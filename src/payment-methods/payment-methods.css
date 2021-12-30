@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.max-width {
+    max-width: 375px;
+    max-height: 812px;
+}
+
+* {
+    font-family: 'Work Sans';
+}
+
+.align-center {
+    align-items: center;
+}
+
+.gradient {
+    background: linear-gradient(90deg, #6D9CF2 -9.5%, #8963EF 29.11%, #BA63A8 60.79%, #EF8554 100%);
+}
+
+.box-shadow {
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+}
