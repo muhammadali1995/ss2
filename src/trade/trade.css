@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.max-width {
+    max-width: 375px;
+    max-height: 812px;
+}
+
+* {
+    font-family: 'Work Sans';
+}
+
+.blue {
+    color: #11153D;
+}
+
+.green {
+    color: #08A647;
+}
+
+.bg-green {
+    background: #08A647;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.pagenation {
+    background: #E8E9FF;
+    color: #72769A;
+}
+
+.page:active {
+    background-color: rgba(255, 255, 255, 1) !important;
+    border-radius: 1.5rem !important;
+    color: #7B7FF0 !important;
+}
+
+.align-end {
+    align-items: end;
+}
+
+.gradient {
+    background: linear-gradient(90deg, #6D9CF2 -9.5%, #8963EF 29.11%, #BA63A8 60.79%, #EF8554 100%);
+}
