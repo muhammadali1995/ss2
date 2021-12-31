@@ -15,10 +15,9 @@
 </head>
 
 <body>
-    <div class="max-width mx-auto mt-2">
-
+    <div class="max-width mx-auto">
         <!-- TOP STOCK PRICE -->
-        <section class="bg-white fixed w-full top-0">
+        <section class="bg-white w-full sticky top-0">
             <div class="w-80 mx-auto pt-2">
                 <div class="flex justify-between">
                     <button><img src="../assets/Mask.png"></button>
@@ -58,121 +57,129 @@
                 </ul>
             </div>
         </section>
-    </div>
-    <!-- TABS -->
-    <div x-data="{ activeTab:1, activeClass: 'bg-white rounded-3xl text-blue-500', inactiveClass : ''}"
-        style="background-color: #F2F3FC;" class="max-width mx-auto rounded-t-3xl px-6 py-5">
-        <ul class="align-center flex font-medium justify-around pagenation px-9 py-1 rounded-3xl text-xs">
-            <li class="py-1">
-                <a href="#1" x-on:click="activeTab = 1" :class="activeTab === 1 ? activeClass : inactiveClass"
-                    class="text-center py-1 px-2">News</a>
-            </li>
-            <li class="py-1">
-                <a href="#2" x-on:click="activeTab = 2" :class="activeTab === 2 ? activeClass : inactiveClass"
-                    class="text-center py-1 px-2">Overview</a>
-            </li>
-            <li class="py-1">
-                <a href="#3" x-on:click="activeTab = 3" :class="activeTab === 3 ? activeClass : inactiveClass"
-                    class="text-center py-1 px-2">Chat</a>
-            </li>
-        </ul>
-        <div>
-            <div x-show="activeTab === 1" style="display: none;" class="mt-5">
-                <div class="align-end flex justify-around" data-aos="fade-up">
-                    <div>
-                        <h3 class="blue font-medium text-base">The Financial Times</h3>
-                        <p class="align-center flex justify-between text-xs w-1/2"><span> 23 Nov</span><span
-                                class="list-item ml-6"></span> <span style="color: #7879F1;">Apple </span></p>
-                        <p class="font-normal mt-1 text-xs w-52" style="color: #6F6F6F;">Yesterday, analysts had warned
-                            Apple
-                            was set to stay below</p>
+        <!-- TABS -->
+        <section>
+            <div x-data="{ activeTab:1, activeClass: 'bg-white rounded-3xl text-blue-500', inactiveClass : ''}"
+                style="background-color: #F2F3FC;" class="max-width mx-auto rounded-t-3xl px-6 py-5">
+                <ul class="align-center flex font-medium justify-around pagenation px-9 py-1 rounded-3xl text-xs">
+                    <li class="py-1">
+                        <a href="#1" x-on:click="activeTab = 1" :class="activeTab === 1 ? activeClass : inactiveClass"
+                            class="text-center py-1 px-2">News</a>
+                    </li>
+                    <li class="py-1">
+                        <a href="#2" x-on:click="activeTab = 2" :class="activeTab === 2 ? activeClass : inactiveClass"
+                            class="text-center py-1 px-2">Overview</a>
+                    </li>
+                    <li class="py-1">
+                        <a href="#3" x-on:click="activeTab = 3" :class="activeTab === 3 ? activeClass : inactiveClass"
+                            class="text-center py-1 px-2">Chat</a>
+                    </li>
+                </ul>
+                <div>
+                    <div x-show="activeTab === 1" style="display: none;" class="mt-5">
+                        <div class="align-end flex justify-around" data-aos="fade-up">
+                            <div>
+                                <h3 class="blue font-medium text-base">The Financial Times</h3>
+                                <p class="align-center flex justify-between text-xs w-1/2"><span> 23 Nov</span><span
+                                        class="list-item ml-6"></span> <span style="color: #7879F1;">Apple </span></p>
+                                <p class="font-normal mt-1 text-xs w-52" style="color: #6F6F6F;">Yesterday, analysts had
+                                    warned
+                                    Apple
+                                    was set to stay below</p>
+                            </div>
+                            <div class="">
+                                <img src="../assets/apple.png" class="">
+                            </div>
+                        </div>
+                        <div class="align-end flex justify-around mt-6" data-aos="fade-up">
+                            <div>
+                                <h3 class="blue font-medium text-base">The Financial Times</h3>
+                                <p class="align-center flex justify-between text-xs w-1/2"><span> 23 Nov</span><span
+                                        class="list-item ml-6"></span> <span style="color: #7879F1;">Apple </span></p>
+                                <p class="font-normal mt-1 text-xs w-52" style="color: #6F6F6F;">Yesterday, analysts had
+                                    warned
+                                    Apple
+                                    was set to stay below</p>
+                            </div>
+                            <div class="">
+                                <img src="../assets/apple.png" class="">
+                            </div>
+                        </div>
+                        <div class="align-end flex justify-around mt-6" data-aos="fade-up">
+                            <div>
+                                <h3 class="blue font-medium text-base">The Financial Times</h3>
+                                <p class="align-center flex justify-between text-xs w-1/2"><span> 23 Nov</span><span
+                                        class="list-item ml-6"></span> <span style="color: #7879F1;">Apple </span></p>
+                                <p class="font-normal mt-1 text-xs w-52" style="color: #6F6F6F;">Yesterday, analysts had
+                                    warned
+                                    Apple
+                                    was set to stay below</p>
+                            </div>
+                            <div class="">
+                                <img src="../assets/apple.png" class="">
+                            </div>
+                        </div>
+                        <div class="align-end flex justify-around mt-6" data-aos="fade-up">
+                            <div>
+                                <h3 class="blue font-medium text-base">The Financial Times</h3>
+                                <p class="align-center flex justify-between text-xs w-1/2"><span> 23 Nov</span><span
+                                        class="list-item ml-6"></span> <span style="color: #7879F1;">Apple </span></p>
+                                <p class="font-normal mt-1 text-xs w-52" style="color: #6F6F6F;">Yesterday, analysts had
+                                    warned
+                                    Apple
+                                    was set to stay below</p>
+                            </div>
+                            <div class="">
+                                <img src="../assets/apple.png" class="">
+                            </div>
+                        </div>
+                        <div class="align-end flex justify-around mt-6" data-aos="fade-up">
+                            <div>
+                                <h3 class="blue font-medium text-base">The Financial Times</h3>
+                                <p class="align-center flex justify-between text-xs w-1/2"><span> 23 Nov</span><span
+                                        class="list-item ml-6"></span> <span style="color: #7879F1;">Apple </span></p>
+                                <p class="font-normal mt-1 text-xs w-52" style="color: #6F6F6F;">Yesterday, analysts had
+                                    warned
+                                    Apple
+                                    was set to stay below</p>
+                            </div>
+                            <div class="">
+                                <img src="../assets/apple.png" class="">
+                            </div>
+                        </div>
                     </div>
-                    <div class="">
-                        <img src="../assets/apple.png" class="">
+                    <div x-show="activeTab === 2" class="mt-5">
+                        <div class="align-center flex justify-between ">
+                            <div class="align-center flex">
+                                <div style="background-color: #E8E9FF;" class="p-3 rounded-3xl">
+                                    <img src="../assets/home.png" class="">
+                                </div>
+                                <h3 class="font-semibold ml-3 text-base">Market Cap</h3>
+                            </div>
+                            <p class="font-medium text-gray-500 text-sm">500,000,000.365 € </p>
+                        </div>
+                        <div class="align-center flex mt-3 justify-between ">
+                            <div class="align-center flex">
+                                <div style="background-color: #E8E9FF;" class="p-3 rounded-3xl">
+                                    <img src="../assets/fond.png" class="">
+                                </div>
+                                <h3 class="font-semibold ml-3 text-base">Price-earnings ration</h3>
+                            </div>
+                            <p class="font-medium text-gray-500 text-sm">22.51</p>
+                        </div>
                     </div>
+                    <div x-show="activeTab === 3"></div>
                 </div>
-                <div class="align-end flex justify-around mt-6" data-aos="fade-up">
-                    <div>
-                        <h3 class="blue font-medium text-base">The Financial Times</h3>
-                        <p class="align-center flex justify-between text-xs w-1/2"><span> 23 Nov</span><span
-                                class="list-item ml-6"></span> <span style="color: #7879F1;">Apple </span></p>
-                        <p class="font-normal mt-1 text-xs w-52" style="color: #6F6F6F;">Yesterday, analysts had warned
-                            Apple
-                            was set to stay below</p>
-                    </div>
-                    <div class="">
-                        <img src="../assets/apple.png" class="">
-                    </div>
-                </div>
-                <div class="align-end flex justify-around mt-6" data-aos="fade-up">
-                    <div>
-                        <h3 class="blue font-medium text-base">The Financial Times</h3>
-                        <p class="align-center flex justify-between text-xs w-1/2"><span> 23 Nov</span><span
-                                class="list-item ml-6"></span> <span style="color: #7879F1;">Apple </span></p>
-                        <p class="font-normal mt-1 text-xs w-52" style="color: #6F6F6F;">Yesterday, analysts had warned
-                            Apple
-                            was set to stay below</p>
-                    </div>
-                    <div class="">
-                        <img src="../assets/apple.png" class="">
-                    </div>
-                </div>
-                <div class="align-end flex justify-around mt-6" data-aos="fade-up">
-                    <div>
-                        <h3 class="blue font-medium text-base">The Financial Times</h3>
-                        <p class="align-center flex justify-between text-xs w-1/2"><span> 23 Nov</span><span
-                                class="list-item ml-6"></span> <span style="color: #7879F1;">Apple </span></p>
-                        <p class="font-normal mt-1 text-xs w-52" style="color: #6F6F6F;">Yesterday, analysts had warned
-                            Apple
-                            was set to stay below</p>
-                    </div>
-                    <div class="">
-                        <img src="../assets/apple.png" class="">
-                    </div>
-                </div>
-                <div class="align-end flex justify-around mt-6" data-aos="fade-up">
-                    <div>
-                        <h3 class="blue font-medium text-base">The Financial Times</h3>
-                        <p class="align-center flex justify-between text-xs w-1/2"><span> 23 Nov</span><span
-                                class="list-item ml-6"></span> <span style="color: #7879F1;">Apple </span></p>
-                        <p class="font-normal mt-1 text-xs w-52" style="color: #6F6F6F;">Yesterday, analysts had warned
-                            Apple
-                            was set to stay below</p>
-                    </div>
-                    <div class="">
-                        <img src="../assets/apple.png" class="">
-                    </div>
+                <div class="bottom-1 fixed left-0 px-5 text-center w-full">
+                    <button
+                        class="font-semibold gradient max-width mt-6 mx-auto py-2 rounded-3xl text-center text-white text-xl w-full">
+                        Buy
+                    </button>
                 </div>
             </div>
-            <div x-show="activeTab === 2" class="mt-5">
-                <div class="align-center flex justify-between ">
-                    <div class="align-center flex">
-                        <div style="background-color: #E8E9FF;" class="p-3 rounded-3xl">
-                            <img src="../assets/home.png" class="">
-                        </div>
-                        <h3 class="font-semibold ml-3 text-base">Market Cap</h3>
-                    </div>
-                    <p class="font-medium text-gray-500 text-sm">500,000,000.365 € </p>
-                </div>
-                <div class="align-center flex mt-3 justify-between ">
-                    <div class="align-center flex">
-                        <div style="background-color: #E8E9FF;" class="p-3 rounded-3xl">
-                            <img src="../assets/fond.png" class="">
-                        </div>
-                        <h3 class="font-semibold ml-3 text-base">Price-earnings ration</h3>
-                    </div>
-                    <p class="font-medium text-gray-500 text-sm">22.51</p>
-                </div>
-            </div>
-            <div x-show="activeTab === 3"></div>
-        </div>
-        <div class="fixed bottom-1 left-0 w-full px-5">
-            <button class="font-semibold gradient mt-6 py-2 rounded-3xl text-center text-white text-xl w-full ">
-                Buy
-            </button>
-        </div>
+        </section>
+        <!-- TABS -->
     </div>
-    <!-- TABS -->
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
