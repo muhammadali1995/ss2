@@ -11,13 +11,13 @@
     <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="trade.css">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer=""></script>
-    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
     <div class="max-width mt-2 mx-auto">
         <!-- TOP STOCK PRICE -->
-        <section class="bg-white max-width fixed w-full top-0 z-10">
+        <section class="bg-white max-width fixed w-full top-0">
             <div class="w-80 mx-auto pt-2">
                 <div class="flex justify-between">
                     <button><img src="../assets/Mask.png"></button>
@@ -47,8 +47,8 @@
                 <div class="overflow-auto ss-img-wrapper w-full">
                     <img class="max-w-7xl" src="../assets/degree.png" id="degree">
                 </div>
-                <ul class="flex font-semibold justify-between mt-5 text-xs">
-                    <li>D</li>`
+                <ul class="flex font-semibold justify-between mt-3 text-xs">
+                    <li>D</li>
                     <li>W</li>
                     <li>M</li>
                     <li style="color: #7B7FF0;">6M</li>
@@ -149,34 +149,18 @@
                         <div style="background-color: #E8E9FF;" class="p-3 rounded-3xl">
                             <img src="../assets/home.png" class="">
                         </div>
+                        <h3 class="font-semibold ml-3 text-base">Market Cap</h3>
                     </div>
-                    <div x-show="activeTab === 2" class="mt-5">
-                        <div class="align-center flex justify-between ">
-                            <div class="align-center flex">
-                                <div style="background-color: #E8E9FF;" class="p-3 rounded-3xl">
-                                    <img src="../assets/home.png" class="">
-                                </div>
-                                <h3 class="font-semibold ml-3 text-base">Market Cap</h3>
-                            </div>
-                            <p class="font-medium text-gray-500 text-sm">500,000,000.365 € </p>
-                        </div>
-                        <div class="align-center flex mt-3 justify-between ">
-                            <div class="align-center flex">
-                                <div style="background-color: #E8E9FF;" class="p-3 rounded-3xl">
-                                    <img src="../assets/fond.png" class="">
-                                </div>
-                                <h3 class="font-semibold ml-3 text-base">Price-earnings ration</h3>
-                            </div>
-                            <p class="font-medium text-gray-500 text-sm">22.51</p>
-                        </div>
-                    </div>
-                    <div x-show="activeTab === 3"></div>
+                    <p class="font-medium text-gray-500 text-sm">500,000,000.365 € </p>
                 </div>
-                <div class="bottom-1 fixed left-0 px-5 text-center w-full">
-                    <button
-                        class="font-semibold gradient max-width mt-6 mx-auto py-2 rounded-3xl text-center text-white text-xl w-full">
-                        Buy
-                    </button>
+                <div class="align-center flex mt-3 justify-between ">
+                    <div class="align-center flex">
+                        <div style="background-color: #E8E9FF;" class="p-3 rounded-3xl">
+                            <img src="../assets/fond.png" class="">
+                        </div>
+                        <h3 class="font-semibold ml-3 text-base">Price-earnings ration</h3>
+                    </div>
+                    <p class="font-medium text-gray-500 text-sm">22.51</p>
                 </div>
             </div>
             <div x-show="activeTab === 3" style="display: none;"></div>
@@ -188,12 +172,13 @@
             </button>
         </div>
     </div>
+    <!-- TABS -->
 
-    <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
-    <script src="trade.js"></script> -->
+    <script src="trade.js"></script>
 </body>
 
 </html>
