@@ -67,6 +67,6 @@
 
 .animate {
     background-color: #F2F3FC;
-    max-height: 350px;
-    margin-top: 520px;
+    max-height: 350px;  
+    top: 520px;
 }
