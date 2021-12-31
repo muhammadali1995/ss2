@@ -11,7 +11,7 @@
     <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="trade.css">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer=""></script>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
 </head>
 
 <body>
@@ -65,7 +65,7 @@
             <ul class="align-center flex font-medium justify-around pagenation px-9 py-1 rounded-3xl text-xs w-full">
                 <li class="py-1">
                     <a href="#1" x-on:click="activeTab = 1" :class="activeTab === 1 ? activeClass : inactiveClass"
-                        class="text-center py-1 px-2 rounded-3xl blue-500 bg-white text-blue-500">News</a>
+                        class="text-center py-1 px-2 rounded-3xl blue-500">News</a>
                 </li>
                 <li class="py-1">
                     <a href="#2" x-on:click="activeTab = 2" :class="activeTab === 2 ? activeClass : inactiveClass"
@@ -79,7 +79,7 @@
         </div>
         <div>
             <div x-show="activeTab === 1" class="mt-5">
-                <div class="align-end flex justify-around aos-init aos-animate" data-aos="fade-up">
+                <div class="align-end flex justify-around" >
                     <div>
                         <h3 class="blue font-medium text-base">The Financial Times</h3>
                         <p class="align-center flex justify-between text-xs w-1/2"><span> 23 Nov</span><span
@@ -92,7 +92,7 @@
                         <img src="../assets/apple.png" class="">
                     </div>
                 </div>
-                <div class="align-end flex justify-around mt-6 aos-init aos-animate" data-aos="fade-up">
+                <div class="align-end flex justify-around mt-6">
                     <div>
                         <h3 class="blue font-medium text-base">The Financial Times</h3>
                         <p class="align-center flex justify-between text-xs w-1/2"><span> 23 Nov</span><span
@@ -105,7 +105,7 @@
                         <img src="../assets/apple.png" class="">
                     </div>
                 </div>
-                <div class="align-end flex justify-around mt-6 aos-init" data-aos="fade-up">
+                <div class="align-end flex justify-around mt-6">
                     <div>
                         <h3 class="blue font-medium text-base">The Financial Times</h3>
                         <p class="align-center flex justify-between text-xs w-1/2"><span> 23 Nov</span><span
@@ -118,7 +118,7 @@
                         <img src="../assets/apple.png" class="">
                     </div>
                 </div>
-                <div class="align-end flex justify-around mt-6 aos-init" data-aos="fade-up">
+                <div class="align-end flex justify-around mt-6">
                     <div>
                         <h3 class="blue font-medium text-base">The Financial Times</h3>
                         <p class="align-center flex justify-between text-xs w-1/2"><span> 23 Nov</span><span
@@ -131,7 +131,7 @@
                         <img src="../assets/apple.png" class="">
                     </div>
                 </div>
-                <div class="align-end flex justify-around mt-6 aos-init" data-aos="fade-up">
+                <div class="align-end flex justify-around mt-6">
                     <div>
                         <h3 class="blue font-medium text-base">The Financial Times</h3>
                         <p class="align-center flex justify-between text-xs w-1/2"><span> 23 Nov</span><span
@@ -167,7 +167,7 @@
             </div>
             <div x-show="activeTab === 3" style="display: none;"></div>
         </div>
-        <div class="bottom-1 left-0 sticky text-center w-full">
+        <div class="bottom-1 left-0 fixed bottom-1 text-center w-full">
             <button
                 class="font-semibold gradient max-width mt-6 mx-auto py-2 rounded-3xl text-center text-white text-xl w-80">
                 Buy
@@ -176,11 +176,11 @@
     </div>
     <!-- TABS -->
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
-    <script src="trade.js"></script>
+    <script src="trade.js"></script> -->
 </body>
 
 </html>

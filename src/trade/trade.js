@@ -8,4 +8,4 @@ async function scrollFunction() {
         console.log(document.body.scrollTop);
     }
 }
-window.onscroll = function () { scrollFunction() };
+window.onscroll = function () { scrollFunction() }; 
