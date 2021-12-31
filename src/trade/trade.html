@@ -15,10 +15,9 @@
 </head>
 
 <body>
-    <div class="max-width mx-auto mt-2">
-        <h1>Hello World</h1>
+    <div class="max-width mt-2 mx-auto">
         <!-- TOP STOCK PRICE -->
-        <section class="bg-white fixed w-full top-0">
+        <section class="bg-white max-width fixed w-full top-0">
             <div class="w-80 mx-auto pt-2">
                 <div class="flex justify-between">
                     <button><img src="../assets/Mask.png"></button>
@@ -42,11 +41,11 @@
             </div>
         </section>
         <!-- GRAPH -->
-        <section class="ss-graph-wrapper mt-3">
-            <div class="w-80 mx-auto">
-                <p class="ml-60 mt-24 mt-4 text-gray-400 text-xs">2,254.65 €</p>
-                <div class="ss-img-wrapper w-full overflow-auto">
-                    <img class="max-w-7xl" src="../assets/degree.png">
+        <section class="-mt-1 bg-white fixed pt-5 ss-graph-wrapper top-28 ss-img-wrapper" style="width: 375px;">
+            <div class="mx-auto w-80">
+                <p class="ml-60 text-gray-400 text-xs">2,254.65 €</p>
+                <div class="overflow-auto ss-img-wrapper w-full">
+                    <img class="max-w-7xl" src="../assets/degree.png" id="degree">
                 </div>
                 <ul class="flex font-semibold justify-between mt-3 text-xs">
                     <li>D</li>
@@ -61,11 +60,11 @@
     </div>
     <!-- TABS -->
     <div x-data="{ activeTab:1, activeClass: 'bg-white rounded-3xl text-blue-500', inactiveClass : ''}"
-        style="background-color: #F2F3FC;" class="max-width mx-auto rounded-t-3xl px-6 py-5">
+        class="max-width mx-auto overflow-auto ss-img-wrapper px-6 py-5 relative rounded-t-3xl animate">
         <ul class="align-center flex font-medium justify-around pagenation px-9 py-1 rounded-3xl text-xs">
             <li class="py-1">
                 <a href="#1" x-on:click="activeTab = 1" :class="activeTab === 1 ? activeClass : inactiveClass"
-                    class="text-center py-1 px-2">News</a>
+                    class="text-center py-1 px-2 rounded-3xl blue-500">News</a>
             </li>
             <li class="py-1">
                 <a href="#2" x-on:click="activeTab = 2" :class="activeTab === 2 ? activeClass : inactiveClass"
@@ -77,8 +76,8 @@
             </li>
         </ul>
         <div>
-            <div x-show="activeTab === 1" style="display: none;" class="mt-5">
-                <div class="align-end flex justify-around" data-aos="fade-up">
+            <div x-show="activeTab === 1" class="mt-5">
+                <div class="align-end flex justify-around aos-init aos-animate" data-aos="fade-up">
                     <div>
                         <h3 class="blue font-medium text-base">The Financial Times</h3>
                         <p class="align-center flex justify-between text-xs w-1/2"><span> 23 Nov</span><span
@@ -91,7 +90,7 @@
                         <img src="../assets/apple.png" class="">
                     </div>
                 </div>
-                <div class="align-end flex justify-around mt-6" data-aos="fade-up">
+                <div class="align-end flex justify-around mt-6 aos-init aos-animate" data-aos="fade-up">
                     <div>
                         <h3 class="blue font-medium text-base">The Financial Times</h3>
                         <p class="align-center flex justify-between text-xs w-1/2"><span> 23 Nov</span><span
@@ -104,7 +103,7 @@
                         <img src="../assets/apple.png" class="">
                     </div>
                 </div>
-                <div class="align-end flex justify-around mt-6" data-aos="fade-up">
+                <div class="align-end flex justify-around mt-6 aos-init aos-animate" data-aos="fade-up">
                     <div>
                         <h3 class="blue font-medium text-base">The Financial Times</h3>
                         <p class="align-center flex justify-between text-xs w-1/2"><span> 23 Nov</span><span
@@ -117,7 +116,7 @@
                         <img src="../assets/apple.png" class="">
                     </div>
                 </div>
-                <div class="align-end flex justify-around mt-6" data-aos="fade-up">
+                <div class="align-end flex justify-around mt-6 aos-init aos-animate" data-aos="fade-up">
                     <div>
                         <h3 class="blue font-medium text-base">The Financial Times</h3>
                         <p class="align-center flex justify-between text-xs w-1/2"><span> 23 Nov</span><span
@@ -130,7 +129,7 @@
                         <img src="../assets/apple.png" class="">
                     </div>
                 </div>
-                <div class="align-end flex justify-around mt-6" data-aos="fade-up">
+                <div class="align-end flex justify-around mt-6 aos-init" data-aos="fade-up">
                     <div>
                         <h3 class="blue font-medium text-base">The Financial Times</h3>
                         <p class="align-center flex justify-between text-xs w-1/2"><span> 23 Nov</span><span
@@ -144,7 +143,7 @@
                     </div>
                 </div>
             </div>
-            <div x-show="activeTab === 2" class="mt-5">
+            <div x-show="activeTab === 2" class="mt-5" style="display: none;">
                 <div class="align-center flex justify-between ">
                     <div class="align-center flex">
                         <div style="background-color: #E8E9FF;" class="p-3 rounded-3xl">
@@ -164,10 +163,11 @@
                     <p class="font-medium text-gray-500 text-sm">22.51</p>
                 </div>
             </div>
-            <div x-show="activeTab === 3"></div>
+            <div x-show="activeTab === 3" style="display: none;"></div>
         </div>
-        <div class="fixed bottom-1 left-0 w-full px-5">
-            <button class="font-semibold gradient mt-6 py-2 rounded-3xl text-center text-white text-xl w-full ">
+        <div class="bottom-1 left-0 sticky text-center w-full">
+            <button
+                class="font-semibold gradient max-width mt-6 mx-auto py-2 rounded-3xl text-center text-white text-xl w-80">
                 Buy
             </button>
         </div>
@@ -178,6 +178,7 @@
     <script>
         AOS.init();
     </script>
+    <script src="trade.js"></script>
 </body>
 
 </html>
