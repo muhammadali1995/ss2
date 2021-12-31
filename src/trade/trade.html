@@ -11,13 +11,13 @@
     <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="trade.css">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer=""></script>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
 </head>
 
 <body>
     <div class="max-width mx-auto">
         <!-- TOP STOCK PRICE -->
-        <section class="bg-white w-full sticky top-0">
+        <section class="bg-white w-full fixed top-0 z-10">
             <div class="w-80 mx-auto pt-2">
                 <div class="flex justify-between">
                     <button><img src="../assets/Mask.png"></button>
@@ -41,13 +41,13 @@
             </div>
         </section>
         <!-- GRAPH -->
-        <section class="ss-graph-wrapper mt-3">
+        <section class="ss-graph-wrapper mt-3 fixed w-full z-10 bg-white">
             <div class="w-80 mx-auto">
-                <p class="ml-60 mt-24 mt-4 text-gray-400 text-xs">2,254.65 €</p>
+                <p class="ml-60 mt-4 text-gray-400 text-xs">2,254.65 €</p>
                 <div class="ss-img-wrapper w-full overflow-auto">
                     <img class="max-w-7xl" src="../assets/degree.png">
                 </div>
-                <ul class="flex font-semibold justify-between mt-3 text-xs">
+                <ul class="flex font-semibold justify-between mt-5 text-xs">
                     <li>D</li>
                     <li>W</li>
                     <li>M</li>
@@ -58,7 +58,7 @@
             </div>
         </section>
         <!-- TABS -->
-        <section>
+        <section class="mt-6 sticky top-96">
             <div x-data="{ activeTab:1, activeClass: 'bg-white rounded-3xl text-blue-500', inactiveClass : ''}"
                 style="background-color: #F2F3FC;" class="max-width mx-auto rounded-t-3xl px-6 py-5">
                 <ul class="align-center flex font-medium justify-around pagenation px-9 py-1 rounded-3xl text-xs">
@@ -75,9 +75,9 @@
                             class="text-center py-1 px-2">Chat</a>
                     </li>
                 </ul>
-                <div>
+                <div data-aos="fade-up">
                     <div x-show="activeTab === 1" style="display: none;" class="mt-5">
-                        <div class="align-end flex justify-around" data-aos="fade-up">
+                        <div class="align-end flex justify-around">
                             <div>
                                 <h3 class="blue font-medium text-base">The Financial Times</h3>
                                 <p class="align-center flex justify-between text-xs w-1/2"><span> 23 Nov</span><span
@@ -91,7 +91,7 @@
                                 <img src="../assets/apple.png" class="">
                             </div>
                         </div>
-                        <div class="align-end flex justify-around mt-6" data-aos="fade-up">
+                        <div class="align-end flex justify-around">
                             <div>
                                 <h3 class="blue font-medium text-base">The Financial Times</h3>
                                 <p class="align-center flex justify-between text-xs w-1/2"><span> 23 Nov</span><span
@@ -105,7 +105,20 @@
                                 <img src="../assets/apple.png" class="">
                             </div>
                         </div>
-                        <div class="align-end flex justify-around mt-6" data-aos="fade-up">
+                        <div class="align-end flex justify-around">
+                            <div>
+                                <h3 class="blue font-medium text-base">The Financial Times</h3>
+                                <p class="align-center flex justify-between text-xs w-1/2"><span> 23 Nov</span><span
+                                        class="list-item ml-6"></span> <span style="color: #7879F1;">Apple </span></p>
+                                <p class="font-normal mt-1 text-xs w-52" style="color: #6F6F6F;">Yesterday, analysts had
+                                    warned
+                                    Apple
+                                    was set to stay below</p>
+                            </div>
+                            <div class="">
+                                <img src="../assets/apple.png" class="">
+                            </div>
+                        </div><div class="align-end flex justify-around">
                             <div>
                                 <h3 class="blue font-medium text-base">The Financial Times</h3>
                                 <p class="align-center flex justify-between text-xs w-1/2"><span> 23 Nov</span><span
@@ -119,7 +132,8 @@
                                 <img src="../assets/apple.png" class="">
                             </div>
                         </div>
-                        <div class="align-end flex justify-around mt-6" data-aos="fade-up">
+                    
+                        <div class="align-end flex justify-around mt-6">
                             <div>
                                 <h3 class="blue font-medium text-base">The Financial Times</h3>
                                 <p class="align-center flex justify-between text-xs w-1/2"><span> 23 Nov</span><span
@@ -133,7 +147,35 @@
                                 <img src="../assets/apple.png" class="">
                             </div>
                         </div>
-                        <div class="align-end flex justify-around mt-6" data-aos="fade-up">
+                        <div class="align-end flex justify-around mt-6">
+                            <div>
+                                <h3 class="blue font-medium text-base">The Financial Times</h3>
+                                <p class="align-center flex justify-between text-xs w-1/2"><span> 23 Nov</span><span
+                                        class="list-item ml-6"></span> <span style="color: #7879F1;">Apple </span></p>
+                                <p class="font-normal mt-1 text-xs w-52" style="color: #6F6F6F;">Yesterday, analysts had
+                                    warned
+                                    Apple
+                                    was set to stay below</p>
+                            </div>
+                            <div class="">
+                                <img src="../assets/apple.png" class="">
+                            </div>
+                        </div>
+                        <div class="align-end flex justify-around mt-6">
+                            <div>
+                                <h3 class="blue font-medium text-base">The Financial Times</h3>
+                                <p class="align-center flex justify-between text-xs w-1/2"><span> 23 Nov</span><span
+                                        class="list-item ml-6"></span> <span style="color: #7879F1;">Apple </span></p>
+                                <p class="font-normal mt-1 text-xs w-52" style="color: #6F6F6F;">Yesterday, analysts had
+                                    warned
+                                    Apple
+                                    was set to stay below</p>
+                            </div>
+                            <div class="">
+                                <img src="../assets/apple.png" class="">
+                            </div>
+                        </div>
+                        <div class="align-end flex justify-around mt-6">
                             <div>
                                 <h3 class="blue font-medium text-base">The Financial Times</h3>
                                 <p class="align-center flex justify-between text-xs w-1/2"><span> 23 Nov</span><span
@@ -181,10 +223,10 @@
         <!-- TABS -->
     </div>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
-    </script>
+    </script> -->
 </body>
 
 </html>

@@ -46,3 +46,7 @@
 .gradient {
     background: linear-gradient(90deg, #6D9CF2 -9.5%, #8963EF 29.11%, #BA63A8 60.79%, #EF8554 100%);
 }
+
+.ss-graph-wrapper  {
+    top: 98px;
+}
