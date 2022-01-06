@@ -1,0 +1,16 @@
+.max-width {
+    max-width: 375px;
+}
+
+.box-shadow {
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.box-shadow:hover {
+    background-color: #2B64F5;
+    color: white
+}
+
+.gradient {
+    background: linear-gradient(91.78deg, #11143A 0%, #2B64F5 78.12%, #507DF0 100%);
+}

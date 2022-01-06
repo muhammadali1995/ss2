@@ -1,0 +1,51 @@
+.max-width {
+    max-width: 375px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.align-center {
+    align-items: center;
+}
+
+input.checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-appearance: initial;
+    appearance: initial;
+    width: 25px;
+    border: 1px solid #808080;
+    height: 20px;
+    padding: 0 6px;
+    border-radius: 6px;
+}
+
+input.checkbox:checked::after {
+    content: "";
+    margin-top: 12px;
+    background-image: url(../assets/tick.png);
+    background-repeat: no-repeat;
+    margin: -3px;
+    background-size: contain;
+    background-position: center;
+    width: 11px;
+    height: 16px;
+}
+
+.gradient {
+    background: linear-gradient(91.78deg, #11143A 0%, #2B64F5 78.12%, #507DF0 100%);
+}
+
+.card {
+    border: 1px solid #525967;
+}
+
+input.checkbox:checked {
+    background-color: #2B64F5;
+    color: white;
+}
