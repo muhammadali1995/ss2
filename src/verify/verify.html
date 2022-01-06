@@ -12,7 +12,43 @@
 </head>
 
 <body>
+    <div class="max-width mx-auto p-4">
+        <h2 class="font-semibold text-2xl">Vérification du numéro</h2>
+        <p class="mt-1 text-gray-500 text-sm">Pour confirmer qu'il s'agit bien de vous, nous vous avons envoyé un code au numéro de téléphone que vous avez fourni</p>
+        <form class="content-area mt-8">
+            <fieldset class='number-code'>
+                <div class="justify-between">
+                    <input name="code" class="code-input rounded-xl" type="number" required="">
+                    <input name="code" class="code-input rounded-xl" type="number" required="">
+                    <input name="code" class="code-input rounded-xl" type="number" required="">
+                    <input name="code" class="code-input rounded-xl" type="number" required="">
+                    <input name="code" class="code-input rounded-xl" type="number" required="">
+                    <input name="code" maxlength="1" class="code-input rounded-xl" required="">
+                </div>
+            </fieldset>
+        </form>
+        <div class="flex font-semibold justify-between mt-3" style="color: #2B64F5;">
+            <a href="#">Change phone</a>
+            <a href="#">Resend Code</a>
+        </div>
+        <div class="gap-x-8 gap-y-5 grid grid-cols-3 mt-32">
+            <button class="btn-light font-medium px-8 py-3 rounded-3xl text-2xl">1</button>
+            <button class="btn-light font-medium px-8 py-3 rounded-3xl text-2xl">2</button>
+            <button class="btn-light font-medium px-8 py-3 rounded-3xl text-2xl">3</button>
+            <button class="btn-light font-medium px-8 py-3 rounded-3xl text-2xl">4</button>
+            <button class="btn-light font-medium px-8 py-3 rounded-3xl text-2xl">5</button>
+            <button class="btn-light font-medium px-8 py-3 rounded-3xl text-2xl">6</button>
+            <button class="btn-light font-medium px-8 py-3 rounded-3xl text-2xl">7</button>
+            <button class="btn-light font-medium px-8 py-3 rounded-3xl text-2xl">8</button>
+            <button class="btn-light font-medium px-8 py-3 rounded-3xl text-2xl">9</button>
+            <button class="px-8 py-3"></button>
+            <button class="btn-light font-medium px-8 py-3 rounded-3xl text-2xl">0</button>
+            <button class="px-8 py-3"><img src="../assets/del.png"></button>
+        </div>
+        <button class="gradient font-extrabold mt-4 py-3 rounded-full text-white w-full">Continue</button>
+    </div>
+    <script src="verify.js"></script>
 
-</body>
+</html>
 
 </html>

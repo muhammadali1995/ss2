@@ -1,0 +1,29 @@
+.max-width {
+    max-width: 375px;
+}
+
+.card {
+    background: #E3E3E3;
+    width: 70px;
+    height: 8px;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.inp {
+    border: 2px solid #2B64F5;
+}
+
+input:focus {
+    outline: none;
+}
+
+.gradient {
+    background: linear-gradient(91.78deg, #11143A 0%, #2B64F5 78.12%, #507DF0 100%);
+}
+
+button:disabled {
+    opacity: 0.5;
+}
