@@ -1,0 +1,26 @@
+.max-width {
+    max-width: 375px;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.card {
+    border: 1px solid #525967;
+}
+
+.gradient {
+    background: linear-gradient(91.78deg, #11143A 0%, #2B64F5 78.12%, #507DF0 100%);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input.checkbox {
+    width: 40px;
+    height: 40px;
+}
