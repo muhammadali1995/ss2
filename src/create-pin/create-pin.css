@@ -1,0 +1,78 @@
+.max-width {
+    max-width: 375px;
+}
+
+.card {
+    background: #E3E3E3;
+    width: 70px;
+    height: 8px;
+}
+
+.align-center {
+    align-items: center
+};
+
+.btn {
+    background-color: black!important;
+}
+
+
+:root {
+    --spacing: 8px;
+    --hue: 400;
+    --background1: hsl(214, 14%, 20%);
+    --background2: hsl(214, 14%, 13%);
+    --background3: hsl(214, 14%, 5%);
+    --brand1: hsl(var(--hue) 80% 60%);
+    --text1: hsl(0, 0%, 100%);
+    --text2: hsl(0, 0%, 90%);
+}
+
+.gradient {
+    background: linear-gradient(91.78deg, #11143A 0%, #2B64F5 78.12%, #507DF0 100%);
+}
+
+.number-code>div {
+    display: flex;
+    width: 145px;
+}
+
+.content-area {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-light {
+    background-color: #F2F3FC;
+}
+
+input.code-input {
+    font-size: 1.5em;
+    width: 16px;
+    height: 16px;
+    color: #2B64F5!important;
+    text-align: center;
+}
+
+input {
+    border: 1.52336px solid #2B64F5;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input:focus {
+    color: white;
+    background-color: #2B64F5;
+}
+
+input:invalid {
+    box-shadow: none;
+}
+
+input:focus {
+    outline: none;
+}
