@@ -1,5 +1,28 @@
 {
+  "name": "ss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "dependencies": {
+    "postcss-cli": "^9.1.0"
+  },
   "devDependencies": {
-    "tailwindcss": "^3.0.8"
-  }
+    "autoprefixer": "^10.4.1",
+    "postcss": "^8.4.5",
+    "tailwindcss": "^3.0.11"
+  },
+  "scripts": {
+    "build": "postcss ./src/main.css -o dist/output.css",
+    "watch": "postcss ./src/main.css -o dist/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muhammadali1995/ss2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muhammadali1995/ss2/issues"
+  },
+  "homepage": "https://github.com/muhammadali1995/ss2#readme"
 }

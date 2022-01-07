@@ -1,15 +1,8 @@
-.max-width {
-    max-width: 375px;
-}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
-}
-
-.align-center {
-    align-items: center;
 }
 
 input.checkbox {
@@ -35,14 +28,6 @@ input.checkbox:checked::after {
     background-position: center;
     width: 11px;
     height: 16px;
-}
-
-.gradient {
-    background: linear-gradient(91.78deg, #11143A 0%, #2B64F5 78.12%, #507DF0 100%);
-}
-
-.card {
-    border: 1px solid #525967;
 }
 
 input.checkbox:checked {
