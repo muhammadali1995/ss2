@@ -1,9 +1,7 @@
 import PAGES from "./../../constants/constants.js";
 
-//PAGES
-const {ONBOARD_PAGE, SPLASH_PAGE} = PAGES;
+const { ONBOARD_PAGE, SPLASH_PAGE } = PAGES;
 
-//main logic
 var currentPage = SPLASH_PAGE;
 
 window.onload = () => {
@@ -13,9 +11,9 @@ window.onload = () => {
 
 
     const btnContinue = document.getElementById('btn-continue');
-    btnContinue.addEventListener('click', (event)=> {
+    btnContinue.addEventListener('click', (event) => {
         const nextPage = event.target.closest('.ss-page').nextElementSibling;
-        changePage(nextPage.id);     
+        changePage(nextPage.id);
     })
 
 }
@@ -25,10 +23,10 @@ function changePage(page) {
     showPage(page)
 }
 
-function hidePages(){
+function hidePages() {
     const pages = document.querySelectorAll('.ss-page');
     Array.from(pages).forEach(element => {
-        if(!element.classList.contains('hidden')) element.classList.add('hidden')        
+        if (!element.classList.contains('hidden')) element.classList.add('hidden')
     });
 }
 
@@ -36,4 +34,3 @@ function showPage(pageId) {
     const currPage = document.getElementById(pageId);
     currPage.classList.remove('hidden');
 }
-

@@ -22,7 +22,7 @@ inputElements.forEach((ele, index) => {
 
 function onSubmit(e) {
     e.preventDefault()
-    const code = [...document.getElementsByTagName('input')]
+    const code = [...document.getElementsByClassName('input')]
         .filter(({ name }) => name)
         .map(({ value }) => value)
         .join('')
