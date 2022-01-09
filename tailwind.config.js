@@ -19,7 +19,7 @@ module.exports = {
                 }
             },
             maxWidth: {
-                mobile: '375px'
+                mobile: '390px'
             }
         },
     },
