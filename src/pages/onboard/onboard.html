@@ -20,7 +20,7 @@
 <body>
 
     <!-- SPLASH -->
-    <div id="splash-page" class="max-w-mobile  mx-auto ss-page" style="background: #F2F3FC; max-height: 812px;">
+    <div id="splash-page" class="max-w-mobile hidden mx-auto ss-page" style="background: #F2F3FC; max-height: 812px;">
         <div class="align-center p-4 flex justify-center" style="height: 625px;">
             <div class="align-center flex flex-col justify-center">
                 <div style="background: #11143A;" class="p-5 rounded-xl">
@@ -37,7 +37,7 @@
     </div>
 
     <!-- LOGIN -->
-    <div id="login-page" class="max-w-mobile mx-auto ss-page hidden">
+    <div id="login-page" class="max-w-mobile mx-auto ss-page hidden" style="display: none;">
         <div>
             <div>
                 <div class="absolute flex">
@@ -130,10 +130,10 @@
         <form id="form" class="content-area mt-12">
             <fieldset class='number-code'>
                 <div class="flex justify-between mx-auto w-32">
-                    <input name="code" class="code-input i h-4 rounded-xl text-center outline-none w-4 border border-blue-normal text-transparent" type="password" required="">
-                    <input name="code" class="code-input i h-4 rounded-xl text-center outline-none w-4 border text-transparent border-blue-normal" type="password" required="">
-                    <input name="code" class="code-input i h-4 rounded-xl text-center outline-none w-4 border text-transparent border-blue-normal" type="password" required="">
-                    <input name="code" maxlength="1" class="code-input i h-4 rounded-xl text-center outline-none w-4 text-transparent border border-blue-normal" type="password" required="">
+                    <input name="code" class="code-input password h-4 rounded-xl text-center outline-none w-4 border border-blue-normal text-transparent" type="password" required="">
+                    <input name="code" class="code-input password h-4 rounded-xl text-center outline-none w-4 border text-transparent border-blue-normal" type="password" required="">
+                    <input name="code" class="code-input password h-4 rounded-xl text-center outline-none w-4 border text-transparent border-blue-normal" type="password" required="">
+                    <input name="code" maxlength="1" class="code-input password h-4 rounded-xl text-center outline-none w-4 text-transparent border border-blue-normal" type="password" required="">
                 </div>
                 <p id="error2"></p>
             </fieldset>
@@ -157,7 +157,7 @@
 
     <!-- STOCK -->
     <div id="stock-page" class="max-w-mobile mx-auto p-4 ss-page hidden">
-        <img id="prev2" src="./../../assets/Mask.png">
+        <img id="prev2" class="cursor-pointer" src="./../../assets/Mask.png">
         <h3 class="font-semibold mt-2 text-2xl">Choisissez votre stock gratuit</h3>
         <p class="mt-1 text-gray-600 text-sm">Choisissez votre stock préféré parmis la liste suivante. Nous t’offirons entre 1€ et 300€ de celui-ci. Vous obtiendrez votre stock gratuit lorsque vous effectuerez votre premier dépôt.
         </p>
@@ -251,7 +251,7 @@
         <input type="text" placeholder="Date de naissance" class="outline-none border text border-black mt-4 px-6 py-4 rounded-2xl w-full">
         <input type="text" placeholder="Numéro de Passeport" class="outline-none border text border-black mt-4 px-6 py-4 rounded-2xl w-full">
         <input type="text" placeholder="Email" class="outline-none border text border-black mt-4 px-6 py-4 rounded-2xl w-full">
-        <button id="next3" disabled="true" class="next3 bg-gradient-to-r bottom-2 font-extrabold from-blue-darker mt-60 opacity-50 py-3 rounded-full sticky text-white to-blue-lighter w-full">Suivant</button>
+        <button id="next3" disabled="true" class="bg-gradient-to-r bottom-2 font-extrabold from-blue-darker mt-12 next3 opacity-50 py-3 rounded-full text-white to-blue-lighter w-full">Suivant</button>
     </div>
 
     <!-- CREATE-PIN -->
@@ -296,9 +296,61 @@
         <button class="w-full gradient py-3 rounded-full  mt-4 font-extrabold text-white">Créer code</button>
     </div>
 
+    <!-- ADRESS -->
+    <div id="adress" class="max-w-mobile hidden ss-page mx-auto p-4">
+        <div class="align-center flex">
+            <img src="./../../assets/Mask.png">
+            <div class="flex justify-around items-center w-full">
+                <div class="w-20 bg-gray-400 h-2 rounded-2xl">
+                    <div class="rounded-2xl w-full" style="background: #2B64F5;height: 8px;"></div>
+                </div>
+                <div class="w-20 bg-gray-300 h-2 rounded-2xl">
+                    <div class="rounded-2xl w-1/2" style="background: #2B64F5;height: 8px;"></div>
+                </div>
+                <div class="w-20 bg-gray-300 h-2 rounded-2xl"></div>
+            </div>
+        </div>
+        <h3 class="font-semibold mt-4 text-2xl">Entrez votre adresse</h3>
+        <p class="mt-2 text-gray-500">Conformément au règlement financier, veuillez indiquer l'adresse postale de votre résidence principale. N'utilisez pas de boîte postale ou d'adresse professionnelle.</p>
+        <h4 class="font-semibold mt-8">Recherche d’adresse</h4>
+        <input type="text" placeholder="Entrer une adresse" class="outline-none search border border-gray-400 mt-4 px-4 py-3 rounded-2xl w-full">
+        <div id="dropdown" class="hidden border border-gray-400 max-h-40 overflow-auto px-2 py-3 rounded-b-2xl text-gray-500">
+            <h3 class="py-1">13 rue du Carreaux, Le Plessie-Robinson</h3>
+            <h3 class="py-1">13 rue Henri Barbusse, Gennevilliers</h3>
+            <h3 class="py-1">13 rue des Frères Lumières, Le Blanc-Mesnil</h3>
+            <h3 class="py-1">13 rue de Normandie, Courbevoie</h3>
+        </div>
+        <p class="mt-4 text-blue-700 text-right">Taper manuellement</p>
+        <button id="next4" disabled="true" class="bg-gradient-to-r bottom-2 fixed font-extrabold from-blue-darker mt-12 next3 opacity-50 py-3 rounded-full text-white to-blue-lighter w-96" style="max-width: 91vw;">Suivant</button>
+    </div>
+
+    <!-- TYPE -->
+    <div id="adress" class="max-w-mobile mx-auto p-4">
+        <div class="align-center flex">
+            <img src="./../../assets/Mask.png">
+            <div class="flex justify-around items-center w-full">
+                <div class="w-20 bg-gray-400 h-2 rounded-2xl">
+                    <div class="rounded-2xl w-full" style="background: #2B64F5;height: 8px;"></div>
+                </div>
+                <div class="w-20 bg-gray-300 h-2 rounded-2xl">
+                    <div class="rounded-2xl w-1/2" style="background: #2B64F5;height: 8px;"></div>
+                </div>
+                <div class="w-20 bg-gray-300 h-2 rounded-2xl"></div>
+            </div>
+        </div>
+        <h3 class="font-semibold mt-4 text-2xl">Entrez votre adresse</h3>
+        <p class="mt-2 text-gray-500">Conformément au règlement financier, veuillez indiquer l'adresse postale de votre résidence principale. N'utilisez pas de boîte postale ou d'adresse professionnelle.</p>
+        <h4 class="font-semibold mt-8">Informations de l’adresse</h4>
+        <input type="text" placeholder="Rue" class="outline-none search border border-gray-400 mt-4 px-4 py-3 rounded-2xl w-full">
+        <input type="text" placeholder="Code postale" class="outline-none search border border-gray-400 mt-4 px-4 py-3 rounded-2xl w-full">
+        <input type="text" placeholder="Ville" class="outline-none search border border-gray-400 mt-4 px-4 py-3 rounded-2xl w-full">
+        <input type="text" placeholder="Entrer une adresse" class="outline-none search border border-gray-400 mt-4 px-4 py-3 rounded-2xl w-full">
+        <button id="next5" disabled="true" class="bg-gradient-to-r font-extrabold from-blue-darker mt-12 mx-auto next3 opacity-50 py-3 rounded-full text-white to-blue-lighter w-full" style="max-width: 350px;">Suivant</button>
+    </div>
+
 
     <!-- SIGN  UP -->
-    <div id="sign-up" class="max-w-mobile p-4 mx-auto ss-page hidden">
+    <!-- <div id="sign-up" class="max-w-mobile p-4 mx-auto ss-page hidden">
         <h2 class="font-semibold text-2xl">Quel est votre numéro ?</h2>
         <p class="text-gray-500 text-sm">Entrez votre numéro de téléphone</p>
         <div class="items-center border-grey-normal card flex mt-8 p-5 rounded-3xl">
@@ -316,11 +368,11 @@
             </div>
             <button class="bg-gradient-to-r ss-cont font-extrabold from-blue-darker mt-8 py-3 rounded-full text-white to-blue-lighter w-full" style="max-width: 348px;">Continuer</button>
         </div>
-    </div>
+    </div> -->
 
 
 </body>
 <script src="input.js"></script>
-<script src="./../login/login.js"></script>
+<script src="login.js"></script>
 
 </html>
