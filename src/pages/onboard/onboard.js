@@ -5,10 +5,11 @@ const PAGES = {
     PIN_PAGE: 'pin-page',
     STOCK_PAGE: 'stock-page',
     CREATE_ACCOUNT: 'create',
-    CREATE_PIN: 'create-pin'
+    CREATE_PIN: 'create-pin',
+    TYPE_PAGE: 'type-page'
 }
 
-const { LOGIN_PAGE, SPLASH_PAGE, VERIFY_PAGE, PIN_PAGE, STOCK_PAGE, CREATE_ACCOUNT, CREATE_PIN } = PAGES;
+const { LOGIN_PAGE, SPLASH_PAGE, VERIFY_PAGE, PIN_PAGE, STOCK_PAGE, CREATE_ACCOUNT, CREATE_PIN, TYPE_PAGE } = PAGES;
 
 var currentPage = SPLASH_PAGE;
 
@@ -23,6 +24,7 @@ window.onload = () => {
     const btn3 = document.getElementById('next')
     const btn4 = document.getElementById('next2')
     const btn5 = document.querySelector('.next3')
+    const btn6 = document.getElementById('next4')
     const prev = document.getElementById('prev')
     const prev2 = document.getElementById('prev2')
     const prev3 = document.getElementById('prev3')
@@ -39,7 +41,7 @@ window.onload = () => {
         }
     })
     btn3.addEventListener('click', () => {
-        if (document.getElementById('inp').value != '') {
+        if (btn3.ariaDisabled == 'false') {
             changePage(STOCK_PAGE)
         }
     })
@@ -59,6 +61,11 @@ window.onload = () => {
     })
     prev4.addEventListener('click', () => {
         changePage(CREATE_ACCOUNT)
+    })
+    btn6.addEventListener('click', () => {
+        if (btn6.disabled == 'false') {
+            changePage(TYPE_PAGE)
+        }
     })
 }
 

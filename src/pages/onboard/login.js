@@ -48,23 +48,24 @@ const array = [];
 btns.forEach(btn => {
     btn.addEventListener('click', () => {
         array.push(btn.textContent)
-        const inps = document.querySelectorAll('.i')
+        const inps = document.querySelectorAll('.password')
         inps[0].focus()
         inps[0].value = array[0]
         inps[0].style.backgroundColor = '#2B64F5'
         if (array[1]) {
             inps[1].focus()
-            inps[1].value = array[0]
+            inps[1].value = array[1]
             inps[1].style.backgroundColor = '#2B64F5'
         }
         if (array[2]) {
             inps[2].focus()
-            inps[2].value = array[0]
+            inps[2].value = array[2]
+            inps[2].style.color = '#2B64F5 !important'
             inps[2].style.backgroundColor = '#2B64F5'
         }
         if (array[3]) {
             inps[3].focus()
-            inps[3].value = array[0]
+            inps[3].value = array[3]
             inps[3].style.backgroundColor = '#2B64F5'
         }
     })
@@ -89,23 +90,6 @@ del.addEventListener('click', () => {
         inps[0].focus()
         inps[0].value = ''
         inps[0].style.backgroundColor = 'white'
-    }
-})
-
-const next = document.getElementById('next')
-next.addEventListener('click', () => {
-    const inps2 = document.querySelectorAll('.is')
-    if ((inps2[0].value != '') && (inps2[1].value != '') && (inps2[2].value != '') && (inps2[3].value != '')) {
-        const p = document.getElementById('error2')
-        p.textContent = 'Votre code est erroné'
-        p.className = 'mt-8 text-center text-red-500'
-        inps2.forEach(inp => {
-            inp.style.backgroundColor = '#EB5757'
-            inp.style.border = 'none'
-        })
-    } else {
-        const p = document.getElementById('error2')
-        p.textContent = 'ss'
     }
 })
 
