@@ -39,7 +39,7 @@ window.onload = () => {
         }
     })
     btn3.addEventListener('click', () => {
-        if (document.getElementById('inp').value != '') {
+        if (btn3.disabled == 'false') {
             changePage(STOCK_PAGE)
         }
     })

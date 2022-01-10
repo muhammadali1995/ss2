@@ -161,3 +161,53 @@ del2.addEventListener('click', () => {
         inps[0].style.backgroundColor = 'white'
     }
 })
+
+const btns3 = document.querySelectorAll('.btn-nums3')
+const inputElementss3 = document.querySelectorAll('.inpu')
+const del3 = document.getElementById('del3')
+const array3 = [];
+btns3.forEach(btn => {
+    btn.addEventListener('click', () => {
+        array3.push(btn.textContent)
+        const inps = document.querySelectorAll('.inpu')
+        inps[0].focus()
+        inps[0].value = array[0]
+        inps[0].style.backgroundColor = '#2B64F5'
+        if (array3[1]) {
+            inps[1].focus()
+            inps[1].value = array3[0]
+            inps[1].style.backgroundColor = '#2B64F5'
+        }
+        if (array3[2]) {
+            inps[2].focus()
+            inps[2].value = array3[0]
+            inps[2].style.backgroundColor = '#2B64F5'
+        }
+        if (array3[3]) {
+            inps[3].focus()
+            inps[3].value = array3[0]
+            inps[3].style.backgroundColor = '#2B64F5'
+        }
+    })
+})
+
+del3.addEventListener('click', () => {
+    const inps = document.querySelectorAll('.inpu')
+    array3.length -= 1
+    inps[3].value = ''
+    inps[3].style.backgroundColor = 'white'
+    if (!array3[2]) {
+        inps[2].value = ''
+        inps[2].style.backgroundColor = 'white'
+    }
+    if (!array3[1]) {
+        inps[1].focus()
+        inps[1].value = ''
+        inps[1].style.backgroundColor = 'white'
+    }
+    if (!array3[0]) {
+        inps[0].focus()
+        inps[0].value = ''
+        inps[0].style.backgroundColor = 'white'
+    }
+})
