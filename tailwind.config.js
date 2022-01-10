@@ -6,7 +6,7 @@ module.exports = {
                 blue: {
                     darker: '#11143A',
                     normal: '#2B64F5',
-                    lighter: '#507DF0'
+                    lighter: '#507DF0',
                 },
                 grey: {
                     normal: '#525967',
@@ -20,6 +20,9 @@ module.exports = {
             },
             maxWidth: {
                 mobile: '390px'
+            },
+            boxShadow: {
+                medium: '0px 5px 20px rgba(0, 0, 0, 0.1);'
             }
         },
     },

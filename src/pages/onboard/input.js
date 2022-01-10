@@ -28,3 +28,21 @@ function onSubmit(e) {
         .join('')
     console.log(code)
 }
+
+const textInputs = document.querySelectorAll('.text')
+textInputs.forEach(inp => {
+    inp.addEventListener('keyup', () => {
+        if ((textInputs[0].value != '') && (textInputs[1].value != '') && (textInputs[2].value != '') && (textInputs[3].value != '') && (textInputs[4].value != '')) {
+            const btn = document.getElementById('next3')
+            btn.disabled = false
+            btn.className = 'bg-gradient-to-r bottom-2 font-extrabold from-blue-darker mt-60 py-3 rounded-full sticky text-white to-blue-lighter w-full'
+        } else {
+            document.getElementById('next3').className = 'bg-gradient-to-r bottom-2 font-extrabold from-blue-darker mt-60 py-3 rounded-full sticky text-white to-blue-lighter w-full opacity-50'
+        }
+        if (inp.value != '') {
+            inp.className = 'border border-2 text border-blue-700 mt-4 px-6 py-4 rounded-2xl w-full outline-none'
+        } else {
+            inp.className = 'border border-2 text border-black mt-4 px-6 py-4 rounded-2xl w-full outline-none'
+        }
+    })
+})

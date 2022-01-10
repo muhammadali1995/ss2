@@ -33,3 +33,11 @@ input.checkbox:checked {
     background-color: #2B64F5;
     color: white;
 }
+
+.red {
+    border: 1px solid #EB5757!important;
+}
+
+.blue {
+    border: 1px solid #2B64F5!important;
+}
