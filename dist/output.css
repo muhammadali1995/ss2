@@ -1059,7 +1059,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .text-transparent {
-    color: transparent;
+    color: transparent !important;
 }
 
 .text-blue-normal {

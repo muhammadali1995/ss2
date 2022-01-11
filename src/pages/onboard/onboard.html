@@ -20,8 +20,8 @@
 <body>
 
     <!-- SPLASH -->
-    <div id="splash-page" class="max-w-mobile hidden mx-auto ss-page" style="background: #F2F3FC; max-height: 812px;">
-        <div class="align-center p-4 flex justify-center" style="height: 625px;">
+    <div id="splash-page" class="max-w-mobile mx-auto  ss-page" style="background: #F2F3FC;">
+        <div class="align-center p-4 flex justify-center h-screen">
             <div class="align-center flex flex-col justify-center">
                 <div style="background: #11143A;" class="p-5 rounded-xl">
                     <img src="./../../assets/Group 9.png" alt="">
@@ -29,24 +29,15 @@
                 <img src="./../../assets/logo.png" class="mt-4">
             </div>
         </div>
-        <div class="-mt-12 overflow-hidden">
-            <img src="./../../assets/Ellipse 194.png" alt="">
-            <img src="./../../assets/Ellipse 193.png" alt="" class="-mt-36">
-            <img src="./../../assets/Ellipse 195.png" alt="" class="-mt-16 ml-32">
+        <div class="absolute bottom-0 max-w-mobile overflow-hidden">
+            <img src="./../../assets/Ellipse 194.png" alt="" class="w-full">
+            <img src="./../../assets/Ellipse 193.png" alt="" class="-mt-36 w-full">
+            <img src="./../../assets/Ellipse 195.png" alt="" class="-mt-16 ml-32 w-auto">
         </div>
     </div>
 
     <!-- LOGIN -->
-    <div id="login-page" class="max-w-mobile mx-auto ss-page hidden" style="display: none;">
-        <div>
-            <div>
-                <div class="absolute flex">
-                    <img src="./../../assets/Rectangle 1028 (1).png" class="" style="min-height: 89vh;">
-                    <div class="absolute h-full opacity-40 w-full bg-black">
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div id="login-page" class="max-w-mobile mx-auto ss-page hidden">
         <div class="swiper swiper-initialized swiper-horizontal swiper-pointer-events" style="height: 530px;">
             <div class="swiper-wrapper">
                 <div class="swiper-slide justify-center items-center relative">
@@ -93,7 +84,7 @@
                         </span></span>
                 </p>
             </div>
-            <button class="mb-3 btn-cont1 font-semibold bg-gradient-to-r from-blue-darker to-blue-lighter mt-6 py-3 rounded-3xl text-base text-white w-full ">S’inscrire
+            <button class="mb-3 login-cont font-semibold bg-gradient-to-r from-blue-darker to-blue-lighter mt-6 py-3 rounded-3xl text-base text-white w-full ">S’inscrire
                 ou se connecter</button>
         </div>
     </div>
@@ -105,12 +96,12 @@
         <form class="content-area mt-8">
             <fieldset class='number-code'>
                 <div class="justify-between flex">
-                    <input name="code" class="w-10 text-center text-2xl py-3 border border-blue-normal code-input input rounded-xl" type="number" required="">
-                    <input name="code" class="w-10 text-center text-2xl py-3 border border-blue-normal code-input input rounded-xl" type="number" required="">
-                    <input name="code" class="w-10 text-center text-2xl py-3 border border-blue-normal code-input input rounded-xl" type="number" required="">
-                    <input name="code" class="w-10 text-center text-2xl py-3 border border-blue-normal code-input input rounded-xl" type="number" required="">
-                    <input name="code" class="w-10 text-center text-2xl py-3 border border-blue-normal code-input input rounded-xl" type="number" required="">
-                    <input name="code" maxlength="1" class="w-10 text-center text-2xl py-3 border border-blue-normal code-input input rounded-xl" required="">
+                    <input name="code" class="w-10 text-center text-2xl py-3 border border-blue-normal code-input input outline-none rounded-xl" type="number" required="">
+                    <input name="code" class="w-10 text-center text-2xl py-3 border border-blue-normal code-input input outline-none rounded-xl" type="number" required="">
+                    <input name="code" class="w-10 text-center text-2xl py-3 border border-blue-normal code-input input outline-none rounded-xl" type="number" required="">
+                    <input name="code" class="w-10 text-center text-2xl py-3 border border-blue-normal code-input input outline-none rounded-xl" type="number" required="">
+                    <input name="code" class="w-10 text-center text-2xl py-3 border border-blue-normal code-input input outline-none rounded-xl" type="number" required="">
+                    <input name="code" maxlength="1" class="w-10 text-center text-2xl py-3 border border-blue-normal code-input outline-none input rounded-xl" required="">
                 </div>
                 <p id="error"></p>
             </fieldset>
@@ -119,13 +110,13 @@
             <a href="#">Changer le numéro</a>
             <a href="#">Renvoyer code</a>
         </div>
-        <button aria-disabled="true" id="btn" class="btn2 bg-gradient-to-r bottom-2 fixed font-extrabold from-blue-darker max-w-mobile mt-40 py-3 rounded-full ss-cont text-white to-blue-lighter w-96" style="max-width: 358px;">Continue</button>
+        <button aria-disabled="true" id="btn" class="verify-cont bg-gradient-to-r bottom-2 fixed font-extrabold from-blue-darker max-w-mobile mt-40 py-3 rounded-full ss-cont text-white to-blue-lighter w-96" style="max-width: 358px;">Continue</button>
     </div>
 
     <!-- PIN -->
     <div id="pin-page" class="max-w-mobile mx-auto ss-page p-4 hidden">
         <div class="align-center flex">
-            <img id="prev" class="cursor-pointer" src="../.././assets/Mask.png">
+            <img class="pin-prev cursor-pointer" src="../.././assets/Mask.png">
         </div>
         <form id="form" class="content-area mt-12">
             <fieldset class='number-code'>
@@ -152,12 +143,12 @@
             <button style="background-color: #F2F3FC" class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">0</button>
             <button class="px-8 py-3" id="del"><img src="./../../assets/del.png"></button>
         </div>
-        <p aria-disabled="true" class="cursor-pointer font-bold mt-10 text-blue-normal text-center" id="next">Mot de passe oublié ?</p>
+        <p aria-disabled="true" class="cursor-pointer font-bold mt-10 text-blue-normal text-center pin-cont">Mot de passe oublié ?</p>
     </div>
 
     <!-- STOCK -->
     <div id="stock-page" class="max-w-mobile mx-auto p-4 ss-page hidden">
-        <img id="prev2" class="cursor-pointer" src="./../../assets/Mask.png">
+        <img class=" stock-prev cursor-pointer" src="./../../assets/Mask.png">
         <h3 class="font-semibold mt-2 text-2xl">Choisissez votre stock gratuit</h3>
         <p class="mt-1 text-gray-600 text-sm">Choisissez votre stock préféré parmis la liste suivante. Nous t’offirons entre 1€ et 300€ de celui-ci. Vous obtiendrez votre stock gratuit lorsque vous effectuerez votre premier dépôt.
         </p>
@@ -221,7 +212,7 @@
                         </div>
                         <h2 class="font-semibold mt-32 text-2xl text-center">Très bon choix !</h2>
                         <p class="text-center text-gray-600 text-sm">Configurons votre compte pour obtenir vos unités gratuites à Solana - cela ne prendra que quelques minutes.</p>
-                        <button id="next2" data-modal-toggle="default-modal" class="font-extrabold mt-8 py-3 rounded-full text-white w-full" style="background: linear-gradient(91.78deg, #11143A 0%, #2B64F5 78.12%, #507DF0 100%);">
+                        <button data-modal-toggle="default-modal" class="stock-cont font-extrabold mt-8 py-3 rounded-full text-white w-full" style="background: linear-gradient(91.78deg, #11143A 0%, #2B64F5 78.12%, #507DF0 100%);">
                             Suivant
                         </button>
                         <p class="mt-4 text-center text-gray-600 text-sm">Vous obtiendrez votre stock gratuit lorsque vous effectuerez votre premier dépôt.</p>
@@ -234,7 +225,7 @@
     <!-- CREATE ACCOUNT -->
     <div id="create" class="max-w-mobile mx-auto hidden  ss-page p-4">
         <div class="align-center flex">
-            <img id="prev3" src="./../../assets/Mask.png">
+            <img class="cursor-pointer account-prev" src="./../../assets/Mask.png">
             <div class="flex justify-around items-center w-full">
                 <div class="bg-gray-300 card h-2 rounded-2xl w-20">
                     <div class="rounded-2xl w-1/2" style="background: #2B64F5;height: 8px;"></div>
@@ -246,18 +237,18 @@
         <h3 class="font-semibold mt-7 text-2xl">Créer un compte</h3>
         <p class="mt-2 text-gray-600 text-sm">Complétez les informations ci-dessous pour créer votre compte</p>
         <h4 class="font-semibold mt-8">Informations personnelles</h4>
-        <input type="text" placeholder="Prénom" class="outline-none border text border-black mt-4 px-6 py-4 rounded-2xl w-full">
-        <input type="text" placeholder="Nom de Famille" class="outline-none border text border-black mt-4 px-6 py-4 rounded-2xl w-full">
-        <input type="text" placeholder="Date de naissance" class="outline-none border text border-black mt-4 px-6 py-4 rounded-2xl w-full">
-        <input type="text" placeholder="Numéro de Passeport" class="outline-none border text border-black mt-4 px-6 py-4 rounded-2xl w-full">
-        <input type="text" placeholder="Email" class="outline-none border text border-black mt-4 px-6 py-4 rounded-2xl w-full">
-        <button id="next3" disabled="true" class="bg-gradient-to-r bottom-2 font-extrabold from-blue-darker mt-12 next3 opacity-50 py-3 rounded-full text-white to-blue-lighter w-full">Suivant</button>
+        <input type="text" placeholder="Prénom" class="outline-none border textInput border-black mt-4 px-6 py-4 rounded-2xl w-full">
+        <input type="text" placeholder="Nom de Famille" class="outline-none border textInput border-black mt-4 px-6 py-4 rounded-2xl w-full">
+        <input type="text" placeholder="Date de naissance" class="outline-none border textInput border-black mt-4 px-6 py-4 rounded-2xl w-full">
+        <input type="text" placeholder="Numéro de Passeport" class="outline-none border textInput border-black mt-4 px-6 py-4 rounded-2xl w-full">
+        <input type="text" placeholder="Email" class="outline-none border textInput border-black mt-4 px-6 py-4 rounded-2xl w-full">
+        <button disabled class="account-cont bg-gradient-to-r bottom-2 font-extrabold opacity-50 from-blue-darker mt-12 py-3 rounded-full text-white to-blue-lighter w-full">Suivant</button>
     </div>
 
     <!-- CREATE-PIN -->
     <div id="create-pin" class="max-w-mobile mx-auto ss-page p-4 hidden">
         <div class="align-center flex">
-            <img id="prev4" class="cursor-pointer" src="../.././assets/Mask.png">
+            <img class="crpin-prev cursor-pointer" src="../.././assets/Mask.png">
             <div class="flex justify-around items-center w-full">
                 <div class="bg-gray-300 card h-2 rounded-2xl w-20">
                     <div class="rounded-2xl w-full" style="background: #2B64F5;height: 8px;"></div>
@@ -290,10 +281,9 @@
             <button style="background-color: #F2F3FC" class="font-medium px-8 py-3 rounded-3xl text-2xl btn-nums">8</button>
             <button style="background-color: #F2F3FC" class="font-medium px-8 py-3 rounded-3xl text-2xl btn-nums">9</button>
             <button class="px-8 py-3"></button>
-            <button style="background-color: #F2F3FC" class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">0</button>
+            <button style="background-color: #F2F3FC" class="font-medium px-8 py-3 rounded-3xl text-2xl btn-nums">0</button>
             <button class="px-8 py-3" id="del2"><img src="./../../assets/del.png"></button>
         </div>
-        <button class="w-full gradient py-3 rounded-full  mt-4 font-extrabold text-white">Créer code</button>
     </div>
 
     <!-- ADRESS -->
@@ -321,11 +311,11 @@
             <h3 class="py-1">13 rue de Normandie, Courbevoie</h3>
         </div>
         <p class="mt-4 text-blue-700 text-right">Taper manuellement</p>
-        <button id="next4" disabled="true" class="bg-gradient-to-r bottom-2 fixed font-extrabold from-blue-darker mt-12 next3 opacity-50 py-3 rounded-full text-white to-blue-lighter w-96" style="max-width: 91vw;">Suivant</button>
+        <button disabled="true" class="adress-cont bg-gradient-to-r bottom-2 fixed font-extrabold from-blue-darker mt-12 next3 opacity-50 py-3 rounded-full text-white to-blue-lighter w-96" style="max-width: 91vw;">Suivant</button>
     </div>
 
     <!-- TYPE -->
-    <div id="adress" class="max-w-mobile mx-auto p-4">
+    <div id="adress-type" class="hidden ss-page max-w-mobile mx-auto p-4">
         <div class="align-center flex">
             <img src="./../../assets/Mask.png">
             <div class="flex justify-around items-center w-full">
@@ -341,38 +331,150 @@
         <h3 class="font-semibold mt-4 text-2xl">Entrez votre adresse</h3>
         <p class="mt-2 text-gray-500">Conformément au règlement financier, veuillez indiquer l'adresse postale de votre résidence principale. N'utilisez pas de boîte postale ou d'adresse professionnelle.</p>
         <h4 class="font-semibold mt-8">Informations de l’adresse</h4>
-        <input type="text" placeholder="Rue" class="outline-none search border border-gray-400 mt-4 px-4 py-3 rounded-2xl w-full">
-        <input type="text" placeholder="Code postale" class="outline-none search border border-gray-400 mt-4 px-4 py-3 rounded-2xl w-full">
-        <input type="text" placeholder="Ville" class="outline-none search border border-gray-400 mt-4 px-4 py-3 rounded-2xl w-full">
-        <input type="text" placeholder="Entrer une adresse" class="outline-none search border border-gray-400 mt-4 px-4 py-3 rounded-2xl w-full">
-        <button id="next5" disabled="true" class="bg-gradient-to-r font-extrabold from-blue-darker mt-12 mx-auto next3 opacity-50 py-3 rounded-full text-white to-blue-lighter w-full" style="max-width: 350px;">Suivant</button>
+        <input type="text" placeholder="Rue" class="outline-none search2 border border-gray-400 mt-4 px-4 py-3 rounded-2xl w-full">
+        <input type="text" placeholder="Code postale" class="outline-none search2 border border-gray-400 mt-4 px-4 py-3 rounded-2xl w-full">
+        <input type="text" placeholder="Ville" class="outline-none search2 border border-gray-400 mt-4 px-4 py-3 rounded-2xl w-full">
+        <button id="next5" disabled="true" class="bg-gradient-to-r font-extrabold from-blue-darker mt-16 mx-auto next3 opacity-50 py-3 rounded-full text-white to-blue-lighter w-full" style="max-width: 350px;">Suivant</button>
     </div>
 
-
-    <!-- SIGN  UP -->
-    <!-- <div id="sign-up" class="max-w-mobile p-4 mx-auto ss-page hidden">
-        <h2 class="font-semibold text-2xl">Quel est votre numéro ?</h2>
-        <p class="text-gray-500 text-sm">Entrez votre numéro de téléphone</p>
-        <div class="items-center border-grey-normal card flex mt-8 p-5 rounded-3xl">
-            <img src="./../../assets/flag.png">
-            <input class="ml-6" style="outline: none;" type="number" placeholder="+33 6 78 93 24 10">
+    <!-- PICK INTEREST -->
+    <div id="pick" class="max-w-mobile mx-auto p-4 hidden ss-page">
+        <div class="align-center flex">
+            <img src="./../../assets/Mask.png">
         </div>
-        <div class="fixed bottom-2">
-            <div class="items-center flex mt-44">
-                <input type="checkbox" class="checkbox form-check-input">
-                <p class="font-normal ml-7 text-sm">En appuyant sur continuer, vous acceptez les <span class="font-medium text-indigo-900 cursor-pointer ">Conditions Générales</span> de The Social Stock et
-                    <span class="font-medium text-indigo-900 cursor-pointer ">Politique de confidentialité.<span>
-                        </span>
-                    </span>
-                </p>
+        <h3 class="font-semibold mt-4 text-2xl">Super ! Maintenant sélectionnez le meilleur contenu pour vous</h3>
+        <p class="font-normal mt-2 text-gray-400">Quels sont vos centres d'intérêt ?</p>
+        <div class="gap-x-16 gap-y-10 grid grid-cols-3 mt-8">
+            <div class="flex flex-col">
+                <div class="bg-blue-600 flex h-16 items-center justify-center rounded-full w-16"><img src="./../../assets/crypto.png" alt=""></div>
+                <p class="font-bold mt-2 text-blue-normal text-center text-sm w-16">Cryptos</p>
             </div>
-            <button class="bg-gradient-to-r ss-cont font-extrabold from-blue-darker mt-8 py-3 rounded-full text-white to-blue-lighter w-full" style="max-width: 348px;">Continuer</button>
+            <div class="flex flex-col">
+                <div class="border-blue-normal border-2 flex h-16 items-center justify-center rounded-full w-16"><img src="./../../assets/Media.png" alt=""></div>
+                <p class="font-bold mt-2 text-blue-normal text-center text-sm w-16">Media</p>
+            </div>
+            <div class="flex flex-col">
+                <div class="bg-blue-600 flex h-16 items-center justify-center rounded-full w-16"><img src="./../../assets/Sports.png" alt=""></div>
+                <p class="font-bold mt-2 text-blue-normal text-center text-sm w-16">Sports</p>
+            </div>
+            <div class="flex flex-col">
+                <div class="border-blue-normal border-2 flex h-16 items-center justify-center rounded-full w-16"><img src="./../../assets/ecommerce.png" alt=""></div>
+                <p class="font-bold mt-2 text-blue-normal text-center text-sm w-16">Ecommerce</p>
+            </div>
+            <div class="flex flex-col">
+                <div class="bg-blue-600 flex h-16 items-center justify-center rounded-full w-16"><img src="./../../assets/music.png" alt=""></div>
+                <p class="font-bold mt-2 text-blue-normal text-center text-sm w-16">Musique</p>
+            </div>
+            <div class="flex flex-col">
+                <div class="border-blue-normal border-2 flex h-16 items-center justify-center rounded-full w-16"><img src="./../../assets/energie.png" alt=""></div>
+                <p class="font-bold mt-2 text-blue-normal text-center text-sm w-16">Energie</p>
+            </div>
+            <div class="flex flex-col">
+                <div class="bg-blue-600 flex h-16 items-center justify-center rounded-full w-16"><img src="./../../assets/Tech.png" alt=""></div>
+                <p class="font-bold mt-2 text-blue-normal text-center text-sm w-16">Tech</p>
+            </div>
+            <div class="flex flex-col">
+                <div class="border-blue-normal border-2 flex h-16 items-center justify-center rounded-full w-16"><img src="./../../assets/pill.png" alt=""></div>
+                <p class="font-bold mt-2 text-blue-normal text-center text-sm w-16">Medecine</p>
+            </div>
+            <div class="flex flex-col">
+                <div class="border-blue-normal border-2 flex h-16 items-center justify-center rounded-full w-16"><img src="./../../assets/Bank.png" alt=""></div>
+                <p class="font-bold mt-2 text-blue-normal text-center text-sm w-16">Medecine</p>
+            </div>
         </div>
-    </div> -->
+        <button class="bg-gradient-to-r font-semibold from-blue-darker mt-10 py-3 rounded-full text-white to-blue-lighter w-full">Continuer</button>
+    </div>
 
+    <!-- TERMS -->
+    <div id="term" class="ss-page hidden max-w-mobile mx-auto p-4">
+        <div class="align-center flex">
+            <img src="./../../assets/Mask.png">
+        </div>
+        <h3 class="font-semibold mt-4 text-2xl">Acceptez nos termes et conditions générales</h3>
+        <form class="mt-8">
+            <div class="flex">
+                <div> <input class="checkbox" type="checkbox"></div>
+                <label class="ml-6 text-sm">Cocher toutes les cases</label>
+            </div>
+            <div class="flex mt-7">
+                <div><input class="checkbox" type="checkbox"></div>
+                <label class="ml-6 text-sm">Je ne suis pas affilié ou employé 
+                    par une bourse, une société de valeurs mobilière, un organisme de règlementation, une société membre d’une bourse, la FINRA 
+                    ou un courtier en valeur mobilière municipal.</label>
+            </div>
+            <div class="flex mt-7">
+                <div> <input type="checkbox" class="checkbox"></div>
+                <label class="ml-6 text-sm">Je ne suis pas un dirigeant ou un actionnaire 
+                    à >10% d’une société coté en bourse soumise à la Sécurité Exchange Act 1934 
+                    des États-Unis.</label>
+            </div>
+            <div class="flex mt-7">
+                <div> <input class="checkbox" type="checkbox"></div>
+                <label class="ml-6 text-sm">Je ne suis pas actuellement ou précédemment une personne politiquement exposée 
+                    ou un agent public.</label>
+            </div>
+            <div class="flex mt-7">
+                <div> <input class="checkbox" type="checkbox"></div>
+                <label class="ml-6 text-sm">Je certifie que je ne suis pas un citoyen américain, un étranger résident des État-Unis ou une autre personne américaine à des fins fiscales américaines et je soumets 
+                    le formulaire <span class="text-blue-700 cursor-pointer">W8-BEN</span>  applicable et 
+                    ses <span class="text-blue-700 cursor-pointer">déclarations et certifications pertinentes.</span> </label>
+            </div>
+            <div class="flex mt-7">
+                <div> <input class="checkbox" type="checkbox"></div>
+                <label class="ml-6 text-sm">J’ai lu, compris et accepte d’être lié par tout les termes, divulgations et avis de non-responsabilité qui me concernent, tels 
+                    qu’ils se trouvent sur la page <span class="text-blue-700 cursor-pointer">juridique</span> du site web de TSS LDT.</label>
+            </div>
+            <div class="flex mt-7">
+                <div> <input class="checkbox" type="checkbox"></div>
+                <label class="ml-6 text-sm">Je suis le propriétaire légal et bénéficiaire 
+                    de ce compte. Je confirme que TSS ne m’a pas sollicité directement pour l’ouverture 
+                    d’un compte de courtage.</label>
+            </div>
+            <div class="flex mt-7">
+                <div> <input class="checkbox" type="checkbox"></div>
+                <label class="ml-6 text-sm">Je certifie que j’ai des niveaux de revenu disponible ou d’avoirs liquides suffisants 
+                    pour être considéré comme quelqu’un 
+                    d’un “groupe à revenu plus élevé”.</label>
+            </div>
+            <div class="flex mt-7">
+                <div> <input class="checkbox" type="checkbox"></div>
+                <label class="ml-6 text-sm">Je confirme que les informations fournies, 
+                    y compris mon NIF, sont vraies et exactes 
+                    et j’accepte d’informer TSS de tout changement dans les informations fournies.</label>
+            </div>
+
+            <button class="font-extrabold mt-8 py-3 rounded-full text-white w-full" type="button" data-modal-toggle="small-modal" style="background: linear-gradient(91.78deg, #11143A 0%, #2B64F5 78.12%, #507DF0 100%);">
+                Continuer            </button>
+
+            <div id="small-modal" class="fixed flex h-modal items-center hidden justify-center left-0 md:h-full md:inset-0 overflow-x-hidden overflow-y-auto right-0 top-80 z-50" aria-modal="true" role="dialog">
+                <div class="h-full max-w-mobile md:h-auto px-4 relative" style="max-width: 370px;">
+                    <div class="-mb-20 max-w-mobile mx-auto relative rounded-lg shadow w-full ">
+                        <div class="">
+                            <img src="./../../assets/bg.png ">
+                        </div>
+                        <div class="absolute px-4 top-12 w-full">
+                            <button type="button" class="absolute right-2 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="small-modal">
+                                <svg class=" w-5 h-5 " fill="currentColor " viewBox="0 0 20 20 " xmlns="http://www.w3.org/2000/svg "><path fill-rule="evenodd " d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1
+                                1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z " clip-rule="evenodd "></path></svg>  
+                            </button>
+                            <div class="flex justify-center ">
+                                <img src="./../../assets/social stocks.png " alt=" " class=" ">
+                            </div>
+                            <h2 class="font-semibold mt-32 text-2xl text-center ">Très bon choix !</h2>
+                            <p class="text-center text-gray-600 text-sm ">Configurons votre compte pour obtenir vos unités gratuites à Solana - cela ne prendra que quelques minutes.</p>
+                            <button id="next6" data-modal-toggle="small-modal" class="font-extrabold mt-8 py-3 rounded-full text-white w-full " style="background: linear-gradient(91.78deg, #11143A 0%, #2B64F5 78.12%, #507DF0 100%); ">
+                                Suivant
+                            </button>
+                            <p class="mt-4 text-center text-gray-600 text-sm ">Vous obtiendrez votre stock gratuit lorsque vous effectuerez votre premier dépôt.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
 
 </body>
-<script src="input.js"></script>
-<script src="login.js"></script>
+<script src="input.js "></script>
+<script src="login.js "></script>
 
 </html>

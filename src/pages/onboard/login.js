@@ -13,25 +13,23 @@ const swiper = new Swiper('.swiper', {
     scrollbar: false
 })
 
-const btn = document.getElementById('btn')
-const latest = document.getElementsByClassName('input')
+const btn = document.querySelector('#btn')
+const verifyInputs = Array.from(document.getElementsByClassName('input'))
+const errorText = document.getElementById('error')
 btn.addEventListener('click', () => {
-    if ((latest[0].value != '') && (latest[1].value != '') && (latest[2].value != '') && (latest[3].value != '') && (latest[4].value != '') && (latest[5].value != '')) {
+    if (hasAllValue(verifyInputs)) {
         btn.ariaDisabled = false
-        document.querySelectorAll('.input').forEach(input => {
-            const p = document.getElementById('error')
-            p.textContent = ''
-            document.querySelectorAll('.input').forEach(input => {
-                input.classList.remove('red')
-                if (input.value != '') {
-                    input.style.backgroundColor = '#2B64F5'
-                }
-            })
+        errorText.textContent = ''
+        verifyInputs.forEach(input => {
+            input.classList.remove('red')
+            if (input.value != '') {
+                input.style.backgroundColor = '#2B64F5'
+            }
         })
     } else {
-        const p = document.getElementById('error')
-        p.textContent = 'Ce code n’est pas valide'
-        p.className = 'mt-4 text-red-500'
+        btn.ariaDisabled = true
+        errorText.textContent = 'Ce code n’est pas valide'
+        errorText.className = 'mt-4 text-red-500'
         document.querySelectorAll('.input').forEach(input => {
             input.classList.add('red')
             if (input.value != '') {
@@ -40,6 +38,11 @@ btn.addEventListener('click', () => {
         })
     }
 })
+
+
+function hasAllValue(arr) {
+    return arr.every(input => input.value != '')
+}
 
 const btns = document.querySelectorAll('.btn-num')
 const inputElementss = document.querySelectorAll('.i')
@@ -72,9 +75,8 @@ btns.forEach(btn => {
 })
 
 del.addEventListener('click', () => {
-    const inps = document.querySelectorAll('.i')
+    const inps = document.querySelectorAll('.password')
     array.length -= 1
-    console.log(array)
     inps[3].value = ''
     inps[3].style.backgroundColor = 'white'
     if (!array[2]) {
@@ -94,54 +96,45 @@ del.addEventListener('click', () => {
 })
 
 
+// CREATE PIN 
 
-const btns2 = document.querySelectorAll('.btn-nums')
-const inputElementss2 = document.querySelectorAll('.in')
-const del2 = document.getElementById('del2')
-const array2 = [];
-btns2.forEach(btn => {
+const numberBtns = document.querySelectorAll('.btn-nums')
+const clearBtn = document.getElementById('del2')
+const codeValues = [];
+const codeInputs = document.querySelectorAll('.in')
+let currentInputIndex = 0;
+numberBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
-        array2.push(btn.textContent)
-        const inps = document.querySelectorAll('.in')
-        inps[0].focus()
-        inps[0].value = array[0]
-        inps[0].style.backgroundColor = '#2B64F5'
-        if (array2[1]) {
-            inps[1].focus()
-            inps[1].value = array[0]
-            inps[1].style.backgroundColor = '#2B64F5'
-        }
-        if (array2[2]) {
-            inps[2].focus()
-            inps[2].value = array[0]
-            inps[2].style.backgroundColor = '#2B64F5'
-        }
-        if (array2[3]) {
-            inps[3].focus()
-            inps[3].value = array[0]
-            inps[3].style.backgroundColor = '#2B64F5'
-        }
+
+        if (currentInputIndex > 3) return;
+
+        const code = btn.textContent;
+        codeValues.push(code)
+        codeInputs[currentInputIndex].focus()
+        codeInputs[currentInputIndex].value = code;
+        codeInputs[currentInputIndex].style.backgroundColor = '#2B64F5'
+
+        currentInputIndex++;
+        console.log(codeValues)
     })
 })
 
-del2.addEventListener('click', () => {
-    const inps = document.querySelectorAll('.in')
-    array2.length -= 1
-    console.log(array2)
-    inps[3].value = ''
-    inps[3].style.backgroundColor = 'white'
-    if (!array2[2]) {
-        inps[2].value = ''
-        inps[2].style.backgroundColor = 'white'
+clearBtn.addEventListener('click', () => {
+
+    if (currentInputIndex > 3) currentInputIndex = 3;
+    codeInputs[currentInputIndex].value = ''
+    codeInputs[currentInputIndex].style.backgroundColor = 'white'
+
+    if (currentInputIndex > 0) {
+        currentInputIndex--
     }
-    if (!array2[1]) {
-        inps[1].focus()
-        inps[1].value = ''
-        inps[1].style.backgroundColor = 'white'
+
+    if (codeValues.length > 0) {
+        codeValues.length--
     }
-    if (!array2[0]) {
-        inps[0].focus()
-        inps[0].value = ''
-        inps[0].style.backgroundColor = 'white'
-    }
+
+
+    console.log(codeValues)
 })
+
+// CREATE PIN
