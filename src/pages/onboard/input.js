@@ -1,5 +1,7 @@
 const inputElements = [...document.querySelectorAll('input.code-input')]
 
+const verifyCode = []
+
 inputElements.forEach((ele, index) => {
     ele.addEventListener('keydown', (e) => {
         e.target.style.backgroundColor = '#2B64F5'
@@ -12,12 +14,14 @@ inputElements.forEach((ele, index) => {
     ele.addEventListener('input', (e) => {
         const [first, ...rest] = e.target.value
         if (index !== inputElements.length - 1 && first !== undefined) {
+            verifyCode.push(ele.value)
             inputElements[index + 1].focus()
             inputElements[index + 1].value = rest.join('')
             inputElements[index + 1].dispatchEvent(new Event('input'))
         }
     })
 })
+console.log(verifyCode)
 
 
 function onSubmit(e) {
@@ -29,23 +33,37 @@ function onSubmit(e) {
 }
 
 const textInputs = Array.from(document.querySelectorAll('.textInput'))
+const btnCont = document.querySelector('.account-cont')
+const personalInf = []
 textInputs.forEach(inp => {
     inp.addEventListener('keyup', () => {
         if (hasAllValue(textInputs)) {
-            const btn = document.querySelector('.account-cont')
-            btn.disabled = false
-            btn.className = 'bg-gradient-to-r bottom-2 font-extrabold from-blue-darker mt-12 py-3 rounded-full text-white to-blue-lighter w-full'
+            btnCont.disabled = false;
+            btnCont.className = 'bg-gradient-to-r bottom-2 font-extrabold from-blue-darker mt-12 py-3 rounded-full text-white to-blue-lighter w-full'
         } else {
             if (inp.value != '') {
                 inp.className = 'border border-2 text border-blue-700 mt-4 px-6 py-4 rounded-2xl w-full outline-none'
-                document.getElementById('next3').className = 'bg-gradient-to-r bottom-2 font-extrabold from-blue-darker opacity-50 mt-12 py-3 rounded-full text-white to-blue-lighter w-full'
+                btnCont.className = 'bg-gradient-to-r bottom-2 font-extrabold from-blue-darker opacity-50 mt-12 py-3 rounded-full text-white to-blue-lighter w-full'
             } else {
                 inp.className = 'border border-2 text border-black mt-4 px-6 py-4 rounded-2xl w-full outline-none'
-                document.getElementById('next3').className = 'bg-gradient-to-r bottom-2 font-extrabold from-blue-darker opacity-50 mt-12 py-3 rounded-full text-white to-blue-lighter w-full'
+                btnCont.className = 'bg-gradient-to-r bottom-2 font-extrabold from-blue-darker opacity-50 mt-12 py-3 rounded-full text-white to-blue-lighter w-full'
             }
-            document.getElementById('next3').className = 'bg-gradient-to-r bottom-2 font-extrabold from-blue-darker opacity-50 mt-12 py-3 rounded-full text-white to-blue-lighter w-full'
+            btnCont.className = 'bg-gradient-to-r bottom-2 font-extrabold from-blue-darker opacity-50 mt-12 py-3 rounded-full text-white to-blue-lighter w-full'
         }
     })
+})
+btnCont.addEventListener('click', () => {
+    textInputs.forEach(input => {
+        personalInf.push(input.value)
+    })
+})
+
+document.querySelector('.textInputs').addEventListener('keyup', (e) => {
+    if (e.target.value != '') {
+        e.target.className = 'border border-2 text border-blue-700 mt-4 px-6 py-4 rounded-2xl w-full outline-none'
+    } else {
+        e.target.className = 'border border-2 text border-blue-700 mt-4 px-6 py-4 rounded-2xl w-full outline-none opacity-50'
+    }
 })
 
 
@@ -77,3 +95,69 @@ next.addEventListener('click', () => {
         })
     }
 })
+
+
+const searchInput = document.querySelector('.search')
+const next5 = document.getElementById('next')
+const dropdown = document.getElementById('dropdown')
+let adress = ''
+searchInput.addEventListener('keyup', () => {
+    if (searchInput.value != '') {
+        next5.disabled = false
+        searchInput.className = 'search border border-blue-700 mt-4 px-4 py-3 rounded-t-2xl outline-none w-full'
+        dropdown.classList.remove('hidden')
+        next5.className = 'bg-gradient-to-r bottom-2 fixed font-extrabold from-blue-darker mt-12 next3  py-3 rounded-full text-white to-blue-lighter w-96'
+    } else {
+        searchInput.className = 'search border border-gray-400 mt-4 px-4 py-3 rounded-2xl outline-none w-full'
+        dropdown.classList.add('hidden')
+        next5.disabled = true
+        next5.className = 'bg-gradient-to-r bottom-2 fixed font-extrabold from-blue-darker mt-12 next3 opacity-50 py-3 rounded-full text-white to-blue-lighter w-96'
+    }
+})
+next5.addEventListener('click', () => {
+    adress = searchInput.value
+})
+Array.from(document.querySelectorAll('.selectOption')).forEach(element => {
+    element.addEventListener('click', () => {
+        document.querySelector('#selectInput').value = element.textContent
+    })
+})
+
+const searchInput2 = document.querySelectorAll('.search2')
+const next6 = document.getElementById('next2')
+const dropdown2 = document.getElementById('dropdown2')
+const fullAdress = []
+
+searchInput2.forEach(inp => {
+    inp.addEventListener('keyup', () => {
+        if (inp.value != '') {
+            inp.classList.add('blue')
+        }
+        if (inp.value == '') {
+            inp.classList.remove('blue')
+        }
+        if ((searchInput2[0].value != '') && (searchInput2[1].value != '') && (searchInput2[2].value != '')) {
+            next6.disabled = false
+            next6.className = 'bg-gradient-to-r font-extrabold from-blue-darker mt-16 mx-auto  py-3 rounded-full text-white to-blue-lighter w-full'
+        }
+        if ((searchInput2[0].value == '') || (searchInput2[1].value == '') || (searchInput2[2].value == '')) {
+            next6.disabled = true
+            next6.className = 'bg-gradient-to-r font-extrabold from-blue-darker mt-16 mx-auto next3 opacity-50 py-3 rounded-full text-white to-blue-lighter w-full'
+        }
+    })
+})
+
+next6.addEventListener('click', () => {
+    if (fullAdress.length >= 1) {
+        fullAdress.map(searchInput2.forEach(input => {
+            return input.value
+        }))
+    } else {
+        searchInput2.forEach(input => {
+            fullAdress.push(input.value)
+        })
+    }
+})
+
+const phoneNumber = document.getElementById('phoneNumber')
+console.log(phoneNumber.value)
