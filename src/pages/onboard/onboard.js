@@ -6,11 +6,13 @@ const PAGES = {
     STOCK_PAGE: 'stock-page',
     CREATE_ACCOUNT: 'create',
     CREATE_PIN: 'create-pin',
-    TYPE_PAGE: 'type-page',
-    ADRESS: 'adress'
+    TYPE_PAGE: 'adress-type',
+    ADRESS: 'adress',
+    PICK_PAGE: 'pick',
+    TERM_PAGE: 'term'
 }
 
-const { LOGIN_PAGE, SPLASH_PAGE, VERIFY_PAGE, PIN_PAGE, STOCK_PAGE, CREATE_ACCOUNT, CREATE_PIN, TYPE_PAGE, ADRESS } = PAGES;
+const { LOGIN_PAGE, SPLASH_PAGE, VERIFY_PAGE, PIN_PAGE, STOCK_PAGE, CREATE_ACCOUNT, CREATE_PIN, TYPE_PAGE, ADRESS, PICK_PAGE, TERM_PAGE } = PAGES;
 
 var currentPage = SPLASH_PAGE;
 
@@ -25,11 +27,17 @@ window.onload = () => {
     const pinCont = document.querySelector('.pin-cont')
     const stockCont = document.querySelector('.stock-cont')
     const accountCont = document.querySelector('.account-cont')
-    const adressCont = document.querySelector('.adress-cont')
+    const adressCont = document.querySelector('#next')
+    const typeCont = document.querySelector('.type-con')
+    const pickCont = document.querySelector('.pick-con')
     const pinPrev = document.querySelector('.pin-prev')
     const stockPrev = document.querySelector('.stock-prev')
     const accountPrev = document.querySelector('.account-prev')
     const createPinPrev = document.querySelector('.crpin-prev')
+    const adressPrev = document.querySelector('.adress-pre')
+    const typePrev = document.querySelector('.type-prev')
+    const pickPrev = document.querySelector('.pick-prev')
+    const termPrev = document.querySelector('.term-prev')
     loginCont.addEventListener('click', () => {
         changePage(VERIFY_PAGE)
     })
@@ -53,9 +61,15 @@ window.onload = () => {
         }
     })
     adressCont.addEventListener('click', () => {
-        if (adressCont.disabled == 'false') {
+        if (adressCont.disabled == false) {
             changePage(TYPE_PAGE)
         }
+    })
+    typeCont.addEventListener('click', () => {
+        changePage(PICK_PAGE)
+    })
+    pickCont.addEventListener('click', () => {
+        changePage(TERM_PAGE)
     })
     pinPrev.addEventListener('click', () => {
         changePage(VERIFY_PAGE)
@@ -69,6 +83,18 @@ window.onload = () => {
     })
     accountPrev.addEventListener('click', () => {
         changePage(STOCK_PAGE)
+    })
+    adressPrev.addEventListener('click', () => {
+        changePage(CREATE_PIN)
+    })
+    typePrev.addEventListener('click', () => {
+        changePage(ADRESS)
+    })
+    pickPrev.addEventListener('click', () => {
+        changePage(TYPE_PAGE)
+    })
+    termPrev.addEventListener('click', () => {
+        changePage(PICK_PAGE)
     })
 }
 

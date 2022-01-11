@@ -39,36 +39,40 @@ btn.addEventListener('click', () => {
     }
 })
 
-
 function hasAllValue(arr) {
     return arr.every(input => input.value != '')
 }
 
 const btns = document.querySelectorAll('.btn-num')
-const inputElementss = document.querySelectorAll('.i')
 const del = document.getElementById('del')
-const array = [];
+const pinCode = [];
 btns.forEach(btn => {
     btn.addEventListener('click', () => {
-        array.push(btn.textContent)
+        if (document.getElementById('last').value != '') {
+            setTimeout(() => {
+                document.getElementById('stock-page').classList.remove('hidden')
+                document.getElementById('pin-page').classList.add('hidden')
+            }, 1000)
+        }
+        pinCode.push(btn.textContent)
         const inps = document.querySelectorAll('.password')
         inps[0].focus()
-        inps[0].value = array[0]
+        inps[0].value = pinCode[0]
         inps[0].style.backgroundColor = '#2B64F5'
-        if (array[1]) {
+        if (pinCode[1]) {
             inps[1].focus()
-            inps[1].value = array[1]
+            inps[1].value = pinCode[1]
             inps[1].style.backgroundColor = '#2B64F5'
         }
-        if (array[2]) {
+        if (pinCode[2]) {
             inps[2].focus()
-            inps[2].value = array[2]
+            inps[2].value = pinCode[2]
             inps[2].style.color = '#2B64F5 !important'
             inps[2].style.backgroundColor = '#2B64F5'
         }
-        if (array[3]) {
+        if (pinCode[3]) {
             inps[3].focus()
-            inps[3].value = array[3]
+            inps[3].value = pinCode[3]
             inps[3].style.backgroundColor = '#2B64F5'
         }
     })
@@ -76,19 +80,21 @@ btns.forEach(btn => {
 
 del.addEventListener('click', () => {
     const inps = document.querySelectorAll('.password')
-    array.length -= 1
+    if (pinCode.length > 0) {
+        pinCode.length -= 1
+    }
     inps[3].value = ''
     inps[3].style.backgroundColor = 'white'
-    if (!array[2]) {
+    if (!pinCode[2]) {
         inps[2].value = ''
         inps[2].style.backgroundColor = 'white'
     }
-    if (!array[1]) {
+    if (!pinCode[1]) {
         inps[1].focus()
         inps[1].value = ''
         inps[1].style.backgroundColor = 'white'
     }
-    if (!array[0]) {
+    if (!pinCode[0]) {
         inps[0].focus()
         inps[0].value = ''
         inps[0].style.backgroundColor = 'white'
@@ -101,11 +107,11 @@ del.addEventListener('click', () => {
 const numberBtns = document.querySelectorAll('.btn-nums')
 const clearBtn = document.getElementById('del2')
 const codeValues = [];
+
 const codeInputs = document.querySelectorAll('.in')
 let currentInputIndex = 0;
 numberBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
-
         if (currentInputIndex > 3) return;
         if (currentInputIndex == 3) {
             setTimeout(() => {
@@ -123,7 +129,6 @@ numberBtns.forEach((btn) => {
         codeInputs[currentInputIndex].style.backgroundColor = '#2B64F5'
 
         currentInputIndex++;
-        console.log(codeValues)
     })
 })
 

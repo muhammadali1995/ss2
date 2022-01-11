@@ -13,8 +13,11 @@
     <link rel="stylesheet" href="./../../main.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-    <script src="onboard.js"></script>
     <script src="https://unpkg.com/@themesberg/flowbite@1.3.0/dist/flowbite.bundle.js"></script>
+    <script src="onboard.js" defer></script>
+    <script src="input.js " defer></script>
+    <script src="login.js " defer></script>
+
 </head>
 
 <body>
@@ -74,10 +77,10 @@
         </div>
         <div class="mt-10 px-4">
             <p class="mt-6 text-gray-600">Entrez votre numéro de téléphone</p>
-            <div class="border border-gray-light flex items-center mt-2 p-6 rounded-3xl">
+            <form class="border border-gray-light flex items-center mt-2 p-6 rounded-3xl">
                 <img src=" ./../../assets/flag.png ">
-                <input class=" ml-6 " style=" outline: none; " type=" number " placeholder=" +33 6 78 93 24 10 ">
-            </div>
+                <input class=" ml-6 " style=" outline: none; " type=" number " id="phoneNumber" placeholder=" +33 6 78 93 24 10 ">
+            </form>
             <div class="flex items-center mt-8">
                 <p class=" font-normal text-xs ">En appuyant sur continuer, vous acceptez les <span class=" font-medium text-indigo-900 cursor-pointer ">Conditions Générales</span> de The Social Stock et
                     <span class=" font-medium text-indigo-900 cursor-pointer ">Politique de confidentialité.<span>
@@ -123,7 +126,7 @@
                 <div class="flex justify-between mx-auto w-32">
                     <input name="code" class="code-input password h-4 rounded-xl text-center outline-none w-4 border border-blue-normal text-transparent" type="password" required="">
                     <input name="code" class="code-input password h-4 rounded-xl text-center outline-none w-4 border text-transparent border-blue-normal" type="password" required="">
-                    <input name="code" class="code-input password h-4 rounded-xl text-center outline-none w-4 border text-transparent border-blue-normal" type="password" required="">
+                    <input name="code" id="last" class="code-input password h-4 rounded-xl text-center outline-none w-4 border text-transparent border-blue-normal" type="password" required="">
                     <input name="code" maxlength="1" class="code-input password h-4 rounded-xl text-center outline-none w-4 text-transparent border border-blue-normal" type="password" required="">
                 </div>
                 <p id="error2"></p>
@@ -200,7 +203,8 @@
             Suivant
         </button>
 
-        <div id="default-modal" class="fixed flex h-modal items-center hidden justify-center left-0 md:h-full md:inset-0 overflow-x-hidden overflow-y-auto right-0 top-80 z-50" aria-modal="true" role="dialog">
+        <div id="default-modal" aria-hidden="true" class="fixed h-modal items-center
+         hidden justify-center left-0 md:h-full md:inset-0 overflow-x-hidden overflow-y-auto right-0 top-80 z-50" aria-modal="true" role="dialog">
             <div class="h-full max-w-mobile md:h-auto px-4 relative" style="max-width: 370px;">
                 <div class="-mb-20 max-w-mobile mx-auto relative rounded-lg shadow w-full ">
                     <div class="">
@@ -237,12 +241,15 @@
         <h3 class="font-semibold mt-7 text-2xl">Créer un compte</h3>
         <p class="mt-2 text-gray-600 text-sm">Complétez les informations ci-dessous pour créer votre compte</p>
         <h4 class="font-semibold mt-8">Informations personnelles</h4>
-        <input type="text" placeholder="Prénom" class="outline-none border textInput border-black mt-4 px-6 py-4 rounded-2xl w-full">
-        <input type="text" placeholder="Nom de Famille" class="outline-none border textInput border-black mt-4 px-6 py-4 rounded-2xl w-full">
-        <input type="text" placeholder="Date de naissance" class="outline-none border textInput border-black mt-4 px-6 py-4 rounded-2xl w-full">
-        <input type="text" placeholder="Numéro de Passeport" class="outline-none border textInput border-black mt-4 px-6 py-4 rounded-2xl w-full">
-        <input type="text" placeholder="Email" class="outline-none border textInput border-black mt-4 px-6 py-4 rounded-2xl w-full">
+        <form>
+            <input type="text" placeholder="Prénom" class="outline-none border textInput border-black mt-4 px-6 py-4 rounded-2xl w-full">
+            <input type="text" placeholder="Nom de Famille" class="outline-none border textInput border-black mt-4 px-6 py-4 rounded-2xl w-full">
+            <input type="text" placeholder="Date de naissance" class="outline-none border textInput border-black mt-4 px-6 py-4 rounded-2xl w-full">
+            <input type="text" placeholder="Numéro de Passeport" class="outline-none border textInput border-black mt-4 px-6 py-4 rounded-2xl w-full">
+            <input type="text" placeholder="Email" class="outline-none border textInput border-black mt-4 px-6 py-4 rounded-2xl w-full">
+        </form>
         <button disabled class="account-cont bg-gradient-to-r bottom-2 textInputs font-extrabold opacity-50 from-blue-darker mt-12 py-3 rounded-full text-white to-blue-lighter w-full">Suivant</button>
+
     </div>
 
     <!-- CREATE-PIN -->
@@ -289,7 +296,7 @@
     <!-- ADRESS -->
     <div id="adress" class="max-w-mobile ss-page hidden mx-auto p-4">
         <div class="align-center flex">
-            <img src="./../../assets/Mask.png">
+            <img class="cursor-pointer adress-prev adress-pre" src="./../../assets/Mask.png">
             <div class="flex justify-around items-center w-full">
                 <div class="w-20 bg-gray-400 h-2 rounded-2xl">
                     <div class="rounded-2xl w-full" style="background: #2B64F5;height: 8px;"></div>
@@ -303,21 +310,21 @@
         <h3 class="font-semibold mt-4 text-2xl">Entrez votre adresse</h3>
         <p class="mt-2 text-gray-500">Conformément au règlement financier, veuillez indiquer l'adresse postale de votre résidence principale. N'utilisez pas de boîte postale ou d'adresse professionnelle.</p>
         <h4 class="font-semibold mt-8">Recherche d’adresse</h4>
-        <input type="text" placeholder="Entrer une adresse" class="outline-none search border border-gray-400 mt-4 px-4 py-3 rounded-2xl w-full">
+        <input type="text" placeholder="Entrer une adresse" id="selectInput" class="outline-none search border border-gray-400 mt-4 px-4 py-3 rounded-2xl w-full">
         <div id="dropdown" class="hidden border border-gray-400 max-h-40 overflow-auto px-2 py-3 rounded-b-2xl text-gray-500">
-            <h3 class="py-1">13 rue du Carreaux, Le Plessie-Robinson</h3>
-            <h3 class="py-1">13 rue Henri Barbusse, Gennevilliers</h3>
-            <h3 class="py-1">13 rue des Frères Lumières, Le Blanc-Mesnil</h3>
-            <h3 class="py-1">13 rue de Normandie, Courbevoie</h3>
+            <h3 class="py-1 selectOption">13 rue du Carreaux, Le Plessie-Robinson</h3>
+            <h3 class="py-1 selectOption">13 rue Henri Barbusse, Gennevilliers</h3>
+            <h3 class="py-1 selectOption">13 rue des Frères Lumières, Le Blanc-Mesnil</h3>
+            <h3 class="py-1 selectOption">13 rue de Normandie, Courbevoie</h3>
         </div>
         <p class="mt-4 text-blue-700 text-right">Taper manuellement</p>
-        <button id="next" disabled="true" class="bg-gradient-to-r bottom-2 fixed font-extrabold from-blue-darker mt-12 next3 opacity-50 py-3 rounded-full text-white to-blue-lighter w-96" style="max-width: 91vw;">Suivant</button>
+        <button id="next" disabled="true" class="adress-cont adress-con bg-gradient-to-r bottom-2 fixed font-extrabold from-blue-darker mt-12 next3 opacity-50 py-3 rounded-full text-white to-blue-lighter w-96" style="max-width: 91vw;">Suivant</button>
     </div>
 
     <!-- TYPE -->
     <div id="adress-type" class="hidden ss-page max-w-mobile mx-auto p-4">
         <div class="align-center flex">
-            <img id="prev" class="cursor-pointer" src="./../../assets/Mask.png">
+            <img id="prev" class="type-prev cursor-pointer" src="./../../assets/Mask.png">
             <div class="flex justify-around items-center w-full">
                 <div class="w-20 bg-gray-400 h-2 rounded-2xl">
                     <div class="rounded-2xl w-full" style="background: #2B64F5;height: 8px;"></div>
@@ -331,16 +338,18 @@
         <h3 class="font-semibold mt-4 text-2xl">Entrez votre adresse</h3>
         <p class="mt-2 text-gray-500">Conformément au règlement financier, veuillez indiquer l'adresse postale de votre résidence principale. N'utilisez pas de boîte postale ou d'adresse professionnelle.</p>
         <h4 class="font-semibold mt-8">Informations de l’adresse</h4>
-        <input type="text" placeholder="Rue" class="outline-none search2 border border-gray-400 mt-4 px-4 py-3 rounded-2xl w-full">
-        <input type="text" placeholder="Code postale" class="outline-none search2 border border-gray-400 mt-4 px-4 py-3 rounded-2xl w-full">
-        <input type="text" placeholder="Ville" class="outline-none search2 border border-gray-400 mt-4 px-4 py-3 rounded-2xl w-full">
-        <button id="next2" disabled="true" class="bg-gradient-to-r font-extrabold from-blue-darker mt-16 mx-auto next3 opacity-50 py-3 rounded-full text-white to-blue-lighter w-full" style="max-width: 350px;">Suivant</button>
+        <form>
+            <input type="text" placeholder="Rue" class="outline-none search2 border border-gray-400 mt-4 px-4 py-3 rounded-2xl w-full">
+            <input type="text" placeholder="Code postale" class="outline-none search2 border border-gray-400 mt-4 px-4 py-3 rounded-2xl w-full">
+            <input type="text" placeholder="Ville" class="outline-none search2 border border-gray-400 mt-4 px-4 py-3 rounded-2xl w-full">
+        </form>
+        <button id="next2" disabled="true" class="type-con bg-gradient-to-r font-extrabold from-blue-darker mt-16 mx-auto next3 opacity-50 py-3 rounded-full text-white to-blue-lighter w-full" style="max-width: 350px;">Suivant</button>
     </div>
 
     <!-- PICK INTEREST -->
     <div id="pick" class="max-w-mobile mx-auto p-4 hidden ss-page">
         <div class="align-center flex">
-            <img id="prev2" class="cursor-pointer" src="./../../assets/Mask.png">
+            <img id="prev2" class="pick-prev cursor-pointer" src="./../../assets/Mask.png">
         </div>
         <h3 class="font-semibold mt-4 text-2xl">Super ! Maintenant sélectionnez le meilleur contenu pour vous</h3>
         <p class="font-normal mt-2 text-gray-400">Quels sont vos centres d'intérêt ?</p>
@@ -382,13 +391,13 @@
                 <p class="font-bold mt-2 text-blue-normal text-center text-sm w-16">Medecine</p>
             </div>
         </div>
-        <button id="next3" class="bg-gradient-to-r font-semibold from-blue-darker mt-10 py-3 rounded-full text-white to-blue-lighter w-full">Continuer</button>
+        <button id="next3" class="pick-con bg-gradient-to-r font-semibold from-blue-darker mt-10 py-3 rounded-full text-white to-blue-lighter w-full">Continuer</button>
     </div>
 
     <!-- TERMS -->
     <div id="term" class="ss-page hidden max-w-mobile mx-auto p-4">
         <div class="align-center flex">
-            <img id="prev3" class="cursor-pointer" src="./../../assets/Mask.png">
+            <img id="prev3" class="term-prev cursor-pointer" src="./../../assets/Mask.png">
         </div>
         <h3 class="font-semibold mt-4 text-2xl">Acceptez nos termes et conditions générales</h3>
         <form class="mt-8">
@@ -446,7 +455,7 @@
             <button class="font-extrabold mt-8 py-3 rounded-full text-white w-full" type="button" data-modal-toggle="small-modal" style="background: linear-gradient(91.78deg, #11143A 0%, #2B64F5 78.12%, #507DF0 100%);">
                 Continuer            </button>
 
-            <div id="small-modal" class="fixed flex h-modal items-center hidden justify-center left-0 md:h-full md:inset-0 overflow-x-hidden overflow-y-auto right-0 top-80 z-50" aria-modal="true" role="dialog">
+            <div id="small-modal" aria-hidden="true" class="fixed flex h-modal items-center hidden justify-center left-0 md:h-full md:inset-0 overflow-x-hidden overflow-y-auto right-0 top-80 z-50" aria-modal="true" role="dialog">
                 <div class="h-full max-w-mobile md:h-auto px-4 relative" style="max-width: 370px;">
                     <div class="-mb-20 max-w-mobile mx-auto relative rounded-lg shadow w-full ">
                         <div class="">
@@ -462,7 +471,7 @@
                             </div>
                             <h2 class="font-semibold mt-32 text-2xl text-center ">Très bon choix !</h2>
                             <p class="text-center text-gray-600 text-sm ">Configurons votre compte pour obtenir vos unités gratuites à Solana - cela ne prendra que quelques minutes.</p>
-                            <button data-modal-toggle="small-modal" class="font-extrabold mt-8 py-3 rounded-full text-white w-full " style="background: linear-gradient(91.78deg, #11143A 0%, #2B64F5 78.12%, #507DF0 100%); ">
+                            <button class="font-extrabold mt-8 py-3 rounded-full text-white w-full " style="background: linear-gradient(91.78deg, #11143A 0%, #2B64F5 78.12%, #507DF0 100%); ">
                                 Suivant
                             </button>
                             <p class="mt-4 text-center text-gray-600 text-sm ">Vous obtiendrez votre stock gratuit lorsque vous effectuerez votre premier dépôt.</p>
@@ -474,8 +483,6 @@
     </div>
 
 </body>
-<script src="./../adress/adress.js"></script>
-<script src="input.js "></script>
-<script src="login.js "></script>
+
 
 </html>
