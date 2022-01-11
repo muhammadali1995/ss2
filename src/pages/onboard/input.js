@@ -26,33 +26,39 @@ function onSubmit(e) {
         .filter(({ name }) => name)
         .map(({ value }) => value)
         .join('')
-    console.log(code)
 }
 
-const textInputs = document.querySelectorAll('.text')
+const textInputs = Array.from(document.querySelectorAll('.textInput'))
 textInputs.forEach(inp => {
     inp.addEventListener('keyup', () => {
-        if ((textInputs[0].value != '') && (textInputs[1].value != '') && (textInputs[2].value != '') && (textInputs[3].value != '') && (textInputs[4].value != '')) {
-            const btn = document.getElementById('next3')
+        if (hasAllValue(textInputs)) {
+            const btn = document.querySelector('.account-cont')
             btn.disabled = false
-            btn.className = 'bg-gradient-to-r bottom-2 font-extrabold from-blue-darker mt-60 py-3 rounded-full sticky text-white to-blue-lighter w-full'
+            btn.className = 'bg-gradient-to-r bottom-2 font-extrabold from-blue-darker mt-12 py-3 rounded-full text-white to-blue-lighter w-full'
         } else {
-            document.getElementById('next3').className = 'bg-gradient-to-r bottom-2 font-extrabold from-blue-darker mt-60 py-3 rounded-full sticky text-white to-blue-lighter w-full opacity-50'
-        }
-        if (inp.value != '') {
-            inp.className = 'border border-2 text border-blue-700 mt-4 px-6 py-4 rounded-2xl w-full outline-none'
-        } else {
-            inp.className = 'border border-2 text border-black mt-4 px-6 py-4 rounded-2xl w-full outline-none'
+            if (inp.value != '') {
+                inp.className = 'border border-2 text border-blue-700 mt-4 px-6 py-4 rounded-2xl w-full outline-none'
+                document.getElementById('next3').className = 'bg-gradient-to-r bottom-2 font-extrabold from-blue-darker opacity-50 mt-12 py-3 rounded-full text-white to-blue-lighter w-full'
+            } else {
+                inp.className = 'border border-2 text border-black mt-4 px-6 py-4 rounded-2xl w-full outline-none'
+                document.getElementById('next3').className = 'bg-gradient-to-r bottom-2 font-extrabold from-blue-darker opacity-50 mt-12 py-3 rounded-full text-white to-blue-lighter w-full'
+            }
+            document.getElementById('next3').className = 'bg-gradient-to-r bottom-2 font-extrabold from-blue-darker opacity-50 mt-12 py-3 rounded-full text-white to-blue-lighter w-full'
         }
     })
 })
 
+
+function hasAllValue(arr) {
+    return arr.every(input => (input.value != ''))
+}
+
 const passInput = document.querySelectorAll('.password')
-const next = document.getElementById('next')
-console.log(next)
+const next = document.querySelector('.pin-cont')
 next.addEventListener('click', () => {
     if ((passInput[0].value != '') && (passInput[1].value != '') && (passInput[2].value != '') && (passInput[3].value != '')) {
         passInput.forEach(input => {
+            input.style.border = '1px solid #2B64F5'
             input.style.backgroundColor = '#2B64F5'
             input.style.border = 'none'
             const p = document.getElementById('error2')
@@ -61,29 +67,13 @@ next.addEventListener('click', () => {
         })
     } else {
         passInput.forEach(input => {
-            input.style.backgroundColor = '#EB5757'
-            input.style.border = 'none'
+            if (input.value != '') {
+                input.style.backgroundColor = '#EB5757'
+            }
+            next.ariaDisabled = true
             const p = document.getElementById('error2')
             p.textContent = 'Votre code est erroné'
             p.className = 'mt-6 text-red-500 text-center'
         })
-    }
-})
-
-
-const searchInput = document.querySelector('.search')
-const next5 = document.getElementById('next4')
-const dropdown = document.getElementById('dropdown')
-searchInput.addEventListener('keyup', () => {
-    if (searchInput.value != '') {
-        next5.disabled = false
-        searchInput.className = 'search border border-blue-700 mt-4 px-4 py-3 rounded-t-2xl outline-none w-full'
-        dropdown.classList.remove('hidden')
-        next5.className = 'bg-gradient-to-r bottom-2 fixed font-extrabold from-blue-darker mt-12 next3  py-3 rounded-full text-white to-blue-lighter w-96'
-    } else {
-        searchInput.className = 'search border border-gray-400 mt-4 px-4 py-3 rounded-2xl outline-none w-full'
-        dropdown.classList.add('hidden')
-        next5.disabled = true
-        next5.className = 'bg-gradient-to-r bottom-2 fixed font-extrabold from-blue-darker mt-12 next3 opacity-50 py-3 rounded-full text-white to-blue-lighter w-96'
     }
 })
