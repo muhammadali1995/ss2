@@ -107,7 +107,15 @@ numberBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
 
         if (currentInputIndex > 3) return;
-
+        if (currentInputIndex == 3) {
+            setTimeout(() => {
+                document.getElementById('adress').classList.remove('hidden')
+                document.getElementById('create-pin').classList.add('hidden')
+            }, 1000)
+        }
+        if (currentInputIndex != 3) {
+            document.getElementById('inp').ariaDisabled = true
+        }
         const code = btn.textContent;
         codeValues.push(code)
         codeInputs[currentInputIndex].focus()

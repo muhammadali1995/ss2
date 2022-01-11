@@ -72,7 +72,6 @@ window.onload = () => {
     })
 }
 
-
 function changePage(page) {
     hidePages();
     showPage(page)
