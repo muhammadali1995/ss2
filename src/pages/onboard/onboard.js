@@ -67,6 +67,9 @@ window.onload = () => {
     createPinPrev.addEventListener('click', () => {
         changePage(CREATE_ACCOUNT)
     })
+    accountPrev.addEventListener('click', () => {
+        changePage(STOCK_PAGE)
+    })
 }
 
 
