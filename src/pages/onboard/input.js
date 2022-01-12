@@ -21,7 +21,6 @@ inputElements.forEach((ele, index) => {
         }
     })
 })
-console.log(verifyCode)
 
 
 function onSubmit(e) {
@@ -52,10 +51,12 @@ textInputs.forEach(inp => {
         }
     })
 })
+
 btnCont.addEventListener('click', () => {
-    textInputs.forEach(input => {
-        personalInf.push(input.value)
-    })
+
+    // textInputs.forEach(input => {
+    //     personalInf.push(input.value)
+    // })
 })
 
 document.querySelector('.textInputs').addEventListener('keyup', (e) => {
@@ -96,6 +97,8 @@ next.addEventListener('click', () => {
     }
 })
 
+const lastInput = document.getElementById('last')
+lastInput
 
 const searchInput = document.querySelector('.search')
 const next5 = document.getElementById('next')
@@ -126,7 +129,6 @@ Array.from(document.querySelectorAll('.selectOption')).forEach(element => {
 const searchInput2 = document.querySelectorAll('.search2')
 const next6 = document.getElementById('next2')
 const dropdown2 = document.getElementById('dropdown2')
-const fullAdress = []
 
 searchInput2.forEach(inp => {
     inp.addEventListener('keyup', () => {
@@ -147,17 +149,4 @@ searchInput2.forEach(inp => {
     })
 })
 
-next6.addEventListener('click', () => {
-    if (fullAdress.length >= 1) {
-        fullAdress.map(searchInput2.forEach(input => {
-            return input.value
-        }))
-    } else {
-        searchInput2.forEach(input => {
-            fullAdress.push(input.value)
-        })
-    }
-})
-
 const phoneNumber = document.getElementById('phoneNumber')
-console.log(phoneNumber.value)

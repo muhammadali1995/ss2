@@ -241,14 +241,14 @@
         <h3 class="font-semibold mt-7 text-2xl">Créer un compte</h3>
         <p class="mt-2 text-gray-600 text-sm">Complétez les informations ci-dessous pour créer votre compte</p>
         <h4 class="font-semibold mt-8">Informations personnelles</h4>
-        <form>
-            <input type="text" placeholder="Prénom" class="outline-none border textInput border-black mt-4 px-6 py-4 rounded-2xl w-full">
-            <input type="text" placeholder="Nom de Famille" class="outline-none border textInput border-black mt-4 px-6 py-4 rounded-2xl w-full">
-            <input type="text" placeholder="Date de naissance" class="outline-none border textInput border-black mt-4 px-6 py-4 rounded-2xl w-full">
-            <input type="text" placeholder="Numéro de Passeport" class="outline-none border textInput border-black mt-4 px-6 py-4 rounded-2xl w-full">
-            <input type="text" placeholder="Email" class="outline-none border textInput border-black mt-4 px-6 py-4 rounded-2xl w-full">
+        <form id="formdata">
+            <input type="text" name="name" placeholder="Prénom" class="outline-none border textInput border-black mt-4 px-6 py-4 rounded-2xl w-full">
+            <input type="text" name="surname" placeholder="Nom de Famille" class="outline-none border textInput border-black mt-4 px-6 py-4 rounded-2xl w-full">
+            <input type="text" name="birthday" placeholder="Date de naissance" class="outline-none border textInput border-black mt-4 px-6 py-4 rounded-2xl w-full">
+            <input type="text" name="passport" placeholder="Numéro de Passeport" class="outline-none border textInput border-black mt-4 px-6 py-4 rounded-2xl w-full">
+            <input type="email" id="email" name="email" placeholder="Email" class="outline-none border textInput border-black mt-4 px-6 py-4 rounded-2xl w-full">
+            <button type="submit" class="account-cont bg-gradient-to-r bottom-2 textInputs font-extrabold opacity-50 from-blue-darker mt-12 py-3 rounded-full text-white to-blue-lighter w-full">Suivant</button>
         </form>
-        <button disabled class="account-cont bg-gradient-to-r bottom-2 textInputs font-extrabold opacity-50 from-blue-darker mt-12 py-3 rounded-full text-white to-blue-lighter w-full">Suivant</button>
 
     </div>
 
@@ -338,12 +338,12 @@
         <h3 class="font-semibold mt-4 text-2xl">Entrez votre adresse</h3>
         <p class="mt-2 text-gray-500">Conformément au règlement financier, veuillez indiquer l'adresse postale de votre résidence principale. N'utilisez pas de boîte postale ou d'adresse professionnelle.</p>
         <h4 class="font-semibold mt-8">Informations de l’adresse</h4>
-        <form>
-            <input type="text" placeholder="Rue" class="outline-none search2 border border-gray-400 mt-4 px-4 py-3 rounded-2xl w-full">
-            <input type="text" placeholder="Code postale" class="outline-none search2 border border-gray-400 mt-4 px-4 py-3 rounded-2xl w-full">
-            <input type="text" placeholder="Ville" class="outline-none search2 border border-gray-400 mt-4 px-4 py-3 rounded-2xl w-full">
+        <form id="adressForm">
+            <input type="text" name="street" placeholder="Rue" class="outline-none search2 border border-gray-400 mt-4 px-4 py-3 rounded-2xl w-full">
+            <input type="text" name="zip code" placeholder="Code postale" class="outline-none search2 border border-gray-400 mt-4 px-4 py-3 rounded-2xl w-full">
+            <input type="text" name="city" placeholder="Ville" class="outline-none search2 border border-gray-400 mt-4 px-4 py-3 rounded-2xl w-full">
+            <button id="next2" type="submit" disabled="true" class="type-con bg-gradient-to-r font-extrabold from-blue-darker mt-16 mx-auto next3 opacity-50 py-3 rounded-full text-white to-blue-lighter w-full" style="max-width: 350px;">Suivant</button>
         </form>
-        <button id="next2" disabled="true" class="type-con bg-gradient-to-r font-extrabold from-blue-darker mt-16 mx-auto next3 opacity-50 py-3 rounded-full text-white to-blue-lighter w-full" style="max-width: 350px;">Suivant</button>
     </div>
 
     <!-- PICK INTEREST -->
