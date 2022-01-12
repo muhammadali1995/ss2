@@ -46,6 +46,8 @@ function hasAllValue(arr) {
 const btns = document.querySelectorAll('.btn-num')
 const del = document.getElementById('del')
 const pinCode = [];
+const passwordInp = document.querySelectorAll('.password')
+let currentIndexPassword = 0;
 btns.forEach(btn => {
     btn.addEventListener('click', () => {
         if (document.getElementById('last').value != '') {
@@ -55,49 +57,26 @@ btns.forEach(btn => {
             }, 500)
         }
         pinCode.push(btn.textContent)
-        const inps = document.querySelectorAll('.password')
-        inps[0].focus()
-        inps[0].value = pinCode[0]
-        inps[0].style.backgroundColor = '#2B64F5'
-        if (pinCode[1]) {
-            inps[1].focus()
-            inps[1].value = pinCode[1]
-            inps[1].style.backgroundColor = '#2B64F5'
+        if (currentIndexPassword > 3) return;
+        if (currentIndexPassword != 3) {
+            document.getElementById('inp').ariaDisabled = true
         }
-        if (pinCode[2]) {
-            inps[2].focus()
-            inps[2].value = pinCode[2]
-            inps[2].style.color = '#2B64F5 !important'
-            inps[2].style.backgroundColor = '#2B64F5'
-        }
-        if (pinCode[3]) {
-            inps[3].focus()
-            inps[3].value = pinCode[3]
-            inps[3].style.backgroundColor = '#2B64F5'
-        }
+        const code = btn.textContent;
+        pinCode.push(code)
+        passwordInp[currentIndexPassword].value = code;
+        passwordInp[currentIndexPassword].style.backgroundColor = '#2B64F5'
+
+        currentIndexPassword++;
     })
 })
 
 del.addEventListener('click', () => {
-    const inps = document.querySelectorAll('.password')
-    if (pinCode.length > 0) {
-        pinCode.length -= 1
-    }
-    inps[3].value = ''
-    inps[3].style.backgroundColor = 'white'
-    if (!pinCode[2]) {
-        inps[2].value = ''
-        inps[2].style.backgroundColor = 'white'
-    }
-    if (!pinCode[1]) {
-        inps[1].focus()
-        inps[1].value = ''
-        inps[1].style.backgroundColor = 'white'
-    }
-    if (!pinCode[0]) {
-        inps[0].focus()
-        inps[0].value = ''
-        inps[0].style.backgroundColor = 'white'
+    if (currentIndexPassword > 3) return;
+    if (currentIndexPassword > 0) {
+        passwordInp[currentIndexPassword - 1].focus()
+        passwordInp[currentIndexPassword - 1].value = '';
+        passwordInp[currentIndexPassword - 1].style.backgroundColor = 'white'
+        currentIndexPassword--
     }
 })
 
