@@ -13,25 +13,23 @@ const swiper = new Swiper('.swiper', {
     scrollbar: false
 })
 
-const btn = document.getElementById('btn')
-const latest = document.getElementsByClassName('input')
+const btn = document.querySelector('#btn')
+const verifyInputs = Array.from(document.getElementsByClassName('input'))
+const errorText = document.getElementById('error')
 btn.addEventListener('click', () => {
-    if ((latest[0].value != '') && (latest[1].value != '') && (latest[2].value != '') && (latest[3].value != '') && (latest[4].value != '') && (latest[5].value != '')) {
+    if (hasAllValue(verifyInputs)) {
         btn.ariaDisabled = false
-        document.querySelectorAll('.input').forEach(input => {
-            const p = document.getElementById('error')
-            p.textContent = ''
-            document.querySelectorAll('.input').forEach(input => {
-                input.classList.remove('red')
-                if (input.value != '') {
-                    input.style.backgroundColor = '#2B64F5'
-                }
-            })
+        errorText.textContent = ''
+        verifyInputs.forEach(input => {
+            input.classList.remove('red')
+            if (input.value != '') {
+                input.style.backgroundColor = '#2B64F5'
+            }
         })
     } else {
-        const p = document.getElementById('error')
-        p.textContent = 'Ce code n’est pas valide'
-        p.className = 'mt-4 text-red-500'
+        btn.ariaDisabled = true
+        errorText.textContent = 'Ce code n’est pas valide'
+        errorText.className = 'mt-4 text-red-500'
         document.querySelectorAll('.input').forEach(input => {
             input.classList.add('red')
             if (input.value != '') {
@@ -42,51 +40,57 @@ btn.addEventListener('click', () => {
 })
 
 const btns = document.querySelectorAll('.btn-num')
-const inputElementss = document.querySelectorAll('.i')
 const del = document.getElementById('del')
-const array = [];
+const pinCode = [];
 btns.forEach(btn => {
     btn.addEventListener('click', () => {
-        array.push(btn.textContent)
+        if (document.getElementById('last').value != '') {
+            setTimeout(() => {
+                document.getElementById('stock-page').classList.remove('hidden')
+                document.getElementById('pin-page').classList.add('hidden')
+            }, 1000)
+        }
+        pinCode.push(btn.textContent)
         const inps = document.querySelectorAll('.password')
         inps[0].focus()
-        inps[0].value = array[0]
+        inps[0].value = pinCode[0]
         inps[0].style.backgroundColor = '#2B64F5'
-        if (array[1]) {
+        if (pinCode[1]) {
             inps[1].focus()
-            inps[1].value = array[1]
+            inps[1].value = pinCode[1]
             inps[1].style.backgroundColor = '#2B64F5'
         }
-        if (array[2]) {
+        if (pinCode[2]) {
             inps[2].focus()
-            inps[2].value = array[2]
+            inps[2].value = pinCode[2]
             inps[2].style.color = '#2B64F5 !important'
             inps[2].style.backgroundColor = '#2B64F5'
         }
-        if (array[3]) {
+        if (pinCode[3]) {
             inps[3].focus()
-            inps[3].value = array[3]
+            inps[3].value = pinCode[3]
             inps[3].style.backgroundColor = '#2B64F5'
         }
     })
 })
 
 del.addEventListener('click', () => {
-    const inps = document.querySelectorAll('.i')
-    array.length -= 1
-    console.log(array)
+    const inps = document.querySelectorAll('.password')
+    if (pinCode.length > 0) {
+        pinCode.length -= 1
+    }
     inps[3].value = ''
     inps[3].style.backgroundColor = 'white'
-    if (!array[2]) {
+    if (!pinCode[2]) {
         inps[2].value = ''
         inps[2].style.backgroundColor = 'white'
     }
-    if (!array[1]) {
+    if (!pinCode[1]) {
         inps[1].focus()
         inps[1].value = ''
         inps[1].style.backgroundColor = 'white'
     }
-    if (!array[0]) {
+    if (!pinCode[0]) {
         inps[0].focus()
         inps[0].value = ''
         inps[0].style.backgroundColor = 'white'
@@ -95,53 +99,48 @@ del.addEventListener('click', () => {
 
 
 
-const btns2 = document.querySelectorAll('.btn-nums')
-const inputElementss2 = document.querySelectorAll('.in')
-const del2 = document.getElementById('del2')
-const array2 = [];
-btns2.forEach(btn => {
+const numberBtns = document.querySelectorAll('.btn-nums')
+const clearBtn = document.getElementById('del2')
+const codeValues = [];
+
+const codeInputs = document.querySelectorAll('.in')
+let currentInputIndex = 0;
+numberBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
-        array2.push(btn.textContent)
-        const inps = document.querySelectorAll('.in')
-        inps[0].focus()
-        inps[0].value = array[0]
-        inps[0].style.backgroundColor = '#2B64F5'
-        if (array2[1]) {
-            inps[1].focus()
-            inps[1].value = array[0]
-            inps[1].style.backgroundColor = '#2B64F5'
+        if (currentInputIndex > 3) return;
+        if (currentInputIndex == 3) {
+            setTimeout(() => {
+                document.getElementById('adress').classList.remove('hidden')
+                document.getElementById('create-pin').classList.add('hidden')
+            }, 1000)
         }
-        if (array2[2]) {
-            inps[2].focus()
-            inps[2].value = array[0]
-            inps[2].style.backgroundColor = '#2B64F5'
+        if (currentInputIndex != 3) {
+            document.getElementById('inp').ariaDisabled = true
         }
-        if (array2[3]) {
-            inps[3].focus()
-            inps[3].value = array[0]
-            inps[3].style.backgroundColor = '#2B64F5'
-        }
+        const code = btn.textContent;
+        codeValues.push(code)
+        codeInputs[currentInputIndex].focus()
+        codeInputs[currentInputIndex].value = code;
+        codeInputs[currentInputIndex].style.backgroundColor = '#2B64F5'
+
+        currentInputIndex++;
     })
 })
 
-del2.addEventListener('click', () => {
-    const inps = document.querySelectorAll('.in')
-    array2.length -= 1
-    console.log(array2)
-    inps[3].value = ''
-    inps[3].style.backgroundColor = 'white'
-    if (!array2[2]) {
-        inps[2].value = ''
-        inps[2].style.backgroundColor = 'white'
+clearBtn.addEventListener('click', () => {
+
+    if (currentInputIndex > 3) currentInputIndex = 3;
+    codeInputs[currentInputIndex].value = ''
+    codeInputs[currentInputIndex].style.backgroundColor = 'white'
+
+    if (currentInputIndex > 0) {
+        currentInputIndex--
     }
-    if (!array2[1]) {
-        inps[1].focus()
-        inps[1].value = ''
-        inps[1].style.backgroundColor = 'white'
+
+    if (codeValues.length > 0) {
+        codeValues.length--
     }
-    if (!array2[0]) {
-        inps[0].focus()
-        inps[0].value = ''
-        inps[0].style.backgroundColor = 'white'
-    }
+
+
+    console.log(codeValues)
 })

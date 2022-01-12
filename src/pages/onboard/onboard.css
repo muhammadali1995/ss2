@@ -41,3 +41,25 @@ input.checkbox:checked {
 .blue {
     border: 1px solid #2B64F5!important;
 }
+
+.swiper {
+    background-image: url('./../../assets/Rectangle 1028 (1).png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 390px;
+}
+
+input.checkbox {
+    width: 22px;
+    height: 22px;
+}
+
+input.checkbox:checked {
+    background-color: #2B64F5;
+    color: white;
+    background-image: url(./../../assets/tick.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 22px;
+    height: 22px;
+}

@@ -6,10 +6,13 @@ const PAGES = {
     STOCK_PAGE: 'stock-page',
     CREATE_ACCOUNT: 'create',
     CREATE_PIN: 'create-pin',
-    TYPE_PAGE: 'type-page'
+    TYPE_PAGE: 'adress-type',
+    ADRESS: 'adress',
+    PICK_PAGE: 'pick',
+    TERM_PAGE: 'term'
 }
 
-const { LOGIN_PAGE, SPLASH_PAGE, VERIFY_PAGE, PIN_PAGE, STOCK_PAGE, CREATE_ACCOUNT, CREATE_PIN, TYPE_PAGE } = PAGES;
+const { LOGIN_PAGE, SPLASH_PAGE, VERIFY_PAGE, PIN_PAGE, STOCK_PAGE, CREATE_ACCOUNT, CREATE_PIN, TYPE_PAGE, ADRESS, PICK_PAGE, TERM_PAGE } = PAGES;
 
 var currentPage = SPLASH_PAGE;
 
@@ -19,53 +22,79 @@ window.onload = () => {
     }, 500)
 
 
-    const btn1 = document.querySelector('.btn-cont1')
-    const btn2 = document.querySelector('.btn2')
-    const btn3 = document.getElementById('next')
-    const btn4 = document.getElementById('next2')
-    const btn5 = document.querySelector('.next3')
-    const btn6 = document.getElementById('next4')
-    const prev = document.getElementById('prev')
-    const prev2 = document.getElementById('prev2')
-    const prev3 = document.getElementById('prev3')
-    const prev4 = document.getElementById('prev4')
-    btn1.addEventListener('click', () => {
+    const loginCont = document.querySelector('.login-cont')
+    const verifyCont = document.querySelector('.verify-cont')
+    const pinCont = document.querySelector('.pin-cont')
+    const stockCont = document.querySelector('.stock-cont')
+    const accountCont = document.querySelector('.account-cont')
+    const adressCont = document.querySelector('#next')
+    const typeCont = document.querySelector('.type-con')
+    const pickCont = document.querySelector('.pick-con')
+    const pinPrev = document.querySelector('.pin-prev')
+    const stockPrev = document.querySelector('.stock-prev')
+    const accountPrev = document.querySelector('.account-prev')
+    const createPinPrev = document.querySelector('.crpin-prev')
+    const adressPrev = document.querySelector('.adress-pre')
+    const typePrev = document.querySelector('.type-prev')
+    const pickPrev = document.querySelector('.pick-prev')
+    const termPrev = document.querySelector('.term-prev')
+    loginCont.addEventListener('click', () => {
         changePage(VERIFY_PAGE)
     })
-    prev.addEventListener('click', () => {
-        changePage(VERIFY_PAGE)
-    })
-    btn2.addEventListener('click', () => {
-        if (btn2.ariaDisabled == 'false') {
+
+    verifyCont.addEventListener('click', () => {
+        if (verifyCont.ariaDisabled == 'false') {
             changePage(PIN_PAGE)
         }
     })
-    btn3.addEventListener('click', () => {
-        if (btn3.ariaDisabled == 'false') {
+    pinCont.addEventListener('click', () => {
+        if (pinCont.ariaDisabled == 'false') {
             changePage(STOCK_PAGE)
         }
     })
-    btn4.addEventListener('click', () => {
+    stockCont.addEventListener('click', () => {
         changePage(CREATE_ACCOUNT)
     })
-    btn5.addEventListener('click', () => {
-        if (btn5.disabled == false) {
+    accountCont.addEventListener('click', () => {
+        if (accountCont.disabled == false) {
             changePage(CREATE_PIN)
         }
     })
-    prev2.addEventListener('click', () => {
-        changePage(PIN_PAGE)
-    })
-    prev3.addEventListener('click', () => {
-        changePage(STOCK_PAGE)
-    })
-    prev4.addEventListener('click', () => {
-        changePage(CREATE_ACCOUNT)
-    })
-    btn6.addEventListener('click', () => {
-        if (btn6.disabled == 'false') {
+    adressCont.addEventListener('click', () => {
+        if (adressCont.disabled == false) {
             changePage(TYPE_PAGE)
         }
+    })
+    typeCont.addEventListener('click', () => {
+        changePage(PICK_PAGE)
+    })
+    pickCont.addEventListener('click', () => {
+        changePage(TERM_PAGE)
+    })
+    pinPrev.addEventListener('click', () => {
+        changePage(VERIFY_PAGE)
+    })
+
+    stockPrev.addEventListener('click', () => {
+        changePage(PIN_PAGE)
+    })
+    createPinPrev.addEventListener('click', () => {
+        changePage(CREATE_ACCOUNT)
+    })
+    accountPrev.addEventListener('click', () => {
+        changePage(STOCK_PAGE)
+    })
+    adressPrev.addEventListener('click', () => {
+        changePage(CREATE_PIN)
+    })
+    typePrev.addEventListener('click', () => {
+        changePage(ADRESS)
+    })
+    pickPrev.addEventListener('click', () => {
+        changePage(TYPE_PAGE)
+    })
+    termPrev.addEventListener('click', () => {
+        changePage(PICK_PAGE)
     })
 }
 

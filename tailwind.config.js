@@ -7,16 +7,21 @@ module.exports = {
                     darker: '#11143A',
                     normal: '#2B64F5',
                     lighter: '#507DF0',
+                    dark: ' #11153D'
                 },
                 grey: {
                     normal: '#525967',
                     light: '#525967'
                 },
+                light: '#F2F3FC',
                 border: {
                     blue: {
                         normal: '#2B64F5'
                     }
                 }
+            },
+            backgroundColor: {
+                normal: '#2B64F5'
             },
             maxWidth: {
                 mobile: '390px'
