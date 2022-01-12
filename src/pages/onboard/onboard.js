@@ -1,52 +1,41 @@
-const PAGES = {
-    SPLASH_PAGE: 'splash-page',
-    LOGIN_PAGE: 'login-page',
-    VERIFY_PAGE: 'verify',
-    PIN_PAGE: 'pin-page',
-    STOCK_PAGE: 'stock-page',
-    CREATE_ACCOUNT: 'create',
-    CREATE_PIN: 'create-pin',
-    TYPE_PAGE: 'adress-type',
-    ADRESS: 'adress',
-    PICK_PAGE: 'pick',
-    TERM_PAGE: 'term'
-}
 
-const { LOGIN_PAGE, SPLASH_PAGE, VERIFY_PAGE, PIN_PAGE, STOCK_PAGE, CREATE_ACCOUNT, CREATE_PIN, TYPE_PAGE, ADRESS, PICK_PAGE, TERM_PAGE } = PAGES;
+const SPLASH_PAGE = 'splash-page';
+const LOGIN_PAGE = 'login-page';
+const VERIFY_PAGE = 'verify';
+const PIN_PAGE = 'pin-page';
+const STOCK_PAGE = 'stock-page';
+const CREATE_ACCOUNT = 'create';
+const CREATE_PIN = 'create-pin';
+const TYPE_PAGE = 'adress-type';
+const ADRESS = 'adress';
+const PICK_PAGE = 'pick';
+const TERM_PAGE = 'term';
 
 var currentPage = SPLASH_PAGE;
 
+const navigationMap = {
+    'login-btn': VERIFY_PAGE,
+    'verify-btn': PIN_PAGE
+}
+
 window.onload = () => {
-
-
-    // personal info form
-    const personalInfoForm = document.getElementById('formdata');
-    const fullAdressForm = document.getElementById('adressForm')
-
-    personalInfoForm.addEventListener('submit', (event) => {
-        event.preventDefault();
-        const data = new FormData(personalInfoForm)
-        const personalInformation = Object.fromEntries(data.entries())
-    })
-
-    fullAdressForm.addEventListener('submit', (e) => {
-        e.preventDefault()
-        const db = new FormData(fullAdressForm)
-        const fullAdress = Object.fromEntries(db.entries())
-        console.log(fullAdress)
-    })
 
     setTimeout(() => {
         changePage(LOGIN_PAGE)
     }, 500)
 
+    const nextBtns = document.getElementsByClassName('next-btn');
+    Array.from(nextBtns).forEach(nextBtn => {
+        nextBtn.addEventListener('click', (event) => {
+            const id = event.target.id;
+            changePage(navigationMap[id])
+        })
+    })
 
-    const loginCont = document.querySelector('.login-cont')
-    const verifyCont = document.querySelector('.verify-cont')
     const pinCont = document.querySelector('.pin-cont')
     const stockCont = document.querySelector('.stock-cont')
     const accountCont = document.querySelector('.account-cont')
-    const adressCont = document.querySelector('#next')
+    const adressCont = document.querySelector('#address-cont-btn')
     const typeCont = document.querySelector('.type-con')
     const pickCont = document.querySelector('.pick-con')
     const pinPrev = document.querySelector('.pin-prev')
@@ -57,15 +46,7 @@ window.onload = () => {
     const typePrev = document.querySelector('.type-prev')
     const pickPrev = document.querySelector('.pick-prev')
     const termPrev = document.querySelector('.term-prev')
-    loginCont.addEventListener('click', () => {
-        changePage(VERIFY_PAGE)
-    })
 
-    verifyCont.addEventListener('click', () => {
-        if (verifyCont.ariaDisabled == 'false') {
-            changePage(PIN_PAGE)
-        }
-    })
     pinCont.addEventListener('click', () => {
         if (pinCont.ariaDisabled == 'false') {
             changePage(STOCK_PAGE)
@@ -135,3 +116,20 @@ function showPage(pageId) {
     const currPage = document.getElementById(pageId);
     currPage.classList.remove('hidden');
 }
+
+
+//  LOGIN SWIPER
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    loop: true,
+
+    autoplay: {
+        delay: 3000
+    },
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+    },
+    scrollbar: false
+})

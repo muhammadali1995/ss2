@@ -18,7 +18,7 @@
     <script src="https://unpkg.com/@themesberg/flowbite@1.3.0/dist/flowbite.bundle.js"></script>
     <script src="onboard.js" defer></script>
     <script src="input.js " defer></script>
-    <script src="login.js " defer></script>
+    <script src="form.js" defer></script>
 
 </head>
 
@@ -95,7 +95,7 @@
                         </span></span>
                 </p>
             </div>
-            <button class="mb-3 login-cont font-semibold bg-gradient-to-r from-blue-darker to-blue-lighter mt-6 py-3 rounded-3xl text-base text-white w-full ">S’inscrire
+            <button id="login-btn" class="mb-3 next-btn login-cont font-semibold bg-gradient-to-r from-blue-darker to-blue-lighter mt-6 py-3 rounded-3xl text-base text-white w-full ">S’inscrire
                 ou se connecter</button>
         </div>
     </div>
@@ -134,8 +134,8 @@
             <a href="#">Changer le numéro</a>
             <a href="#">Renvoyer code</a>
         </div>
-        <button aria-disabled="true" id="btn"
-            class="verify-cont bg-gradient-to-r bottom-2 fixed font-extrabold from-blue-darker max-w-mobile mt-40 py-3 rounded-full ss-cont text-white to-blue-lighter w-96"
+        <button aria-disabled="true" id="verify-btn"
+            class="verify-cont next-btn bg-gradient-to-r bottom-2 fixed font-extrabold from-blue-darker max-w-mobile mt-40 py-3 rounded-full ss-cont text-white to-blue-lighter w-96"
             style="max-width: 358px;">Continue</button>
     </div>
 
@@ -153,7 +153,7 @@
                     <input name="code"
                         class="code-input password h-4 rounded-xl text-center outline-none w-4 border text-transparent border-blue-normal"
                         type="password" required="">
-                    <input name="code" id="last"
+                    <input name="code" id="last-pin-input"
                         class="code-input password h-4 rounded-xl text-center outline-none w-4 border text-transparent border-blue-normal"
                         type="password" required="">
                     <input name="code" maxlength="1"
@@ -185,7 +185,7 @@
             <button class="px-8 py-3"> <img src="./../../assets/Face_ID_logo 1.png" alt=""></button>
             <button style="background-color: #F2F3FC"
                 class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">0</button>
-            <button class="px-8 py-3" id="del"><img src="./../../assets/del.png"></button>
+            <button class="px-8 py-3" id="pin-clear-btn"><img src="./../../assets/del.png"></button>
         </div>
         <p aria-disabled="true" class="cursor-pointer font-bold mt-10 text-blue-normal text-center pin-cont">Mot de
             passe oublié ?</p>
@@ -310,6 +310,7 @@
             <input type="email" id="email" name="email" placeholder="Email"
                 class="outline-none border textInput border-black mt-4 px-6 py-4 rounded-2xl w-full">
             <button type="submit"
+                disabled
                 class="account-cont bg-gradient-to-r bottom-2 textInputs font-extrabold opacity-50 from-blue-darker mt-12 py-3 rounded-full text-white to-blue-lighter w-full">Suivant</button>
         </form>
 
@@ -402,7 +403,7 @@
             <h3 class="py-1 selectOption">13 rue de Normandie, Courbevoie</h3>
         </div>
         <p class="mt-4 text-blue-700 text-right">Taper manuellement</p>
-        <button id="next" disabled="true"
+        <button id="address-cont-btn" disabled="true"
             class="adress-cont adress-con bg-gradient-to-r bottom-2 fixed font-extrabold from-blue-darker mt-12 next3 opacity-50 py-3 rounded-full text-white to-blue-lighter w-96"
             style="max-width: 91vw;">Suivant</button>
     </div>
