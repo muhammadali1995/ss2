@@ -17,6 +17,25 @@ const { LOGIN_PAGE, SPLASH_PAGE, VERIFY_PAGE, PIN_PAGE, STOCK_PAGE, CREATE_ACCOU
 var currentPage = SPLASH_PAGE;
 
 window.onload = () => {
+
+
+    // personal info form
+    const personalInfoForm = document.getElementById('formdata');
+    const fullAdressForm = document.getElementById('adressForm')
+
+    personalInfoForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const data = new FormData(personalInfoForm)
+        const personalInformation = Object.fromEntries(data.entries())
+    })
+
+    fullAdressForm.addEventListener('submit', (e) => {
+        e.preventDefault()
+        const db = new FormData(fullAdressForm)
+        const fullAdress = Object.fromEntries(db.entries())
+        console.log(fullAdress)
+    })
+
     setTimeout(() => {
         changePage(LOGIN_PAGE)
     }, 500)
@@ -55,6 +74,8 @@ window.onload = () => {
     stockCont.addEventListener('click', () => {
         changePage(CREATE_ACCOUNT)
     })
+
+
     accountCont.addEventListener('click', () => {
         if (accountCont.disabled == false) {
             changePage(CREATE_PIN)
