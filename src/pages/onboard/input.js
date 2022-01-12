@@ -1,14 +1,13 @@
-
-
 const textInputs = Array.from(document.querySelectorAll('.textInput'))
-const btnCont = document.querySelector('.account-cont')
+const btnCont = document.querySelector('#account-btn')
 const personalInf = []
 textInputs.forEach(inp => {
     inp.addEventListener('keyup', () => {
         if (hasAllValue(textInputs)) {
-            btnCont.disabled = false;
+            btnCont.ariaDisabled = false;
             btnCont.className = 'bg-gradient-to-r bottom-2 font-extrabold from-blue-darker mt-12 py-3 rounded-full text-white to-blue-lighter w-full'
         } else {
+            btnCont.ariaDisabled = true;
             if (inp.value != '') {
                 inp.className = 'border border-2 text border-blue-700 mt-4 px-6 py-4 rounded-2xl w-full outline-none'
                 btnCont.className = 'bg-gradient-to-r bottom-2 font-extrabold from-blue-darker opacity-50 mt-12 py-3 rounded-full text-white to-blue-lighter w-full'
@@ -59,4 +58,3 @@ next.addEventListener('click', () => {
         })
     }
 })
-

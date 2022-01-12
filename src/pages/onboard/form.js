@@ -19,9 +19,9 @@ inputElements.forEach((ele, index) => {
     ele.addEventListener('input', (e) => {
         const [first, ...rest] = e.target.value
         if (index !== inputElements.length - 1 && first !== undefined) {
-            
+
             verificationCode.push(ele.value)
-            
+
             inputElements[index + 1].focus()
             inputElements[index + 1].value = rest.join('')
             inputElements[index + 1].dispatchEvent(new Event('input'))
@@ -162,19 +162,19 @@ clearBtn.addEventListener('click', () => {
 
 
 // PERSONAL INFO FORM
-  const personalInfoForm = document.getElementById('formdata');
+const personalInfoForm = document.getElementById('formdata');
 
-  personalInfoForm.addEventListener('submit', (event) => {
-      event.preventDefault();
-      const data = new FormData(personalInfoForm)
-      const personalInformation = Object.fromEntries(data.entries())
-      console.log(personalInformation);
-  });
+personalInfoForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const data = new FormData(personalInfoForm)
+    const personalInformation = Object.fromEntries(data.entries())
+    console.log(personalInformation);
+});
 
 
 //ADDRESS
-const searchInput =  document.querySelector('#selectInput');
-const addressContBtn = document.getElementById('address-cont-btn')
+const searchInput = document.querySelector('#selectInput');
+const addressContBtn = document.getElementById('adress-btn')
 const dropdown = document.getElementById('dropdown')
 let adress = ''
 searchInput.addEventListener('keyup', () => {
@@ -182,7 +182,7 @@ searchInput.addEventListener('keyup', () => {
         addressContBtn.disabled = false
         searchInput.classList.add('rounded-t-2xl');
         dropdown.classList.remove('hidden');
-        addressContBtn.classList.remove('opacity-50') 
+        addressContBtn.classList.remove('opacity-50')
     } else {
         searchInput.classList.add('rounded-2xl')
         dropdown.classList.add('hidden')
@@ -206,7 +206,7 @@ Array.from(document.querySelectorAll('.selectOption')).forEach(element => {
 })
 
 const searchInput2 = document.querySelectorAll('.search2')
-const next6 = document.getElementById('next2')
+const next6 = document.getElementById('type-btn')
 const dropdown2 = document.getElementById('dropdown2')
 
 searchInput2.forEach(inp => {
@@ -228,11 +228,11 @@ searchInput2.forEach(inp => {
     })
 })
 
-  const fullAdressForm = document.getElementById('adressForm')
+const fullAdressForm = document.getElementById('adressForm')
 
-  fullAdressForm.addEventListener('submit', (e) => {
-      e.preventDefault()
-      const db = new FormData(fullAdressForm)
-      const fullAdress = Object.fromEntries(db.entries())
-      console.log(fullAdress)
-  })
+fullAdressForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+    const db = new FormData(fullAdressForm)
+    const fullAdress = Object.fromEntries(db.entries())
+    console.log(fullAdress)
+})
