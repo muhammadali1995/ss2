@@ -14,7 +14,14 @@ var currentPage = SPLASH_PAGE;
 
 const navigationNextMap = {
     'login-btn': VERIFY_PAGE,
-    'verify-btn': PIN_PAGE
+    'verify-btn': PIN_PAGE,
+    'pin-btn': STOCK_PAGE,
+    'stock-btn': CREATE_ACCOUNT,
+    'account-btn': CREATE_PIN,
+    'crpin-btn': ADRESS,
+    'adress-btn': TYPE_PAGE,
+    'type-btn': PICK_PAGE,
+    'pick-btn': TERM_PAGE
 }
 
 window.onload = () => {
@@ -27,16 +34,11 @@ window.onload = () => {
     Array.from(nextBtns).forEach(nextBtn => {
         nextBtn.addEventListener('click', (event) => {
             const id = event.target.id;
-            changePage(navigationNextMap[id])
+            if (nextBtn.ariaDisabled == 'false')
+                changePage(navigationNextMap[id])
         })
     })
 
-    const pinCont = document.querySelector('.pin-cont')
-    const stockCont = document.querySelector('.stock-cont')
-    const accountCont = document.querySelector('.account-cont')
-    const adressCont = document.querySelector('#address-cont-btn')
-    const typeCont = document.querySelector('.type-con')
-    const pickCont = document.querySelector('.pick-con')
     const pinPrev = document.querySelector('.pin-prev')
     const stockPrev = document.querySelector('.stock-prev')
     const accountPrev = document.querySelector('.account-prev')
@@ -46,32 +48,6 @@ window.onload = () => {
     const pickPrev = document.querySelector('.pick-prev')
     const termPrev = document.querySelector('.term-prev')
 
-    pinCont.addEventListener('click', () => {
-        if (pinCont.ariaDisabled == 'false') {
-            changePage(STOCK_PAGE)
-        }
-    })
-    stockCont.addEventListener('click', () => {
-        changePage(CREATE_ACCOUNT)
-    })
-
-
-    accountCont.addEventListener('click', () => {
-        if (accountCont.disabled == false) {
-            changePage(CREATE_PIN)
-        }
-    })
-    adressCont.addEventListener('click', () => {
-        if (adressCont.disabled == false) {
-            changePage(TYPE_PAGE)
-        }
-    })
-    typeCont.addEventListener('click', () => {
-        changePage(PICK_PAGE)
-    })
-    pickCont.addEventListener('click', () => {
-        changePage(TERM_PAGE)
-    })
     pinPrev.addEventListener('click', () => {
         changePage(VERIFY_PAGE)
     })
