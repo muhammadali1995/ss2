@@ -52,7 +52,7 @@ btns.forEach(btn => {
             setTimeout(() => {
                 document.getElementById('stock-page').classList.remove('hidden')
                 document.getElementById('pin-page').classList.add('hidden')
-            }, 1000)
+            }, 500)
         }
         pinCode.push(btn.textContent)
         const inps = document.querySelectorAll('.password')
@@ -110,6 +110,10 @@ const codeValues = [];
 
 const codeInputs = document.querySelectorAll('.in')
 let currentInputIndex = 0;
+
+const data = new FormData(document.getElementById('formdata'));
+const value = Object.fromEntries(data.entries());
+value.email = data.get("email");
 numberBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
         if (currentInputIndex > 3) return;
@@ -146,8 +150,4 @@ clearBtn.addEventListener('click', () => {
         codeValues.length--
     }
 
-
-    console.log(codeValues)
 })
-
-// CREATE PIN
