@@ -39,6 +39,10 @@ btn.addEventListener('click', () => {
     }
 })
 
+function hasAllValue(arr) {
+    return arr.every(input => input.value != '')
+}
+
 const btns = document.querySelectorAll('.btn-num')
 const del = document.getElementById('del')
 const pinCode = [];
@@ -98,6 +102,7 @@ del.addEventListener('click', () => {
 })
 
 
+// CREATE PIN 
 
 const numberBtns = document.querySelectorAll('.btn-nums')
 const clearBtn = document.getElementById('del2')
