@@ -13,7 +13,7 @@ const TERM_PAGE = 'term';
 
 var currentPage = SPLASH_PAGE;
 
-const navigationMap = {
+const navigationNextMap = {
     'login-btn': VERIFY_PAGE,
     'verify-btn': PIN_PAGE
 }
@@ -28,7 +28,7 @@ window.onload = () => {
     Array.from(nextBtns).forEach(nextBtn => {
         nextBtn.addEventListener('click', (event) => {
             const id = event.target.id;
-            changePage(navigationMap[id])
+            changePage(navigationNextMap[id])
         })
     })
 
