@@ -1,0 +1,23 @@
+.scrollPage ::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollPage ::-webkit-scrollbar-button {
+    background: transparent!important;
+}
+
+.scrollPage::-webkit-scrollbar-track-piece {
+    background: transparent!important;
+}
+
+.scrollPage ::-webkit-scrollbar-thumb {
+    background: transparent!important;
+}
+
+* {
+    font-family: 'Lato';
+}
+
+.swiper-pagination {
+    color: #525967!important;
+}

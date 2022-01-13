@@ -544,8 +544,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     right: 0.5rem;
 }
 
-.top-10 {
-    top: 2.5rem;
+.top-72 {
+    top: 18rem;
 }
 
 .bottom-0 {
@@ -570,6 +570,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .z-30 {
     z-index: 30;
+}
+
+.m-4 {
+    margin: 1rem;
 }
 
 .mx-auto {
@@ -625,16 +629,40 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-right: 1rem;
 }
 
-.ml-3 {
-    margin-left: 0.75rem;
+.-mr-10 {
+    margin-right: -2.5rem;
 }
 
-.-mt-2 {
-    margin-top: -0.5rem;
+.mb-20 {
+    margin-bottom: 5rem;
 }
 
 .mt-6 {
     margin-top: 1.5rem;
+}
+
+.ml-4 {
+    margin-left: 1rem;
+}
+
+.ml-2 {
+    margin-left: 0.5rem;
+}
+
+.mt-3 {
+    margin-top: 0.75rem;
+}
+
+.-ml-4 {
+    margin-left: -1rem;
+}
+
+.mt-1 {
+    margin-top: 0.25rem;
+}
+
+.-mt-10 {
+    margin-top: -2.5rem;
 }
 
 .-mt-36 {
@@ -661,20 +689,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-bottom: 0.75rem;
 }
 
-.mt-1 {
-    margin-top: 0.25rem;
-}
-
-.mt-3 {
-    margin-top: 0.75rem;
-}
-
 .mt-40 {
     margin-top: 10rem;
-}
-
-.ml-4 {
-    margin-left: 1rem;
 }
 
 .mt-1\.5 {
@@ -699,6 +715,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .ml-60 {
     margin-left: 15rem;
+}
+
+.ml-3 {
+    margin-left: 0.75rem;
 }
 
 .flex {
@@ -737,6 +757,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     height: 1.25rem;
 }
 
+.h-60 {
+    height: 15rem;
+}
+
 .h-screen {
     height: 100vh;
 }
@@ -773,16 +797,24 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: 1.25rem;
 }
 
+.w-32 {
+    width: 8rem;
+}
+
+.w-60 {
+    width: 15rem;
+}
+
+.w-80 {
+    width: 20rem;
+}
+
 .w-auto {
     width: auto;
 }
 
 .w-10 {
     width: 2.5rem;
-}
-
-.w-32 {
-    width: 8rem;
 }
 
 .w-4 {
@@ -795,10 +827,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-48 {
     width: 12rem;
-}
-
-.w-80 {
-    width: 20rem;
 }
 
 .min-w-full {
@@ -972,6 +1000,11 @@ Ensure the default browser behavior of the `hidden` attribute.
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-normal {
+    --tw-bg-opacity: 1;
+    background-color: rgb(43 100 245 / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-r {
     background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -1038,14 +1071,19 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-right: 2.5rem;
 }
 
-.px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+.py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .py-4 {
     padding-top: 1rem;
     padding-bottom: 1rem;
+}
+
+.px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
 .px-5 {
@@ -1063,9 +1101,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-right: 2.25rem;
 }
 
-.py-2 {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+.pb-4 {
+    padding-bottom: 1rem;
 }
 
 .pt-2 {
@@ -1098,14 +1135,14 @@ Ensure the default browser behavior of the `hidden` attribute.
     line-height: 1.25rem;
 }
 
-.text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
-}
-
 .text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
+}
+
+.text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
 }
 
 .text-xl {
@@ -1216,10 +1253,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .outline {
     outline-style: solid;
-}
-
-.filter {
-    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .swiper-pagination-bullet {

@@ -58,3 +58,23 @@ next.addEventListener('click', () => {
         })
     }
 })
+
+const stockCards = document.querySelectorAll('.stock-card')
+stockCards.forEach(stockCard => {
+    stockCard.addEventListener('click', () => {
+        if (stockCard.classList.contains('bg-blue-500')) {
+            stockCard.classList.remove('bg-blue-500')
+            stockCard.classList.remove('text-white')
+        } else {
+            stockCard.classList.add('bg-blue-500')
+            stockCard.classList.add('text-white')
+        }
+    })
+})
+
+const ssPickBtns = document.querySelectorAll('.ss-pick-btn')
+ssPickBtns.forEach(ssPickBtn => {
+    ssPickBtn.addEventListener('click', () => {
+        ssPickBtn.classList.add('shadow')
+    })
+})
