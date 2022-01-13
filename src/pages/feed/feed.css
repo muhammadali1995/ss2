@@ -21,3 +21,9 @@
 .swiper-pagination {
     color: #525967!important;
 }
+
+.color-normal::placeholder {
+    color: #2B64F5;
+    font-size: 14px;
+    font-weight: 400;
+}
