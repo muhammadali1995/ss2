@@ -30,20 +30,15 @@ const newsPage = document.getElementById('news')
 publicationsBtn.addEventListener('click', () => {
     publicationsPage.classList.remove('hidden')
     newsPage.classList.add('hidden')
-    publicationsBtn.classList.add('bg-normal')
-    publicationsBtn.classList.add('text-white')
-    newsBtn.classList.remove('bg-normal')
-    newsBtn.classList.remove('text-white')
+    publicationsBtn.classList.add('bg-normal', 'text-white')
+    newsBtn.classList.remove('bg-normal', 'text-white')
 })
 newsBtn.addEventListener('click', () => {
     newsPage.classList.remove('hidden')
     publicationsPage.classList.add('hidden')
-    publicationsBtn.classList.remove('bg-normal')
-    publicationsBtn.classList.remove('text-white')
-    publicationsBtn.classList.remove('bg-blue-normal')
-    newsBtn.classList.add('bg-normal')
+    publicationsBtn.classList.remove('bg-normal', 'bg-blue-normal', 'text-white')
+    newsBtn.classList.add('bg-normal', 'text-white')
     publicationsBtn.classList.add('text-gray-500')
-    newsBtn.classList.add('text-white')
 })
 
 const postBtn = document.getElementById('post')
@@ -81,13 +76,11 @@ const commentSearchValue = document.getElementById('commentSearch')
 const ActiveInput = document.activeElement
 dropdownBtn.addEventListener('click', () => {
     if (dropdownBtn.style.transform == 'rotate(45deg)') {
-        dropdownBtn.style.transition = '0.2s ease-in';
+        dropdownBtn.setAttribute('style', 'transform:rotate(90deg);transition:0.2s ease-in;')
         commentDropdown.classList.add('hidden')
-        dropdownBtn.style.transform = 'rotate(90deg)';
     } else {
-        dropdownBtn.style.transition = '0.2s ease-in';
+        dropdownBtn.setAttribute('style', 'transform:rotate(45deg);transition :0.2s ease-in;')
         commentDropdown.classList.remove('hidden')
-        dropdownBtn.style.transform = 'rotate(45deg)';
     }
 })
 
@@ -120,12 +113,74 @@ profileImg.addEventListener('click', () => {
     if (profileDropdown.classList.contains('hidden')) {
         profileDropdown.classList.remove('hidden')
         feedPage.style.opacity = '0.4'
-        document.body.style.background = 'black'
-        document.body.style.overflow = 'hidden'
+        document.body.setAttribute('style', 'overflow:hidden;background:black;')
     } else {
         profileDropdown.classList.add('hidden')
         feedPage.style.opacity = '1'
-        document.body.style.background = 'transparent'
-        document.body.style.overflow = 'auto'
+        document.body.setAttribute('style', 'overflow:auto;bacground:transparent;')
+    }
+})
+
+const postInput = document.getElementById('postInput')
+const postParent = document.getElementById('postParent')
+const postBtnNext = document.getElementById('enterPost')
+const postForm = document.getElementById('postForm')
+postForm.onsubmit = (e) => {
+    e.preventDefault()
+    if (postInput.value != '') {
+        postPage.classList.add('hidden')
+        feedPage.classList.remove('hidden')
+        const newPost = document.createElement('div')
+        const postValue = postInput.value
+        newPost.className = 'bg-white mt-4 p-4 rounded-2xl'
+        newPost.innerHTML = `<div class="flex items-center ">
+            <img src="./../../assets/feed/hassan.png " alt=" ">
+            <div class="ml-4 ">
+                <h3 class="font-semibold ">Clark Hassan</h3>
+                <p class="text-gray-400 text-xs ">24s ago</p>
+            </div>
+        </div>
+        <p class="font-normal mt-4 text-gray-600 text-sm ">${postValue}</p>
+        <div class="flex items-center justify-between w-60 mt-4 ">
+            <div class="flex items-center cursor-pointer ">
+                <img src="./../../assets/feed/heart (1) 1.png ">
+                <p class="ml-2 text-gray-400 text-xs ">Like</p>
+            </div>
+            <div class="flex items-center cursor-pointer ">
+                <img src="./../../assets/feed/message 1.png ">
+                <p class="ml-2 text-gray-400 text-xs commentBtn">Comment</p>
+            </div>
+    </div>`
+        postParent.appendChild(newPost)
+        postInput.value = ''
+    }
+}
+postBtnNext.addEventListener('click', () => {
+    if (postInput.value != '') {
+        postPage.classList.add('hidden')
+        feedPage.classList.remove('hidden')
+        const newPost = document.createElement('div')
+        const postValue = postInput.value
+        newPost.className = 'bg-white mt-4 p-4 rounded-2xl'
+        newPost.innerHTML = `<div class="flex items-center ">
+            <img src="./../../assets/feed/hassan.png " alt=" ">
+            <div class="ml-4 ">
+                <h3 class="font-semibold ">Clark Hassan</h3>
+                <p class="text-gray-400 text-xs ">24s ago</p>
+            </div>
+        </div>
+        <p class="font-normal mt-4 text-gray-600 text-sm ">${postValue}</p>
+        <div class="flex items-center justify-between w-60 mt-4 ">
+            <div class="flex items-center cursor-pointer ">
+                <img src="./../../assets/feed/heart (1) 1.png ">
+                <p class="ml-2 text-gray-400 text-xs ">Like</p>
+            </div>
+            <div class="flex items-center cursor-pointer ">
+                <img src="./../../assets/feed/message 1.png ">
+                <p class="ml-2 text-gray-400 text-xs commentBtn">Comment</p>
+            </div>
+    </div>`
+        postParent.appendChild(newPost)
+        postInput.value = ''
     }
 })
