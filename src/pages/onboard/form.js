@@ -143,21 +143,14 @@ numberBtns.forEach((btn) => {
         currentInputIndex++;
     })
 })
-
 clearBtn.addEventListener('click', () => {
-
-    if (currentInputIndex > 3) currentInputIndex = 3;
-    codeInputs[currentInputIndex].value = ''
-    codeInputs[currentInputIndex].style.backgroundColor = 'white'
-
+    if (currentInputIndex > 3) return;
     if (currentInputIndex > 0) {
+        codeInputs[currentInputIndex - 1].focus()
+        codeInputs[currentInputIndex - 1].value = '';
+        codeInputs[currentInputIndex - 1].style.backgroundColor = 'white'
         currentInputIndex--
     }
-
-    if (codeValues.length > 0) {
-        codeValues.length--
-    }
-
 })
 
 
