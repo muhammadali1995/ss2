@@ -63,43 +63,45 @@
                         <img src="./../../assets/feed/Profile_image.png ">
                         <p class="font-normal ml-4 text-blue-normal text-sm ">Partager un post...</p>
                     </div>
-                    <div class="bg-white mt-4 p-4 rounded-2xl ">
-                        <div class="flex items-center ">
-                            <img src="./../../assets/feed/hassan.png " alt=" ">
-                            <div class="ml-4 ">
-                                <h3 class="font-semibold ">Clark Hassan</h3>
-                                <p class="text-gray-400 text-xs ">24s ago</p>
+                    <div id="postParent">
+                        <div class="bg-white mt-4 p-4 rounded-2xl ">
+                            <div class="flex items-center ">
+                                <img src="./../../assets/feed/hassan.png " alt=" ">
+                                <div class="ml-4 ">
+                                    <h3 class="font-semibold ">Clark Hassan</h3>
+                                    <p class="text-gray-400 text-xs ">24s ago</p>
+                                </div>
+                            </div>
+                            <p class="font-normal mt-4 text-gray-600 text-sm ">Il a survécu non seulement à cinq siècles, mais aussi au saut dans la composition électronique.</p>
+                            <div class="flex items-center justify-between w-60 mt-4 ">
+                                <div class="flex items-center cursor-pointer ">
+                                    <img src="./../../assets/feed/heart (1) 1.png ">
+                                    <p class="ml-2 text-gray-400 text-xs ">Like</p>
+                                </div>
+                                <div class="flex items-center cursor-pointer ">
+                                    <img src="./../../assets/feed/message 1.png ">
+                                    <p class="ml-2 text-gray-400 text-xs commentBtn">Comment</p>
+                                </div>
                             </div>
                         </div>
-                        <p class="font-normal mt-4 text-gray-600 text-sm ">Il a survécu non seulement à cinq siècles, mais aussi au saut dans la composition électronique.</p>
-                        <div class="flex items-center justify-between w-60 mt-4 ">
-                            <div class="flex items-center cursor-pointer ">
-                                <img src="./../../assets/feed/heart (1) 1.png ">
-                                <p class="ml-2 text-gray-400 text-xs ">Like</p>
+                        <div class="bg-white mt-4 p-4 rounded-2xl ">
+                            <div class="flex items-center ">
+                                <img src="./../../assets/feed/hassan.png " alt=" ">
+                                <div class="ml-4 ">
+                                    <h3 class="font-semibold ">Clark Hassan</h3>
+                                    <p class="text-gray-400 text-xs ">24s ago</p>
+                                </div>
                             </div>
-                            <div class="flex items-center cursor-pointer ">
-                                <img src="./../../assets/feed/message 1.png ">
-                                <p class="ml-2 text-gray-400 text-xs commentBtn">Comment</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white mt-4 p-4 rounded-2xl ">
-                        <div class="flex items-center ">
-                            <img src="./../../assets/feed/hassan.png " alt=" ">
-                            <div class="ml-4 ">
-                                <h3 class="font-semibold ">Clark Hassan</h3>
-                                <p class="text-gray-400 text-xs ">24s ago</p>
-                            </div>
-                        </div>
-                        <img src="./../../assets/feed/bitcoin.png " alt=" " class="mt-4 ">
-                        <div class="flex items-center justify-between mt-4 w-60 ">
-                            <div class="flex items-center cursor-pointer ">
-                                <img src="./../../assets/feed/heart (1) 1.png ">
-                                <p class="ml-2 text-gray-400 text-xs ">Like</p>
-                            </div>
-                            <div class="flex items-center cursor-pointer ">
-                                <img src="./../../assets/feed/message 1.png ">
-                                <p class="ml-2 text-gray-400 text-xs commentBtn">Comment</p>
+                            <img src="./../../assets/feed/bitcoin.png " alt=" " class="mt-4 ">
+                            <div class="flex items-center justify-between mt-4 w-60 ">
+                                <div class="flex items-center cursor-pointer ">
+                                    <img src="./../../assets/feed/heart (1) 1.png ">
+                                    <p class="ml-2 text-gray-400 text-xs ">Like</p>
+                                </div>
+                                <div class="flex items-center cursor-pointer ">
+                                    <img src="./../../assets/feed/message 1.png ">
+                                    <p class="ml-2 text-gray-400 text-xs commentBtn">Comment</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -250,8 +252,10 @@
             <h3 class="font-semibold ml-4 text-2xl">Partager un post</h3>
         </div>
         <div class="flex items-center mt-4">
-            <img src="./../../assets/feed/Profile_image.png">
-            <input type="text" class="color-normal" placeholder="">
+            <form id="postForm" class="flex">
+                <img src="./../../assets/feed/Profile_image.png">
+                <input id="postInput" type="text" class="color-normal outline-none ml-4" placeholder="Écrire...">
+            </form>
         </div>
         <div class="-ml-4 border border-light bottom-0 fixed flex items-center justify-around max-w-mobile py-2 w-full">
             <div class="flex">
@@ -259,7 +263,7 @@
                 <div class="bg-light mr-2 p-2 px-2 cursor-pointer rounded-full"><img src="./../../assets/feed/@.png" alt=""></div>
                 <div class="bg-light p-2 px-2 cursor-pointer rounded-full"><img src="./../../assets/feed/pictures.png" alt=""></div>
             </div>
-            <button class="bg-gradient-to-r font-bold from-blue-darker px-8 py-2 rounded-full text-sm text-white to-blue-lighter">Publier</button>
+            <button id="enterPost" class="bg-gradient-to-r font-bold from-blue-darker px-8 py-2 rounded-full text-sm text-white to-blue-lighter">Publier</button>
         </div>
     </div>
     <div id="commentPage" class="max-w-mobile hidden mx-auto p-4">
