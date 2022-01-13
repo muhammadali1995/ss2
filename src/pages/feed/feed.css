@@ -1,16 +1,16 @@
-.scrollPage ::-webkit-scrollbar {
+* ::-webkit-scrollbar {
     display: none;
 }
 
-.scrollPage ::-webkit-scrollbar-button {
+* ::-webkit-scrollbar-button {
     background: transparent!important;
 }
 
-.scrollPage::-webkit-scrollbar-track-piece {
+*::-webkit-scrollbar-track-piece {
     background: transparent!important;
 }
 
-.scrollPage ::-webkit-scrollbar-thumb {
+* ::-webkit-scrollbar-thumb {
     background: transparent!important;
 }
 

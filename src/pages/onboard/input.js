@@ -75,6 +75,10 @@ stockCards.forEach(stockCard => {
 const ssPickBtns = document.querySelectorAll('.ss-pick-btn')
 ssPickBtns.forEach(ssPickBtn => {
     ssPickBtn.addEventListener('click', () => {
-        ssPickBtn.classList.add('shadow')
+        if (ssPickBtn.classList.contains('shadow')) {
+            ssPickBtn.classList.remove('shadow')
+        } else {
+            ssPickBtn.classList.add('shadow')
+        }
     })
 })
