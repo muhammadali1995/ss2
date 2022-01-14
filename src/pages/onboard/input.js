@@ -60,12 +60,16 @@ next.addEventListener('click', () => {
 })
 
 const stockCards = document.querySelectorAll('.stock-card')
+const stocksValue = []
 stockCards.forEach(stockCard => {
     stockCard.addEventListener('click', () => {
         if (stockCard.classList.contains('bg-blue-500')) {
             stockCard.classList.remove('bg-blue-500')
             stockCard.classList.remove('text-white')
+            stocksValue.pop(stockCard.children[1].children[0].innerText)
         } else {
+            stocksValue.push(stockCard.children[1].children[0].innerText)
+            console.log(stocksValue)
             stockCard.classList.add('bg-blue-500')
             stockCard.classList.add('text-white')
         }
@@ -73,11 +77,15 @@ stockCards.forEach(stockCard => {
 })
 
 const ssPickBtns = document.querySelectorAll('.ss-pick-btn')
+const pickValues = []
 ssPickBtns.forEach(ssPickBtn => {
     ssPickBtn.addEventListener('click', () => {
         if (ssPickBtn.classList.contains('shadow')) {
             ssPickBtn.classList.remove('shadow')
+            pickValues.pop(ssPickBtn.children[1].innerText)
         } else {
+            pickValues.push(ssPickBtn.children[1].innerText)
+            console.log(pickValues)
             ssPickBtn.classList.add('shadow')
         }
     })

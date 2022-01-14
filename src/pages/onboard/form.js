@@ -4,7 +4,7 @@ const phoneNumber = document.getElementById('phoneNumber');
 
 // VERIFY CODE
 const inputElements = [...document.querySelectorAll('input.code-input')]
-const verificationCode = []
+let verificationCode = []
 
 //Input navigation logic
 inputElements.forEach((ele, index) => {
@@ -19,9 +19,6 @@ inputElements.forEach((ele, index) => {
     ele.addEventListener('input', (e) => {
         const [first, ...rest] = e.target.value
         if (index !== inputElements.length - 1 && first !== undefined) {
-
-            verificationCode.push(ele.value)
-
             inputElements[index + 1].focus()
             inputElements[index + 1].value = rest.join('')
             inputElements[index + 1].dispatchEvent(new Event('input'))
@@ -40,13 +37,14 @@ verifyBtn.addEventListener('click', () => {
         errorText.textContent = ''
         verificationInputs.forEach(input => {
             input.classList.remove('red')
+            verificationCode.push(input.value)
             if (input.value != '') {
                 input.style.backgroundColor = '#2B64F5'
             }
         })
-
-        //SUCCESS
         console.log(verificationCode);
+        verificationCode = []
+            //SUCCESS
 
     } else {
         verifyBtn.ariaDisabled = true
