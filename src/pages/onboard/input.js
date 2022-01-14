@@ -64,14 +64,13 @@ const stocksValue = []
 stockCards.forEach(stockCard => {
     stockCard.addEventListener('click', () => {
         if (stockCard.classList.contains('bg-blue-500')) {
-            stockCard.classList.remove('bg-blue-500')
-            stockCard.classList.remove('text-white')
+            stockCard.classList.remove('bg-blue-500', 'text-white')
             stocksValue.pop(stockCard.children[1].children[0].innerText)
+            console.log(stocksValue)
         } else {
             stocksValue.push(stockCard.children[1].children[0].innerText)
             console.log(stocksValue)
-            stockCard.classList.add('bg-blue-500')
-            stockCard.classList.add('text-white')
+            stockCard.classList.add('bg-blue-500', 'text-white')
         }
     })
 })
