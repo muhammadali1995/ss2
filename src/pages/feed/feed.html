@@ -17,19 +17,18 @@
 </head>
 
 <body>
-    <div class="max-w-mobile hidden mx-auto relative">
+    <div class="max-w-mobile mx-auto relative">
         <div id="feed" class="max-w-mobile mx-auto bg-blue-dark">
             <div class="font-semibold p-4 text-white ">
                 <div class="-ml-4 -mt-4 bg-blue-dark z-50 fixed flex items-center justify-between max-w-mobile px-4 py-2 w-full">
                     <h3 class="text-2xl ">Feed</h3>
                     <div class="flex items-center ">
-                        <div class="mr-4 "><img src="./../../assets/feed/bell.png "></div>
-                        <div id="profileImg" class="w-8 h-8"><img src="./../../assets/feed/Profile_image.png " alt=" "></div>
-
+                        <div class="mr-4 "><img src="./../../assets/feed/bell.png"></div>
+                        <div id="profileImg" class="cursor-pointer"><img src="./../../assets/feed/menu.png"></div>
                     </div>
                 </div>
                 <div class="mt-16">
-                    <form id="searchForm" class="flex justify-around">
+                    <form class=" searchForm flex justify-around">
                         <button type="submit" class="-mr-10 relative">
                         <img src="./../../assets/feed/search (1) 1.png " class="">
                     </button>
@@ -43,19 +42,19 @@
                     <button id="newsBtn" class="font-bold hover:bg-blue-normal hover:text-white p-1 rounded-full text-gray-500 w-1/2">News</button>
                 </div>
                 <div id="publications" class=" mb-20 mt-6 w-100">
-                    <div class="overflow-auto  w-100">
+                    <div class="overflow-auto w-100">
                         <div class=" flex " style="width: 400px; ">
-                            <div style="background: #2B64F526; " class="flex items-center justify-around mr-4 px-2 py-4 rounded-2xl w-32 ">
+                            <div style="background: #2B64F526; " class="flex items-center justify-around mr-4 px-2 py-3 rounded-2xl w-32 ">
                                 <img src="./../../assets/feed/crupto.png ">
                                 <h3 class="font-bold text-sm ">Cryptos</h3>
                             </div>
-                            <div style="background: #F2848426; " class="flex items-center justify-around mr-4 px-2 py-4 rounded-2xl w-32 ">
-                                <img src="./../../assets/feed/carbon_media-library-filled.png ">
-                                <h3 class="font-bold text-sm ">Cryptos</h3>
+                            <div style="background: #F2848426; " class="flex items-center justify-around mr-4 px-2 py-3 rounded-2xl w-32 ">
+                                <img src="./../../assets/feed/video.png">
+                                <h3 class="font-bold text-sm text-red" style="color:#EB5757;">Média</h3>
                             </div>
-                            <div style="background: #2B64F526; " class="flex items-center justify-around mr-4 px-2 py-4 rounded-2xl w-32 ">
-                                <img src="./../../assets/feed/map_pharmacy.png ">
-                                <h3 class="font-bold text-sm ">Cryptos</h3>
+                            <div style="background: #2B64F526; " class="flex items-center justify-around mr-4 px-2 py-3 rounded-2xl w-32 ">
+                                <img src="./../../assets/feed/pill.png ">
+                                <h3 class="font-bold text-sm " style="color: #08A647;">Health</h3>
                             </div>
                         </div>
                     </div>
@@ -222,26 +221,38 @@
                 </footer>
             </div>
         </div>
-        <div id="profileDropdown" style="box-shadow: 0px 0px 20px rgba(17, 20, 58, 0.15);left: 393px;" class="bg-light hidden flex fixed flex-col items-end p-6 rounded-2xl text-black top-12">
-            <div class="flex items-center cursor-pointer">
-                <h3 class="font-medium mr-4">Profil</h3>
-                <img src="./../../assets/feed/user.png">
+        <div id="profileDropdown" style="box-shadow: 0px 0px 20px rgba(17, 20, 58, 0.15);" class="bg-light right-0 hidden fixed flex flex-col p-6 rounded-2xl text-black top-12 w-72">
+            <button class="ml-auto" id="profileCloseBtn"> <img src="./../../assets/feed/close (1) 1.png"></button>
+            <div class="flex items-center justify-center w-full">
+                <img src="./../../assets/feed/PROFILE_IMG.png" alt="">
             </div>
-            <div class="flex mt-4 items-center cursor-pointer">
+            <button class="bg-gradient-to-r flex from-blue-darker justify-center mt-6 mx-auto py-2 rounded-full text-white to-blue-lighter w-32">
+                <img src="./../../assets/feed/gift.png" class="mr-2">
+                <p>Parrainer</p>
+            </button>
+            <div class="mt-8 flex items-center cursor-pointer">
+                <img src="./../../assets/feed/historique.png" class="mr-6">
+                <h3 class="font-medium">Historique de transactions</h3>
+            </div>
+            <div class="flex items-center cursor-pointer mt-6">
+                <img src="./../../assets/feed/banque.png" class="mr-6">
+                <h3 class="font-medium mr-4">Déposer/Retirer</h3>
+            </div>
+            <div class="flex items-center cursor-pointer mt-6">
+                <img src="./../../assets/feed/academy.png" class="mr-6">
+                <h3 class="font-medium mr-4">Academy</h3>
+            </div>
+            <div class="flex items-center cursor-pointer mt-6">
+                <img src="./../../assets/feed/phone 1.png" class="mr-6">
                 <h3 class="font-medium mr-4">Support</h3>
-                <img src="./../../assets/feed/phone 1.png">
             </div>
-            <div class="flex mt-4 items-center cursor-pointer">
+            <div class="flex items-center cursor-pointer mt-6">
+                <img src="./../../assets/feed/setting.png" class="mr-6">
                 <h3 class="font-medium mr-4">Paramètres</h3>
-                <img src="./../../assets/feed/setting.png">
             </div>
-            <div class="flex mt-4 items-center cursor-pointer">
+            <div class="flex items-center cursor-pointer mt-6">
+                <img src="./../../assets/feed/log-out.png" class="mr-6">
                 <h3 class="font-medium mr-4 text-red-600">Déconnexion</h3>
-                <img src="./../../assets/feed/log-out.png">
-            </div>
-            <div class="flex mt-4 items-center cursor-pointer">
-                <h3 class="font-medium mr-4 text-blue-normal">Parrainer</h3>
-                <img src="./../../assets/feed/gift.png">
             </div>
         </div>
     </div>
@@ -322,17 +333,170 @@
             </form>
         </div>
     </div>
-    <div id="rechercher">
-        <div>
-            <div>
-                <img src="./../../assets/Vector.png">
-                <h3>Rechercher</h3>
+    <div id="rechercher" class="bg-blue-dark hidden max-w-mobile mx-auto text-white">
+        <div class="bg-blue-dark fixed flex items-center justify-between max-w-mobile px-4 py-2 top-0 w-full z-50">
+            <div class="flex items-center">
+                <button id="rechercherCloseBtn"><img src="./../../assets/feed/chevron-left.png"></button>
+                <h3 class="font-semibold ml-4 text-2xl">Rechercher</h3>
             </div>
-            <div>
-                <img src="./../../assets/feed/bell.png">
-                <img src="./../../assets/feed/menu.png" alt="">
+            <div class="flex items-center">
+                <button><img src="./../../assets/feed/bell.png" class="mr-4"></button>
+                <button><img src="./../../assets/feed/menu.png" alt=""></button>
             </div>
         </div>
+        <div class="bg-blue-dark pt-20">
+            <div class="bg-light p-4 rounded-t-3xl">
+                <form class="searchForm flex justify-around">
+                    <button type="submit" class="-mr-10 relative">
+                <img src="./../../assets/feed/search (1) 1.png " class="">
+            </button>
+                    <input type="text" id="rechercherValue" placeholder="Rechercher" class="p-4 px-10 outline-none rounded-full text-black w-full ">
+                </form>
+                <div class="flex items-center justify-between mt-6 text-black">
+                    <div class="flex items-center">
+                        <div><img src="./../../assets/feed/tesla.png"></div>
+                        <div class="ml-4">
+                            <h3 class="font-semibold text-base">Tesla</h3>
+                            <p class="text-gray-400 text-xs">TSLA</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-end">
+                        <h3 class="font-normal text-sm">12,502.36 €</h3>
+                        <p class="text-green-600 font-semibold text-xs">+510% </p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-6 text-black">
+                    <div class="flex items-center">
+                        <div><img src="./../../assets/feed/facebook.png"></div>
+                        <div class="ml-4">
+                            <h3 class="font-semibold text-base">Meta (Facebook)</h3>
+                            <p class="text-gray-400 text-xs">FB</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-end">
+                        <h3 class="font-normal text-sm">58,505,35.00 €</h3>
+                        <p class="text-red-600 font-semibold text-xs">-510% </p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-6 text-black">
+                    <div class="flex items-center">
+                        <div><img src="./../../assets/feed/microsoft.png"></div>
+                        <div class="ml-4">
+                            <h3 class="font-semibold text-base">Microsoft</h3>
+                            <p class="text-gray-400 text-xs">MSFT</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-end">
+                        <h3 class="font-normal text-sm">5,365.00 €</h3>
+                        <p class="text-red-600 font-semibold text-xs">-10% </p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-6 text-black">
+                    <div class="flex items-center">
+                        <div><img src="./../../assets/feed/amd.png"></div>
+                        <div class="ml-4">
+                            <h3 class="font-semibold text-base">AMD</h3>
+                            <p class="text-gray-400 text-xs">AMD</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-end">
+                        <h3 class="font-normal text-sm">5,365.00 €</h3>
+                        <p class="text-red-600 font-semibold text-xs">-10% </p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-6 text-black">
+                    <div class="flex items-center">
+                        <div><img src="./../../assets/feed/apple.png"></div>
+                        <div class="ml-4">
+                            <h3 class="font-semibold text-base">Apple</h3>
+                            <p class="text-gray-400 text-xs">APPL</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-end">
+                        <h3 class="font-normal text-sm">5,365.00 €</h3>
+                        <p class="text-green-600 font-semibold text-xs">+545% </p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-6 text-black">
+                    <div class="flex items-center">
+                        <div><img src="./../../assets/feed/snapshot.png"></div>
+                        <div class="ml-4">
+                            <h3 class="font-semibold text-base">Snapchat</h3>
+                            <p class="text-gray-400 text-xs">SNAP</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-end">
+                        <h3 class="font-normal text-sm">5,365.00 €</h3>
+                        <p class="text-green-600 font-semibold text-xs">+1080.3% </p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-6 text-black">
+                    <div class="flex items-center">
+                        <div><img src="./../../assets/feed/zoom.png"></div>
+                        <div class="ml-4">
+                            <h3 class="font-semibold text-base">Zoom</h3>
+                            <p class="text-gray-400 text-xs">ZMN</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-end">
+                        <h3 class="font-normal text-sm">5,365.00 €</h3>
+                        <p class="text-red-600 font-semibold text-xs">-54%</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-6 text-black">
+                    <div class="flex items-center">
+                        <div><img src="./../../assets/feed/hp.png"></div>
+                        <div class="ml-4">
+                            <h3 class="font-semibold text-base">Hewlett Packard</h3>
+                            <p class="text-gray-400 text-xs">HP</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-end">
+                        <h3 class="font-normal text-sm">5,365.00 €</h3>
+                        <p class="text-red-600 font-semibold text-xs">-10% </p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-6 text-black">
+                    <div class="flex items-center">
+                        <div><img src="./../../assets/feed/nivida.png"></div>
+                        <div class="ml-4">
+                            <h3 class="font-semibold text-base">Nvidia</h3>
+                            <p class="text-gray-400 text-xs">NVD</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-end">
+                        <h3 class="font-normal text-sm">5,365.00 €</h3>
+                        <p class="text-green-600 font-semibold text-xs">+810% </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="bg-light bottom-0 fixed flex justify-between max-w-mobile py-2 px-4 w-96" style="filter: drop-shadow(0px 0px 20px rgba(17, 20, 58, 0.15));">
+            <button class="flex flex-col items-center ">
+            <img src="./../../assets/feed/compass.png ">
+            <h4 class="text-xs font-semibold text-blue-normal mt-1 ">Feed</h4>
+        </button>
+            <button class="flex flex-col items-center ">
+            <img src="./../../assets/feed/bank.png ">
+            <h4 class="text-xs font-semibold text-gray-400 mt-1 ">Academy</h4>
+        </button>
+            <button class="-mt-10 flex flex-col items-center text-center ">
+            <div class="bg-light p-2 rounded-full ">
+                <div class="bg-gradient-to-r from-blue-darker p-4 rounded-full to-blue-lighter ">
+                    <img src="./../../assets/feed/Trade.png ">
+                </div>
+                <h4 class="text-xs font-semibold text-gray-400 mt-1 ">Trade</h4>
+            </div>
+        </button>
+            <button class="flex flex-col items-center ">
+            <img src="./../../assets/feed/wallet.png ">
+            <h4 class="text-xs font-semibold text-gray-400 mt-1 ">Portefeuille</h4>
+        </button>
+            <button class="flex flex-col items-center ">
+            <img src="./../../assets/feed/chat.png ">
+            <h4 class="text-xs font-semibold text-gray-400 mt-1 ">Chat</h4>
+        </button>
+        </footer>
     </div>
 </body>
 

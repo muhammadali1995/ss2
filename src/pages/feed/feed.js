@@ -14,12 +14,15 @@ const swiper = new Swiper('.swiper', {
 })
 
 const searchInput = document.getElementById('searchValue')
-const searchForm = document.getElementById('searchForm')
-searchForm.addEventListener('submit', (e) => {
-    e.preventDefault()
-    const searchInputValue = searchInput.value;
-    searchInputValue.value = ''
-    console.log(searchInputValue)
+const searchForms = document.querySelectorAll('.searchForm')
+searchForms.forEach(searchForm => {
+    searchForm.addEventListener('submit', (e) => {
+        e.preventDefault()
+        const searchInputValue = searchForm.children[1].value;
+        searchInputValue.value = ''
+        console.log(searchInputValue)
+    })
+
 })
 
 const publicationsBtn = document.getElementById('publicationsBtn')
@@ -183,4 +186,39 @@ postBtnNext.addEventListener('click', () => {
         postParent.appendChild(newPost)
         postInput.value = ''
     }
+})
+
+const rechercherPage = document.getElementById('rechercher')
+const rechercherInput = document.getElementById('rechercherValue')
+searchInput.addEventListener('keyup', () => {
+    if (searchInput.value != '') {
+        rechercherPage.classList.remove('hidden')
+        feedPage.classList.add('hidden')
+        rechercherInput.value = searchInput.value
+        rechercherInput.focus()
+    } else {
+        rechercherPage.classList.add('hidden')
+        feedPage.classList.remove('hidden')
+    }
+})
+rechercherInput.addEventListener('keyup', () => {
+    if (rechercherInput.value == '') {
+        rechercherPage.classList.add('hidden')
+        feedPage.classList.remove('hidden')
+        searchInput.value = rechercherInput.value
+        searchInput.focus()
+    }
+})
+const profileCloseBtn = document.getElementById('profileCloseBtn')
+profileCloseBtn.addEventListener('click', () => {
+    profileDropdown.classList.add('hidden')
+    feedPage.style.opacity = '1'
+    document.body.setAttribute('style', 'overflow:auto;bacground:transparent;')
+})
+
+const rechercherCloseBtn = document.getElementById('rechercherCloseBtn')
+rechercherCloseBtn.addEventListener('click', () => {
+    rechercherPage.classList.add('hidden')
+    feedPage.classList.remove('hidden')
+    searchInput.value = ''
 })
