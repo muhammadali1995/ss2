@@ -13,6 +13,9 @@ module.exports = {
                     normal: '#525967',
                     light: '#525967'
                 },
+                green: {
+                    normal: '#08A647'
+                },
                 light: '#F2F3FC',
                 border: {
                     blue: {
