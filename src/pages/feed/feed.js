@@ -110,20 +110,19 @@ commentForm.addEventListener('submit', (e) => {
     console.log(commentSearch)
 })
 
-const profileImg = document.getElementById('profileImg')
+const profileImgs = document.querySelectorAll('.profileImg')
 const profileDropdown = document.getElementById('profileDropdown')
-profileImg.addEventListener('click', () => {
-    if (profileDropdown.classList.contains('hidden')) {
-        profileDropdown.classList.remove('hidden')
-        feedPage.style.opacity = '0.4'
-        document.body.setAttribute('style', 'overflow:hidden;background:black;')
-    } else {
-        profileDropdown.classList.add('hidden')
-        feedPage.style.opacity = '1'
-        document.body.setAttribute('style', 'overflow:auto;bacground:transparent;')
-    }
+profileImgs.forEach(profileImg => {
+    profileImg.addEventListener('click', () => {
+        if (profileDropdown.classList.contains('hidden')) {
+            profileDropdown.classList.remove('hidden')
+            document.body.setAttribute('style', 'overflow:hidden;background:black;')
+        } else {
+            profileDropdown.classList.add('hidden')
+            document.body.setAttribute('style', 'overflow:auto;bacground:transparent;')
+        }
+    })
 })
-
 const postInput = document.getElementById('postInput')
 const postParent = document.getElementById('postParent')
 const postBtnNext = document.getElementById('enterPost')
