@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../../dist/output.css">
+    <link rel="stylesheet" href="./feed.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <!-- <script src="feed.js" defer></script> -->
+    <!-- <script src="./../portfolio/portfolio.js" defer></script> -->
+    <title>Feed</title>
+</head>
+
+<body>
+    <div id="main-wrapper" class="ss-page max-w-mobile mx-auto bg-light h-screen">
+
+        <nav class="font-semibold text-white bg-blue-dark z-50 fixed flex
+             items-center justify-between max-w-mobile px-4 py-2 w-full top-0">
+            <h3 class="text-2xl ">Feed</h3>
+            <div class="flex items-center ">
+                <div class="mr-4 "><img src="./../../assets/feed/bell.png"></div>
+                <div class="cursor-pointer profileImg"><img src="./../../assets/feed/menu.png"></div>
+            </div>
+        </nav>
+        <!-- MAIN CONTENT -->
+        <div class="main-content">
+            <!-- FEED -->
+            <div id='feedPage' class="hidden">
+                <!-- FEED SEARCH BAR -->
+                <div class="pt-20 pb-12 px-4 bg-blue-dark">
+                    <form class=" searchForm flex justify-around">
+                        <button type="submit" class="-mr-10 relative">
+                            <img src="./../../assets/feed/search (1) 1.png " class="">
+                        </button>
+                        <input type="text" id="searchValue" placeholder="Rechercher "
+                            class="p-4 px-10 outline-none rounded-full text-black w-full ">
+                    </form>
+                </div>
+
+                <!-- FEED TABS  -->
+                <div class="-mt-6 px-4 py-2  rounded-t-3xl bg-light h-min">
+                    <div class="bg-white rounded-full flex justify-between p-2 ">
+                        <button id="publicationsBtn"
+                            class="font-bold hover:bg-blue-normal p-1 bg-blue-normal rounded-full hover:text-white text-white w-1/2">Publications</button>
+                        <button id="newsBtn"
+                            class="font-bold hover:bg-blue-normal hover:text-white p-1 rounded-full text-gray-500 w-1/2">News</button>
+                    </div>
+                    <div id="publications" class=" mb-20 mt-6 w-100">
+                        <div class="overflow-auto w-100">
+                            <div class="flex" style="width: 400px; ">
+                                <div style="background: #2B64F526; "
+                                    class="flex items-center justify-around mr-4 px-2 py-3 rounded-2xl w-32 ">
+                                    <img src="./../../assets/feed/crupto.png ">
+                                    <h3 class="font-bold text-sm ">Cryptos</h3>
+                                </div>
+                                <div style="background: #F2848426; "
+                                    class="flex items-center justify-around mr-4 px-2 py-3 rounded-2xl w-32 ">
+                                    <img src="./../../assets/feed/video.png">
+                                    <h3 class="font-bold text-sm text-red" style="color:#EB5757;">Média</h3>
+                                </div>
+                                <div style="background: #2B64F526; "
+                                    class="flex items-center justify-around mr-4 px-2 py-3 rounded-2xl w-32 ">
+                                    <img src="./../../assets/feed/pill.png ">
+                                    <h3 class="font-bold text-sm " style="color: #08A647;">Health</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="post"
+                            class="bg-white border border-blue-normal cursor-pointer flex items-center mt-6 px-4 py-2 rounded-2xl ">
+                            <img src="./../../assets/feed/Profile_image.png ">
+                            <p class="font-normal ml-4 text-blue-normal text-sm ">Partager un post...</p>
+                        </div>
+                        <div id="postParent">
+                            <div class="bg-white mt-4 p-4 rounded-2xl ">
+                                <div class="flex items-center ">
+                                    <img src="./../../assets/feed/hassan.png " alt=" ">
+                                    <div class="ml-4 ">
+                                        <h3 class="font-semibold ">Clark Hassan</h3>
+                                        <p class="text-gray-400 text-xs ">24s ago</p>
+                                    </div>
+                                </div>
+                                <p class="font-normal mt-4 text-gray-600 text-sm ">Il a survécu non seulement à cinq
+                                    siècles, mais aussi au saut dans la composition électronique.</p>
+                                <div class="flex items-center justify-between w-60 mt-4 ">
+                                    <div class="flex items-center cursor-pointer ">
+                                        <img class="like" src="./../../assets/feed/heart (1) 1.png ">
+                                        <p class="ml-2 text-gray-400 text-xs ">Like</p>
+                                    </div>
+                                    <div class="flex items-center cursor-pointer ">
+                                        <img src="./../../assets/feed/message 1.png ">
+                                        <p class="ml-2 text-gray-400 text-xs commentBtn">Comment</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white mt-4 p-4 rounded-2xl ">
+                                <div class="flex items-center ">
+                                    <img src="./../../assets/feed/hassan.png " alt=" ">
+                                    <div class="ml-4 ">
+                                        <h3 class="font-semibold ">Clark Hassan</h3>
+                                        <p class="text-gray-400 text-xs ">24s ago</p>
+                                    </div>
+                                </div>
+                                <img src="./../../assets/feed/bitcoin.png " alt=" " class="mt-4 ">
+                                <div class="flex items-center justify-between mt-4 w-60 ">
+                                    <div class="flex items-center cursor-pointer ">
+                                        <img class="like" src="./../../assets/feed/heart (1) 1.png ">
+                                        <p class="ml-2 text-gray-400 text-xs ">Like</p>
+                                    </div>
+                                    <div class="flex items-center cursor-pointer ">
+                                        <img src="./../../assets/feed/message 1.png ">
+                                        <p class="ml-2 text-gray-400 text-xs commentBtn">Comment</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white mt-4 p-4 rounded-2xl ">
+                                <div class="flex items-center ">
+                                    <img src="./../../assets/feed/hassan.png " alt=" ">
+                                    <div class="ml-4 ">
+                                        <h3 class="font-semibold ">Clark Hassan</h3>
+                                        <p class="text-gray-400 text-xs ">24s ago</p>
+                                    </div>
+                                </div>
+                                <img src="./../../assets/feed/bitcoin.png " alt=" " class="mt-4 ">
+                                <div class="flex items-center justify-between mt-4 w-60 ">
+                                    <div class="flex items-center cursor-pointer ">
+                                        <img class="like" src="./../../assets/feed/heart (1) 1.png ">
+                                        <p class="ml-2 text-gray-400 text-xs ">Like</p>
+                                    </div>
+                                    <div class="flex items-center cursor-pointer ">
+                                        <img src="./../../assets/feed/message 1.png ">
+                                        <p class="ml-2 text-gray-400 text-xs commentBtn">Comment</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white mt-4 p-4 rounded-2xl ">
+                                <div class="flex items-center ">
+                                    <img src="./../../assets/feed/hassan.png " alt=" ">
+                                    <div class="ml-4 ">
+                                        <h3 class="font-semibold ">Clark Hassan</h3>
+                                        <p class="text-gray-400 text-xs ">24s ago</p>
+                                    </div>
+                                </div>
+                                <img src="./../../assets/feed/bitcoin.png " alt=" " class="mt-4 ">
+                                <div class="flex items-center justify-between mt-4 w-60 ">
+                                    <div class="flex items-center cursor-pointer ">
+                                        <img class="like" src="./../../assets/feed/heart (1) 1.png ">
+                                        <p class="ml-2 text-gray-400 text-xs ">Like</p>
+                                    </div>
+                                    <div class="flex items-center cursor-pointer ">
+                                        <img src="./../../assets/feed/message 1.png ">
+                                        <p class="ml-2 text-gray-400 text-xs commentBtn">Comment</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white mt-4 p-4 rounded-2xl ">
+                                <div class="flex items-center ">
+                                    <img src="./../../assets/feed/hassan.png " alt=" ">
+                                    <div class="ml-4 ">
+                                        <h3 class="font-semibold ">Clark Hassan</h3>
+                                        <p class="text-gray-400 text-xs ">24s ago</p>
+                                    </div>
+                                </div>
+                                <img src="./../../assets/feed/bitcoin.png " alt=" " class="mt-4 ">
+                                <div class="flex items-center justify-between mt-4 w-60 ">
+                                    <div class="flex items-center cursor-pointer ">
+                                        <img class="like" src="./../../assets/feed/heart (1) 1.png ">
+                                        <p class="ml-2 text-gray-400 text-xs ">Like</p>
+                                    </div>
+                                    <div class="flex items-center cursor-pointer ">
+                                        <img src="./../../assets/feed/message 1.png ">
+                                        <p class="ml-2 text-gray-400 text-xs commentBtn">Comment</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white mt-4 p-4 rounded-2xl ">
+                                <div class="flex items-center ">
+                                    <img src="./../../assets/feed/hassan.png " alt=" ">
+                                    <div class="ml-4 ">
+                                        <h3 class="font-semibold ">Clark Hassan</h3>
+                                        <p class="text-gray-400 text-xs ">24s ago</p>
+                                    </div>
+                                </div>
+                                <img src="./../../assets/feed/bitcoin.png " alt=" " class="mt-4 ">
+                                <div class="flex items-center justify-between mt-4 w-60 ">
+                                    <div class="flex items-center cursor-pointer ">
+                                        <img class="like" src="./../../assets/feed/heart (1) 1.png ">
+                                        <p class="ml-2 text-gray-400 text-xs ">Like</p>
+                                    </div>
+                                    <div class="flex items-center cursor-pointer ">
+                                        <img src="./../../assets/feed/message 1.png ">
+                                        <p class="ml-2 text-gray-400 text-xs commentBtn">Comment</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white mt-4 p-4 rounded-2xl ">
+                                <div class="flex items-center ">
+                                    <img src="./../../assets/feed/hassan.png " alt=" ">
+                                    <div class="ml-4 ">
+                                        <h3 class="font-semibold ">Clark Hassan</h3>
+                                        <p class="text-gray-400 text-xs ">24s ago</p>
+                                    </div>
+                                </div>
+                                <img src="./../../assets/feed/bitcoin.png " alt=" " class="mt-4 ">
+                                <div class="flex items-center justify-between mt-4 w-60 ">
+                                    <div class="flex items-center cursor-pointer ">
+                                        <img class="like" src="./../../assets/feed/heart (1) 1.png ">
+                                        <p class="ml-2 text-gray-400 text-xs ">Like</p>
+                                    </div>
+                                    <div class="flex items-center cursor-pointer ">
+                                        <img src="./../../assets/feed/message 1.png ">
+                                        <p class="ml-2 text-gray-400 text-xs commentBtn">Comment</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="news" class="mb-20 hidden">
+                        <div class="swiper  swiper-initialized swiper-horizontal swiper-pointer-events "
+                            style="height: 330px; ">
+                            <div class="swiper-wrapper ">
+                                <div class="swiper-slide mx-auto flex justify-center relative ">
+                                    <div class="bg-white h-60 mt-7 w-80 rounded-2xl ">
+                                        <img src="./../../assets/feed/bitcoin full.png " alt=" " class="w-full ">
+                                        <h3 class="font-bold m-4 ">BTC devait rester en dessous de 50 000 $ pendant un
+                                            certain temps...
+                                        </h3>
+                                        <div class="flex justify-between mt-2 pb-4 px-4 ">
+                                            <p class="font-semibold text-blue-normal text-sm ">TrustWallet News</p>
+                                            <p class="text-gray-400 text-sm "> 9h</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide mx-auto flex justify-center relative ">
+                                    <div class="bg-white h-60 mt-7 w-80 rounded-2xl ">
+                                        <img src="./../../assets/feed/bitcoin full.png " alt=" " class="w-full ">
+                                        <h3 class="font-bold m-4 ">BTC devait rester en dessous de 50 000 $ pendant un
+                                            certain temps...
+                                        </h3>
+                                        <div class="flex justify-between mt-2 pb-4 px-4 ">
+                                            <p class="font-semibold text-blue-normal text-sm ">TrustWallet News</p>
+                                            <p class="text-gray-400 text-sm "> 9h</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide mx-auto flex justify-center relative ">
+                                    <div class="bg-white h-60 mt-7 w-80 rounded-2xl ">
+                                        <img src="./../../assets/feed/bitcoin full.png " alt=" " class="w-full ">
+                                        <h3 class="font-bold m-4 ">BTC devait rester en dessous de 50 000 $ pendant un
+                                            certain temps...
+                                        </h3>
+                                        <div class="flex justify-between mt-2 pb-4 px-4 ">
+                                            <p class="font-semibold text-blue-normal text-sm ">TrustWallet News</p>
+                                            <p class="text-gray-400 text-sm "> 9h</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide mx-auto flex justify-center relative ">
+                                    <div class="bg-white h-60 mt-7 w-80 rounded-2xl ">
+                                        <img src="./../../assets/feed/bitcoin full.png " alt=" " class="w-full ">
+                                        <h3 class="font-bold m-4 ">BTC devait rester en dessous de 50 000 $ pendant un
+                                            certain temps...
+                                        </h3>
+                                        <div class="flex justify-between mt-2 pb-4 px-4 ">
+                                            <p class="font-semibold text-blue-normal text-sm ">TrustWallet News</p>
+                                            <p class="text-gray-400 text-sm "> 9h</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide mx-auto flex justify-center relative ">
+                                    <div class="bg-white h-60 mt-7 w-80 rounded-2xl ">
+                                        <img src="./../../assets/feed/bitcoin full.png " alt=" " class="w-full ">
+                                        <h3 class="font-bold m-4 ">BTC devait rester en dessous de 50 000 $ pendant un
+                                            certain temps...
+                                        </h3>
+                                        <div class="flex justify-between mt-2 pb-4 px-4 ">
+                                            <p class="font-semibold text-blue-normal text-sm ">TrustWallet News</p>
+                                            <p class="text-gray-400 text-sm "> 9h</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="absolute flex items-center justify-center swiper-pagination top-72 w-96 ">
+                            </div>
+                        </div>
+                        <div class="flex justify-between mt-3 ">
+                            <p class="font-semibold text-gray-400 ">Based on your portfolio</p>
+                            <div class="flex items-center">
+                                <img src="./../../assets/Ethereum.png" class="h-6 w-6 -mr-2">
+                                <img src="./../../assets/tesla.png" class="h-6 w-6 z-30">
+                                <img src="./../../assets/solona.png" class="-ml-2 h-6 w-6 z-10">
+                                <img src="./../../assets/bit.png" class="h-6 w-6 -ml-2">
+                            </div>
+                        </div>
+                        <div class="mt-4 bg-white flex items-center p-4 rounded-2xl ">
+                            <img src="./../../assets/feed/article.png ">
+                            <div class="ml-4 ">
+                                <h3 class="font-semibold text-sm ">La Banque d'Angleterre qualifie Apple de «&nbsp;sans
+                                    valeur&nbsp;» comme l'inflation britannique...</h3>
+                                <div class="flex justify-between mt-2 ">
+                                    <p class="font-semibold text-blue-normal text-xs ">Coingraph</p>
+                                    <p class="text-gray-500 text-xs ">9h</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4 bg-white flex items-center p-4 rounded-2xl ">
+                            <img src="./../../assets/feed/man.png ">
+                            <div class="ml-4 ">
+                                <h3 class="font-semibold text-sm ">DOGE developer mints first-ever NFT on the Dogecoin
+                                    blockchain
+                                </h3>
+                                <div class="flex justify-between mt-2 ">
+                                    <p class="font-semibold text-blue-normal text-xs ">Coingraph</p>
+                                    <p class="text-gray-500 text-xs ">9hr ago</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- PORTFOLIO -->
+            <div id="portfolio" class="bg-blue-dark">
+                <div class="font-semibold text-white ">
+                    <div class="px-4 sticky text-center top-16 z-10 ">
+                        <p class="font-semibold text-gray-300 text-sm ">Valeur du porte-feuille</p>
+                        <h2 class="font-semibold mt-2 text-3xl ">110,251.54 €</h2>
+                        <div class="flex items-center justify-center mt-2 ">
+                            <p class="font-semibold text-green-normal ">+859.23 €</p>
+                            <button class="bg-green-normal flex items-center ml-4 px-2 rounded-full ">
+                                <img src="./../../assets/feed/bx_bxs-up-arrow.png " alt=" " class="mr-1 ">
+                                <p>10.89%</p>
+                            </button>
+                        </div>
+                        <div class="flex justify-center mt-6 ">
+                            <button class="bg-blue-normal font-bold py-3 rounded-full text-sm w-1/2 ">Ajouter de
+                                l’argent</button>
+                            <button
+                                class="bg-white font-bold ml-3 py-2 rounded-full text-blue-normal text-sm w-1/2 ">Retirer</button>
+                        </div>
+                        <div class="flex items-center justify-between mt-6 ">
+                            <p class="font-semibold ">Liquidités</p>
+                            <img src="./../../assets/feed/information 1.png " class=" ">
+
+                        </div>
+                        <form class="bg-white flex items-center justify-between mt-4 p-2 rounded-xl text-black w-full ">
+                            <button class="bg-light px-2 py-2 rounded-full "><img src="./../../assets/feed/euro.png "
+                                    alt=" "></button>
+                            <input type="text " placeholder="EUR " class="-ml-4 outline-none ">
+                            <p class="font-bold ">2,500 €</p>
+                        </form>
+                    </div>
+                    <div id="upScroll" class="UpScroll bg-light mt-24 p-4 relative rounded-t-3xl z-50"
+                        style="min-height: 79vh; max-height: 79vh; overflow: auto;">
+                        <div class="bg-white h-2 mx-auto w-20 "></div>
+                        <div class="bg-white flex items-center justify-around mt-4 p-2 rounded-full text-black ">
+                            <button id="tousBtn"
+                                class="font-bold hover:bg-blue-normal hover:text-white px-4 py-2 rounded-full bg-blue-normal text-white ">Tous</button>
+                            <button
+                                class="tabsBtn font-bold hover:bg-blue-normal hover:text-white px-4 py-2 rounded-full text-gray-600 ">Stocks</button>
+                            <button
+                                class="tabsBtn font-bold hover:bg-blue-normal hover:text-white px-4 py-2 rounded-full text-gray-600 ">Crypto</button>
+                            <button id="attenteBtn"
+                                class="font-bold hover:bg-blue-normal hover:text-white px-4 py-2 rounded-full ">En
+                                attente</button>
+                        </div>
+                        <div id="tousTab" class="pb-16 bg-light">
+                            <div class="flex items-center justify-between mt-6 rounded-3xl p-4 bg-white text-black ">
+                                <div class="flex items-center ">
+                                    <div><img src="./../../assets/feed/apple.png "></div>
+                                    <div class="ml-4 ">
+                                        <h3 class="font-semibold text-base ">Apple</h3>
+                                        <p class="text-gray-400 text-xs ">APPL</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-end ">
+                                    <h3 class="font-normal text-sm ">12,502.36 €</h3>
+                                    <p class="text-green-600 font-semibold text-xs ">+510% </p>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between mt-6 rounded-3xl p-4 bg-white text-black ">
+                                <div class="flex items-center ">
+                                    <div><img src="./../../assets/solona.png "></div>
+                                    <div class="ml-4 ">
+                                        <h3 class="font-semibold text-base ">Solana</h3>
+                                        <p class="text-gray-400 text-xs ">SOL</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-end ">
+                                    <h3 class="font-normal text-sm ">985.36 €</h3>
+                                    <p class="text-green-600 font-semibold text-xs ">+510% </p>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between mt-6 rounded-3xl p-4 bg-white text-black ">
+                                <div class="flex items-center ">
+                                    <div><img src="./../../assets/solona.png "></div>
+                                    <div class="ml-4 ">
+                                        <h3 class="font-semibold text-base ">Solana</h3>
+                                        <p class="text-gray-400 text-xs ">SOL</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-end ">
+                                    <h3 class="font-normal text-sm ">985.36 €</h3>
+                                    <p class="text-green-600 font-semibold text-xs ">+510% </p>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between mt-6 rounded-3xl p-4 bg-white text-black ">
+                                <div class="flex items-center ">
+                                    <div><img src="./../../assets/solona.png "></div>
+                                    <div class="ml-4 ">
+                                        <h3 class="font-semibold text-base ">Solana</h3>
+                                        <p class="text-gray-400 text-xs ">SOL</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-end ">
+                                    <h3 class="font-normal text-sm ">985.36 €</h3>
+                                    <p class="text-green-600 font-semibold text-xs ">+510% </p>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between mt-6 rounded-3xl p-4 bg-white text-black ">
+                                <div class="flex items-center ">
+                                    <div><img src="./../../assets/solona.png "></div>
+                                    <div class="ml-4 ">
+                                        <h3 class="font-semibold text-base ">Solana</h3>
+                                        <p class="text-gray-400 text-xs ">SOL</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-end ">
+                                    <h3 class="font-normal text-sm ">985.36 €</h3>
+                                    <p class="text-green-600 font-semibold text-xs ">+510% </p>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between mt-6 rounded-3xl p-4 bg-white text-black ">
+                                <div class="flex items-center ">
+                                    <div><img src="./../../assets/solona.png "></div>
+                                    <div class="ml-4 ">
+                                        <h3 class="font-semibold text-base ">Solana</h3>
+                                        <p class="text-gray-400 text-xs ">SOL</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-end ">
+                                    <h3 class="font-normal text-sm ">985.36 €</h3>
+                                    <p class="text-green-600 font-semibold text-xs ">+510% </p>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between mt-6 rounded-3xl p-4 bg-white text-black ">
+                                <div class="flex items-center ">
+                                    <div><img src="./../../assets/solona.png "></div>
+                                    <div class="ml-4 ">
+                                        <h3 class="font-semibold text-base ">Solana</h3>
+                                        <p class="text-gray-400 text-xs ">SOL</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-end ">
+                                    <h3 class="font-normal text-sm ">985.36 €</h3>
+                                    <p class="text-green-600 font-semibold text-xs ">+510% </p>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between mt-6 rounded-3xl p-4 bg-white text-black ">
+                                <div class="flex items-center ">
+                                    <div><img src="./../../assets/solona.png "></div>
+                                    <div class="ml-4 ">
+                                        <h3 class="font-semibold text-base ">Solana</h3>
+                                        <p class="text-gray-400 text-xs ">SOL</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-end ">
+                                    <h3 class="font-normal text-sm ">985.36 €</h3>
+                                    <p class="text-green-600 font-semibold text-xs ">+510% </p>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between mt-6 rounded-3xl p-4 bg-white text-black ">
+                                <div class="flex items-center ">
+                                    <div><img src="./../../assets/solona.png "></div>
+                                    <div class="ml-4 ">
+                                        <h3 class="font-semibold text-base ">Solana</h3>
+                                        <p class="text-gray-400 text-xs ">SOL</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-end ">
+                                    <h3 class="font-normal text-sm ">985.36 €</h3>
+                                    <p class="text-green-600 font-semibold text-xs ">+510% </p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="attenteTab" class="hidden">
+                            <div class="flex items-center justify-between mt-6 ">
+                                <p class="font-semibold text-black">En attente</p>
+                                <img src="./../../assets/feed/information 1.png " class=" ">
+
+                            </div>
+                            <div class="flex items-center justify-between mt-6 rounded-3xl p-4 bg-white text-black"
+                                style="filter: drop-shadow(0px 0px 20px rgba(17, 20, 58, 0.15));">
+                                <div class="flex items-center ">
+                                    <div><img src="./../../assets/feed/apple.png "></div>
+                                    <div class="ml-4 ">
+                                        <h3 class="font-semibold text-base ">Apple</h3>
+                                        <p class="text-gray-400 text-xs ">APPL</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img src="./../../assets/feed/close (1) 1.png " class="w-1/2 h-1/2 cursor-pointer ">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="bg-light bottom-0 fixed flex justify-between max-w-mobile px-4 py-2 w-full z-50"
+            style="filter: drop-shadow(0px 0px 20px rgba(17, 20, 58, 0.15));">
+            <button class="flex flex-col items-center ">
+                <img src="./../../assets/feed/compass.png ">
+                <h4 class="text-xs font-semibold text-blue-normal mt-1 ">Feed</h4>
+            </button>
+            <button class="portfolioNextBtn flex flex-col items-center">
+                <img src="./../../assets/feed/wallet.png ">
+                <h4 class="text-xs font-semibold text-gray-400 mt-1 ">Portefeuille</h4>
+            </button>
+            <button class="-mt-10 flex flex-col items-center text-center ">
+                <div class="bg-light p-2 rounded-full ">
+                    <div class="bg-gradient-to-r from-blue-darker p-4 rounded-full to-blue-lighter ">
+                        <img src="./../../assets/feed/Trade.png ">
+                    </div>
+                    <h4 class="text-xs font-semibold text-gray-400 mt-1 ">Trade</h4>
+                </div>
+            </button>
+            <button class="flex flex-col items-center ">
+                <img src="./../../assets/feed/bank.png ">
+                <h4 class="text-xs font-semibold text-gray-400 mt-1 ">Academy</h4>
+            </button>
+            <button class="flex profileNextBtn flex-col items-center ">
+                <img src="./../../assets/feed/user (1) 2.png">
+                <h4 class="text-xs font-semibold text-gray-400 mt-1 ">Profil</h4>
+            </button>
+        </footer>
+    </div>
+</body>
+
+</html>
