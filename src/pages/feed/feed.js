@@ -22,7 +22,6 @@ searchForms.forEach(searchForm => {
         searchInputValue.value = ''
         console.log(searchInputValue)
     })
-
 })
 
 const publicationsBtn = document.getElementById('publicationsBtn')
