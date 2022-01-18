@@ -489,6 +489,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: auto;
   margin-right: auto;
 }
+.ml-3 {
+  margin-left: 0.75rem;
+}
+.mr-4 {
+  margin-right: 1rem;
+}
 .mt-4 {
   margin-top: 1rem;
 }
@@ -527,9 +533,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .-mt-4 {
   margin-top: -1rem;
-}
-.mr-4 {
-  margin-right: 1rem;
 }
 .-mr-10 {
   margin-right: -2.5rem;
@@ -572,9 +575,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .mr-1 {
   margin-right: 0.25rem;
-}
-.ml-3 {
-  margin-left: 0.75rem;
 }
 .ml-52 {
   margin-left: 13rem;
@@ -624,6 +624,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 .ml-60 {
   margin-left: 15rem;
 }
+.mt-56 {
+  margin-top: 14rem;
+}
+.mt-52 {
+  margin-top: 13rem;
+}
+.-ml-1 {
+  margin-left: -0.25rem;
+}
+.-ml-0 {
+  margin-left: -0px;
+}
 .flex {
   display: flex;
 }
@@ -638,6 +650,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .hidden {
   display: none;
+}
+.h-7 {
+  height: 1.75rem;
 }
 .h-2 {
   height: 0.5rem;
@@ -680,8 +695,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-4 {
   height: 1rem;
 }
+.h-80 {
+  height: 20rem;
+}
 .max-h-40 {
   max-height: 10rem;
+}
+.w-7 {
+  width: 1.75rem;
 }
 .w-full {
   width: 100%;
@@ -739,6 +760,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-48 {
   width: 12rem;
+}
+.w-screen {
+  width: 100vw;
 }
 .min-w-full {
   min-width: 100%;
@@ -911,6 +935,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .to-blue-lighter {
   --tw-gradient-to: #507DF0;
 }
+.bg-cover {
+  background-size: cover;
+}
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
 .p-4 {
   padding: 1rem;
 }
@@ -999,6 +1029,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .pb-5 {
   padding-bottom: 1.25rem;
 }
+.pt-10 {
+  padding-top: 2.5rem;
+}
 .text-center {
   text-align: center;
 }
@@ -1043,6 +1076,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .font-medium {
   font-weight: 500;
+}
+.text-blue-dark {
+  --tw-text-opacity: 1;
+  color: rgb(17 21 61 / var(--tw-text-opacity));
 }
 .text-gray-500 {
   --tw-text-opacity: 1;
