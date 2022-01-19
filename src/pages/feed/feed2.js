@@ -48,6 +48,7 @@ const rechercherInput = document.getElementById('rechercherValue')
 const rechercherCloseBtn = document.getElementById('rechercherCloseBtn')
 const postCloseBtn = document.getElementById('close')
 const academyNextBtn = document.getElementById('mainNextBtn')
+const pagesBtn = document.querySelectorAll('.pagesBtn')
 const rechercherPage = 'rechercher'
 const FEED_PAGE = 'feedPage'
 const Inf_page = 'personalInformation'
@@ -62,6 +63,10 @@ const singleLesson2 = 'singleLesson2'
 const personalInfBtn = document.getElementById('personalInfBtn')
 const portfolioBtn = document.getElementById('portfolioBtn')
 const feedBtn = document.getElementById('feedBtn')
+const feddBtnStyled = 'feedBtn'
+const portfolioBtnStyled = 'portfolioBtn'
+const academyBtnStyled = 'academyBtn'
+const profilBtnStyled = 'profilBtn'
 const profilBtn = document.getElementById('profilBtn')
 const navbarText = document.getElementById('navbarText')
 const abonentNextBtn = document.getElementById('abonentNextBtn')
@@ -70,8 +75,32 @@ const rechercherPrevBtn = document.getElementById('rechercherPrev')
 const navbar = document.getElementById('navbar')
 const footer = document.getElementById('footer')
 const followBtns = document.querySelectorAll('.follow')
+const defaultMarginTop = document.getElementById('defaultMarginTop')
 const personalPrevBtn = document.getElementById('personalPrevBtn')
 const academyBtn = document.getElementById('academyBtn')
+const upScroll = document.getElementById('upScroll')
+
+
+// FOOTER
+
+function showPageBtn(pageBtn) {
+    hidePageBtns()
+    showPagesBtn(pageBtn)
+}
+
+function hidePageBtns() {
+    Array.from(pagesBtn).forEach(element => {
+        if (!element.classList.contains('text-gray-400')) element.classList.add('text-gray-400')
+        element.classList.remove('text-blue-normal')
+    });
+}
+
+function showPagesBtn(pageBtnId) {
+    const currPage = document.getElementById(pageBtnId);
+    currPage.classList.add('text-blue-normal');
+}
+
+// FOOTER
 
 // PAGES
 function changePage(page) {
@@ -95,6 +124,7 @@ function showPage(pageId) {
 // PROFIL PAGE
 profilBtn.addEventListener('click', () => {
     changePage(PROFIL_PAGE)
+    showPageBtn(profilBtnStyled)
     navbar.classList.remove('hidden')
     navbarText.innerText = 'Profil'
     footer.classList.remove('hidden')
@@ -108,6 +138,7 @@ personalInfBtn.addEventListener('click', () => {
 
 personalPrevBtn.addEventListener('click', () => {
     changePage(PROFIL_PAGE)
+    showPageBtn(profilBtnStyled)
     footer.classList.remove('hidden')
     footer.classList.remove('hidden')
     navbar.classList.remove('hidden')
@@ -129,6 +160,7 @@ abonentNextBtn.addEventListener('click', () => {
 
 abonentPrevBtn.addEventListener('click', () => {
     changePage(PROFIL_PAGE)
+    showPageBtn(profilBtnStyled)
     footer.classList.remove('hidden')
     navbar.classList.remove('hidden')
 });
@@ -162,6 +194,7 @@ newsBtn.addEventListener('click', () => {
 postBtnNext.addEventListener('click', () => {
     if (postInput.value != '') {
         changePage(FEED_PAGE)
+        showPageBtn(feddBtnStyled)
         footer.classList.remove('hidden')
         footer.classList.remove('hidden')
         navbar.classList.remove('hidden')
@@ -201,6 +234,7 @@ commentBtns.forEach(commentBtn => {
 })
 commentCloseBtn.addEventListener('click', () => {
     changePage(FEED_PAGE)
+    showPageBtn(feddBtnStyled)
     footer.classList.remove('hidden')
     navbar.classList.remove('hidden')
     footer.classList.remove('hidden')
@@ -256,6 +290,7 @@ postBtn.addEventListener('click', () => {
 })
 feedBtn.addEventListener('click', () => {
     changePage(FEED_PAGE)
+    showPageBtn(feddBtnStyled)
     footer.classList.remove('hidden')
     navbar.classList.remove('hidden')
     navbarText.innerText = 'Feed'
@@ -270,6 +305,7 @@ searchInput.addEventListener('keyup', () => {
         rechercherPrevBtn.classList.remove('hidden')
     } else {
         changePage(FEED_PAGE)
+        showPageBtn(feddBtnStyled)
         footer.classList.remove('hidden')
         navbarText.innerText = 'Feed'
         rechercherPrevBtn.classList.add('hidden')
@@ -279,6 +315,7 @@ rechercherInput.addEventListener('keyup', () => {
     if (rechercherInput.value != '') {} else {
         searchInput.value = ''
         changePage(FEED_PAGE)
+        showPageBtn(feddBtnStyled)
         footer.classList.remove('hidden')
         searchInput.focus()
         navbarText.innerText = 'Feed'
@@ -288,11 +325,13 @@ rechercherInput.addEventListener('keyup', () => {
 
 rechercherPrevBtn.addEventListener('click', () => {
     changePage(FEED_PAGE)
+    showPageBtn(feddBtnStyled)
     footer.classList.remove('hidden')
     searchInput.value = ''
 })
 postCloseBtn.addEventListener('click', () => {
     changePage(FEED_PAGE)
+    showPageBtn(feddBtnStyled)
     footer.classList.remove('hidden')
     navbar.classList.remove('hidden')
     footer.classList.remove('hidden')
@@ -302,6 +341,8 @@ postCloseBtn.addEventListener('click', () => {
 // PORTFOLIO PAGE 
 portfolioBtn.addEventListener('click', () => {
     changePage(PORTFOLIO)
+    changeScrollPage()
+    showPageBtn(portfolioBtnStyled)
     footer.classList.remove('hidden')
     console.log(portfolioBtn)
     navbar.classList.remove('hidden')
@@ -323,11 +364,31 @@ tousBtn.addEventListener('click', () => {
     tousBtn.classList.add('bg-blue-normal', 'text-white')
     tousBtn.classList.remove('text-gray-600')
 });
+
+function changeScrollPage() {
+    const top = defaultMarginTop.getBoundingClientRect().top + defaultMarginTop.offsetHeight
+    console.log(upScroll, window.innerHeight - top)
+    const maxHeight = window.innerHeight - top
+    upScroll.style.maxHeight = maxHeight + 'px'
+    upScroll.style.minHeight = maxHeight + 'px'
+    console.log(upScroll.getBoundingClientRect().top)
+    console.log(top)
+}
+window.onscroll = () => {
+    if (upScroll.getBoundingClientRect().top < 130) {
+        upScroll.classList.remove('overflow-hidden')
+        upScroll.classList.add('overflow-auto')
+    } else {
+        upScroll.classList.add('overflow-hidden')
+        upScroll.classList.remove('overflow-auto')
+    }
+};
 // PORTFOLIO PAGE
 
 // ACADEMY
 academyBtn.addEventListener('click', () => {
     changePage(ACADEMY_PAGE)
+    showPageBtn(academyBtnStyled)
     footer.classList.remove('hidden')
     navbar.classList.add('hidden')
 })
@@ -339,6 +400,7 @@ academyNextBtn.addEventListener('click', () => {
 })
 lessonPagePrev.addEventListener('click', () => {
     changePage(ACADEMY_PAGE)
+    showPageBtn(academyBtnStyled)
     footer.classList.remove('hidden')
 })
 lessonCards.forEach(lessonCard => {
@@ -396,6 +458,7 @@ playVideo2.addEventListener('click', () => {
         videoTime2.style.width = video2.currentTime + '%'
     }
 });
+
 // ACADEMY
 
 // SWIPER
@@ -413,4 +476,4 @@ const swiper = new Swiper('.swiper', {
     },
     scrollbar: false
 });
-// SWOPER
+// SWIPER
