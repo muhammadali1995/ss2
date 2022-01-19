@@ -16,10 +16,10 @@ lessonPagePrev.addEventListener('click', () => {
 const lessonCards = document.querySelectorAll('.lessonCard')
 lessonCards.forEach(lessonCard => {
     lessonCard.addEventListener('click', () => {
-        if (lessonCard.children[1].innerHTML == '<img src="./../../assets/feed/feather_lock.jpg">') {
-            lessonCard.children[1].innerHTML = '<img src="./../../assets/feed/check.png">'
+        if (lessonCard.children[1].innerHTML == '<img src="./../../assets/feed/feather_lock.png">') {
+            lessonCard.children[1].innerHTML = '<img src="./../../assets/feed/tick_icon.png">'
         } else {
-            lessonCard.children[1].innerHTML = '<img src="./../../assets/feed/feather_lock.jpg">'
+            lessonCard.children[1].innerHTML = '<img src="./../../assets/feed/feather_lock.png">'
         }
     })
 })
@@ -36,18 +36,19 @@ videoPlayBtn.addEventListener('click', () => {
     singleLessonPage.classList.remove('hidden')
 })
 
-// singleLessonPrevBtn.addEventListener('click', () => {
-//     lessonPage.classList.remove('hidden')
-//     singleLessonPage.classList.add('hidden')
-// })
+singleLessonPrevBtn.addEventListener('click', () => {
+    lessonPage.classList.remove('hidden')
+    singleLessonPage.classList.add('hidden')
+})
 
-// singleLessonNextBtn.addEventListener('click', () => {
-//     singleLessonPage.classList.add('hidden')
-//     singleNextLesson.classList.remove('hidden')
-// })
+singleLessonNextBtn.addEventListener('click', () => {
+    singleLessonPage.classList.add('hidden')
+    singleNextLesson.classList.remove('hidden')
+})
 
-// lessonPrevBtns.forEach(lessonPrevBtn => {
-//     lessonPrevBtn.addEventListener('click', () => {
-//         singleNextLesson.classList.add
-//     })
-// })
+lessonPrevBtns.forEach(lessonPrevBtn => {
+    lessonPrevBtn.addEventListener('click', () => {
+        singleNextLesson.classList.add('hidden')
+        singleLessonPage.classList.remove('hidden')
+    })
+})

@@ -12,15 +12,22 @@ const newsBtn = document.getElementById('newsBtn')
 const publicationsPage = document.getElementById('publications')
 const newsPage = document.getElementById('news')
 const postBtn = document.getElementById('post')
-const postPage = document.getElementById('postPage')
 const mainWrapper = document.getElementById('main-wrapper')
+const videoTime = document.getElementById('videoTime')
+const videoTime2 = document.getElementById('videoTime2')
 const closeBtn = document.getElementById('close')
 const postInput = document.getElementById('postInput')
 const postParent = document.getElementById('postParent')
 const postBtnNext = document.getElementById('enterPost')
 const postForm = document.getElementById('postForm')
 const commentBtns = document.querySelectorAll('.commentBtn')
-const commentPage = document.getElementById('commentPage')
+const playVideo = document.getElementById('playVideo')
+const commentPage = 'commentPage'
+const video2 = document.getElementById('video2')
+const playVideo2 = document.getElementById('playVideo2')
+const video = document.querySelector('video')
+const lesson2PrevBtn = document.getElementById('lesson2PrevBtn')
+const singleLessonNextBtn = document.getElementById('singleLessonNextBtn')
 const commentCloseBtn = document.getElementById('commentCloseBtn')
 const dropdownBtn = document.getElementById('dropdownBtn')
 const commentDropdown = document.getElementById('commentDropdown')
@@ -29,32 +36,44 @@ const commentSearchInput = document.getElementById('commentSearch')
 const commentForm = document.getElementById('commentForm')
 const commentSearchValue = document.getElementById('commentSearch')
 const ActiveInput = document.activeElement
+const videoPlayBtn = document.getElementById('videoPlayBtn')
+const singleLessonPrevBtn = document.getElementById('singleLessonPrevBtn')
+const singleNextLesson = document.getElementById('singleNextLesson')
+const lessonPrevBtns = document.querySelectorAll('.lessonPrevBtn')
+const lessonCards = document.querySelectorAll('.lessonCard')
+const lessonPagePrev = document.getElementById('lessonPagePrev')
+const academyMenuBtn = document.getElementById('menu')
 const likeBtns = document.querySelectorAll('.like')
-const rechercherPage = document.getElementById('rechercher')
 const rechercherInput = document.getElementById('rechercherValue')
 const rechercherCloseBtn = document.getElementById('rechercherCloseBtn')
+const postCloseBtn = document.getElementById('close')
+const academyNextBtn = document.getElementById('mainNextBtn')
+const rechercherPage = 'rechercher'
 const FEED_PAGE = 'feedPage'
+const Inf_page = 'personalInformation'
 const PORTFOLIO = 'portfolio'
 const PROFIL_PAGE = 'profil'
+const postPage = 'postPage'
+const abonentsPage = 'abonents'
+const ACADEMY_PAGE = 'academy'
+const lessonPage = 'lessonPage'
+const singleLessonPage = 'singleLesson'
+const singleLesson2 = 'singleLesson2'
+const personalInfBtn = document.getElementById('personalInfBtn')
 const portfolioBtn = document.getElementById('portfolioBtn')
 const feedBtn = document.getElementById('feedBtn')
 const profilBtn = document.getElementById('profilBtn')
 const navbarText = document.getElementById('navbarText')
+const abonentNextBtn = document.getElementById('abonentNextBtn')
+const abonentPrevBtn = document.getElementById('abonentPrevBtn')
+const rechercherPrevBtn = document.getElementById('rechercherPrev')
+const navbar = document.getElementById('navbar')
+const footer = document.getElementById('footer')
+const followBtns = document.querySelectorAll('.follow')
+const personalPrevBtn = document.getElementById('personalPrevBtn')
+const academyBtn = document.getElementById('academyBtn')
 
-portfolioBtn.addEventListener('click', () => {
-    changePage(PORTFOLIO)
-    navbarText.innerText = 'Portefeuille'
-})
-feedBtn.addEventListener('click', () => {
-    changePage(FEED_PAGE)
-    navbarText.innerText = 'Feed'
-})
-profilBtn.addEventListener('click', () => {
-    changePage(PROFIL_PAGE)
-    navbarText.innerText = 'Profil'
-})
-
-
+// PAGES
 function changePage(page) {
     hidePages();
     showPage(page)
@@ -71,29 +90,52 @@ function showPage(pageId) {
     const currPage = document.getElementById(pageId);
     currPage.classList.remove('hidden');
 }
-attenteBtn.addEventListener('click', () => {
-    attenteTab.classList.remove('hidden')
-    tousTab.classList.add('hidden')
-    tousBtn.classList.remove('bg-blue-normal', 'text-white')
-    tousBtn.classList.add('text-gray-600')
-    attenteBtn.classList.add('bg-blue-normal', 'text-white')
-    attenteBtn.classList.remove('text-gray-600')
+// PAGES
+
+// PROFIL PAGE
+profilBtn.addEventListener('click', () => {
+    changePage(PROFIL_PAGE)
+    navbar.classList.remove('hidden')
+    navbarText.innerText = 'Profil'
+    footer.classList.remove('hidden')
 })
-tousBtn.addEventListener('click', () => {
-    attenteTab.classList.add('hidden')
-    tousTab.classList.remove('hidden')
-    attenteBtn.classList.remove('bg-blue-normal', 'text-white')
-    attenteBtn.classList.add('text-gray-600')
-    tousBtn.classList.add('bg-blue-normal', 'text-white')
-    tousBtn.classList.remove('text-gray-600')
-})
-profileMenu.addEventListener('click', () => {
-    profileDropdown.classList.toggle('hidden')
+personalInfBtn.addEventListener('click', () => {
+    changePage(Inf_page)
+    footer.classList.add('hidden')
+    footer.classList.remove('hidden')
+    navbar.classList.add('hidden')
 })
 
+personalPrevBtn.addEventListener('click', () => {
+    changePage(PROFIL_PAGE)
+    footer.classList.remove('hidden')
+    footer.classList.remove('hidden')
+    navbar.classList.remove('hidden')
+})
+const toggleDropdown = () => {
+    profileDropdown.classList.toggle('hidden')
+}
+
+profileMenu.addEventListener('click', () => toggleDropdown())
 profileCloseBtn.addEventListener('click', () => {
     profileDropdown.classList.add('hidden')
 })
+
+abonentNextBtn.addEventListener('click', () => {
+    changePage(abonentsPage)
+    footer.classList.remove('hidden')
+    navbar.classList.add('hidden')
+})
+
+abonentPrevBtn.addEventListener('click', () => {
+    changePage(PROFIL_PAGE)
+    footer.classList.remove('hidden')
+    navbar.classList.remove('hidden')
+});
+// PROFIL PAGE
+
+// FEED PAGE
+
 searchForms.forEach(searchForm => {
     searchForm.addEventListener('submit', (e) => {
         e.preventDefault()
@@ -117,17 +159,12 @@ newsBtn.addEventListener('click', () => {
     publicationsBtn.classList.add('text-gray-500')
     newsBtn.classList.remove('text-gray-500')
 })
-postBtn.addEventListener('click', () => {
-    mainWrapper.classList.add('hidden')
-    postPage.classList.remove('hidden')
-})
-closeBtn.addEventListener('click', () => {
-    mainWrapper.classList.remove('hidden')
-    postPage.classList.add('hidden')
-})
 postBtnNext.addEventListener('click', () => {
     if (postInput.value != '') {
-        postPage.classList.add('hidden')
+        changePage(FEED_PAGE)
+        footer.classList.remove('hidden')
+        footer.classList.remove('hidden')
+        navbar.classList.remove('hidden')
         mainWrapper.classList.remove('hidden')
         const newPost = document.createElement('div')
         const postValue = postInput.value
@@ -156,13 +193,17 @@ postBtnNext.addEventListener('click', () => {
 })
 commentBtns.forEach(commentBtn => {
     commentBtn.addEventListener('click', () => {
-        commentPage.classList.remove('hidden')
-        mainWrapper.classList.add('hidden')
+        changePage(commentPage)
+        footer.classList.remove('hidden')
+        navbar.classList.add('hidden')
+        footer.classList.add('hidden')
     })
 })
 commentCloseBtn.addEventListener('click', () => {
-    commentPage.classList.add('hidden')
-    mainWrapper.classList.remove('hidden')
+    changePage(FEED_PAGE)
+    footer.classList.remove('hidden')
+    navbar.classList.remove('hidden')
+    footer.classList.remove('hidden')
 })
 commentSearchInput.addEventListener('keyup', () => {
     if (commentSearchInput.value != '') {
@@ -192,32 +233,184 @@ likeBtns.forEach(likeBtn => {
         likeBtn.classList.toggle('text-blue-500')
     })
 })
-rechercherCloseBtn.addEventListener('click', () => {
-    rechercherPage.classList.add('hidden')
-    mainWrapper.classList.remove('hidden')
-    searchInput.value = ''
-})
-searchInput.addEventListener('keyup', () => {
-    if (searchInput.value != '') {
-        rechercherPage.classList.remove('hidden')
-        mainWrapper.classList.add('hidden')
-        rechercherInput.value = searchInput.value
-        rechercherInput.focus()
-    } else {
-        rechercherPage.classList.add('hidden')
-        mainWrapper.classList.remove('hidden')
-    }
-})
-rechercherInput.addEventListener('keyup', () => {
-    if (rechercherInput.value == '') {
-        rechercherPage.classList.add('hidden')
-        mainWrapper.classList.remove('hidden')
-        searchInput.value = rechercherInput.value
-        searchInput.focus()
-    }
-})
 profileCloseBtn.addEventListener('click', () => {
     profileDropdown.classList.add('hidden')
     mainWrapper.style.opacity = '1'
     document.body.setAttribute('style', 'overflow:auto;bacground:transparent;')
 })
+
+followBtns.forEach(followBtn => {
+    followBtn.addEventListener('click', () => {
+        if (followBtn.innerText == 'Se désabonner') {
+            followBtn.innerText = 'S’abonner'
+        } else {
+            followBtn.innerText = 'Se désabonner'
+        }
+    })
+})
+postBtn.addEventListener('click', () => {
+    changePage(postPage)
+    footer.classList.remove('hidden')
+    navbar.classList.add('hidden')
+    footer.classList.add('hidden')
+})
+feedBtn.addEventListener('click', () => {
+    changePage(FEED_PAGE)
+    footer.classList.remove('hidden')
+    navbar.classList.remove('hidden')
+    navbarText.innerText = 'Feed'
+})
+searchInput.addEventListener('keyup', () => {
+    if (searchInput.value != '') {
+        changePage(rechercherPage)
+        footer.classList.remove('hidden')
+        rechercherInput.focus()
+        rechercherInput.value = searchInput.value
+        navbarText.innerText = 'Rechercher'
+        rechercherPrevBtn.classList.remove('hidden')
+    } else {
+        changePage(FEED_PAGE)
+        footer.classList.remove('hidden')
+        navbarText.innerText = 'Feed'
+        rechercherPrevBtn.classList.add('hidden')
+    }
+})
+rechercherInput.addEventListener('keyup', () => {
+    if (rechercherInput.value != '') {} else {
+        searchInput.value = ''
+        changePage(FEED_PAGE)
+        footer.classList.remove('hidden')
+        searchInput.focus()
+        navbarText.innerText = 'Feed'
+        rechercherPrevBtn.classList.add('hidden')
+    }
+})
+
+rechercherPrevBtn.addEventListener('click', () => {
+    changePage(FEED_PAGE)
+    footer.classList.remove('hidden')
+    searchInput.value = ''
+})
+postCloseBtn.addEventListener('click', () => {
+    changePage(FEED_PAGE)
+    footer.classList.remove('hidden')
+    navbar.classList.remove('hidden')
+    footer.classList.remove('hidden')
+});
+// FEED PAGE
+
+// PORTFOLIO PAGE 
+portfolioBtn.addEventListener('click', () => {
+    changePage(PORTFOLIO)
+    footer.classList.remove('hidden')
+    console.log(portfolioBtn)
+    navbar.classList.remove('hidden')
+    navbarText.innerText = 'Portefeuille'
+})
+attenteBtn.addEventListener('click', () => {
+    attenteTab.classList.remove('hidden')
+    tousTab.classList.add('hidden')
+    tousBtn.classList.remove('bg-blue-normal', 'text-white')
+    tousBtn.classList.add('text-gray-600')
+    attenteBtn.classList.add('bg-blue-normal', 'text-white')
+    attenteBtn.classList.remove('text-gray-600')
+})
+tousBtn.addEventListener('click', () => {
+    attenteTab.classList.add('hidden')
+    tousTab.classList.remove('hidden')
+    attenteBtn.classList.remove('bg-blue-normal', 'text-white')
+    attenteBtn.classList.add('text-gray-600')
+    tousBtn.classList.add('bg-blue-normal', 'text-white')
+    tousBtn.classList.remove('text-gray-600')
+});
+// PORTFOLIO PAGE
+
+// ACADEMY
+academyBtn.addEventListener('click', () => {
+    changePage(ACADEMY_PAGE)
+    footer.classList.remove('hidden')
+    navbar.classList.add('hidden')
+})
+
+academyMenuBtn.addEventListener('click', () => toggleDropdown())
+academyNextBtn.addEventListener('click', () => {
+    changePage(lessonPage)
+    footer.classList.remove('hidden')
+})
+lessonPagePrev.addEventListener('click', () => {
+    changePage(ACADEMY_PAGE)
+    footer.classList.remove('hidden')
+})
+lessonCards.forEach(lessonCard => {
+    lessonCard.addEventListener('click', () => {
+        if (lessonCard.children[1].innerHTML == '<img src="./../../assets/feed/feather_lock.jpg">') {
+            lessonCard.children[1].innerHTML = '<img src="./../../assets/feed/check.png">'
+        } else {
+            lessonCard.children[1].innerHTML = '<img src="./../../assets/feed/feather_lock.jpg">'
+        }
+    })
+})
+
+videoPlayBtn.addEventListener('click', () => {
+    footer.classList.add('hidden')
+    changePage(singleLessonPage)
+})
+singleLessonPrevBtn.addEventListener('click', () => {
+    changePage(lessonPage)
+    footer.classList.remove('hidden')
+})
+singleLessonNextBtn.addEventListener('click', () => {
+    changePage(singleLesson2)
+    footer.classList.add('hidden')
+})
+
+lesson2PrevBtn.addEventListener('click', () => {
+    changePage(singleLessonPage)
+})
+playVideo.addEventListener('click', () => {
+    if (playVideo.innerHTML == '<img src="./../../assets/feed/video_play.png">') {
+        video.play()
+        videoTime.style.width = video.currentTime + '%'
+        playVideo.innerHTML = '<img src="./../../assets/feed/pause.png">'
+    } else {
+        video.pause()
+        videoTime.style.width = video.currentTime + '%'
+        playVideo.innerHTML = '<img src="./../../assets/feed/video_play.png">'
+    }
+    video.ontimeupdate = () => {
+        videoTime.style.width = video.currentTime + '%'
+    }
+})
+playVideo2.addEventListener('click', () => {
+    console.log(playVideo2.innerHTML)
+    if (playVideo2.innerHTML == '<img src="./../../assets/feed/pause.png">') {
+        video2.play()
+        videoTime2.style.width = video2.currentTime + '%'
+        playVideo2.innerHTML = '<img src="./../../assets/feed/video_play.png">'
+    } else {
+        video2.pause()
+        videoTime2.style.width = video2.currentTime + '%'
+        playVideo2.innerHTML = '<img src="./../../assets/feed/pause.png">'
+    }
+    video2.ontimeupdate = () => {
+        videoTime2.style.width = video2.currentTime + '%'
+    }
+});
+// ACADEMY
+
+// SWIPER
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    loop: true,
+
+    autoplay: {
+        delay: 3000
+    },
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+    },
+    scrollbar: false
+});
+// SWOPER
