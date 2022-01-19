@@ -19,13 +19,20 @@
 <body>
     <div id="main-wrapper" class="max-w-mobile mx-auto bg-light h-screen">
 
-        <nav class="font-semibold text-white bg-blue-dark z-50 fixed flex
+        <nav id="navbar" class="font-semibold text-white bg-blue-dark z-50 fixed flex
              items-center justify-between max-w-mobile px-4 py-2 w-full top-0">
-            <h3 id="navbarText" class="text-2xl ">Feed</h3>
+            <div class="flex items-center">
+                <button id="rechercherPrev" class="hidden mr-4"><img src="./../../assets/feed/chevron-left.png"></button>
+                <h3 id="navbarText" class="text-2xl ">Feed</h3>
+            </div>
             <div class="flex items-center ">
                 <div class="mr-4 "><img src="./../../assets/feed/bell.png"></div>
                 <div id="profileMenu" class="cursor-pointer"><img src="./../../assets/feed/menu.png"></div>
             </div>
+        </nav>
+        <!-- MAIN CONTENT -->
+        <div class="main-content">
+            <!-- PROFILE DROPDOWN -->
             <div id="profileDropdown" style="box-shadow: 0px 0px 20px rgba(17, 20, 58, 0.15);" class="z-50 bg-light right-0 hidden fixed flex flex-col p-6 rounded-2xl text-black top-12 w-72">
                 <button class="ml-auto" id="profileCloseBtn"> <img src="./../../assets/feed/close (1) 1.png"></button>
                 <div class="flex items-center justify-center w-full">
@@ -60,9 +67,6 @@
                     <h3 class="font-medium mr-4 text-red-600">Déconnexion</h3>
                 </div>
             </div>
-        </nav>
-        <!-- MAIN CONTENT -->
-        <div class="main-content">
             <!-- FEED -->
             <div id="feedPage" class="ss-page">
                 <!-- FEED SEARCH BAR -->
@@ -624,13 +628,499 @@
                     </div>
                 </div>
             </div>
+            <!-- RECHERCHER -->
+            <div id="rechercher" class="bg-blue-dark ss-page hidden max-w-mobile mx-auto text-white">
+                <div class="bg-blue-dark pt-20">
+                    <div class="bg-light p-4 rounded-t-3xl">
+                        <form class="searchForm flex justify-around">
+                            <button type="submit" class="-mr-10 relative">
+                                <img src="./../../assets/feed/search (1) 1.png " class="">
+                            </button>
+                            <input type="text" id="rechercherValue" placeholder="Rechercher" class="p-4 px-10 outline-none rounded-full text-black w-full ">
+                        </form>
+                        <div class="flex items-center justify-between mt-6 text-black">
+                            <div class="flex items-center">
+                                <div><img src="./../../assets/feed/tesla.png"></div>
+                                <div class="ml-4">
+                                    <h3 class="font-semibold text-base">Tesla</h3>
+                                    <p class="text-gray-400 text-xs">TSLA</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-end">
+                                <h3 class="font-normal text-sm">12,502.36 €</h3>
+                                <p class="text-green-600 font-semibold text-xs">+510% </p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mt-6 text-black">
+                            <div class="flex items-center">
+                                <div><img src="./../../assets/feed/facebook.png"></div>
+                                <div class="ml-4">
+                                    <h3 class="font-semibold text-base">Meta (Facebook)</h3>
+                                    <p class="text-gray-400 text-xs">FB</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-end">
+                                <h3 class="font-normal text-sm">58,505,35.00 €</h3>
+                                <p class="text-red-600 font-semibold text-xs">-510% </p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mt-6 text-black">
+                            <div class="flex items-center">
+                                <div><img src="./../../assets/feed/microsoft.png"></div>
+                                <div class="ml-4">
+                                    <h3 class="font-semibold text-base">Microsoft</h3>
+                                    <p class="text-gray-400 text-xs">MSFT</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-end">
+                                <h3 class="font-normal text-sm">5,365.00 €</h3>
+                                <p class="text-red-600 font-semibold text-xs">-10% </p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mt-6 text-black">
+                            <div class="flex items-center">
+                                <div><img src="./../../assets/feed/amd.png"></div>
+                                <div class="ml-4">
+                                    <h3 class="font-semibold text-base">AMD</h3>
+                                    <p class="text-gray-400 text-xs">AMD</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-end">
+                                <h3 class="font-normal text-sm">5,365.00 €</h3>
+                                <p class="text-red-600 font-semibold text-xs">-10% </p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mt-6 text-black">
+                            <div class="flex items-center">
+                                <div><img src="./../../assets/feed/apple.png"></div>
+                                <div class="ml-4">
+                                    <h3 class="font-semibold text-base">Apple</h3>
+                                    <p class="text-gray-400 text-xs">APPL</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-end">
+                                <h3 class="font-normal text-sm">5,365.00 €</h3>
+                                <p class="text-green-600 font-semibold text-xs">+545% </p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mt-6 text-black">
+                            <div class="flex items-center">
+                                <div><img src="./../../assets/feed/snapshot.png"></div>
+                                <div class="ml-4">
+                                    <h3 class="font-semibold text-base">Snapchat</h3>
+                                    <p class="text-gray-400 text-xs">SNAP</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-end">
+                                <h3 class="font-normal text-sm">5,365.00 €</h3>
+                                <p class="text-green-600 font-semibold text-xs">+1080.3% </p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mt-6 text-black">
+                            <div class="flex items-center">
+                                <div><img src="./../../assets/feed/zoom.png"></div>
+                                <div class="ml-4">
+                                    <h3 class="font-semibold text-base">Zoom</h3>
+                                    <p class="text-gray-400 text-xs">ZMN</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-end">
+                                <h3 class="font-normal text-sm">5,365.00 €</h3>
+                                <p class="text-red-600 font-semibold text-xs">-54%</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mt-6 text-black">
+                            <div class="flex items-center">
+                                <div><img src="./../../assets/feed/hp.png"></div>
+                                <div class="ml-4">
+                                    <h3 class="font-semibold text-base">Hewlett Packard</h3>
+                                    <p class="text-gray-400 text-xs">HP</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-end">
+                                <h3 class="font-normal text-sm">5,365.00 €</h3>
+                                <p class="text-red-600 font-semibold text-xs">-10% </p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mt-6 text-black">
+                            <div class="flex items-center">
+                                <div><img src="./../../assets/feed/nivida.png"></div>
+                                <div class="ml-4">
+                                    <h3 class="font-semibold text-base">Nvidia</h3>
+                                    <p class="text-gray-400 text-xs">NVD</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-end">
+                                <h3 class="font-normal text-sm">5,365.00 €</h3>
+                                <p class="text-green-600 font-semibold text-xs">+810% </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="bg-light bottom-0 fixed flex justify-between max-w-mobile px-4 py-2 w-full" style="filter: drop-shadow(0px 0px 20px rgba(17, 20, 58, 0.15));">
+                    <button class="flex flex-col items-center ">
+                        <img src="./../../assets/feed/compass.png ">
+                        <h4 class="text-xs font-semibold text-blue-normal mt-1 ">Feed</h4>
+                    </button>
+                    <button class="flex flex-col items-center portfolioNextBtn">
+                        <img src=" ./../../assets/feed/wallet.png ">
+                        <h4 class="text-xs font-semibold text-gray-400 mt-1 ">Portefeuille</h4>
+                    </button>
+                    <button class="-mt-10 flex flex-col items-center text-center ">
+                        <div class="bg-light p-2 rounded-full ">
+                            <div class="bg-gradient-to-r from-blue-darker p-4 rounded-full to-blue-lighter ">
+                                <img src="./../../assets/feed/Trade.png ">
+                            </div>
+                            <h4 class="text-xs font-semibold text-gray-400 mt-1 ">Trade</h4>
+                        </div>
+                    </button>
+                    <button class="flex flex-col items-center ">
+                        <img src="./../../assets/feed/bank.png ">
+                        <h4 class="text-xs font-semibold text-gray-400 mt-1 ">Academy</h4>
+                    </button>
+                    <button class="flex flex-col items-center ">
+                        <img src="./../../assets/feed/user (1) 2.png">
+                        <h4 class="text-xs font-semibold text-gray-400 mt-1 ">Profil</h4>
+                    </button>
+                </footer>
+            </div>
+            <!-- POST PAGE -->
+            <div id="postPage" class="hidden ss-page bg-white h-screen max-w-mobile mx-auto p-4">
+                <div class="flex items-center">
+                    <button id="close"><img src="./../../assets/feed/close (1) 1.png"></button>
+                    <h3 class="font-semibold ml-4 text-2xl">Partager un post</h3>
+                </div>
+                <div class="flex items-center mt-4">
+                    <form id="postForm" class="flex items-center">
+                        <img src="./../../assets/feed/Profile_image.png">
+                        <textarea placeholder=" Écrire... " required id="postInput" class="color-normal outline-none ml-4" rows="1"></textarea>
+                    </form>
+                </div>
+                <div class="-ml-4 border border-light bottom-0 fixed flex items-center justify-around max-w-mobile py-2 w-full">
+                    <div class="flex">
+                        <div class="bg-light mr-2 p-2 px-3 cursor-pointer rounded-full"><img src="./../../assets/feed/dollar.png" alt=""></div>
+                        <div class="bg-light mr-2 p-2 px-2 cursor-pointer rounded-full"><img src="./../../assets/feed/@.png" alt=""></div>
+                        <div class="bg-light p-2 px-2 cursor-pointer rounded-full"><img src="./../../assets/feed/pictures.png" alt=""></div>
+                    </div>
+                    <button id="enterPost" class="bg-gradient-to-r font-bold from-blue-darker px-8 py-2 rounded-full text-sm text-white to-blue-lighter">Publier</button>
+                </div>
+            </div>
+            <!-- COMMENT PAGE -->
+            <div id="commentPage" class="max-w-mobile bg-white ss-page h-screen hidden mx-auto p-4">
+                <div class="flex items-center py-4">
+                    <button id="commentCloseBtn"><img src="./../../assets/feed/close (1) 1.png"></button>
+                    <h3 class="font-semibold ml-4 text-2xl">Commentaires</h3>
+                </div>
+                <hr>
+                <div class="p-4 py-6">
+                    <div class="flex items-center">
+                        <img src="./../../assets/feed/hassan.png">
+                        <div class="ml-4">
+                            <h3 class="font-semibold">Clark Hassan</h3>
+                            <p class="font-semibold text-gray-300 text-xs">2 jours</p>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-600">Il a survécu non seulement à cinq siècles, mais aussi au saut dans la composition électronique.</p>
+                </div>
+                <hr>
+                <div class="flex items-start mt-6">
+                    <div class="w-16 h-16"><img src="./../../assets/feed/girlfriend.png"></div>
+                    <div class="bg-light ml-4 p-2 rounded-2xl">
+                        <div class="flex items-center justify-between">
+                            <h3 class="font-bold text-sm">Laura MERCIER</h3>
+                            <p class="font-semibold text-gray-400 text-xs">1 jour</p>
+                        </div>
+                        <p class="font-normal mt-1 text-gray-600 text-sm">Vraiment David ? 😂 Ce n'est pas toujours cool de parier contre $APPL en bourse. Ou Clark, qu'en pensez-vous ?</p>
+                    </div>
+                </div>
+                <div class="flex items-start mt-6">
+                    <div class="w-20 h-20"> <img src="./../../assets/feed/hassan.png"></div>
+                    <div class="bg-light ml-4 p-2 rounded-2xl">
+                        <div class="flex items-center justify-between">
+                            <h3 class="font-bold text-sm">Clark Hassan</h3>
+                            <p class="font-semibold text-gray-400 text-xs">9h</p>
+                        </div>
+                        <p class="font-normal mt-1 text-gray-600 text-sm">De nombreux packages de publications assistées par ordinateur et éditeurs de pages Web utilisent désormais Lorem Ipsum comme texte de modèle par défaut
+                        </p>
+                    </div>
+                </div>
+                <div class="-ml-4 border border-light bottom-0 fixed flex items-center justify-around max-w-mobile py-2 w-full">
+                    <div class="p-2">
+                        <div id="dropdownBtn" class="bg-light mr-2 p-2 hidden px-2 cursor-pointer rounded-full"><img src="./../../assets/feed/plus.png" alt=""></div>
+                    </div>
+                    <div id="searchOthers" class="p-2 rounded-full flex">
+                        <div class="bg-light mr-2 p-2 px-3 cursor-pointer rounded-full"><img src="./../../assets/feed/dollar.png" alt=""></div>
+                        <div class="bg-light mr-2 p-2 px-2 cursor-pointer rounded-full"><img src="./../../assets/feed/@.png" alt=""></div>
+                        <div class="bg-light p-2 px-2 cursor-pointer rounded-full"><img src="./../../assets/feed/pictures.png" alt=""></div>
+                    </div>
+                    <div id="commentDropdown" class="p-2 rounded-full hidden absolute bg-white left-0 -mt-40" style="box-shadow: 0px 0px 20px rgba(17, 20, 58, 0.15);">
+                        <div class="bg-light  p-2 px-3 cursor-pointer rounded-full"><img src="./../../assets/feed/dollar.png" alt=""></div>
+                        <div class="bg-light mt-2  p-2 px-2 cursor-pointer rounded-full"><img src="./../../assets/feed/@.png" alt=""></div>
+                        <div class="bg-light mt-2 p-2 px-2 cursor-pointer rounded-full"><img src="./../../assets/feed/pictures.png" alt=""></div>
+                    </div>
+                    <form id="commentForm" class="bg-light flex items-center px-4 py-1 rounded-full">
+                        <input type="text" id="commentSearch" placeholder="Écrire..." class="bg-transparent color-normal mr-2 outline-none">
+                        <button type="send"><img src="./../../assets/feed/send (1) 1.png" alt=""></button>
+                    </form>
+                </div>
+            </div>
+            <!-- ABONENTS -->
+            <div id="abonents" class="hidden mx-auto ss-page max-w-mobile bg-white h-screen">
+                <div class="bg-white p-4">
+                    <div class="flex items-center">
+                        <button id="abonentPrevBtn"> <img src="./../../assets/Mask.png" class="mr-4"></button>
+                        <h3 class="font-semibold text-2xl">Abonnements</h3>
+                    </div>
+                    <form class="border border-gray-400 flex justify-around mt-6 px-3 rounded-full">
+                        <button type="submit" class="-mr-10 relative">
+                            <img src="./../../assets/feed/search (1) 1.png " class="">
+                        </button>
+                        <input type="text" placeholder="Rechercher " class="p-4 px-10 outline-none rounded-full text-black w-full ">
+                    </form>
+                    <div class="flex items-center justify-between mt-8">
+                        <div class="flex items-center">
+                            <div class="h-14 rounded-full w-14"> <img src="./../../assets/david.png"></div>
+                            <div class="ml-4">
+                                <h3 class="font-semibold text-base">David Cohen</h3>
+                                <h4 class="text-gray-600 text-sm">Here will be some...</h4>
+                            </div>
+                        </div>
+                        <button class="follow bg-blue-normal px-4 py-2 rounded-full text-white">Se désabonner</button>
+                    </div>
+                    <div class="flex items-center justify-between mt-6">
+                        <div class="flex items-center">
+                            <div class="h-14 rounded-full w-14"> <img src="./../../assets/ralph.png"></div>
+                            <div class="ml-4">
+                                <h3 class="font-semibold text-base">Ralph Edwards</h3>
+                                <h4 class="text-gray-600 text-sm">Here will be some...</h4>
+                            </div>
+                        </div>
+                        <button class="follow bg-blue-normal px-4 py-2 rounded-full text-white">Se désabonner</button>
+                    </div>
+                    <div class="flex items-center justify-between mt-6">
+                        <div class="flex items-center">
+                            <div class="h-14 rounded-full w-14"><img src="./../../assets/web.png"></div>
+                            <div class="ml-4">
+                                <h3 class="font-semibold text-base">Theresa Webb</h3>
+                                <h4 class="text-gray-600 text-sm">Here will be some...</h4>
+                            </div>
+                        </div>
+                        <button class="follow bg-blue-normal px-4 py-2 rounded-full text-white">Se désabonner</button>
+                    </div>
+                    <div class="flex items-center justify-between mt-6">
+                        <div class="flex items-center">
+                            <div class="h-14 rounded-full w-14"><img src="./../../assets/darell.png"></div>
+                            <div class="ml-4">
+                                <h3 class="font-semibold text-base">Darrell Steward</h3>
+                                <h4 class="text-gray-600 text-sm">Here will be some...</h4>
+                            </div>
+                        </div>
+                        <button class="follow bg-blue-normal px-4 py-2 rounded-full text-white">Se désabonner</button>
+                    </div>
+                </div>
+            </div>
+            <!-- PERSONAL INFORMATION -->
+            <div id="personalInformation" class="bg-white ss-page hidden p-4">
+                <div class="flex items-center">
+                    <button id="personalPrevBtn" class="mr-4"><img src="./../../assets/Mask.png"></button>
+                    <h3 class="font-semibold text-xl">Informations personnelles</h3>
+                </div>
+                <div class="border-2 border-blue-normal flex h-28 items-center justify-center mx-auto py-2 mt-6 rounded-full w-28">
+                    <img src="./../../assets/feed/PROFILE_IMG.png" alt="">
+                </div>
+                <button class="-mt-10 absolute bg-blue-normal ml-52 p-1 rounded-full"><img
+                        src="./../../assets/feed/camera 1.png" alt=""></button>
+                <h3 class="font-semibold mt-2 text-center">Sam Gamegie</h3>
+                <input type="text" value="Samy" class="personalInfInput outline-none bg-light mt-6 px-6 py-4 text-gray-500 rounded-2xl w-full">
+                <input type="text" value="Gamegie" class="personalInfInput outline-none bg-light mt-2 px-6 py-4 text-gray-500 rounded-2xl w-full">
+                <input type="text" value="s.gamegie@gmail.com" class="personalInfInput outline-none bg-light mt-2 text-gray-500 px-6 py-4 rounded-2xl w-full">
+                <textarea rows="6" class="w-100 w-full rounded-2xl mt-2 personalInfInput outline-none text-gray-500 bg-light py-4 px-5">C'est un fait établi de longue date qu'un lecteur sera distrait par le contenu lisible d'une page lorsqu'il regarde sa mise en page.</textarea>
+                <button class="bg-gradient-to-r font-semibold from-blue-darker mt-12 py-3 rounded-full text-white to-blue-lighter w-full">Sauvegarder</button>
+            </div>
+            <!-- ACADEMY -->
+            <div id="academy" class="max-w-mobile mx-auto pb-12 hidden bg-white ss-page">
+                <div class="flex items-center justify-between p-4">
+                    <div class="flex items-center">
+                        <img src="./../../assets/feed/ss-btn.png">
+                        <h3 class="font-semibold ml-3 text-blue-dark">THE SOCIAL STOCKS</h3>
+                    </div>
+                    <div class="flex items-center">
+                        <img src="./../../assets/feed/hassan 2.png" class="h-7 mr-4 w-7">
+                        <button id="menu"><img src="./../../assets/feed/menu_black.png"></button>
+                    </div>
+                </div>
+                <div style="background-image: url(./../../assets/feed/bg-academy.png);" class="h-screen bg-cover p-4 bg-no-repeat">
+                    <h3 class="font-bold mt-40 text-3xl text-center text-white">ACADEMY</h3>
+                    <p class="mt-1 text-center text-gray-300 text-sm">E-learning modules</p>
+                    <div class="overflow-auto">
+                        <div class="flex mt-8" style="width: 500px;">
+                            <div style="background-image: url(./../../assets/feed/card1.png);" class="bg-no-repeat flex flex-col h-80 items-center w-48">
+                                <h3 class="mr-3  font-semibold pt-5 text-center text-sm text-white">Bitcoin 101 - <br> Whitepaper and TA</h3>
+                                <p class=" font-normal mr-3 mt-2 text-center text-gray-300 text-xs">4h 46m</p>
+                                <button class=" bg-white font-semibold mr-3 mt-40 py-2 rounded-full text-blue-normal w-32">Read</button>
+                            </div>
+                            <div style="background-image: url(./../../assets/feed/card1.png);" class="bg-no-repeat flex flex-col h-80 items-center w-48">
+                                <h3 class="mr-3  font-semibold pt-5 text-center text-sm text-white">Introduction to the <br> financial market</h3>
+                                <p class=" font-normal mr-3 mt-2 text-center text-gray-300 text-xs">4h 46m</p>
+                                <button id="mainNextBtn" class="bg-white flex font-semibold items-center justify-around mr-3 mt-6 p-6 rounded-full text-blue-normal"><img src="./../../assets/feed/feather_lock.png"></button>
+                            </div>
+                            <div style="background-image: url(./../../assets/feed/card1.png);" class="bg-no-repeat flex flex-col h-80 items-center w-48">
+                                <h3 class="mr-3  font-semibold pt-5 text-center text-sm text-white">Bitcoin 101 - <br> Whitepaper and TA</h3>
+                                <p class=" font-normal mr-3 mt-2 text-center text-gray-300 text-xs">4h 46m</p>
+                                <button class=" bg-white font-semibold mr-3 mt-40 py-2 rounded-full text-blue-normal w-32">Read</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- LESSON -->
+            <div id="lessonPage" class="max-w-mobile ss-page mx-auto hidden bg-white pb-16">
+                <video autoplay="true" src="./../../assets/feed/Git va GitHub boshlang'ich Programmistlar uchun.mp4"></video>
+                <div class="absolute bg-cover bg-no-repeat p-4 top-0 w-full max-w-mobile">
+                    <div class="flex items-center justify-between">
+                        <button id="lessonPagePrev"> <img src="./../../assets/feed/chevron-left.png"></button>
+                        <div class="flex items-center">
+                            <img src="./../../assets/feed/bookmark.png" class="mr-4 cursor-pointer">
+                            <img src="./../../assets/feed/share.png" class="cursor-pointer">
+                        </div>
+                    </div>
+                    <button id="playVideo" class="bg-blue-normal flex mx-auto my-16 p-3 rounded-full"><img src="./../../assets/feed/video_play.png"></button>
+                </div>
+                <div class="h-2 w-100">
+                    <div id="videoTime" class="h-1 w-1" style="background: #7879F1;"></div>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold mt-2 w-56">Bitcoin 101 - Whitepaper and Technical Analysis</h3>
+                    <p class="font-normal mt-2 text-xs">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less Lorep ispsum iothe uth... <span class="font-semibold cursor-pointer text-blue-normal"
+                            id="videoPlayBtn">Read more</span></p>
+                    <hr class="mt-4">
+                    <div class="flex items-center justify-between mt-3">
+                        <h3 class="font-semibold text-sm">10 Lessons</h3>
+                        <p class="font-semibold text-blue-normal text-xs">4h 46m</p>
+                    </div>
+                </div>
+                <div class="flex hover:bg-light items-center justify-between px-6 py-4 lessonCard">
+                    <div class="flex items-center">
+                        <p class="mr-6">1</p>
+                        <div>
+                            <h3 class="font-normal text-sm">What is Bitcoin?</h3>
+                            <p class="font-normal text-gray-600 text-xs">2 Min</p>
+                        </div>
+                    </div>
+                    <button> <img src="./../../assets/feed/feather_lock.jpg"></button>
+                </div>
+                <div class="flex hover:bg-light items-center justify-between px-6 py-4 lessonCard">
+                    <div class="flex items-center">
+                        <p class="mr-6">2</p>
+                        <div>
+                            <h3 class="font-normal text-sm">Why trade Bitcoin in the market...</h3>
+                            <p class="font-normal text-gray-600 text-xs">50 Min</p>
+                        </div>
+                    </div>
+                    <button> <img src="./../../assets/feed/feather_lock.jpg"></button>
+                </div>
+                <div class="flex hover:bg-light items-center justify-between px-6 py-4 lessonCard">
+                    <div class="flex items-center">
+                        <p class="mr-6">3</p>
+                        <div>
+                            <h3 class="font-normal text-sm">What is a stock index?</h3>
+                            <p class="font-normal text-gray-600 text-xs">5 Min</p>
+                        </div>
+                    </div>
+                    <button> <img src="./../../assets/feed/feather_lock.jpg"></button>
+                </div>
+                <div class="flex hover:bg-light items-center justify-between px-6 py-4 lessonCard">
+                    <div class="flex items-center">
+                        <p class="mr-6">4</p>
+                        <div>
+                            <h3 class="font-normal text-sm">What is an action?</h3>
+                            <p class="font-normal text-gray-600 text-xs">50 Min</p>
+                        </div>
+                    </div>
+                    <button> <img src="./../../assets/feed/feather_lock.jpg"></button>
+                </div>
+                <div class="flex hover:bg-light items-center justify-between px-6 py-4 lessonCard">
+                    <div class="flex items-center">
+                        <p class="mr-6">5</p>
+                        <div>
+                            <h3 class="font-normal text-sm">Qu’est-ce qu’un indice boursier?...</h3>
+                            <p class="font-normal text-gray-600 text-xs">50 Min</p>
+                        </div>
+                    </div>
+                    <button> <img src="./../../assets/feed/feather_lock.jpg"></button>
+                </div>
+            </div>
+            <!-- SINGLE LESSON -->
+            <div id="singleLesson" class="max-w-mobile bg-white mx-auto hidden ss-page">
+                <div class="flex items-center justify-between p-4">
+                    <div class="flex items-center">
+                        <button id="singleLessonPrevBtn"><img src="./../../assets/Mask.png"></button>
+                        <h3 class="font-semibold ml-6">What is Bitcoin?</h3>
+                    </div>
+                    <p class="font-semibold text-blue-normal text-xs">2 Min</p>
+                </div>
+                <video id="video2" src="./../../assets/feed/Git va GitHub boshlang'ich Programmistlar uchun.mp4"></video>
+                <div class="bg-cover bg-no-repeat">
+                    <div class="absolute max-w-mobile w-full flex justify-between px-4 py-24 items-center top-16">
+                        <img src="./../../assets/feed/video_prev.png" class="cursor-pointer">
+                        <button id="playVideo2"><img src="./../../assets/feed/pause.png"></button>
+                        <img src="./../../assets/feed/video_next.png" class="cursor-pointer">
+                    </div>
+                </div>
+                <div class="w-100 h-2">
+                    <div id="videoTime2" class="w-0 h-2" style="background: #7879F1;"></div>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold mt-2">Introduction</h3>
+                    <p class="font-normal mt-2 text-gray-600 text-sm">Imagine that one day you decide to place all your savings under your mattress. Yes you forget this money for a year, it does will bring you nothing. You will find exactly the same amount. Now imagine that you have instead used that
+                        money to buy assets financial, such as stocks or raw materials. Instead of being at a standstill, your money would have benefited from a potential much greater growth because these actions or raw materials are likely to gain value.
+                        But conversely, they can also lose value. To invest in the financial markets it is therefore important to choose assets likely to evolve in the direction of your anticipation and then finding the ideal balance between risk of loss
+                        and potential for gain. As we will see, trading can, if it is applied in a prudent and reasoned manner earn more than the interest rates charged by the banks</p>
+                    <h3 class="font-semibold mt-4">Invest or trade</h3>
+                    <p class="font-normal mt-2 text-gray-600 text-sm">What we have just described is called " invest ”. It is essentially a form long-term financial trading, which amounts to buy and hold financial assets for several months or several years.</p>
+                    <img src="./../../assets/feed/planting_bit.png" class="mt-4 mx-auto">
+                    <h3 class="font-semibold mt-4">You need invest in Bitcoin</h3>
+                    <p class="font-normal mt-2 text-gray-600 text-sm">To invest in the financial markets it is therefore important to choose assets likely to evolve in the direction of your anticipation and then finding the ideal balance between risk of loss and potential for gain. As we will see, trading
+                        can, if it is applied in a prudent and reasoned manner earn more than the interest rates charged by the banks</p>
+                    <button id="singleLessonNextBtn" class="bg-gradient-to-r font-semibold from-blue-darker mt-8 py-3 rounded-full text-white to-blue-lighter w-full">Next Lesson</button>
+                </div>
+            </div>
+            <!-- SINGLE LESSON 2 -->
+            <div id="singleLesson2" class="bg-white ss-page hidden p-4">
+                <div class="flex items-center justify-between py-4">
+                    <div class="flex items-center">
+                        <button id="lesson2PrevBtn"><img src="./../../assets/Mask.png"></button>
+                        <h3 class="font-semibold ml-6">Why trade Bitcoin in the market...</h3>
+                    </div>
+                    <p class="font-semibold text-xs" style="color: #7879F1;">50 Min</p>
+                </div>
+                <div class="bg-light h-1 w-100">
+                    <div style="background: #7879F1;" class="h-1 w-20"></div>
+                </div>
+                <h3 class="font-semibold mt-4">Introduction</h3>
+                <p class="font-normal mt-2 text-gray-600 text-sm">Imagine that one day you decide to place all your savings under your mattress. Yes you forget this money for a year, it does will bring you nothing. You will find exactly the same amount. Now imagine that you have instead used that money
+                    to buy assets financial, such as stocks or raw materials. Instead of being at a standstill, your money would have benefited from a potential much greater growth because these actions or raw materials are likely to gain value. But conversely,
+                    they can also lose value. To invest in the financial markets it is therefore important to choose assets likely to evolve in the direction of your anticipation and then finding the ideal balance between risk of loss and potential for
+                    gain. As we will see, trading can, if it is applied in a prudent and reasoned manner earn more than the interest rates charged by the banks</p>
+                <img src="./../../assets/feed/bitcoin-trading.png" class="mt-1 mx-auto">
+                <h3 class="font-semibold mt-6">Invest or trade</h3>
+                <p class="font-normal mt-2 text-gray-600 text-sm">What we have just described is called " invest ”. It is essentially a form long-term financial trading, which amounts to buy and hold financial assets for several months or several years.</p>
+                <h3 class="font-semibold mt-6">You need invest in Bitcoin</h3>
+                <p class="font-normal mt-2 text-gray-600 text-sm">To invest in the financial markets it is therefore important to choose assets likely to evolve in the direction of your anticipation and then finding the ideal balance between risk of loss and potential for gain. As we will see, trading
+                    can, if it is applied in a prudent and reasoned manner earn more than the interest rates charged by the banks</p>
+                <button class="bg-gradient-to-r font-semibold from-blue-darker mt-8 py-3 rounded-full text-white to-blue-lighter w-full">Next Lesson</button>
+                <p class="font-semibold mt-4 text-blue-normal text-center">Previous</p>
+            </div>
         </div>
 
         <!-- FOOTER -->
-        <footer class="bg-light bottom-0 fixed flex justify-between max-w-mobile px-4 py-2 w-full z-50" style="filter: drop-shadow(0px 0px 20px rgba(17, 20, 58, 0.15));">
-            <button id="feedBtn" class="flex flex-col items-center ">
-                <img src="./../../assets/feed/compass.png ">
-                <h4 class="text-xs font-semibold text-blue-normal mt-1 ">Feed</h4>
+        <footer id="footer" class="bg-light bottom-0 fixed flex justify-between max-w-mobile px-4 py-2 w-full z-50" style="filter: drop-shadow(0px 0px 20px rgba(17, 20, 58, 0.15));">
+            <button id="feedBtn" class="flex flex-col items-center text-blue-normal">
+                <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.0002 22.6663C17.8912 22.6663 22.6668 17.8907 22.6668 11.9997C22.6668 6.10864 17.8912 1.33301 12.0002 1.33301C6.10913 1.33301 1.3335 6.10864 1.3335 11.9997C1.3335 17.8907 6.10913 22.6663 12.0002 22.6663Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16.5229 7.47754L14.2615 14.2615L7.47754 16.5229L9.73887 9.73887L16.5229 7.47754Z" stroke="#9BA3BB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <h4 class="text-xs font-semibold mt-1 ">Feed</h4>
             </button>
             <button id="portfolioBtn" class="portfolioNextBtn flex flex-col items-center">
                 <img src="./../../assets/feed/wallet.png ">
@@ -649,250 +1139,6 @@
                 <h4 class="text-xs font-semibold text-gray-400 mt-1 ">Academy</h4>
             </button>
             <button id="profilBtn" class="flex profileNextBtn flex-col items-center ">
-                <img src="./../../assets/feed/user (1) 2.png">
-                <h4 class="text-xs font-semibold text-gray-400 mt-1 ">Profil</h4>
-            </button>
-        </footer>
-        <!-- POST PAGE -->
-    </div>
-    <div id="postPage" class="hidden bg-white h-screen max-w-mobile mx-auto p-4">
-        <div class="flex items-center">
-            <button id="close"><img src="./../../assets/feed/close (1) 1.png"></button>
-            <h3 class="font-semibold ml-4 text-2xl">Partager un post</h3>
-        </div>
-        <div class="flex items-center mt-4">
-            <form id="postForm" class="flex items-center">
-                <img src="./../../assets/feed/Profile_image.png">
-                <textarea placeholder=" Écrire... " required id="postInput" class="color-normal outline-none ml-4" rows="1"></textarea>
-            </form>
-        </div>
-        <div class="-ml-4 border border-light bottom-0 fixed flex items-center justify-around max-w-mobile py-2 w-full">
-            <div class="flex">
-                <div class="bg-light mr-2 p-2 px-3 cursor-pointer rounded-full"><img src="./../../assets/feed/dollar.png" alt=""></div>
-                <div class="bg-light mr-2 p-2 px-2 cursor-pointer rounded-full"><img src="./../../assets/feed/@.png" alt=""></div>
-                <div class="bg-light p-2 px-2 cursor-pointer rounded-full"><img src="./../../assets/feed/pictures.png" alt=""></div>
-            </div>
-            <button id="enterPost" class="bg-gradient-to-r font-bold from-blue-darker px-8 py-2 rounded-full text-sm text-white to-blue-lighter">Publier</button>
-        </div>
-    </div>
-    <div id="commentPage" class="max-w-mobile bg-white h-screen hidden mx-auto p-4">
-        <div class="flex items-center py-4">
-            <button id="commentCloseBtn"><img src="./../../assets/feed/close (1) 1.png"></button>
-            <h3 class="font-semibold ml-4 text-2xl">Commentaires</h3>
-        </div>
-        <hr>
-        <div class="p-4 py-6">
-            <div class="flex items-center">
-                <img src="./../../assets/feed/hassan.png">
-                <div class="ml-4">
-                    <h3 class="font-semibold">Clark Hassan</h3>
-                    <p class="font-semibold text-gray-300 text-xs">2 jours</p>
-                </div>
-            </div>
-            <p class="mt-4 text-gray-600">Il a survécu non seulement à cinq siècles, mais aussi au saut dans la composition électronique.</p>
-        </div>
-        <hr>
-        <div class="flex items-start mt-6">
-            <div class="w-16 h-16"><img src="./../../assets/feed/girlfriend.png"></div>
-            <div class="bg-light ml-4 p-2 rounded-2xl">
-                <div class="flex items-center justify-between">
-                    <h3 class="font-bold text-sm">Laura MERCIER</h3>
-                    <p class="font-semibold text-gray-400 text-xs">1 jour</p>
-                </div>
-                <p class="font-normal mt-1 text-gray-600 text-sm">Vraiment David ? 😂 Ce n'est pas toujours cool de parier contre $APPL en bourse. Ou Clark, qu'en pensez-vous ?</p>
-            </div>
-        </div>
-        <div class="flex items-start mt-6">
-            <div class="w-20 h-20"> <img src="./../../assets/feed/hassan.png"></div>
-            <div class="bg-light ml-4 p-2 rounded-2xl">
-                <div class="flex items-center justify-between">
-                    <h3 class="font-bold text-sm">Clark Hassan</h3>
-                    <p class="font-semibold text-gray-400 text-xs">9h</p>
-                </div>
-                <p class="font-normal mt-1 text-gray-600 text-sm">De nombreux packages de publications assistées par ordinateur et éditeurs de pages Web utilisent désormais Lorem Ipsum comme texte de modèle par défaut
-                </p>
-            </div>
-        </div>
-        <div class="-ml-4 border border-light bottom-0 fixed flex items-center justify-around max-w-mobile py-2 w-full">
-            <div class="p-2">
-                <div id="dropdownBtn" class="bg-light mr-2 p-2 hidden px-2 cursor-pointer rounded-full"><img src="./../../assets/feed/plus.png" alt=""></div>
-            </div>
-            <div id="searchOthers" class="p-2 rounded-full flex">
-                <div class="bg-light mr-2 p-2 px-3 cursor-pointer rounded-full"><img src="./../../assets/feed/dollar.png" alt=""></div>
-                <div class="bg-light mr-2 p-2 px-2 cursor-pointer rounded-full"><img src="./../../assets/feed/@.png" alt=""></div>
-                <div class="bg-light p-2 px-2 cursor-pointer rounded-full"><img src="./../../assets/feed/pictures.png" alt=""></div>
-            </div>
-            <div id="commentDropdown" class="p-2 rounded-full hidden absolute bg-white left-0 -mt-40" style="box-shadow: 0px 0px 20px rgba(17, 20, 58, 0.15);">
-                <div class="bg-light  p-2 px-3 cursor-pointer rounded-full"><img src="./../../assets/feed/dollar.png" alt=""></div>
-                <div class="bg-light mt-2  p-2 px-2 cursor-pointer rounded-full"><img src="./../../assets/feed/@.png" alt=""></div>
-                <div class="bg-light mt-2 p-2 px-2 cursor-pointer rounded-full"><img src="./../../assets/feed/pictures.png" alt=""></div>
-            </div>
-            <form id="commentForm" class="bg-light flex items-center px-4 py-1 rounded-full">
-                <input type="text" id="commentSearch" placeholder="Écrire..." class="bg-transparent color-normal mr-2 outline-none">
-                <button type="send"><img src="./../../assets/feed/send (1) 1.png" alt=""></button>
-            </form>
-        </div>
-    </div>
-    <div id="rechercher" class="bg-blue-dark hidden max-w-mobile mx-auto text-white">
-        <div class="bg-blue-dark fixed flex items-center justify-between max-w-mobile px-4 py-2 top-0 w-full z-50">
-            <div class="flex items-center">
-                <button id="rechercherCloseBtn"><img src="./../../assets/feed/chevron-left.png"></button>
-                <h3 class="font-semibold ml-4 text-2xl">Rechercher</h3>
-            </div>
-            <div class="flex items-center">
-                <button><img src="./../../assets/feed/bell.png" class="mr-4"></button>
-                <button><img src="./../../assets/feed/menu.png" alt=""></button>
-            </div>
-        </div>
-        <div class="bg-blue-dark pt-20">
-            <div class="bg-light p-4 rounded-t-3xl">
-                <form class="searchForm flex justify-around">
-                    <button type="submit" class="-mr-10 relative">
-                        <img src="./../../assets/feed/search (1) 1.png " class="">
-                    </button>
-                    <input type="text" id="rechercherValue" placeholder="Rechercher" class="p-4 px-10 outline-none rounded-full text-black w-full ">
-                </form>
-                <div class="flex items-center justify-between mt-6 text-black">
-                    <div class="flex items-center">
-                        <div><img src="./../../assets/feed/tesla.png"></div>
-                        <div class="ml-4">
-                            <h3 class="font-semibold text-base">Tesla</h3>
-                            <p class="text-gray-400 text-xs">TSLA</p>
-                        </div>
-                    </div>
-                    <div class="flex flex-col items-end">
-                        <h3 class="font-normal text-sm">12,502.36 €</h3>
-                        <p class="text-green-600 font-semibold text-xs">+510% </p>
-                    </div>
-                </div>
-                <div class="flex items-center justify-between mt-6 text-black">
-                    <div class="flex items-center">
-                        <div><img src="./../../assets/feed/facebook.png"></div>
-                        <div class="ml-4">
-                            <h3 class="font-semibold text-base">Meta (Facebook)</h3>
-                            <p class="text-gray-400 text-xs">FB</p>
-                        </div>
-                    </div>
-                    <div class="flex flex-col items-end">
-                        <h3 class="font-normal text-sm">58,505,35.00 €</h3>
-                        <p class="text-red-600 font-semibold text-xs">-510% </p>
-                    </div>
-                </div>
-                <div class="flex items-center justify-between mt-6 text-black">
-                    <div class="flex items-center">
-                        <div><img src="./../../assets/feed/microsoft.png"></div>
-                        <div class="ml-4">
-                            <h3 class="font-semibold text-base">Microsoft</h3>
-                            <p class="text-gray-400 text-xs">MSFT</p>
-                        </div>
-                    </div>
-                    <div class="flex flex-col items-end">
-                        <h3 class="font-normal text-sm">5,365.00 €</h3>
-                        <p class="text-red-600 font-semibold text-xs">-10% </p>
-                    </div>
-                </div>
-                <div class="flex items-center justify-between mt-6 text-black">
-                    <div class="flex items-center">
-                        <div><img src="./../../assets/feed/amd.png"></div>
-                        <div class="ml-4">
-                            <h3 class="font-semibold text-base">AMD</h3>
-                            <p class="text-gray-400 text-xs">AMD</p>
-                        </div>
-                    </div>
-                    <div class="flex flex-col items-end">
-                        <h3 class="font-normal text-sm">5,365.00 €</h3>
-                        <p class="text-red-600 font-semibold text-xs">-10% </p>
-                    </div>
-                </div>
-                <div class="flex items-center justify-between mt-6 text-black">
-                    <div class="flex items-center">
-                        <div><img src="./../../assets/feed/apple.png"></div>
-                        <div class="ml-4">
-                            <h3 class="font-semibold text-base">Apple</h3>
-                            <p class="text-gray-400 text-xs">APPL</p>
-                        </div>
-                    </div>
-                    <div class="flex flex-col items-end">
-                        <h3 class="font-normal text-sm">5,365.00 €</h3>
-                        <p class="text-green-600 font-semibold text-xs">+545% </p>
-                    </div>
-                </div>
-                <div class="flex items-center justify-between mt-6 text-black">
-                    <div class="flex items-center">
-                        <div><img src="./../../assets/feed/snapshot.png"></div>
-                        <div class="ml-4">
-                            <h3 class="font-semibold text-base">Snapchat</h3>
-                            <p class="text-gray-400 text-xs">SNAP</p>
-                        </div>
-                    </div>
-                    <div class="flex flex-col items-end">
-                        <h3 class="font-normal text-sm">5,365.00 €</h3>
-                        <p class="text-green-600 font-semibold text-xs">+1080.3% </p>
-                    </div>
-                </div>
-                <div class="flex items-center justify-between mt-6 text-black">
-                    <div class="flex items-center">
-                        <div><img src="./../../assets/feed/zoom.png"></div>
-                        <div class="ml-4">
-                            <h3 class="font-semibold text-base">Zoom</h3>
-                            <p class="text-gray-400 text-xs">ZMN</p>
-                        </div>
-                    </div>
-                    <div class="flex flex-col items-end">
-                        <h3 class="font-normal text-sm">5,365.00 €</h3>
-                        <p class="text-red-600 font-semibold text-xs">-54%</p>
-                    </div>
-                </div>
-                <div class="flex items-center justify-between mt-6 text-black">
-                    <div class="flex items-center">
-                        <div><img src="./../../assets/feed/hp.png"></div>
-                        <div class="ml-4">
-                            <h3 class="font-semibold text-base">Hewlett Packard</h3>
-                            <p class="text-gray-400 text-xs">HP</p>
-                        </div>
-                    </div>
-                    <div class="flex flex-col items-end">
-                        <h3 class="font-normal text-sm">5,365.00 €</h3>
-                        <p class="text-red-600 font-semibold text-xs">-10% </p>
-                    </div>
-                </div>
-                <div class="flex items-center justify-between mt-6 text-black">
-                    <div class="flex items-center">
-                        <div><img src="./../../assets/feed/nivida.png"></div>
-                        <div class="ml-4">
-                            <h3 class="font-semibold text-base">Nvidia</h3>
-                            <p class="text-gray-400 text-xs">NVD</p>
-                        </div>
-                    </div>
-                    <div class="flex flex-col items-end">
-                        <h3 class="font-normal text-sm">5,365.00 €</h3>
-                        <p class="text-green-600 font-semibold text-xs">+810% </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <footer class="bg-light bottom-0 fixed flex justify-between max-w-mobile px-4 py-2 w-full" style="filter: drop-shadow(0px 0px 20px rgba(17, 20, 58, 0.15));">
-            <button class="flex flex-col items-center ">
-                <img src="./../../assets/feed/compass.png ">
-                <h4 class="text-xs font-semibold text-blue-normal mt-1 ">Feed</h4>
-            </button>
-            <button class="flex flex-col items-center portfolioNextBtn">
-                <img src=" ./../../assets/feed/wallet.png ">
-                <h4 class="text-xs font-semibold text-gray-400 mt-1 ">Portefeuille</h4>
-            </button>
-            <button class="-mt-10 flex flex-col items-center text-center ">
-                <div class="bg-light p-2 rounded-full ">
-                    <div class="bg-gradient-to-r from-blue-darker p-4 rounded-full to-blue-lighter ">
-                        <img src="./../../assets/feed/Trade.png ">
-                    </div>
-                    <h4 class="text-xs font-semibold text-gray-400 mt-1 ">Trade</h4>
-                </div>
-            </button>
-            <button class="flex flex-col items-center ">
-                <img src="./../../assets/feed/bank.png ">
-                <h4 class="text-xs font-semibold text-gray-400 mt-1 ">Academy</h4>
-            </button>
-            <button class="flex flex-col items-center ">
                 <img src="./../../assets/feed/user (1) 2.png">
                 <h4 class="text-xs font-semibold text-gray-400 mt-1 ">Profil</h4>
             </button>
