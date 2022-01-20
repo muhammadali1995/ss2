@@ -35,6 +35,8 @@ const commentPage = 'commentPage'
 const video2 = document.getElementById('video2')
 const playVideo2 = document.getElementById('playVideo2')
 const video = document.querySelector('video')
+const chatNextBtns = document.querySelectorAll('.contact')
+const conversation = 'conversation'
 const lesson2PrevBtn = document.getElementById('lesson2PrevBtn')
 const singleLessonNextBtn = document.getElementById('singleLessonNextBtn')
 const commentCloseBtn = document.getElementById('commentCloseBtn')
@@ -42,13 +44,16 @@ const dropdownBtn = document.getElementById('dropdownBtn')
 const commentDropdown = document.getElementById('commentDropdown')
 const searchOthers = document.getElementById('searchOthers')
 const commentSearchInput = document.getElementById('commentSearch')
+const chatForm = document.getElementById('chatFrom')
 const commentForm = document.getElementById('commentForm')
 const commentSearchValue = document.getElementById('commentSearch')
 const ActiveInput = document.activeElement
 const videoPlayBtn = document.getElementById('videoPlayBtn')
+const conversationPrevBtn = document.getElementById('conversationPrevBtn')
 const singleLessonPrevPageBtn = document.getElementById('singleLessonPrevPageBtn')
 const singleNextLesson = document.getElementById('singleNextLesson')
 const groupesPage = document.getElementById('groupesPage')
+const messadgeSite = document.getElementById('messadgeSite')
 const groupesBtn = document.getElementById('groupesBtn')
 const amisBtn = document.getElementById('amisBtn')
 const amisPage = document.getElementById('amisPage')
@@ -91,6 +96,7 @@ const abonentPrevBtn = document.getElementById('abonentPrevBtn')
 const rechercherPrevBtn = document.getElementById('rechercherPrev')
 const navbar = document.getElementById('navbar')
 const footer = document.getElementById('footer')
+const user = document.getElementById('user')
 const followBtns = document.querySelectorAll('.follow')
 const defaultMarginTop = document.getElementById('defaultMarginTop')
 const personalPrevBtn = document.getElementById('personalPrevBtn')
@@ -473,12 +479,49 @@ amisBtn.addEventListener('click', () => {
     groupesPage.classList.add('hidden')
 })
 groupesBtn.addEventListener('click', () => {
-        amisPage.classList.add('hidden')
-        groupesBtn.className = 'bg-blue-normal font-bold py-1 rounded-full text-white w-1/2'
-        amisBtn.className = 'font-bold text-gray-600 w-1/2'
-        groupesPage.classList.remove('hidden')
+    amisPage.classList.add('hidden')
+    groupesBtn.className = 'bg-blue-normal font-bold py-1 rounded-full text-white w-1/2'
+    amisBtn.className = 'font-bold text-gray-600 w-1/2'
+    groupesPage.classList.remove('hidden')
+})
+chatNextBtns.forEach(chatNextBtn => {
+    chatNextBtn.addEventListener('click', () => {
+        changePage(conversation)
+        console.log(chatNextBtn)
+        user.innerHTML = `
+        <img src="${chatNextBtn.children[0].children[0].src}">
+        <h3 class="font-extrabold ml-4">${chatNextBtn.children[0].children[1].children[0].innerText}</h3>
+        `
+        footer.classList.add('hidden')
+        navbar.classList.add('hidden')
     })
-    // CHAT
+
+})
+conversationPrevBtn.addEventListener('click', () => {
+    changePage(chat)
+    navbar.classList.remove('hidden')
+    footer.classList.remove('hidden')
+})
+
+chatForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+    const newMessadge = document.createElement('div')
+    newMessadge.innerHTML = `<div class="flex items-start mt-8">
+                    <div class="bg-blue-dark px-4 py-2 rounded-2xl text-white" style="border-top-right-radius: 0;">
+                        <div class="flex justify-between">
+                            <h3 class="font-bold text-sm">Sam GAMEGIE</h3>
+                            <p class="font-semibold text-gray-300 text-xs">${new Date().toLocaleTimeString()}</p>
+                        </div>
+                        <p class="font-normal mt-1 text-gray-300 w-72 overflow-auto text-sm">${chatForm.children[0].value}</p>
+                    </div>
+                    <img src="./../../assets/feed/Profile_image.png" class="ml-4">
+                </div>`
+    messadgeSite.appendChild(newMessadge)
+    chatForm[0].value = ''
+
+})
+
+// CHAT
 
 // SWIPER
 const swiper = new Swiper('.swiper', {
