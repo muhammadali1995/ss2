@@ -48,6 +48,10 @@ const ActiveInput = document.activeElement
 const videoPlayBtn = document.getElementById('videoPlayBtn')
 const singleLessonPrevPageBtn = document.getElementById('singleLessonPrevPageBtn')
 const singleNextLesson = document.getElementById('singleNextLesson')
+const groupesPage = document.getElementById('groupesPage')
+const groupesBtn = document.getElementById('groupesBtn')
+const amisBtn = document.getElementById('amisBtn')
+const amisPage = document.getElementById('amisPage')
 const lessonPrevBtns = document.querySelectorAll('.lessonPrevBtn')
 const lessonCards = document.querySelectorAll('.lessonCard')
 const lessonPagePrev = document.getElementById('lessonPagePrev')
@@ -456,10 +460,23 @@ closeBtn2.addEventListener('click', () => {
 
 // CHAT
 chatBtn.addEventListener('click', () => {
-        changePage(chat)
-        navbarText.innerText = 'Chat'
-        console.log(chatBtn)
-        showPageBtn(chatBtnStyled)
+    changePage(chat)
+    navbarText.innerText = 'Chat'
+    console.log(chatBtn)
+    showPageBtn(chatBtnStyled)
+})
+
+amisBtn.addEventListener('click', () => {
+    amisPage.classList.remove('hidden')
+    amisBtn.className = 'bg-blue-normal font-bold py-1 rounded-full text-white w-1/2'
+    groupesBtn.className = 'font-bold text-gray-600 w-1/2'
+    groupesPage.classList.add('hidden')
+})
+groupesBtn.addEventListener('click', () => {
+        amisPage.classList.add('hidden')
+        groupesBtn.className = 'bg-blue-normal font-bold py-1 rounded-full text-white w-1/2'
+        amisBtn.className = 'font-bold text-gray-600 w-1/2'
+        groupesPage.classList.remove('hidden')
     })
     // CHAT
 
