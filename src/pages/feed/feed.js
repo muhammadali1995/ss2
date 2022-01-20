@@ -7,14 +7,23 @@ const profileMenu = document.getElementById('profileMenu')
 const profileCloseBtn = document.getElementById('profileCloseBtn')
 const searchInput = document.getElementById('searchValue')
 const searchForms = document.querySelectorAll('.searchForm')
+const singleLessonNextPageBtn = document.getElementById('singleLessonNextPageBtn')
+const intrClose = document.getElementById('intrClose')
+const closedPage = document.getElementById('closedPage')
 const publicationsBtn = document.getElementById('publicationsBtn')
 const newsBtn = document.getElementById('newsBtn')
+const chatBtnStyled = 'chatBtn'
 const publicationsPage = document.getElementById('publications')
 const newsPage = document.getElementById('news')
+const academyNextPageBtn = document.getElementById('academyNextPageBtn')
+const lockBtns = document.querySelectorAll('.lockBtn')
 const postBtn = document.getElementById('post')
+const chatBtn = document.getElementById('chatBtn')
+const searchBtn = document.getElementById('searchBtn')
 const mainWrapper = document.getElementById('main-wrapper')
 const videoTime = document.getElementById('videoTime')
 const videoTime2 = document.getElementById('videoTime2')
+const lessonNextBtn = document.getElementById('lessonNextBtn')
 const closeBtn = document.getElementById('close')
 const postInput = document.getElementById('postInput')
 const postParent = document.getElementById('postParent')
@@ -37,7 +46,7 @@ const commentForm = document.getElementById('commentForm')
 const commentSearchValue = document.getElementById('commentSearch')
 const ActiveInput = document.activeElement
 const videoPlayBtn = document.getElementById('videoPlayBtn')
-const singleLessonPrevBtn = document.getElementById('singleLessonPrevBtn')
+const singleLessonPrevPageBtn = document.getElementById('singleLessonPrevPageBtn')
 const singleNextLesson = document.getElementById('singleNextLesson')
 const lessonPrevBtns = document.querySelectorAll('.lessonPrevBtn')
 const lessonCards = document.querySelectorAll('.lessonCard')
@@ -51,6 +60,7 @@ const academyNextBtn = document.getElementById('mainNextBtn')
 const pagesBtn = document.querySelectorAll('.pagesBtn')
 const rechercherPage = 'rechercher'
 const FEED_PAGE = 'feedPage'
+const chat = 'chat'
 const Inf_page = 'personalInformation'
 const PORTFOLIO = 'portfolio'
 const PROFIL_PAGE = 'profil'
@@ -61,6 +71,8 @@ const ACADEMY_PAGE = 'academy'
 const lessonPage = 'lessonPage'
 const singleLessonPage = 'singleLesson'
 const singleLesson2 = 'singleLesson2'
+const closedDiv = document.getElementById('closedDiv')
+const closeBtn2 = document.getElementById('closeBtn2')
 const personalInfBtn = document.getElementById('personalInfBtn')
 const portfolioBtn = document.getElementById('portfolioBtn')
 const feedBtn = document.getElementById('feedBtn')
@@ -297,48 +309,27 @@ feedBtn.addEventListener('click', () => {
     navbar.classList.remove('hidden')
     navbarText.innerText = 'Feed'
 })
-searchInput.addEventListener('keyup', () => {
-    if (searchInput.value != '') {
-        changePage(rechercherPage)
-        footer.classList.remove('hidden')
-        rechercherInput.focus()
-        rechercherInput.value = searchInput.value
-        navbarText.innerText = 'Rechercher'
-        rechercherPrevBtn.classList.remove('hidden')
-    } else {
-        changePage(FEED_PAGE)
-        showPageBtn(feddBtnStyled)
-        footer.classList.remove('hidden')
-        navbarText.innerText = 'Feed'
-        rechercherPrevBtn.classList.add('hidden')
-    }
-})
-rechercherInput.addEventListener('keyup', () => {
-    if (rechercherInput.value != '') {} else {
-        searchInput.value = ''
-        changePage(FEED_PAGE)
-        showPageBtn(feddBtnStyled)
-        footer.classList.remove('hidden')
-        searchInput.focus()
-        navbarText.innerText = 'Feed'
-        rechercherPrevBtn.classList.add('hidden')
-    }
-})
-
-rechercherPrevBtn.addEventListener('click', () => {
-    changePage(FEED_PAGE)
-    showPageBtn(feddBtnStyled)
-    footer.classList.remove('hidden')
-    searchInput.value = ''
-})
 postCloseBtn.addEventListener('click', () => {
     changePage(FEED_PAGE)
     showPageBtn(feddBtnStyled)
     footer.classList.remove('hidden')
     navbar.classList.remove('hidden')
     footer.classList.remove('hidden')
-});
-// FEED PAGE
+})
+
+searchBtn.addEventListener('click', () => {
+        if (!searchBtn.classList.contains('text-blue-normal')) {
+            searchBtn.classList.add('text-blue-normal')
+            changePage(rechercherPage)
+            navbarText.innerText = 'Rechercher'
+        } else {
+            searchBtn.classList.remove('text-blue-normal')
+            changePage(FEED_PAGE)
+            navbarText.innerText = 'Feed'
+            showPageBtn(feddBtnStyled)
+        }
+    })
+    // FEED PAGE
 
 // PORTFOLIO PAGE 
 portfolioBtn.addEventListener('click', () => {
@@ -392,18 +383,7 @@ academyBtn.addEventListener('click', () => {
     changePage(ACADEMY_PAGE)
     showPageBtn(academyBtnStyled)
     footer.classList.remove('hidden')
-    navbar.classList.add('hidden')
-})
-
-academyMenuBtn.addEventListener('click', () => toggleDropdown())
-academyNextBtn.addEventListener('click', () => {
-    changePage(lessonPage)
-    footer.classList.remove('hidden')
-})
-lessonPagePrev.addEventListener('click', () => {
-    changePage(ACADEMY_PAGE)
-    showPageBtn(academyBtnStyled)
-    footer.classList.remove('hidden')
+    navbarText.innerText = 'Academy'
 })
 lessonCards.forEach(lessonCard => {
     lessonCard.addEventListener('click', () => {
@@ -414,54 +394,74 @@ lessonCards.forEach(lessonCard => {
         }
     })
 })
-
-videoPlayBtn.addEventListener('click', () => {
-    footer.classList.add('hidden')
-    changePage(singleLessonPage)
-})
-singleLessonPrevBtn.addEventListener('click', () => {
+singleLessonPrevPageBtn.addEventListener('click', () => {
     changePage(lessonPage)
-    footer.classList.remove('hidden')
 })
-singleLessonNextBtn.addEventListener('click', () => {
-    changePage(singleLesson2)
-    footer.classList.add('hidden')
-})
-
 lesson2PrevBtn.addEventListener('click', () => {
     changePage(singleLessonPage)
 })
 playVideo.addEventListener('click', () => {
-    if (playVideo.innerHTML == '<img src="./../../assets/feed/video_play.png">') {
+    if (playVideo.innerHTML == '<img src="./../../assets/feed/video_play.png" class="w-4">') {
         video.play()
         videoTime.style.width = video.currentTime + '%'
         playVideo.innerHTML = '<img src="./../../assets/feed/pause.png">'
     } else {
         video.pause()
         videoTime.style.width = video.currentTime + '%'
-        playVideo.innerHTML = '<img src="./../../assets/feed/video_play.png">'
+        playVideo.innerHTML = '<img src="./../../assets/feed/video_play.png" class="w-4">'
     }
     video.ontimeupdate = () => {
         videoTime.style.width = video.currentTime + '%'
     }
 })
-playVideo2.addEventListener('click', () => {
-    console.log(playVideo2.innerHTML)
-    if (playVideo2.innerHTML == '<img src="./../../assets/feed/pause.png">') {
-        video2.play()
-        videoTime2.style.width = video2.currentTime + '%'
-        playVideo2.innerHTML = '<img src="./../../assets/feed/video_play.png">'
-    } else {
-        video2.pause()
-        videoTime2.style.width = video2.currentTime + '%'
-        playVideo2.innerHTML = '<img src="./../../assets/feed/pause.png">'
-    }
-    video2.ontimeupdate = () => {
-        videoTime2.style.width = video2.currentTime + '%'
-    }
-});
+
+lockBtns.forEach(lockBtn => {
+    lockBtn.addEventListener('click', () => {
+        if (lockBtn.innerHTML == '<img src="./../../assets/feed/lock_blue.png">') {
+            lockBtn.innerHTML = '<img src="./../../assets/feed/tick_icon.png">'
+        } else {
+            lockBtn.innerHTML = '<img src="./../../assets/feed/lock_blue.png">'
+        }
+    })
+})
+
+academyNextPageBtn.addEventListener('click', () => {
+    changePage(lessonPage)
+    footer.classList.add('hidden')
+    navbar.classList.add('hidden')
+})
+
+lessonNextBtn.addEventListener('click', () => {
+    changePage(singleLessonPage)
+    footer.classList.add('hidden')
+    navbar.classList.add('hidden')
+})
+
+intrClose.addEventListener('click', () => {
+    closedPage.classList.add('hidden')
+})
+
+singleLessonNextPageBtn.addEventListener('click', () => {
+    changePage(singleLesson2)
+    navbar.classList.add('hidden')
+    footer.classList.add('hidden')
+})
+
+closeBtn2.addEventListener('click', () => {
+    closedDiv.classList.add('hidden')
+})
 
 // ACADEMY
+
+
+// CHAT
+chatBtn.addEventListener('click', () => {
+        changePage(chat)
+        navbarText.innerText = 'Chat'
+        console.log(chatBtn)
+        showPageBtn(chatBtnStyled)
+    })
+    // CHAT
 
 // SWIPER
 const swiper = new Swiper('.swiper', {
