@@ -29,6 +29,7 @@
                 <h3 id="navbarText" class="text-2xl ">Feed</h3>
             </div>
             <div class="flex items-center ">
+                <i id="searchBtn" class="bi bi-search mr-4 text-xl cursor-pointer"></i>
                 <div class="mr-4 "><img src="./../../assets/feed/bell.png "></div>
                 <div id="profileMenu" class="cursor-pointer "><img src="./../../assets/feed/menu.png "></div>
             </div>
@@ -71,7 +72,7 @@
                 </div>
             </div>
             <!-- FEED -->
-            <div id="feedPage" class="ss-page ">
+            <div id="feedPage" class="ss-page">
                 <!-- FEED SEARCH BAR -->
                 <div class="pt-20 pb-12 px-4 bg-blue-dark ">
                     <form class=" searchForm flex justify-around ">
@@ -341,12 +342,15 @@
                             <button class="bg-white font-bold ml-3 py-2 rounded-full text-blue-normal text-sm w-1/2 ">Retirer</button>
                         </div>
                         <div class="flex items-center justify-between mt-6 ">
-                            <p class="font-semibold ">Liquidités</p>
-                            <button data-tooltip-target="tooltip-click " data-tooltip-trigger="click " type="button "><img src="./../../assets/feed/information 1.png " class=" "></button>
-                            <div id="tooltip-click " role="tooltip " class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700 ">
-                                Lorem ipsum dolor sit.
-                                <div class="tooltip-arrow" data-popper-arrow></div>
+                            <div class="flex items-center">
+                                <p class=" font-semibold mr-3 ">Liquidités</p>
+                                <button data-tooltip-target="tooltip-click" data-tooltip-trigger="click" type="button"><img src="./../../assets/feed/information 1.png " class=" "></button>
+                                <div id="tooltip-click" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700 ">
+                                    Lorem ipsum dolor sit.
+                                    <div class="tooltip-arrow" data-popper-arrow></div>
+                                </div>
                             </div>
+                            <p>2,500 €</p>
                         </div>
                         <form class="bg-white flex items-center justify-between mt-4 p-2 rounded-xl text-black w-full ">
                             <button class="bg-light px-2 py-2 rounded-full "><img src="./../../assets/feed/euro.png "
@@ -489,10 +493,10 @@
                         <div id="attenteTab" class="hidden ">
                             <div class="flex items-center justify-between mt-6 ">
                                 <p class="font-semibold text-black ">En attente</p>
-                                <button data-tooltip-target="tooltip-click" data-tooltip-trigger="click" type="button"><img src="./../../assets/feed/information 1.png " class=" "></button>
-                                <div id="tooltip-click" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700 ">
+                                <button data-tooltip-target="tooltip-click " data-tooltip-trigger="click " type="button "><img src="./../../assets/feed/information 1.png " class=" "></button>
+                                <div id="tooltip-click " role="tooltip " class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700 ">
                                     Lorem ipsum dolor sit.
-                                    <div class="tooltip-arrow" data-popper-arrow></div>
+                                    <div class="tooltip-arrow " data-popper-arrow></div>
                                 </div>
                             </div>
                             <div class="flex items-center justify-between mt-6 rounded-3xl p-4 bg-white text-black " style="filter: drop-shadow(0px 0px 20px rgba(17, 20, 58, 0.15)); ">
@@ -539,7 +543,7 @@
                 </div>
                 <div class="bg-light mb-16 mt-16 p-4 relative rounded-t-3xl z-40 ">
                     <div class="bg-white flex items-center justify-around mt-4 p-2 rounded-full text-black ">
-                        <button id="tousBtn" class="font-bold w-1/2 text-gray-500 px-4 py-2 rounded-full ">Publications</button>
+                        <button id="tousBtn " class="font-bold w-1/2 text-gray-500 px-4 py-2 rounded-full ">Publications</button>
                         <button class="tabsBtn font-bold w-1/2 px-4 py-2 rounded-full bg-blue-normal text-white ">Favoris</button>
                     </div>
                     <div>
@@ -606,7 +610,7 @@
                             <button type="submit " class="-mr-10 relative ">
                                 <img src="./../../assets/feed/search (1) 1.png " class=" ">
                             </button>
-                            <input type="text " id="rechercherValue" placeholder="Rechercher " class="p-4 px-10 outline-none rounded-full text-black w-full ">
+                            <input type="text " id="rechercherValue " placeholder="Rechercher " class="p-4 px-10 outline-none rounded-full text-black w-full ">
                         </form>
                         <div class="flex items-center justify-between mt-6 text-black ">
                             <div class="flex items-center ">
@@ -755,13 +759,13 @@
                 </footer>
             </div>
             <!-- POST PAGE -->
-            <div id="postPage" class="hidden ss-page bg-white h-screen max-w-mobile mx-auto p-4 ">
+            <div id="postPage " class="hidden ss-page bg-white h-screen max-w-mobile mx-auto p-4 ">
                 <div class="flex items-center ">
                     <button id="close"><img src="./../../assets/feed/close (1) 1.png "></button>
                     <h3 class="font-semibold ml-4 text-2xl ">Partager un post</h3>
                 </div>
                 <div class="flex items-center mt-4 ">
-                    <form id="postForm" class="flex items-center ">
+                    <form id="postForm " class="flex items-center ">
                         <img src="./../../assets/feed/Profile_image.png ">
                         <textarea placeholder=" Écrire... " required id="postInput " class="color-normal outline-none ml-4 " rows="1 "></textarea>
                     </form>
@@ -776,7 +780,7 @@
                 </div>
             </div>
             <!-- COMMENT PAGE -->
-            <div id="commentPage" class="max-w-mobile bg-white ss-page h-screen hidden mx-auto p-4 ">
+            <div id="commentPage " class="max-w-mobile bg-white ss-page h-screen hidden mx-auto p-4 ">
                 <div class="flex items-center py-4 ">
                     <button id="commentCloseBtn"><img src="./../../assets/feed/close (1) 1.png "></button>
                     <h3 class="font-semibold ml-4 text-2xl ">Commentaires</h3>
@@ -830,7 +834,7 @@
                     </div>
                     <form id="commentForm" class="bg-light flex items-center px-4 py-1 rounded-full ">
                         <input type="text" id="commentSearch" placeholder="Écrire... " class="bg-transparent color-normal mr-2 outline-none ">
-                        <button type="send "><img src="./../../assets/feed/send (1) 1.png " alt=" "></button>
+                        <button type="send"><img src="./../../assets/feed/send (1) 1.png " alt=" "></button>
                     </form>
                 </div>
             </div>
@@ -899,10 +903,10 @@
                     <img src="./../../assets/feed/PROFILE_IMG.png " alt=" ">
                 </div>
                 <button class="-mt-10 absolute bg-blue-normal ml-52 p-1 rounded-full ">
-                    <label for="file-input">
-                        <img src="./../../assets/feed/camera 1.png"/>
+                    <label for="file-input ">
+                        <img src="./../../assets/feed/camera 1.png "/>
                       </label>
-                      <input class="hidden" id="file-input" type="file" />
+                      <input class="hidden " id="file-input" type="file " />
                 </button>
                 <h3 class="font-semibold mt-2 text-center ">Sam Gamegie</h3>
                 <input type="text " value="Samy " class="personalInfInput outline-none bg-light mt-6 px-6 py-4 text-gray-500 rounded-2xl w-full ">
@@ -912,179 +916,152 @@
                 <button class="bg-gradient-to-r font-semibold from-blue-darker mt-12 py-3 rounded-full text-white to-blue-lighter w-full ">Sauvegarder</button>
             </div>
             <!-- ACADEMY -->
-            <div id="academy" class="max-w-mobile mx-auto pb-12 hidden bg-white ss-page ">
-                <div class="flex items-center justify-between p-4 ">
-                    <div class="flex items-center ">
-                        <img src="./../../assets/feed/ss-btn.png ">
-                        <h3 class="font-semibold ml-3 text-blue-dark ">THE SOCIAL STOCKS</h3>
-                    </div>
-                    <div class="flex items-center ">
-                        <img src="./../../assets/feed/hassan 2.png " class="h-7 mr-4 w-7 ">
-                        <button id="menu"><img src="./../../assets/feed/menu_black.png "></button>
-                    </div>
-                </div>
-                <div style="background-image: url(./../../assets/feed/bg-academy.png); " class="bg-cover p-4 bg-no-repeat ">
-                    <h3 class="font-bold mt-40 text-3xl text-center text-white ">ACADEMY</h3>
-                    <p class="mt-1 text-center text-gray-300 text-sm ">E-learning modules</p>
-                    <div class="overflow-auto ">
-                        <div class="flex mt-8 pb-32 " style="width: 500px; ">
-                            <div style="background-image: url(./../../assets/feed/card1.png); " class="bg-no-repeat flex flex-col h-80 items-center w-48 ">
-                                <h3 class="mr-3 font-semibold pt-5 text-center text-sm text-white ">Bitcoin 101 - <br> Whitepaper and TA</h3>
-                                <p class=" font-normal mr-3 mt-2 text-center text-gray-300 text-xs ">4h 46m</p>
-                                <button class=" bg-white font-semibold mr-3 mt-40 py-2 rounded-full text-blue-normal w-32 ">Read</button>
+            <div id="academy" class="bg-blue-dark ss-page hidden pb-20 ">
+                <div class="bg-blue-dark h-20 "></div>
+                <div class="bg-light p-4 rounded-t-3xl ">
+                    <h3 class="font-bold ">Bitcoin 101 - Whitepaper and TA</h3>
+                    <p class="font-normal mt-2 text-sm
+                                ">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less Lorep ispsum iothe uth...<span class="text-blue-normal cursor-pointer "
+                            id="academyNextPageBtn"> Read more</span></p>
+                    <div class="flex justify-between mt-4 ">
+                        <div class="bg-white flex flex-col rounded-3xl w-44 ">
+                            <img src="./../../assets/feed/bitcoin1.png ">
+                            <div class="p-4 ">
+                                <h4 class="font-semibold text-sm ">What is Bitcoin?</h4>
+                                <p class="mt-8 text-gray-400 text-sm ">2 min</p>
                             </div>
-                            <div style="background-image: url(./../../assets/feed/card1.png); " class="bg-no-repeat flex flex-col h-80 items-center w-48 ">
-                                <h3 class="mr-3 font-semibold pt-5 text-center text-sm text-white ">Introduction to the <br> financial market</h3>
-                                <p class=" font-normal mr-3 mt-2 text-center text-gray-300 text-xs ">4h 46m</p>
-                                <button id="mainNextBtn" class="bg-white flex font-semibold items-center justify-around mr-3 mt-6 p-6 rounded-full text-blue-normal "><img src="./../../assets/feed/feather_lock.png "></button>
+                        </div>
+                        <div class="bg-white flex flex-col rounded-3xl w-44 ">
+                            <img src="./../../assets/feed/bitcoin2.png ">
+                            <div class="p-4 ">
+                                <h4 class="font-semibold text-sm ">Why trade Bitcoin in the market...</h4>
+                                <p class="mt-3 text-gray-400 text-sm ">2 min</p>
                             </div>
-                            <div style="background-image: url(./../../assets/feed/card1.png); " class="bg-no-repeat flex flex-col h-80 items-center w-48 ">
-                                <h3 class="mr-3 font-semibold pt-5 text-center text-sm text-white ">Bitcoin 101 - <br> Whitepaper and TA</h3>
-                                <p class=" font-normal mr-3 mt-2 text-center text-gray-300 text-xs ">4h 46m</p>
-                                <button class=" bg-white font-semibold mr-3 mt-40 py-2 rounded-full text-blue-normal w-32 ">Read</button>
+                        </div>
+                    </div>
+                    <h3 class="font-semibold mt-8 ">Introduction to the financial market</h3>
+                    <p class="font-normal mt-2 text-sm
+                                ">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less Lorep ispsum iothe uth... <span class="text-blue-normal cursor-pointer ">Read more</span></p>
+                    <div class="overflow-auto w-auto ">
+                        <div class="flex justify-between mt-4 " style="width: 560px; ">
+                            <div class="bg-white flex flex-col rounded-3xl w-44 ">
+                                <img src="./../../assets/feed/bitcoin3.png " class="h-20 rounded-t-3xl ">
+                                <div class="p-4 ">
+                                    <h4 class="font-semibold text-sm ">Why trade Bitcoin in the market...</h4>
+                                    <div class="flex items-end justify-between ">
+                                        <p class="mt-8 text-gray-400 text-sm ">2 min</p>
+                                        <button class="lockBtn "><img src="./../../assets/feed/lock_blue.png "></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white flex flex-col rounded-3xl w-44 ">
+                                <img src="./../../assets/feed/bitcoin4.png " class="h-20 ">
+                                <div class="p-4 ">
+                                    <h4 class="font-semibold text-sm ">Why trade Bitcoin in the market...</h4>
+                                    <div class="flex items-end justify-between ">
+                                        <p class="mt-8 text-gray-400 text-sm ">2 min</p>
+                                        <button class="lockBtn "><img src="./../../assets/feed/lock_blue.png "></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white flex flex-col rounded-3xl w-44 ">
+                                <img src="./../../assets/feed/bitcoin5.png " class="h-20 rounded-t-3xl ">
+                                <div class="p-4 ">
+                                    <h4 class="font-semibold text-sm ">Why trade Bitcoin in the market...</h4>
+                                    <div class="flex items-end justify-between ">
+                                        <p class="mt-8 text-gray-400 text-sm ">2 min</p>
+                                        <button class="lockBtn "><img src="./../../assets/feed/lock_blue.png "></button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- LESSON -->
-            <div id="lessonPage" class="max-w-mobile ss-page mx-auto hidden bg-white pb-16 ">
-                <video src="./../../assets/feed/Git va GitHub boshlang 'ich Programmistlar uchun.mp4 "></video>
-                <div class="absolute bg-cover bg-no-repeat p-4 top-0 w-full max-w-mobile">
-                    <div class="flex items-center justify-between">
-                        <button id="lessonPagePrev"> <img src="./../../assets/feed/chevron-left.png"></button>
-                        <div class="flex items-center">
-                            <img src="./../../assets/feed/bookmark.png" class="mr-4 cursor-pointer">
-                            <img src="./../../assets/feed/share.png" class="cursor-pointer">
+            <div id="lessonPage" class="bg-white max-w-mobile hidden mx-auto ss-page ">
+                <video width="390" height="500" src="./../../assets/feed/Git va GitHub boshlang'ich Programmistlar uchun.mp4" class="h-auto w-auto" style="transform: scaleY(4.7);"></video>
+                <div class="absolute bg-cover bg-no-repeat h-screen max-w-mobile p-4 top-0 w-full">
+                    <div class="flex justify-around">
+                        <div class="h-1 w-10 bg-white rounded-full">
+                            <div class="h-1 w-3 bg-blue-normal rounded-full"></div>
                         </div>
+                        <div class="h-1 w-10 bg-white rounded-full"></div>
+                        <div class="h-1 w-10 bg-white rounded-full"></div>
+                        <div class="h-1 w-10 bg-white rounded-full"></div>
+                        <div class="h-1 w-10 bg-white rounded-full"></div>
                     </div>
-                    <button id="playVideo" class="bg-blue-normal flex mx-auto my-16 p-3 rounded-full"><img src="./../../assets/feed/video_play.png"></button>
-                </div>
-                <div class="h-2 w-100">
-                    <div id="videoTime" class="h-1 w-1" style="background: #7879F1;"></div>
-                </div>
-                <div class="p-4">
-                    <h3 class="font-semibold mt-2 w-56">Bitcoin 101 - Whitepaper and Technical Analysis</h3>
-                    <p class="font-normal mt-2 text-xs">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less Lorep ispsum iothe uth... <span class="font-semibold cursor-pointer text-blue-normal"
-                            id="videoPlayBtn">Read more</span></p>
-                    <hr class="mt-4">
-                    <div class="flex items-center justify-between mt-3">
-                        <h3 class="font-semibold text-sm">10 Lessons</h3>
-                        <p class="font-semibold text-blue-normal text-xs">4h 46m</p>
-                    </div>
-                </div>
-                <div class="flex hover:bg-light items-center justify-between px-6 py-4 lessonCard">
-                    <div class="flex items-center">
-                        <p class="mr-6">1</p>
-                        <div>
-                            <h3 class="font-normal text-sm">What is Bitcoin?</h3>
-                            <p class="font-normal text-gray-600 text-xs">2 Min</p>
-                        </div>
-                    </div>
-                    <button> <img src="./../../assets/feed/feather_lock.jpg"></button>
-                </div>
-                <div class="flex hover:bg-light items-center justify-between px-6 py-4 lessonCard">
-                    <div class="flex items-center">
-                        <p class="mr-6">2</p>
-                        <div>
-                            <h3 class="font-normal text-sm">Why trade Bitcoin in the market...</h3>
-                            <p class="font-normal text-gray-600 text-xs">50 Min</p>
-                        </div>
-                    </div>
-                    <button> <img src="./../../assets/feed/feather_lock.jpg"></button>
-                </div>
-                <div class="flex hover:bg-light items-center justify-between px-6 py-4 lessonCard">
-                    <div class="flex items-center">
-                        <p class="mr-6">3</p>
-                        <div>
-                            <h3 class="font-normal text-sm">What is a stock index?</h3>
-                            <p class="font-normal text-gray-600 text-xs">5 Min</p>
-                        </div>
-                    </div>
-                    <button> <img src="./../../assets/feed/feather_lock.jpg"></button>
-                </div>
-                <div class="flex hover:bg-light items-center justify-between px-6 py-4 lessonCard">
-                    <div class="flex items-center">
-                        <p class="mr-6">4</p>
-                        <div>
-                            <h3 class="font-normal text-sm">What is an action?</h3>
-                            <p class="font-normal text-gray-600 text-xs">50 Min</p>
-                        </div>
-                    </div>
-                    <button> <img src="./../../assets/feed/feather_lock.jpg"></button>
-                </div>
-                <div class="flex hover:bg-light items-center justify-between px-6 py-4 lessonCard">
-                    <div class="flex items-center">
-                        <p class="mr-6">5</p>
-                        <div>
-                            <h3 class="font-normal text-sm">Qu’est-ce qu’un indice boursier?...</h3>
-                            <p class="font-normal text-gray-600 text-xs">50 Min</p>
-                        </div>
-                    </div>
-                    <button> <img src="./../../assets/feed/feather_lock.jpg"></button>
+                    <button id="playVideo" class="flex h-full items-center justify-center w-full"><img src="./../../assets/feed/video_play.png" class="w-4"></button>
+                    <button id="lessonNextBtn" class="-mt-16 absolute bg-blue-normal flex items-center px-6 py-3 right-4 rounded-full text-sm text-white"><p class="mr-4">Suivant</p><img src="./../../assets/feed/arrow.png"></button>
+                    <div id="videoTime" class="-ml-4 absolute bg-blue-normal bottom-0 h-1 max-w-mobile w-full"></div>
                 </div>
             </div>
             <!-- SINGLE LESSON -->
-            <div id="singleLesson" class="max-w-mobile bg-white mx-auto hidden ss-page">
-                <div class="flex items-center justify-between p-4">
-                    <div class="flex items-center">
-                        <button id="singleLessonPrevBtn"><img src="./../../assets/Mask.png"></button>
-                        <h3 class="font-semibold ml-6">What is Bitcoin?</h3>
+            <div id="singleLesson" class="bg-blue-dark hidden max-w-mobile h-screen mx-auto p-4 ss-page text-white">
+                <div class="flex justify-around">
+                    <div class="h-1 w-10 bg-blue-normal rounded-full"></div>
+                    <div class="h-1 w-10 bg-white rounded-full">
+                        <div class="w-3 h-1 bg-blue-normal rounded-full"></div>
                     </div>
-                    <p class="font-semibold text-blue-normal text-xs">2 Min</p>
+                    <div class="h-1 w-10 bg-white rounded-full"></div>
+                    <div class="h-1 w-10 bg-white rounded-full"></div>
+                    <div class="h-1 w-10 bg-white rounded-full"></div>
                 </div>
-                <video id="video2" src="./../../assets/feed/Git va GitHub boshlang'ich Programmistlar uchun.mp4 "></video>
-                <div class="bg-cover bg-no-repeat ">
-                    <div class="absolute max-w-mobile w-full flex justify-between px-4 py-24 items-center top-16 ">
-                        <img src="./../../assets/feed/video_prev.png " class="cursor-pointer ">
-                        <button id="playVideo2"><img src="./../../assets/feed/pause.png "></button>
-                        <img src="./../../assets/feed/video_next.png " class="cursor-pointer ">
-                    </div>
+                <div class="flex font-bold justify-between mt-8 text-xl">
+                    <h3>Introduction</h3>
+                    <button id="intrClose"><img src="./../../assets/feed/close_white.png"></button>
                 </div>
-                <div class="w-100 h-2 ">
-                    <div id="videoTime2" class="w-0 h-2 " style="background: #7879F1; "></div>
-                </div>
-                <div class="p-4 ">
-                    <h3 class="font-semibold mt-2 ">Introduction</h3>
-                    <p class="font-normal mt-2 text-gray-600 text-sm ">Imagine that one day you decide to place all your savings under your mattress. Yes you forget this money for a year, it does will bring you nothing. You will find exactly the same amount. Now imagine that you have instead used that
+                <div id="closedPage">
+                    <img src="./../../assets/feed/bitcoin_trading.png" class="mt-6 mx-auto">
+                    <p class="font-normal mt-6 text-gray-300 text-sm">Imagine that one day you decide to place all your savings under your mattress. Yes you forget this money for a year, it does will bring you nothing. You will find exactly the same amount. Now imagine that you have instead used that
                         money to buy assets financial, such as stocks or raw materials. Instead of being at a standstill, your money would have benefited from a potential much greater growth because these actions or raw materials are likely to gain value.
                         But conversely, they can also lose value. To invest in the financial markets it is therefore important to choose assets likely to evolve in the direction of your anticipation and then finding the ideal balance between risk of loss
                         and potential for gain. As we will see, trading can, if it is applied in a prudent and reasoned manner earn more than the interest rates charged by the banks</p>
-                    <h3 class="font-semibold mt-4 ">Invest or trade</h3>
-                    <p class="font-normal mt-2 text-gray-600 text-sm ">What we have just described is called " invest ”. It is essentially a form long-term financial trading, which amounts to buy and hold financial assets for several months or several years.
-                    </p>
-                    <img src="./../../assets/feed/planting_bit.png" class="mt-4 mx-auto">
-                    <h3 class="font-semibold mt-4">You need invest in Bitcoin</h3>
-                    <p class="font-normal mt-2 text-gray-600 text-sm">To invest in the financial markets it is therefore important to choose assets likely to evolve in the direction of your anticipation and then finding the ideal balance between risk of loss and potential for gain. As we will see, trading
-                        can, if it is applied in a prudent and reasoned manner earn more than the interest rates charged by the banks</p>
-                    <button id="singleLessonNextBtn" class="bg-gradient-to-r font-semibold from-blue-darker mt-8 py-3 rounded-full text-white to-blue-lighter w-full">Next Lesson</button>
+                </div>
+                <div class="flex justify-between mt-4">
+                    <button id="singleLessonPrevPageBtn" class=" flex items-center text-sm ">
+                        <img src="./../../assets/feed/chevron-left.png ">
+                        <p class="ml-4 ">Précédent</p>
+                    </button>
+                    <button id="singleLessonNextPageBtn" class="bg-blue-normal flex font-semibold items-center px-6 py-3 rounded-full text-sm ">
+                        <p>Suivant</p>
+                        <img src="./../../assets/feed/arrow.png " class="ml-4 ">
+                    </button>
                 </div>
             </div>
             <!-- SINGLE LESSON 2 -->
-            <div id="singleLesson2" class="bg-white ss-page hidden p-4">
-                <div class="flex items-center justify-between py-4">
-                    <div class="flex items-center">
-                        <button id="lesson2PrevBtn"><img src="./../../assets/Mask.png"></button>
-                        <h3 class="font-semibold ml-6">Why trade Bitcoin in the market...</h3>
+            <div id="singleLesson2" class="bg-blue-dark h-screen p-4 ss-page hidden text-white ">
+                <div class="flex justify-around ">
+                    <div class="h-1 w-10 bg-blue-normal rounded-full "></div>
+                    <div class="h-1 w-10 bg-blue-normal rounded-full "></div>
+                    <div class="h-1 w-10 bg-white rounded-full ">
+                        <div class="w-3 h-1 bg-blue-normal rounded-full"></div>
                     </div>
-                    <p class="font-semibold text-xs" style="color: #7879F1;">50 Min</p>
+                    <div class="h-1 w-10 bg-white rounded-full "></div>
+                    <div class="h-1 w-10 bg-white rounded-full "></div>
                 </div>
-                <div class="bg-light h-1 w-100">
-                    <div style="background: #7879F1;" class="h-1 w-20"></div>
+                <div class="flex font-semibold items-center justify-between mt-8 text-xl ">
+                    <h3>Invest or trade</h3>
+                    <button id="closeBtn2"><img src="./../../assets/feed/close_white.png "></button>
                 </div>
-                <h3 class="font-semibold mt-4">Introduction</h3>
-                <p class="font-normal mt-2 text-gray-600 text-sm">Imagine that one day you decide to place all your savings under your mattress. Yes you forget this money for a year, it does will bring you nothing. You will find exactly the same amount. Now imagine that you have instead used that money
-                    to buy assets financial, such as stocks or raw materials. Instead of being at a standstill, your money would have benefited from a potential much greater growth because these actions or raw materials are likely to gain value. But conversely,
-                    they can also lose value. To invest in the financial markets it is therefore important to choose assets likely to evolve in the direction of your anticipation and then finding the ideal balance between risk of loss and potential for
-                    gain. As we will see, trading can, if it is applied in a prudent and reasoned manner earn more than the interest rates charged by the banks</p>
-                <img src="./../../assets/feed/bitcoin-trading.png" class="mt-1 mx-auto">
-                <h3 class="font-semibold mt-6">Invest or trade</h3>
-                <p class="font-normal mt-2 text-gray-600 text-sm">What we have just described is called " invest ”. It is essentially a form long-term financial trading, which amounts to buy and hold financial assets for several months or several years.</p>
-                <h3 class="font-semibold mt-6">You need invest in Bitcoin</h3>
-                <p class="font-normal mt-2 text-gray-600 text-sm">To invest in the financial markets it is therefore important to choose assets likely to evolve in the direction of your anticipation and then finding the ideal balance between risk of loss and potential for gain. As we will see, trading
-                    can, if it is applied in a prudent and reasoned manner earn more than the interest rates charged by the banks</p>
-                <button class="bg-gradient-to-r font-semibold from-blue-darker mt-8 py-3 rounded-full text-white to-blue-lighter w-full">Next Lesson</button>
-                <p class="font-semibold mt-4 text-blue-normal text-center">Previous</p>
+                <div id="closedDiv">
+                    <p class="font-normal mt-4 text-gray-300 text-sm ">What we have just described is called " invest ”. It is essentially a form long-term financial trading, which amounts to buy and hold financial assets for several months or several years.
+                    </p>
+                    <img src="./../../assets/feed/planting_bitcoin.png" class="mt-6 mx-auto">
+                    <h3 class="font-semibold mt-8 text-xl">You need invest in Bitcoin</h3>
+                    <p class="font-normal mt-4 text-gray-300 text-sm">To invest in the financial markets it is therefore important to choose assets likely to evolve in the direction of your anticipation and then finding the ideal balance between risk of loss and potential for gain. As we will see, trading
+                        can, if it is applied in a prudent and reasoned manner earn more than the interest rates charged by the banks</p>
+                </div>
+                <div class="flex justify-between mt-12">
+                    <button id="lesson2PrevBtn" class="flex items-center text-sm">
+                            <img src="./../../assets/feed/chevron-left.png">
+                            <p class="ml-4">Précédent</p>
+                        </button>
+                    <button id="singleLesson2NextPageBtn" class="bg-blue-normal flex font-semibold items-center px-6 py-3 rounded-full text-sm">
+                            <p>Suivant</p>
+                            <img src="./../../assets/feed/arrow.png" class="ml-4">
+                        </button>
+                </div>
             </div>
             <!-- USER PROFILE -->
             <div id="userProfile" class="max-w-mobile mx-auto hidden ss-page bg-blue-dark">
@@ -1096,7 +1073,7 @@
                         <img src="./../../assets/feed/hassan 2.png">
                     </div>
                     <h3 class="font-extrabold mt-2 text-center text-white">Clark Hassan</h3>
-                    <p class="mt-2 mx-auto text-center text-gray-300 text-sm w-56">C'est un fait établi depuis longtemps qu'un lecteur sera distrait.</p>
+                    <p class="mt-2 mx-auto text-center text-gray-300 text-sm w-56">C'est un fait établi depuis longtemps qu 'un lecteur sera distrait.</p>
                     <div class="flex justify-around mt-4">
                         <button class="bg-blue-normal font-bold px-4 py-2 rounded-full text-sm text-white">S’abonner</button>
                         <button class="border border-blue-normal font-bold px-4 py-2 rounded-full text-blue-normal text-sm">Envoyer un message</button>
@@ -1192,6 +1169,10 @@
                 <button class="bg-gradient-to-r font-semibold from-blue-darker mt-12 py-3 rounded-full text-white to-blue-lighter w-full">Invite your friends</button>
                 <p class="mt-2 text-center text-xs">Terms and conditions apply</p>
             </div>
+            <!-- CHAT PAGE -->
+            <div id="chat" class="ss-page hidden">
+                <h3>sjdj</h3>
+            </div>
         </div>
 
         <!-- FOOTER -->
@@ -1204,7 +1185,7 @@
                 <i class="bi bi-wallet"></i>
                 <h4 class="text-xs font-semibold mt-1">Portefeuille</h4>
             </button>
-            <button id="tradeBtn" class="flex flex-col items-center pagesBtn text-center text-gray-400" style="margin-bottom: -12px;">
+            <button id="academyBtn" class="flex flex-col items-center pagesBtn text-center text-gray-400" style="margin-bottom: -12px;">
                 <div class="bg-light p-2 rounded-full ">
                     <div class="bg-gradient-to-r from-blue-darker p-4 rounded-full to-blue-lighter ">
                         <img src="./../../assets/feed/Trade.png ">
@@ -1212,9 +1193,9 @@
                     <h4 class="text-xs font-semibold mt-1 ">Trade</h4>
                 </div>
             </button>
-            <button id="academyBtn" class="pagesBtn flex flex-col items-center text-gray-400">
-                <i class="bi bi-bank2"></i>
-                                <h4 class="text-xs font-semibold mt-1 ">Academy</h4>
+            <button id="chatBtn" class="pagesBtn flex flex-col items-center text-gray-400">
+                <i class="bi bi-chat-square-dots"></i>
+                <h4 class="text-xs font-semibold mt-1">Chat</h4>
             </button>
             <button id="profilBtn" class="pagesBtn flex profileNextBtn flex-col items-center text-gray-400 ">
                 <i class="bi bi-person"></i>
