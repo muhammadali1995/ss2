@@ -35,7 +35,7 @@
             </div>
             <div class="flex items-center ">
                 <i id="searchBtn" class="bi bi-search mr-4 text-xl cursor-pointer"></i>
-                <div class="mr-4 "><img src="./../../assets/feed/bell.png "></div>
+                <div class="mr-4 text-xl cursor-pointer" id="notificationNextBtn"><i class="bi bi-bell"></i></div>
                 <div id="profileMenu" class="cursor-pointer "><img src="./../../assets/feed/menu.png "></div>
             </div>
         </nav>
@@ -46,7 +46,7 @@
                 class="z-50 bg-light right-0 hidden fixed flex flex-col p-6 rounded-2xl text-black top-12 w-72 ">
                 <button class="ml-auto " id="profileCloseBtn"> <img src="./../../assets/feed/close (1) 1.png "></button>
                 <div class="flex items-center justify-center w-full ">
-                    <img src="./../../assets/feed/PROFILE_IMG.png " alt=" ">
+                    <img src="./../../assets/feed/PROFILE_IMG.png " class="w-28 h-28">
                 </div>
                 <button
                     class="bg-gradient-to-r flex from-blue-darker justify-center mt-6 mx-auto py-2 rounded-full text-white to-blue-lighter w-32 ">
@@ -65,7 +65,7 @@
                     <img src="./../../assets/feed/academy.png " class="mr-6 ">
                     <h3 class="font-medium mr-4 ">Academy</h3>
                 </div>
-                <div class="flex items-center cursor-pointer mt-6 ">
+                <div id="supportNextBtn" class="flex items-center cursor-pointer mt-6 ">
                     <img src="./../../assets/feed/phone 1.png " class="mr-6 ">
                     <h3 class="font-medium mr-4 ">Support</h3>
                 </div>
@@ -336,7 +336,7 @@
                             </div>
                         </div>
                         <div class="mt-4 bg-white flex items-center p-4 rounded-2xl ">
-                            <img src="./../../assets/feed/article.png ">
+                            <img src="./../../assets/feed/article.png " class="w-28 h-auto">
                             <div class="ml-4 ">
                                 <h3 class="font-semibold text-sm ">La Banque d'Angleterre qualifie Apple de «&nbsp;sans
                                     valeur&nbsp;» comme l'inflation britannique...</h3>
@@ -347,7 +347,7 @@
                             </div>
                         </div>
                         <div class="mt-4 bg-white flex items-center p-4 rounded-2xl ">
-                            <img src="./../../assets/feed/man.png ">
+                            <img src="./../../assets/feed/man.png " class="w-28 h-auto">
                             <div class="ml-4 ">
                                 <h3 class="font-semibold text-sm ">DOGE developer mints first-ever NFT on the Dogecoin
                                     blockchain
@@ -569,7 +569,7 @@
                 <div class="mt-16 ">
                     <div
                         class="border-2 border-blue-normal flex h-28 items-center justify-center mx-auto py-2 rounded-full w-28 ">
-                        <img src="./../../assets/feed/PROFILE_IMG.png " alt=" ">
+                        <img src="./../../assets/feed/PROFILE_IMG.png " class="w-28 h-28">
                     </div>
                     <button id="personalInfBtn" class="-mt-10 absolute bg-white ml-52 p-2 rounded-full "><img
                             src="./../../assets/feed/edit.png " alt=" "></button>
@@ -956,13 +956,13 @@
                 </div>
                 <div
                     class="border-2 border-blue-normal flex h-28 items-center justify-center mx-auto py-2 mt-6 rounded-full w-28 ">
-                    <img src="./../../assets/feed/PROFILE_IMG.png " alt=" ">
+                    <img src="./../../assets/feed/PROFILE_IMG.png " class="w-28 h-28">
                 </div>
                 <button class="-mt-10 absolute bg-blue-normal ml-52 p-1 rounded-full ">
-                    <label for="file-input ">
-                        <img src="./../../assets/feed/camera 1.png " />
+                    <label for="file-input">
+                        <img src="./../../assets/feed/camera 1.png "/>
                     </label>
-                    <input class="hidden " id="file-input" type="file " />
+                    <input class="hidden" id="file-input" type="file" />
                 </button>
                 <h3 class="font-semibold mt-2 text-center ">Sam Gamegie</h3>
                 <input type="text " value="Samy "
@@ -1048,7 +1048,7 @@
                 </div>
             </div>
             <!-- LESSON -->
-            <div id="lessonPage" class="bg-white max-w-mobile hidden mx-auto ss-page h-screen">
+            <div id="lessonPage" class="bg-light max-w-mobile hidden mx-auto ss-page h-screen">
                 <video src="./../../assets/feed/Git va GitHub boshlang'ich Programmistlar uchun.mp4"
                     class="h-full"></video>
                 <div class="absolute bg-cover bg-no-repeat h-screen max-w-mobile p-4 top-0 w-full">
@@ -1977,6 +1977,183 @@
                             <p class="font-bold mt-2 text-blue-normal text-center text-sm w-16">Medecine</p>
                         </div>
                     </div>
+                </div>
+            </div>
+            <!-- NOTIFICATION -->
+            <div id="notification" class="bg-white p-4 ss-page hidden">
+                <div class="flex items-center">
+                    <button id="notificationCloseBtn"><img src="./../../assets/feed/close (1) 1.png"></button>
+                    <h3 class="font-semibold ml-4 text-2xl">Notifications</h3>
+                </div>
+                <p class="font-medium mt-4 text-blue-normal text-sm">Marquer comme lu</p>
+                <div class="flex items-start mt-8">
+                    <button class="bg-blue-normal p-3 rounded-full"><img
+                            src="./../../assets/feed/feather_lock_white.png" class="w-6"></button>
+                    <div class="ml-3">
+                        <h3 class="font-bold">Votre mot de passe a changé</h3>
+                        <h4 class="font-semibold text-gray-600 text-sm">Votre mot de passe a été modifié récemment.
+                            Vérifiez qu'il s'agit bien de vous.</h4>
+                        <p class="font-semibold mt-2 text-gray-400 text-sm">Maintenant</p>
+                    </div>
+                    <div class="bg-blue-normal h-2 rounded-full w-3"></div>
+                </div>
+                <hr class="mt-4">
+                <div class="flex items-start mt-8">
+                    <button class="rounded-full"><img src="./../../assets/feed/apple.png" class="w-14"></button>
+                    <div class="ml-3">
+                        <h3 class="font-bold">Apple a bondi de 20% en 24h</h3>
+                        <h4 class="font-semibold text-gray-600 text-sm">Alors que d'autres actions affichaient des
+                            performances inférieures au marché ...
+                        </h4>
+                        <p class="font-semibold mt-2 text-gray-400 text-sm">19h00</p>
+                    </div>
+                    <div class="bg-gray-400 h-2 rounded-full w-3"></div>
+                </div>
+                <hr class="mt-4">
+                <div class="flex items-start mt-8">
+                    <button class="bg-blue-normal p-3 rounded-full"><img
+                            src="./../../assets/feed/ant-design_message-outlined (1).png" class=""></button>
+                    <div class="ml-3">
+                        <h3 class="font-bold">Vous avez un nouveau commentaire.</h3>
+                        <h4 class="font-semibold text-gray-600 text-sm">David Cohen vous a laissé un commentaire.</h4>
+                        <p class="font-semibold mt-2 text-gray-400 text-sm">20h00</p>
+                    </div>
+                    <div class="bg-blue-normal h-2 rounded-full w-2 ml-auto"></div>
+                </div>
+                <hr class="mt-4">
+                <div class="flex items-start mt-8">
+                    <button class="rounded-full"><img src="./../../assets/feed/person1.png" class="w-14"></button>
+                    <div class="ml-3">
+                        <h3 class="font-bold">Un nouveau contact rejoint la Fam</h3>
+                        <h4 class="font-semibold text-gray-600 text-sm">Une personne de votre liste de contacts vient
+                            de rejoindre notre grande famille. Bravo à eux !</h4>
+                        <p class="font-semibold mt-2 text-gray-400 text-sm">Hier</p>
+                    </div>
+                    <div class="bg-gray-400 h-2 rounded-full w-3"></div>
+                </div>
+                <hr class="mt-4">
+                <div class="flex items-start mt-8">
+                    <button class="bg-blue-normal p-3 rounded-full"><img src="./../../assets/feed/gift_white.png"
+                            class=""></button>
+                    <div class="ml-3">
+                        <h3 class="font-bold">Réclamez vos actions gratuites aujourd'hui</h3>
+                        <h4 class="font-semibold text-gray-600 text-sm">100€ vous attendent !</h4>
+                        <p class="font-semibold mt-2 text-gray-400 text-sm">2 jours</p>
+                    </div>
+                    <div class="bg-blue-normal h-2 rounded-full w-2 ml-auto"></div>
+                </div>
+                <hr class="mt-4">
+                <div class="flex items-start mt-8">
+                    <button class="rounded-full"><img src="./../../assets/feed/person2.png" class=""></button>
+                    <div class="ml-3">
+                        <h3 class="font-bold">Vous avez un nouvel ami</h3>
+                        <h4 class="font-semibold text-gray-600 text-sm">Carl TORIN à accepté votre invitation. </h4>
+                        <p class="font-semibold mt-2 text-gray-400 text-sm">3 jours</p>
+                    </div>
+                    <div class="bg-gray-400 h-2 rounded-full w-2 ml-auto"></div>
+                </div>
+                <hr>
+            </div>
+            <!-- SUPPORT -->
+            <div id="support" class="bg-white ss-page hidden">
+                <div class="p-4">
+                    <div class="flex items-center">
+                        <button id="supportCloseBtn"><img src="./../../assets/feed/close (1) 1.png"></button>
+                        <h3 class="font-bold ml-4 text-2xl">Support</h3>
+                    </div>
+                    <img src="./../../assets/feed/call center.png" class="mt-8 mx-auto">
+                    <h3 class="font-bold mt-6 mx-auto text-center w-56">Obtenez de l'aide instantanée
+                        de l'assistance 24h/24 et 7j/7</h3>
+                    <p class="font-normal mt-4 mx-auto text-center text-gray-500 text-sm w-64">Vous avez besoin d'aide
+                        ou vous avez simplement une question ?
+                        Notre équipe d'assistance est là pour vous aider directement 24 heures sur 24.</p>
+                </div>
+                <div class="bg-light p-4 mt-4 rounded-t-3xl pb-24">
+                    <div id="supportChatNextBtn" class="bg-white cursor-pointer justify-between flex items-center px-8 py-4 rounded-3xl"
+                        style="box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);">
+                        <div class="flex items-center justify-between">
+                            <img src="./../../assets/feed/chat rond.png">
+                            <div class="ml-4">
+                                <h3 class="font-semibold">Par chat</h3>
+                                <p class="font-semibold text-gray-500 text-sm w-36">Contactez-nous via notre chat en
+                                    direct.</p>
+                            </div>
+                        </div>
+                        <img src="./../../assets/vector.png">
+                    </div>
+                    <div class="bg-white cursor-pointer justify-between flex items-center px-8 py-4 rounded-3xl mt-4"
+                        style="box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);">
+                        <div class="flex items-center justify-between">
+                            <img src="./../../assets/feed/phone.png">
+                            <div class="ml-4">
+                                <h3 class="font-semibold">Par téléphone</h3>
+                                <p class="font-semibold text-gray-500 text-sm">Contactez-nous immédiatement sur notre ligne téléphonique</p>
+                            </div>
+                        </div>
+                        <img src="./../../assets/vector.png">
+                    </div>
+                    <div class="bg-white cursor-pointer justify-between flex items-center px-8 py-4 rounded-3xl mt-4"
+                        style="box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);">
+                        <div class="flex items-center justify-between">
+                            <img src="./../../assets/feed/Email.png">
+                            <div class="ml-4">
+                                <h3 class="font-semibold">Envoyer un email</h3>
+                                <p class="font-semibold text-gray-500 text-sm">Envoyez-nous un e-mail. 
+                                    Nous vous répondrons au plus vite !</p>
+                            </div>
+                        </div>
+                        <img src="./../../assets/vector.png">
+                    </div>
+                </div>
+            </div>
+            <!-- SUPPORT CHAT -->
+            <div id="supportChat" class="bg-white h-screen ss-page hidden">
+                <div class="flex items-start justify-around p-4 sticky top-0 bg-white" style="box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);">
+                    <button id="supportChatCloseBtn"><img src="./../../assets/Mask.png" class="h-4 w-5"></button>
+                    <div class="text-center">
+                        <div class="flex items-center justify-center">
+                            <img src="./../../assets/feed/ss-btn.png">
+                            <h3 class="font-semibold ml-4">WeStocks</h3>
+                        </div>
+                        <p class="font-semibold mt-3 text-gray-500 text-sm">Gardez votre communication dans un seul message. 
+                            Veuillez être patient et ne pas engager 
+                            plusieurs conversations</p>
+                    </div>
+                    <img id="headerCloseBtn" src="./../../assets/feed/close (1) 1.png">
+                </div>
+                <p class="font-semibold mt-4 mx-auto text-center text-gray-600 text-sm w-96">Les réponses peuvent prendre plus de temps que d'habitude en raison des volumes entrants doubles à élevés.</p>
+                <div id="messagesSite" class="pb-20">
+                    <div class="flex items-start mt-3">
+                        <img src="./../../assets/feed/ss-btn.png" class="mr-4 w-6 h-6">
+                        <div class="bg-light px-4 py-2 rounded-2xl text-black" style="border-top-left-radius: 0;">
+                            <div class="flex justify-between">
+                                <h3 class="font-bold text-sm">WeStocks</h3>
+                                <p class="font-semibold text-gray-600 text-xs">1 jour</p>
+                            </div>
+                            <p class="font-normal mt-1 text-gray-600 text-sm">Merci d'avoir contacté l'assistance. Passe une bonne journée!</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start mt-8">
+                        <div class="bg-blue-dark px-4 py-2 rounded-2xl text-white" style="border-top-right-radius: 0;">
+                            <div class="flex justify-between">
+                                <h3 class="font-bold text-sm">Sam GAMEGIE</h3>
+                                <p class="font-semibold text-gray-300 text-xs">9h</p>
+                            </div>
+                            <p class="font-normal mt-1 text-gray-300 text-sm">De nombreux packages de publications
+                                assistées par ordinateur et éditeurs de pages Web utilisent désormais Lorem Ipsum comme
+                                texte d modèle par défaut</p>
+                        </div>
+                        <img src="./../../assets/feed/Profile_image.png" class="ml-4">
+                    </div>
+                </div>
+                <div class="-ml-4 bg-white border border-light bottom-0 fixed flex items-center justify-around max-w-mobile py-2 w-full">
+                    <div class="p-2 rounded-full flex ">
+                        <div class="bg-light cursor-pointer mr-2 p-2 px-3 rounded-full"><img src="./../../assets/feed/attachment.png" alt=" "></div>
+                    </div>
+                    <form id="supportChatFrom" class="bg-light flex items-center px-4 py-1 rounded-full ">
+                        <input type="text" id="commentSearch" placeholder="Écrire... " class="bg-transparent color-normal mr-2 outline-none ">
+                        <button type="send"><img src="./../../assets/feed/send (1) 1.png " alt=" "></button>
+                    </form>
                 </div>
             </div>
         </div>

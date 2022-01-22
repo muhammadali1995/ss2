@@ -49,6 +49,7 @@ const commentCloseBtn = document.getElementById('commentCloseBtn')
 const dropdownBtn = document.getElementById('dropdownBtn')
 const commentDropdown = document.getElementById('commentDropdown')
 const searchOthers = document.getElementById('searchOthers')
+const notificationNextBtn = document.getElementById('notificationNextBtn')
 const commentSearchInput = document.getElementById('commentSearch')
 const chatForm = document.getElementById('chatFrom')
 const commentForm = document.getElementById('commentForm')
@@ -70,11 +71,13 @@ const academyMenuBtn = document.getElementById('menu')
 const likeBtns = document.querySelectorAll('.like')
 const rechercherInput = document.getElementById('rechercherValue')
 const rechercherCloseBtn = document.getElementById('rechercherCloseBtn')
+const notificationCloseBtn = document.getElementById('notificationCloseBtn')
 const postCloseBtn = document.getElementById('close')
 const academyNextBtn = document.getElementById('mainNextBtn')
 const pagesBtn = document.querySelectorAll('.pagesBtn')
 const rechercherPage = 'rechercher'
 const FEED_PAGE = 'feedPage'
+const notification = 'notification'
 const chat = 'chat'
 const Inf_page = 'personalInformation'
 const PORTFOLIO = 'portfolio'
@@ -83,6 +86,7 @@ const USER_PROFILE_PAGE = 'userProfile'
 const postPage = 'postPage'
 const abonentsPage = 'abonents'
 const ACADEMY_PAGE = 'academy'
+const headerCloseBtn = document.getElementById('headerCloseBtn')
 const lessonPage = 'lessonPage'
 const singleLessonPage = 'singleLesson'
 const singleLesson2 = 'singleLesson2'
@@ -110,6 +114,9 @@ const academyBtn = document.getElementById('academyBtn')
 const upScroll = document.getElementById('upScroll')
 const userProfileBtns = document.querySelectorAll('.userProfile')
 const tradeTabsBtns = document.querySelectorAll('.tradeTabsBtn')
+const supportChatNextBtn = document.getElementById('supportChatNextBtn')
+const supportChat = 'supportChat'
+const supportChatCloseBtn = document.getElementById('supportChatCloseBtn')
 const tradeProposBtn = document.getElementById('tradeProposBtn')
 const tradeNewsBtn = document.getElementById('tradeNewsBtn')
 const tradeAttenteBtn = document.getElementById('tradeAttenteBtn')
@@ -130,10 +137,15 @@ const sellAssetNextBtn = document.getElementById('sellAssetNextBtn')
 const tradingPrevBtn = document.getElementById('tradingPrevBtn')
 const sellAsset2PrevBtn = document.getElementById('sellAsset2PrevBtn')
 const pages = document.getElementsByClassName('ss-page')
+const supportNextBtn = document.getElementById('supportNextBtn')
+const support = 'support'
+const supportCloseBtn = document.getElementById('supportCloseBtn')
 const sellSelectBtn = document.querySelectorAll('.sellSelectBtn')
 const sellPrevBtn = document.getElementById('sellPrevBtn')
 const sellAsset2NextBtn = document.getElementById('sellAsset2NextBtn')
 const tradeBtnStyled = 'tradeBtn'
+const supportChatFrom = document.getElementById('supportChatFrom')
+const messagesSite = document.getElementById('messagesSite')
 
 
 
@@ -167,7 +179,7 @@ function changePage(page) {
 function hidePages() {
     const pages = document.querySelectorAll('.ss-page');
     Array.from(pages).forEach(element => {
-         element.classList.add('hidden')
+        element.classList.add('hidden')
     });
 }
 
@@ -208,12 +220,12 @@ profileCloseBtn.addEventListener('click', () => {
     profileDropdown.classList.add('hidden')
 })
 
-abonentNextBtn.forEach(element=>{
+abonentNextBtn.forEach(element => {
     element.addEventListener('click', () => {
-    changePage(abonentsPage)
-    footer.classList.remove('hidden')
-    navbar.classList.add('hidden')
-})
+        changePage(abonentsPage)
+        footer.classList.remove('hidden')
+        navbar.classList.add('hidden')
+    })
 })
 
 abonentPrevBtn.addEventListener('click', () => {
@@ -372,6 +384,19 @@ searchBtn.addEventListener('click', () => {
         showPageBtn(feddBtnStyled)
     }
 })
+
+notificationNextBtn.addEventListener('click', () => {
+    changePage(notification)
+    navbar.classList.add('hidden')
+    footer.classList.add('hidden')
+})
+
+notificationCloseBtn.addEventListener('click', () => {
+    changePage(FEED_PAGE)
+    navbar.classList.remove('hidden')
+    footer.classList.remove('hidden')
+})
+
 // FEED PAGE
 
 // PORTFOLIO PAGE 
@@ -662,7 +687,7 @@ sellAsset2NextBtn.addEventListener('click', () => {
     changePage(tradeCategoryPage)
     footer.classList.remove('hidden')
     navbar.classList.remove('hidden')
-    navbarText.innerText ='Catagory'
+    navbarText.innerText = 'Catagory'
 })
 
 const scrollAnimation = document.getElementById('scrollAnimation')
@@ -671,7 +696,53 @@ window.addEventListener('scroll', () => {
     scrollAnimation.style.maxHeight = '521px'
 })
 
+headerCloseBtn.addEventListener('click', () => {
+    headerCloseBtn.parentElement.classList.add('hidden')
+    setTimeout(() => headerCloseBtn.parentElement.classList.remove('hidden'), 5000)
+})
+
 // TRADE
+
+// SUPPORT
+
+supportNextBtn.addEventListener('click', () => {
+    changePage(support)
+    profileDropdown.classList.add('hidden')
+    footer.classList.add('hidden')
+    navbar.classList.add('hidden')
+})
+
+supportCloseBtn.addEventListener('click', () => {
+    changePage(FEED_PAGE)
+    navbar.classList.remove('hidden')
+    footer.classList.remove('hidden')
+})
+
+supportChatNextBtn.addEventListener('click', () => {
+    changePage(supportChat)
+})
+supportChatCloseBtn.addEventListener('click', () => {
+    changePage(support)
+})
+
+supportChatFrom.addEventListener('submit', (e) => {
+    e.preventDefault()
+    const newMessadge = document.createElement('div')
+    newMessadge.innerHTML = `<div class="flex items-start mt-8">
+                    <div class="bg-blue-dark px-4 py-2 rounded-2xl text-white" style="border-top-right-radius: 0;">
+                        <div class="flex justify-between">
+                            <h3 class="font-bold text-sm">Sam GAMEGIE</h3>
+                            <p class="font-semibold text-gray-300 text-xs">${new Date().toLocaleTimeString()}</p>
+                        </div>
+                        <p class="font-normal mt-1 text-gray-300 w-72 overflow-auto text-sm">${supportChatFrom.children[0].value}</p>
+                    </div>
+                    <img src="./../../assets/feed/Profile_image.png" class="ml-4">
+                </div>`
+    messagesSite.appendChild(newMessadge)
+    supportChatFrom[0].value = ''
+})
+
+// SUPPORT
 
 // SWIPER
 
