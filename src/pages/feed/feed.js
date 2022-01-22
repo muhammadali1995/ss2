@@ -23,6 +23,10 @@ const searchBtn = document.getElementById('searchBtn')
 const mainWrapper = document.getElementById('main-wrapper')
 const videoTime = document.getElementById('videoTime')
 const videoTime2 = document.getElementById('videoTime2')
+const dollarBtn = document.getElementById('dollarBtn')
+const dollarPage = document.getElementById('dollarPage')
+const emailbtn = document.getElementById('emailbtn')
+const emailpage = document.getElementById('emailpage')
 const lessonNextBtn = document.getElementById('lessonNextBtn')
 const closeBtn = document.getElementById('close')
 const postInput = document.getElementById('postInput')
@@ -489,7 +493,7 @@ chatNextBtns.forEach(chatNextBtn => {
         changePage(conversation)
         console.log(chatNextBtn)
         user.innerHTML = `
-        <img src="${chatNextBtn.children[0].children[0].src}">
+        <img src="${chatNextBtn.children[0].children[0].src}" class="w-10 h-10 rounded-full">
         <h3 class="font-extrabold ml-4">${chatNextBtn.children[0].children[1].children[0].innerText}</h3>
         `
         footer.classList.add('hidden')
@@ -519,6 +523,15 @@ chatForm.addEventListener('submit', (e) => {
     messadgeSite.appendChild(newMessadge)
     chatForm[0].value = ''
 
+})
+
+emailbtn.addEventListener('click', () => {
+    emailpage.classList.toggle('hidden')
+    dollarPage.classList.add('hidden')
+})
+dollarBtn.addEventListener('click', () => {
+    dollarPage.classList.toggle('hidden')
+    emailpage.classList.add('hidden')
 })
 
 // CHAT
