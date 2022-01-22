@@ -14,14 +14,14 @@
 </head>
 
 <body>
-    <div class="bg-blue-dark ss-page max-w-mobile hidden mx-auto ">
+    <div id="tradeMainPage" class="bg-blue-dark ss-page max-w-mobile ss-page mx-auto">
         <div class="bg-blue-dark pt-20 ">
             <form class="flex justify-around m-4 ml-6 searchForm">
                 <button type="submit " class="-mr-10 relative ">
                     <img src="./../../assets/feed/search (1) 1.png " class=" ">
                 </button>
                 <input type="text " id="rechercherValue " placeholder="Rechercher "
-                    class="p-4 px-10 outline-none rounded-full text-black w-full ">
+                    class="p-4 px-10 outline-none pl-10 rounded-full text-black w-full ">
             </form>
             <div class="bg-light p-4 rounded-t-3xl ">
                 <div class="overflow-auto w-100 ">
@@ -98,7 +98,8 @@
                         </div>
                     </div>
                 </div>
-                <h3 class="cursor-pointer font-bold mt-6 text-blue-normal text-center text-sm">Voir tous</h3>
+                <h3 id="tradeNextBtn" class="cursor-pointer font-bold mt-6 text-blue-normal text-center text-sm">Voir
+                    tous</h3>
                 <hr class="mt-4">
                 <div class="flex justify-between mt-6">
                     <h3 class="font-normal">Top Stocks</h3>
@@ -159,13 +160,13 @@
             </div>
         </div>
     </div>
-    <div class="max-w-mobile mx-auto hidden">
-        <div class=" p-4">
+    <div id="trandingPage" class="max-w-mobile hidden ss-page mx-auto">
+        <div class="p-4 sticky top-0">
             <div class="flex items-center justify-between">
-                <img src="./../../assets/Mask.png">
+                <button id="tradingPrevBtn"> <img src="./../../assets/Mask.png"></button>
                 <div class="flex items-center">
                     <h3 class="font-bold mr-4 text-blue-normal text-sm">Voir la discussion (8)</h3>
-                    <img src="./../../assets/feed/star.png" alt="">
+                    <img src="./../../assets/feed/star.png" class="cursor-pointer" id="tradeAddLiked">
                 </div>
             </div>
             <div class="flex items-center justify-between mt-4">
@@ -196,7 +197,7 @@
                 <h5>Tous</h5>
             </div>
         </div>
-        <div class="bg-light mt-4 p-4 rounded-t-3xl pb-20">
+        <div id="scrollAnimation" class="bg-light mt-4 pt-4 px-4 rounded-t-3xl pb-20 relative">
             <div class="bg-white h-2 mx-auto rounded-2xl w-20"></div>
             <div class="bg-white flex font-bold mt-4 p-2 rounded-full text-sm">
                 <button id="tradeAttenteBtn" class="tradeTabsBtn bg-blue-normal py-1 rounded-full text-white w-1/3">En
@@ -261,12 +262,12 @@
                     <p class="font-normal text-gray-500">22.51</p>
                 </div>
             </div>
-            <div class="-ml-4 bg-light bottom-0 fixed max-w-mobile py-2 w-full">
-                <button type="button" data-modal-toggle="defaultModal"
-                    class="bg-gradient-to-r font-normal from-blue-darker py-3 rounded-full text-white to-blue-lighter w-full">Acheter</button>
+            <div id="fixedFooter" class="-ml-4 bg-light bottom-0 fixed max-w-mobile py-2 w-full">
+                <button type="button" id="fixedBtn" data-modal-toggle="defaultModal"
+                    class="bg-gradient-to-r font-normal from-blue-darker py-3 rounded-full text-white to-blue-lighter w-full">Trader</button>
             </div>
             <div id="defaultModal" aria-hidden="true" style="max-width: 355px;"
-                class="fixed flex h-screen items-end justify-center hidden left-0 md:h-full md:inset-0 mx-auto overflow-x-hidden overflow-y-auto pb-4 right-0 top-4 w-full z-50">
+                class="fixed flex h-screen items-end hidden justify-center left-0 md:h-full md:inset-0 mx-auto overflow-x-hidden overflow-y-auto pb-4 right-0 top-4 w-full z-50">
                 <div class="relative px-4 w-full max-w-2xl h-full md:h-auto">
                     <div class="relative rounded-lg shadow">
                         <div class="absolute z-10">
@@ -279,25 +280,23 @@
                             </div>
                             <button data-modal-toggle="defaultModal" class="absolute right-4 top-12"><img
                                     src="./../../assets/feed/close (1) 1.png"></button>
-                                    <div id="tradePageNextBtn" class="flex font-normal pt-10">
-                                        <img src="./../../assets/feed/plus-circle.png">
-                                        <h3 class="ml-4">Acheter</h3>
-                                    </div>
-                                    <div class="flex font-normal pt-10">
-                                        <img src="./../../assets/feed/minus-circle.png">
-                                        <h3 class="ml-4">Vendre</h3>
-                                    </div>
+                            <div data-modal-toggle="defaultModal" id="tradePageNextBtn" class="flex font-normal pt-10">
+                                <img src="./../../assets/feed/plus-circle.png">
+                                <h3 class="ml-4">Acheter</h3>
+                            </div>
+                            <div class="flex font-normal pt-10">
+                                <img src="./../../assets/feed/minus-circle.png">
+                                <h3 class="ml-4">Vendre</h3>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
-
     </div>
-    <div class="max-w-mobile mx-auto p-4">
+    <div id="sellAsset" class="max-w-mobile mx-auto ss-page p-4 hidden">
         <div class="flex font-semibold items-center text-2xl">
-            <img src="./../../assets/Mask.png">
+            <button id="sellPrevBtn"><img src="./../../assets/Mask.png"></button>
             <h3 class="ml-4">Acheter APPL</h3>
         </div>
         <div class="flex items-center justify-around mt-12">
@@ -318,21 +317,140 @@
             <p>5 030,75 €</p>
         </div>
         <div class="gap-x-8 gap-y-5 grid grid-cols-3 mt-6">
-            <button style="background-color: #F2F3FC;" class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">1</button>
-            <button style="background-color: #F2F3FC" class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">2</button>
-            <button style="background-color: #F2F3FC" class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">3</button>
-            <button style="background-color: #F2F3FC" class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">4</button>
-            <button style="background-color: #F2F3FC" class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">5</button>
-            <button style="background-color: #F2F3FC" class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">6</button>
-            <button style="background-color: #F2F3FC" class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">7</button>
-            <button style="background-color: #F2F3FC" class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">8</button>
-            <button style="background-color: #F2F3FC" class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">9</button>
-            <button style="background-color: #F2F3FC" class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">.</button>
-            <button style="background-color: #F2F3FC" class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">0</button>
+            <button style="background-color: #F2F3FC;"
+                class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">1</button>
+            <button style="background-color: #F2F3FC"
+                class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">2</button>
+            <button style="background-color: #F2F3FC"
+                class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">3</button>
+            <button style="background-color: #F2F3FC"
+                class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">4</button>
+            <button style="background-color: #F2F3FC"
+                class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">5</button>
+            <button style="background-color: #F2F3FC"
+                class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">6</button>
+            <button style="background-color: #F2F3FC"
+                class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">7</button>
+            <button style="background-color: #F2F3FC"
+                class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">8</button>
+            <button style="background-color: #F2F3FC"
+                class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">9</button>
+            <button style="background-color: #F2F3FC"
+                class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">.</button>
+            <button style="background-color: #F2F3FC"
+                class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">0</button>
             <button class="px-8 py-3" id="pin-clear-btn"><img src="./../../assets/del.png"></button>
         </div>
-        <button class="bg-gradient-to-br from-blue-darker mt-6 py-3 rounded-full text-white to-blue-lighter w-full">Aperçu des achats</button>
+        <button id="sellAssetNextBtn"
+            class="bg-gradient-to-br from-blue-darker mt-6 py-3 rounded-full text-white to-blue-lighter w-full">Aperçu
+            des achats</button>
+    </div>
+    <div id="sellAsset2" class="max-w-mobile ss-page mx-auto hidden p-4">
+        <div class="flex items-center">
+            <button id="sellAsset2PrevBtn"><img src="./../../assets/Mask.png"></button>
+            <h3 class="font-semibold ml-4 text-2xl">Aperçu de l’achat</h3>
         </div>
+        <h3 class="font-extrabold mt-12 text-4xl text-blue-normal text-center">0.0584 <span
+                class="font-bold ml-3 text-sm">APPL</span></h3>
+        <hr class="-ml-4 absolute border max-w-mobile mt-6 w-full">
+        <div class="bg-light flex font-bold justify-between mt-6 p-4 text-sm sellSelectBtn">
+            <h3 class="text-gray-600">Montant</h3>
+            <p class="font-normal">50,00 €</p>
+        </div>
+        <div class="bg-light flex font-bold justify-between p-4 text-sm sellSelectBtn">
+            <h3 class="text-gray-600">Moyen de paiement</h3>
+            <p class="font-normal">?</p>
+        </div>
+        <div class="bg-light flex font-bold justify-between p-4 text-sm sellSelectBtn">
+            <h3 class="text-gray-600">Frais Social Stocks</h3>
+            <p class="font-normal">1,00 €</p>
+        </div>
+        <div class="bg-light flex font-bold justify-between p-4 text-sm sellSelectBtn">
+            <h3 class="text-gray-600">Total</h3>
+            <p class="font-normal">51,00 €</p>
+        </div>
+        <div class="-ml-4 bg-white bottom-2 fixed max-w-mobile w-full">
+            <p class="font-bold text-center">Offre valable pendant 15 secondes</p>
+            <button data-modal-toggle="defaultModal2"
+                class="bg-gradient-to-br font-normal from-blue-darker mt-6 py-3 rounded-full text-white to-blue-lighter w-full">Acheter</button>
+        </div>
+        <div id="defaultModal2" aria-hidden="true" style="max-width: 355px;"
+            class="fixed flex h-screen items-end hidden justify-center left-0 md:h-full md:inset-0 mx-auto overflow-x-hidden overflow-y-auto pb-4 right-0 top-4 w-full z-50">
+            <div class="relative px-4 w-full max-w-2xl h-full md:h-auto">
+                <div class="relative px-4 w-full max-w-2xl h-full md:h-auto">
+                    <div class="relative rounded-lg shadow" style="margin-top: -400px;">
+                        <div class="absolute z-10">
+                            <img src="./../../assets/bg.png" class="h-96 w-96">
+                        </div>
+                        <div class="p-4 pt-10 relative z-50">
+                            <div class="flex font-semibold items-center justify-center text-2xl text-blue-dark">
+                                <img src="./../../assets/feed/social stocks main logo.png">
+                                <h3 class="ml-1 w-14" style="line-height: 21px;">We Stocks</h3>
+                            </div>
+                            <button data-modal-toggle="defaultModal2" class="absolute right-4 top-12"><img
+                                    src="./../../assets/feed/close (1) 1.png"></button>
+                            <h3 class="font-semibold mt-24 text-2xl text-center">Félicitations !</h3>
+                            <p class="font-normal mt-2 text-center text-gray-600 text-sm">Vous venez d'acheter des
+                                actions Apple&nbsp;!</p>
+                            <div class="flex items-center mt-8">
+                                <img src="./../../assets/feed/Share_blue.png">
+                                <p class="font-normal ml-4">Partager</p>
+                            </div><button id="sellAsset2NextBtn" data-modal-toggle="defaultModal2"
+                                class="bg-gradient-to-r font-normal from-blue-darker mt-3 py-3 rounded-full text-white to-blue-lighter w-full">Trader</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="tradeCategoryPage" class="bg-blue-dark h-screen max-w-mobile hidden ss-page mx-auto pt-4">
+        <div class="bg-light h-full pt-10 rounded-t-3xl">
+            <h3 class="m-4">Catégories</h3>
+            <div class="gap-y-10 grid grid-cols-3 mt-8">
+                <div class="w-28 flex flex-col ss-pick-btn items-center">
+                    <div class="bg-white border-2 border-blue-700 flex h-16 items-center justify-center rounded-full w-16"><img src="./../../assets/feed/crypto_white.png" alt=""></div>
+                    <p class="font-bold mt-2 text-blue-normal text-center text-sm w-16">Cryptos</p>
+                </div>
+                <div class="w-28 flex flex-col ss-pick-btn items-center">
+                    <div class="bg-white border-2 border-blue-700 flex h-16 items-center justify-center rounded-full w-16">
+                        <img src="./../../assets/feed/media.png" alt=""></div>
+                    <p class="font-bold mt-2 text-blue-normal text-center text-sm w-16">Media</p>
+                </div>
+                <div class="w-28 flex flex-col ss-pick-btn items-center">
+                    <div class="bg-white border-2 border-blue-700 flex h-16 items-center justify-center rounded-full w-16"><img src="./../../assets/feed/Sports_white.png" alt=""></div>
+                    <p class="font-bold mt-2 text-blue-normal text-center text-sm w-16">Sports</p>
+                </div>
+                <div class="w-28 flex flex-col ss-pick-btn items-center">
+                    <div class="bg-white border-2 border-blue-700 flex h-16 items-center justify-center rounded-full w-16">
+                        <img src="./../../assets/ecommerce.png" alt=""></div>
+                    <p class="font-bold mt-2 text-blue-normal text-center text-sm w-16">Ecommerce</p>
+                </div>
+                <div class="w-28 flex flex-col ss-pick-btn items-center">
+                    <div class=" flex h-16 bg-white border-2 border-blue-700 items-center justify-center rounded-full w-16"><img src="./../../assets/feed/music.png" alt=""></div>
+                    <p class="font-bold mt-2 text-blue-normal text-center text-sm w-16">Musique</p>
+                </div>
+                <div class="w-28 flex flex-col ss-pick-btn items-center">
+                    <div class="bg-white border-2 border-blue-700 flex h-16 items-center justify-center rounded-full w-16">
+                        <img src="./../../assets/energie.png" alt=""></div>
+                    <p class="font-bold mt-2 text-blue-normal text-center text-sm w-16">Energie</p>
+                </div>
+                <div class="w-28 flex flex-col ss-pick-btn items-center">
+                    <div class="flex h-16 items-center bg-white border-2 border-blue-700 justify-center rounded-full w-16"><img src="./../../assets/feed/Tech.png" alt=""></div>
+                    <p class="font-bold mt-2 text-blue-normal text-center text-sm w-16">Tech</p>
+                </div>
+                <div class="w-28 flex flex-col ss-pick-btn items-center">
+                    <div class="bg-white border-2 border-blue-700 flex h-16 items-center justify-center rounded-full w-16">
+                        <img src="./../../assets/pill.png" alt=""></div>
+                    <p class="font-bold mt-2 text-blue-normal text-center text-sm w-16">Medecine</p>
+                </div>
+                <div class="w-28 flex flex-col ss-pick-btn items-center">
+                    <div class="bg-white border-2 border-blue-700 flex h-16 items-center justify-center rounded-full w-16">
+                        <img src="./../../assets/Bank.png" alt=""></div>
+                    <p class="font-bold mt-2 text-blue-normal text-center text-sm w-16">Medecine</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="trade.js"></script>
 </body>
 
