@@ -13,6 +13,8 @@ const intrClose = document.getElementById('intrClose')
 const closedPage = document.getElementById('closedPage')
 const publicationsBtn = document.getElementById('publicationsBtn')
 const newsBtn = document.getElementById('newsBtn')
+const parametrNextBtn = document.getElementById('parametrNextBtn')
+const settings = 'settings'
 const chatBtnStyled = 'chatBtn'
 const publicationsPage = document.getElementById('publications')
 const newsPage = document.getElementById('news')
@@ -743,6 +745,22 @@ supportChatFrom.addEventListener('submit', (e) => {
 })
 
 // SUPPORT
+
+// SETTINGS
+parametrNextBtn.addEventListener('click', () => {
+    changePage(settings)
+    footer.classList.add('hidden')
+    navbarText.innerText = 'Paramètres'
+    rechercherPrevBtn.classList.remove('hidden')
+    rechercherPrevBtn.addEventListener('click', () => {
+        changePage(FEED_PAGE)
+        navbarText.innerText = 'Feed'
+        footer.classList.remove('hidden')
+        rechercherPrevBtn.classList.add('hidden')
+    })
+    profileDropdown.classList.add('hidden')
+})
+// SETTINGS
 
 // SWIPER
 

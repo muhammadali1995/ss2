@@ -46,7 +46,7 @@
                 class="z-50 bg-light right-0 hidden fixed flex flex-col p-6 rounded-2xl text-black top-12 w-72 ">
                 <button class="ml-auto " id="profileCloseBtn"> <img src="./../../assets/feed/close (1) 1.png "></button>
                 <div class="flex items-center justify-center w-full ">
-                    <img src="./../../assets/feed/PROFILE_IMG.png " class="w-28 h-28">
+                    <img src="./../../assets/feed/PROFILE_IMG.png " class="w-24 h-24">
                 </div>
                 <button
                     class="bg-gradient-to-r flex from-blue-darker justify-center mt-6 mx-auto py-2 rounded-full text-white to-blue-lighter w-32 ">
@@ -69,7 +69,7 @@
                     <img src="./../../assets/feed/phone 1.png " class="mr-6 ">
                     <h3 class="font-medium mr-4 ">Support</h3>
                 </div>
-                <div class="flex items-center cursor-pointer mt-6 ">
+                <div id="parametrNextBtn" class="flex items-center cursor-pointer mt-6 ">
                     <img src="./../../assets/feed/setting.png " class="mr-6 ">
                     <h3 class="font-medium mr-4 ">Paramètres</h3>
                 </div>
@@ -79,7 +79,7 @@
                 </div>
             </div>
             <!-- FEED -->
-            <div id="feedPage" class="ss-page">
+            <div id="feedPage" class="ss-page hidden">
                 <!-- FEED SEARCH BAR -->
                 <div class="pt-20 pb-12 px-4 bg-blue-dark ">
                     <form class=" searchForm flex justify-around ">
@@ -569,7 +569,7 @@
                 <div class="mt-16 ">
                     <div
                         class="border-2 border-blue-normal flex h-28 items-center justify-center mx-auto py-2 rounded-full w-28 ">
-                        <img src="./../../assets/feed/PROFILE_IMG.png " class="w-28 h-28">
+                        <img src="./../../assets/feed/PROFILE_IMG.png " class="w-24 h-24">
                     </div>
                     <button id="personalInfBtn" class="-mt-10 absolute bg-white ml-52 p-2 rounded-full "><img
                             src="./../../assets/feed/edit.png " alt=" "></button>
@@ -674,7 +674,7 @@
                         </div>
                         <div class="flex items-center justify-between mt-6 text-black ">
                             <div class="flex items-center ">
-                                <div><img src="./../../assets/feed/tesla.png "  class="w-8 h-8"></div>
+                                <div><img src="./../../assets/feed/tesla.png " class="w-8 h-8"></div>
                                 <div class="ml-4 ">
                                     <h3 class="font-semibold text-base ">Tesla</h3>
                                     <p class="text-gray-400 text-xs ">TSLA</p>
@@ -687,7 +687,7 @@
                         </div>
                         <div class="flex items-center justify-between mt-6 text-black ">
                             <div class="flex items-center ">
-                                <div><img src="./../../assets/feed/facebook.png "  class="w-8 h-8"></div>
+                                <div><img src="./../../assets/feed/facebook.png " class="w-8 h-8"></div>
                                 <div class="ml-4 ">
                                     <h3 class="font-semibold text-base ">Meta (Facebook)</h3>
                                     <p class="text-gray-400 text-xs ">FB</p>
@@ -956,11 +956,11 @@
                 </div>
                 <div
                     class="border-2 border-blue-normal flex h-28 items-center justify-center mx-auto py-2 mt-6 rounded-full w-28 ">
-                    <img src="./../../assets/feed/PROFILE_IMG.png " class="w-28 h-28">
+                    <img src="./../../assets/feed/PROFILE_IMG.png " class="w-24 h-24">
                 </div>
                 <button class="-mt-10 absolute bg-blue-normal ml-52 p-1 rounded-full ">
                     <label for="file-input">
-                        <img src="./../../assets/feed/camera 1.png "/>
+                        <img src="./../../assets/feed/camera 1.png " />
                     </label>
                     <input class="hidden" id="file-input" type="file" />
                 </button>
@@ -1562,7 +1562,7 @@
                             </div>
                             <div class="flex items-center justify-between mt-6 text-black ">
                                 <div class="flex items-center ">
-                                    <div ><img src="./../../assets/feed/apple.png " class="w-8 h-8"></div>
+                                    <div><img src="./../../assets/feed/apple.png " class="w-8 h-8"></div>
                                     <div class="ml-4 ">
                                         <h3 class="font-semibold text-base ">Apple</h3>
                                         <p class="text-gray-400 text-xs ">APPL</p>
@@ -2069,7 +2069,8 @@
                         Notre équipe d'assistance est là pour vous aider directement 24 heures sur 24.</p>
                 </div>
                 <div class="bg-light p-4 mt-4 rounded-t-3xl pb-24">
-                    <div id="supportChatNextBtn" class="bg-white cursor-pointer justify-between flex items-center px-8 py-4 rounded-3xl"
+                    <div id="supportChatNextBtn"
+                        class="bg-white cursor-pointer justify-between flex items-center px-8 py-4 rounded-3xl"
                         style="box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);">
                         <div class="flex items-center justify-between">
                             <img src="./../../assets/feed/chat rond.png">
@@ -2087,7 +2088,8 @@
                             <img src="./../../assets/feed/phone.png">
                             <div class="ml-4">
                                 <h3 class="font-semibold">Par téléphone</h3>
-                                <p class="font-semibold text-gray-500 text-sm">Contactez-nous immédiatement sur notre ligne téléphonique</p>
+                                <p class="font-semibold text-gray-500 text-sm">Contactez-nous immédiatement sur notre
+                                    ligne téléphonique</p>
                             </div>
                         </div>
                         <img src="./../../assets/vector.png">
@@ -2098,7 +2100,7 @@
                             <img src="./../../assets/feed/Email.png">
                             <div class="ml-4">
                                 <h3 class="font-semibold">Envoyer un email</h3>
-                                <p class="font-semibold text-gray-500 text-sm">Envoyez-nous un e-mail. 
+                                <p class="font-semibold text-gray-500 text-sm">Envoyez-nous un e-mail.
                                     Nous vous répondrons au plus vite !</p>
                             </div>
                         </div>
@@ -2108,20 +2110,23 @@
             </div>
             <!-- SUPPORT CHAT -->
             <div id="supportChat" class="bg-white h-screen ss-page hidden">
-                <div class="flex items-start justify-around p-4 sticky top-0 bg-white" style="box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);">
+                <div class="flex items-start justify-around p-4 sticky top-0 bg-white"
+                    style="box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);">
                     <button id="supportChatCloseBtn"><img src="./../../assets/Mask.png" class="h-4 w-5"></button>
                     <div class="text-center">
                         <div class="flex items-center justify-center">
                             <img src="./../../assets/feed/ss-btn.png">
                             <h3 class="font-semibold ml-4">WeStocks</h3>
                         </div>
-                        <p class="font-semibold mt-3 text-gray-500 text-sm">Gardez votre communication dans un seul message. 
-                            Veuillez être patient et ne pas engager 
+                        <p class="font-semibold mt-3 text-gray-500 text-sm">Gardez votre communication dans un seul
+                            message.
+                            Veuillez être patient et ne pas engager
                             plusieurs conversations</p>
                     </div>
                     <img id="headerCloseBtn" src="./../../assets/feed/close (1) 1.png">
                 </div>
-                <p class="font-semibold mt-4 mx-auto text-center text-gray-600 text-sm w-96">Les réponses peuvent prendre plus de temps que d'habitude en raison des volumes entrants doubles à élevés.</p>
+                <p class="font-semibold mt-4 mx-auto text-center text-gray-600 text-sm w-96">Les réponses peuvent
+                    prendre plus de temps que d'habitude en raison des volumes entrants doubles à élevés.</p>
                 <div id="messagesSite" class="pb-20">
                     <div class="flex items-start mt-3">
                         <img src="./../../assets/feed/ss-btn.png" class="mr-4 w-6 h-6">
@@ -2130,7 +2135,8 @@
                                 <h3 class="font-bold text-sm">WeStocks</h3>
                                 <p class="font-semibold text-gray-600 text-xs">1 jour</p>
                             </div>
-                            <p class="font-normal mt-1 text-gray-600 text-sm">Merci d'avoir contacté l'assistance. Passe une bonne journée!</p>
+                            <p class="font-normal mt-1 text-gray-600 text-sm">Merci d'avoir contacté l'assistance. Passe
+                                une bonne journée!</p>
                         </div>
                     </div>
                     <div class="flex items-start mt-8">
@@ -2146,21 +2152,419 @@
                         <img src="./../../assets/feed/Profile_image.png" class="ml-4">
                     </div>
                 </div>
-                <div class="-ml-4 bg-white border border-light bottom-0 fixed flex items-center justify-around max-w-mobile py-2 w-full">
+                <div
+                    class="-ml-4 bg-white border border-light bottom-0 fixed flex items-center justify-around max-w-mobile py-2 w-full">
                     <div class="p-2 rounded-full flex ">
-                        <div class="bg-light cursor-pointer mr-2 p-2 px-3 rounded-full"><img src="./../../assets/feed/attachment.png" alt=" "></div>
+                        <div class="bg-light cursor-pointer mr-2 p-2 px-3 rounded-full"><img
+                                src="./../../assets/feed/attachment.png" alt=" "></div>
                     </div>
                     <form id="supportChatFrom" class="bg-light flex items-center px-4 py-1 rounded-full ">
-                        <input type="text" id="commentSearch" placeholder="Écrire... " class="bg-transparent color-normal mr-2 outline-none ">
+                        <input type="text" id="commentSearch" placeholder="Écrire... "
+                            class="bg-transparent color-normal mr-2 outline-none ">
                         <button type="send"><img src="./../../assets/feed/send (1) 1.png " alt=" "></button>
                     </form>
+                </div>
+            </div>
+            <!-- SETTINGS -->
+            <div id="settings" class="bg-blue-dark ss-page hidden pt-16 text-white">
+                <div class="">
+                    <div
+                        class="border-2 border-blue-normal flex h-28 items-center justify-center mx-auto py-2 rounded-full w-28 ">
+                        <img src="./../../assets/feed/PROFILE_IMG.png " class="w-24 h-24">
+                    </div>
+                    <h3 class="font-extrabold mt-2 text-center ">Sam GAMEGIE</h3>
+                </div>
+                <div class="bg-light mt-8 p-4 rounded-t-3xl text-black">
+                    <h3 class="font-normal text-gray-600">Général</h3>
+                    <div class="bg-white flex flex-col mt-4 p-4 rounded-3xl">
+                        <div class="flex items-center justify-between mt-6 cursor-pointer">
+                            <div class="flex items-center">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.77408 9.13477C12.0941 9.13477 13.9749 7.45583 13.9749 5.38477C13.9749 3.3137 12.0941 1.63477 9.77408 1.63477C7.45402 1.63477 5.57324 3.3137 5.57324 5.38477C5.57324 7.45583 7.45402 9.13477 9.77408 9.13477Z"
+                                        stroke="#2B64F5" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path
+                                        d="M3.11356 18.3653H16.4335C17.9094 18.3653 19.0464 17.2323 18.3572 16.0673C17.3432 14.3535 15.0317 12.3076 9.77351 12.3076C4.51536 12.3076 2.20381 14.3535 1.18988 16.0673C0.500596 17.2323 1.63755 18.3653 3.11356 18.3653Z"
+                                        stroke="#2B64F5" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                                <h3 class="font-bold ml-4">Informations personnelles</h3>
+                            </div>
+                            <img src="./../../assets/vector.png">
+                        </div>
+                        <div class="flex items-center justify-between mt-6 cursor-pointer">
+                            <div class="flex items-center">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.30112 1.36914H2.9384C2.07172 1.36914 1.36914 2.07172 1.36914 2.9384C1.36914 11.6052 8.39498 18.631 17.0618 18.631C17.9284 18.631 18.631 17.9284 18.631 17.0618V13.699L14.9321 11.2331L13.014 13.151C12.6809 13.4843 12.1831 13.5878 11.7645 13.3716C11.0546 13.0049 9.90259 12.3158 8.76712 11.2331C7.60447 10.1245 6.92328 8.92997 6.58139 8.20724C6.38978 7.80212 6.50071 7.33451 6.81758 7.01764L8.76712 5.06812L6.30112 1.36914Z"
+                                        stroke="#2B64F5" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <h3 class="font-bold ml-4">Numéro de téléphone</h3>
+                            </div>
+                            <img src="./../../assets/vector.png">
+                        </div>
+                        <div class="flex items-center justify-between mt-6 cursor-pointer">
+                            <div class="flex items-center">
+                                <svg width="20" height="16" viewBox="0 0 20 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M17.4997 0.888672H2.49967C1.5792 0.888672 0.833008 1.68461 0.833008 2.66645V13.3331C0.833008 14.315 1.5792 15.1109 2.49967 15.1109H17.4997C18.4202 15.1109 19.1663 14.315 19.1663 13.3331V2.66645C19.1663 1.68461 18.4202 0.888672 17.4997 0.888672Z"
+                                        stroke="#2B64F5" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M0.833008 6.22266H19.1663" stroke="#2B64F5" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <h3 class="font-bold ml-4">Moyens de paiements</h3>
+                            </div>
+                            <img src="./../../assets/vector.png">
+                        </div>
+                        <div class="flex items-center justify-between mt-6 cursor-pointer">
+                            <div class="flex items-center">
+                                <img src="./../../assets/feed/Contact.png">
+                                <h3 class="font-bold ml-4">Contacts</h3>
+                            </div>
+                            <img src="./../../assets/vector.png">
+                        </div>
+                        <div class="flex items-center justify-between mt-6 cursor-pointer">
+                            <div class="flex items-center">
+                                <svg width="17" height="20" viewBox="0 0 17 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.6005 9.16699C13.0363 13.6462 14.75 15.0003 14.75 15.0003H1.25C1.25 15.0003 3.5 13.2228 3.5 7.00033C3.5 5.58616 3.974 4.22949 4.81775 3.22949C5.66225 2.22949 6.8075 1.66699 8 1.66699C8.25275 1.66699 8.504 1.69199 8.75 1.74199"
+                                        stroke="#2B64F5" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M13.25 6.66699C13.8467 6.66699 14.419 6.4036 14.841 5.93476C15.2629 5.46592 15.5 4.83003 15.5 4.16699C15.5 3.50395 15.2629 2.86807 14.841 2.39923C14.419 1.93038 13.8467 1.66699 13.25 1.66699C12.6533 1.66699 12.081 1.93038 11.659 2.39923C11.2371 2.86807 11 3.50395 11 4.16699C11 4.83003 11.2371 5.46592 11.659 5.93476C12.081 6.4036 12.6533 6.66699 13.25 6.66699Z"
+                                        stroke="#2B64F5" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M9.29715 17.5C9.16544 17.7528 8.97624 17.9626 8.7485 18.1085C8.52077 18.2544 8.26252 18.3312 7.99965 18.3312C7.73678 18.3312 7.47852 18.2544 7.25079 18.1085C7.02306 17.9626 6.83385 17.7528 6.70215 17.5"
+                                        stroke="#2B64F5" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <h3 class="font-bold ml-4">Notifications</h3>
+                            </div>
+                            <img src="./../../assets/vector.png">
+                        </div>
+                    </div>
+                    <h3 class="font-normal text-gray-600 mt-12">Settings</h3>
+                    <div class="bg-white flex flex-col mt-4 p-4 rounded-3xl">
+                        <div class="flex items-center justify-between mt-6 cursor-pointer">
+                            <div class="flex items-center">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.6667 0H3.33333C2.44928 0 1.60143 0.35119 0.976311 0.976311C0.35119 1.60143 0 2.44928 0 3.33333V16.6667C0 17.5507 0.35119 18.3986 0.976311 19.0237C1.60143 19.6488 2.44928 20 3.33333 20H16.6667C17.5507 20 18.3986 19.6488 19.0237 19.0237C19.6488 18.3986 20 17.5507 20 16.6667V3.33333C20 2.44928 19.6488 1.60143 19.0237 0.976311C18.3986 0.35119 17.5507 0 16.6667 0ZM3.33333 2.22222H16.6667C16.9614 2.22222 17.244 2.33929 17.4523 2.54766C17.6607 2.75603 17.7778 3.03865 17.7778 3.33333V12.6222L14.2222 9.58889C13.6713 9.1356 12.9801 8.88777 12.2667 8.88777C11.5533 8.88777 10.862 9.1356 10.3111 9.58889L2.22222 16.3333V3.33333C2.22222 3.03865 2.33929 2.75603 2.54766 2.54766C2.75603 2.33929 3.03865 2.22222 3.33333 2.22222ZM16.6667 17.7778H3.95556L11.7333 11.2889C11.8827 11.1779 12.0639 11.118 12.25 11.118C12.4361 11.118 12.6173 11.1779 12.7667 11.2889L17.7778 15.5556V16.6667C17.7778 16.9614 17.6607 17.244 17.4523 17.4523C17.244 17.6607 16.9614 17.7778 16.6667 17.7778Z"
+                                        fill="#2B64F5" />
+                                    <path
+                                        d="M5.55534 7.77767C6.47581 7.77767 7.22201 7.03148 7.22201 6.111C7.22201 5.19053 6.47581 4.44434 5.55534 4.44434C4.63486 4.44434 3.88867 5.19053 3.88867 6.111C3.88867 7.03148 4.63486 7.77767 5.55534 7.77767Z"
+                                        stroke="#2B64F5" stroke-width="1.5" />
+                                </svg>
+                                <h3 class="font-bold ml-4">Accepter les captures d’écran</h3>
+                            </div>
+                            <div
+                                class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
+                                <input type="checkbox" name="toggle" id="toggle"
+                                    class="toggle-checkbox absolute block w-4 h-4 mt-1 ml-1 mr-1 rounded-full bg-blue-normal appearance-none cursor-pointer" />
+                                <label for="toggle"
+                                    class="toggle-label block overflow-hidden h-6 rounded-full bg-white border-blue-normal border cursor-pointer"></label>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mt-6 cursor-pointer">
+                            <div class="flex items-center">
+                                <svg width="16" height="20" viewBox="0 0 16 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0.857422 9.6875C0.857422 8.99713 1.3691 8.4375 2.00028 8.4375H14.0003C14.6315 8.4375 15.1431 8.99713 15.1431 9.6875V16.5625C15.1431 17.9432 14.1198 19.0625 12.8574 19.0625H3.14314C1.88077 19.0625 0.857422 17.9432 0.857422 16.5625V9.6875Z"
+                                        stroke="#2B64F5" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M3.14294 8.125V7.92838C3.14294 5.97684 3.0356 3.80156 4.28176 2.40488C4.99242 1.60838 6.14237 0.9375 8.00009 0.9375C9.8578 0.9375 11.0077 1.60838 11.7184 2.40488C12.9645 3.80156 12.8572 5.97684 12.8572 7.92838V8.125"
+                                        stroke="#2B64F5" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <h3 class="font-bold ml-4">Double authentification</h3>
+                            </div>
+                            <img src="./../../assets/vector.png">
+                        </div>
+                        <div class="flex items-center justify-between mt-6 cursor-pointer">
+                            <div class="flex items-center">
+                                <svg width="18" height="20" viewBox="0 0 18 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9 18.3337C9 18.3337 15 15.0003 15 10.0003V4.16699L9 1.66699L3 4.16699V10.0003C3 15.0003 9 18.3337 9 18.3337Z"
+                                        stroke="#2B64F5" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <h3 class="font-bold ml-4">Politique de confidentialité</h3>
+                            </div>
+                            <img src="./../../assets/vector.png">
+                        </div>
+                        <div class="flex items-center justify-between mt-6 cursor-pointer">
+                            <div class="flex items-center">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.6663 1.66699H4.99967C4.55765 1.66699 4.13372 1.84259 3.82116 2.15515C3.5086 2.46771 3.33301 2.89163 3.33301 3.33366V16.667C3.33301 17.109 3.5086 17.5329 3.82116 17.8455C4.13372 18.1581 4.55765 18.3337 4.99967 18.3337H14.9997C15.4417 18.3337 15.8656 18.1581 16.1782 17.8455C16.4907 17.5329 16.6663 17.109 16.6663 16.667V6.66699L11.6663 1.66699Z"
+                                        stroke="#2B64F5" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M11.667 1.66699V6.66699H16.667" stroke="#2B64F5" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M13.3337 10.833H6.66699" stroke="#2B64F5" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M13.3337 14.167H6.66699" stroke="#2B64F5" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M8.33366 7.5H7.50033H6.66699" stroke="#2B64F5" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <h3 class="font-bold ml-4">Historique des transactions</h3>
+                            </div>
+                            <img src="./../../assets/vector.png">
+                        </div>
+                        <div class="flex items-center justify-between mt-6 cursor-pointer">
+                            <div class="flex items-center">
+                                <svg width="18" height="20" viewBox="0 0 18 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M1.5 15.0003H16.5C16.5 15.0003 14 13.2228 14 7.00033C14 5.58616 13.4733 4.22949 12.5358 3.22949C11.5975 2.22949 10.325 1.66699 9 1.66699C7.675 1.66699 6.4025 2.22949 5.46417 3.22949C4.52667 4.22949 4 5.58616 4 7.00033C4 13.2228 1.5 15.0003 1.5 15.0003Z"
+                                        stroke="#2B64F5" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M10.4419 17.5C10.2956 17.7528 10.0854 17.9626 9.83232 18.1085C9.57929 18.2544 9.29234 18.3312 9.00026 18.3312C8.70818 18.3312 8.42123 18.2544 8.1682 18.1085C7.91516 17.9626 7.70493 17.7528 7.55859 17.5"
+                                        stroke="#2B64F5" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <h3 class="font-bold ml-4">Notifications</h3>
+                            </div>
+                            <img src="./../../assets/vector.png">
+                        </div>
+                        <div class="flex items-center justify-between mt-6 cursor-pointer">
+                            <div class="flex items-center">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_456_5640)">
+                                        <path
+                                            d="M16.0059 12.894C16.0059 8.6318 8.14811 8.91013 8.14811 6.3368C8.14811 5.09125 9.33978 4.48291 10.722 4.48291C13.0464 4.48291 13.4603 5.97625 14.5131 5.97625C15.2587 5.97625 15.6176 5.5068 15.6176 4.98069C15.6176 3.75791 13.7637 2.83236 11.9859 2.5118V1.3318C11.9859 0.978327 11.8455 0.639329 11.5955 0.389385C11.3456 0.139441 11.0066 -0.000976562 10.6531 -0.000976562C10.2996 -0.000976562 9.96064 0.139441 9.7107 0.389385C9.46075 0.639329 9.32033 0.978327 9.32033 1.3318V2.55347C7.382 2.99458 5.71478 4.33902 5.71478 6.53069C5.71478 10.6246 13.5714 10.459 13.5714 13.3346C13.5714 14.3307 12.4931 15.3268 10.722 15.3268C8.06589 15.3268 7.18089 13.529 6.102 13.529C5.57645 13.529 5.10645 13.9712 5.10645 14.6379C5.10645 15.6968 6.88144 16.9712 9.322 17.3274L9.32033 17.3357V18.6674C9.33035 19.0143 9.47522 19.3437 9.72417 19.5856C9.97313 19.8274 10.3066 19.9628 10.6537 19.9628C11.0008 19.9628 11.3342 19.8274 11.5832 19.5856C11.8321 19.3437 11.977 19.0143 11.987 18.6674V17.3357C11.987 17.3201 11.9792 17.3079 11.9781 17.294C14.1742 16.884 16.0059 15.4524 16.0059 12.894Z"
+                                            fill="#2B64F5" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_456_5640">
+                                            <rect width="20" height="20" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <h3 class="font-bold ml-4">Devise</h3>
+                            </div>
+                            <img src="./../../assets/vector.png">
+                        </div>
+                        <div class="flex items-center justify-between mt-6 cursor-pointer">
+                            <div class="flex items-center">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M17.5524 5.57324H2.44824H17.5524ZM3.48991 5.57324V15.4691C3.48991 16.6197 4.42265 17.5524 5.57324 17.5524H14.4274C15.578 17.5524 16.5107 16.6197 16.5107 15.4691V5.57324H3.48991Z"
+                                        stroke="#2B64F5" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M10.2607 10.2607V2.44824" stroke="#2B64F5" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <h3 class="font-bold ml-4">Apparence</h3>
+                            </div>
+                            <img src="./../../assets/vector.png">
+                        </div>
+                        <div class="flex items-center justify-between mt-6 cursor-pointer">
+                            <div class="flex items-center">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.0003 17.5524C14.1712 17.5524 17.5524 14.1712 17.5524 10.0003C17.5524 5.82942 14.1712 2.44824 10.0003 2.44824C5.82942 2.44824 2.44824 5.82942 2.44824 10.0003C2.44824 14.1712 5.82942 17.5524 10.0003 17.5524Z"
+                                        stroke="#2B64F5" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M13.3851 10.0003C13.3851 14.6878 11.294 17.5524 9.99967 17.5524C8.7053 17.5524 6.61426 14.6878 6.61426 10.0003C6.61426 5.31283 8.7053 2.44824 9.99967 2.44824C11.294 2.44824 13.3851 5.31283 13.3851 10.0003Z"
+                                        stroke="#2B64F5" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M2.70801 10H9.99968H17.2913" stroke="#2B64F5" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <h3 class="font-bold ml-4">Test du réseau</h3>
+                            </div>
+                            <img src="./../../assets/vector.png">
+                        </div>
+                        <div class="flex items-center justify-between mt-6 cursor-pointer">
+                            <div class="flex items-center">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M17.5524 7.91699C17.5524 10.7596 16.0941 13.3857 14.6878 13.3857C13.2816 13.3857 11.8232 10.7596 11.8232 7.91699C11.8232 5.07435 13.2816 2.44824 14.6878 2.44824C16.0941 2.44824 17.5524 5.07435 17.5524 7.91699Z"
+                                        stroke="#2B64F5" stroke-width="1.5" />
+                                    <path
+                                        d="M14.6878 13.3857C14.6878 13.3857 5.83366 11.5628 4.79199 11.3024C3.75033 11.042 2.44824 9.67668 2.44824 7.91699C2.44824 6.15726 3.75033 4.79199 4.79199 4.53158C5.83366 4.27116 14.6878 2.44824 14.6878 2.44824"
+                                        stroke="#2B64F5" stroke-width="1.5" />
+                                    <path
+                                        d="M4.53125 11.5625V15.4687C4.53125 16.6194 5.46399 17.5521 6.61458 17.5521H7.13542C8.28604 17.5521 9.21875 16.6194 9.21875 15.4687V12.6042"
+                                        stroke="#2B64F5" stroke-width="1.5" />
+                                </svg>
+                                <h3 class="font-bold ml-4">A propos</h3>
+                            </div>
+                            <img src="./../../assets/vector.png">
+                        </div>
+                        <div class="flex items-center justify-between mt-6 cursor-pointer">
+                            <div class="flex items-center">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.30112 1.36914H2.9384C2.07172 1.36914 1.36914 2.07172 1.36914 2.9384C1.36914 11.6052 8.39498 18.631 17.0618 18.631C17.9284 18.631 18.631 17.9284 18.631 17.0618V13.699L14.9321 11.2331L13.014 13.151C12.6809 13.4843 12.1831 13.5878 11.7645 13.3716C11.0546 13.0049 9.90259 12.3158 8.76712 11.2331C7.60447 10.1245 6.92328 8.92997 6.58139 8.20724C6.38978 7.80212 6.50071 7.33451 6.81758 7.01764L8.76712 5.06812L6.30112 1.36914Z"
+                                        stroke="#2B64F5" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <h3 class="font-bold ml-4">Support</h3>
+                            </div>
+                            <img src="./../../assets/vector.png">
+                        </div>
+                    </div>
+                    <p class="font-medium text-sm text-center text-gray-500 mt-4">App Version: 2.1.16</p>
+                </div>
+            </div>
+            <!-- HISTORY -->
+            <div id="history" class="bg-blue-dark">
+                <div class="bg-blue-dark pb-20 pt-20">
+                    <div class="bg-light p-4 rounded-t-3xl">
+                        <div class="flex font-norma items-center justify-between">
+                            <h3>Trasactions récentes</h3>
+                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_341_6599)">
+                                    <path d="M0.937012 3.75H4.06201" stroke="#525967" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M10.937 3.75H19.062" stroke="#525967" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M0.937012 13.75H10.312" stroke="#525967" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M17.187 13.75H19.062" stroke="#525967" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path
+                                        d="M7.49951 6.5625C9.05281 6.5625 10.312 5.3033 10.312 3.75C10.312 2.1967 9.05281 0.9375 7.49951 0.9375C5.94621 0.9375 4.68701 2.1967 4.68701 3.75C4.68701 5.3033 5.94621 6.5625 7.49951 6.5625Z"
+                                        stroke="#525967" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path
+                                        d="M13.7495 16.5625C15.3028 16.5625 16.562 15.3033 16.562 13.75C16.562 12.1967 15.3028 10.9375 13.7495 10.9375C12.1962 10.9375 10.937 12.1967 10.937 13.75C10.937 15.3033 12.1962 16.5625 13.7495 16.5625Z"
+                                        stroke="#525967" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_341_6599">
+                                        <rect width="20" height="17.5" fill="white" transform="translate(-0.000488281)">
+                                        </rect>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <p class="font-normal mt-6 text-gray-600 text-sm">Aujourd’hui</p>
+                        <div class="flex items-center justify-between mt-6">
+                            <div class="flex items-center">
+                                <img src="./../../assets/feed/akar-icons_arrow-up.png">
+                                <div class="ml-4">
+                                    <h3 class="font-extrabold text-sm">Dépot</h3>
+                                    <p class="font-semibold text-gray-500 text-sm">23 Nov, 13h36</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-end">
+                                <h3 class="font-extrabold text-sm">+859.253 € </h3>
+                                <p class="font-semibold text-gray-500 text-sm">Validé</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mt-6">
+                            <div class="flex items-center">
+                                <img src="./../../assets/feed/akar-icons_arrow-down.png">
+                                <div class="ml-4">
+                                    <h3 class="font-extrabold text-sm">Vente APPL</h3>
+                                    <p class="font-semibold text-gray-500 text-sm">09 Oct, 13h36</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-end">
+                                <h3 class="font-extrabold text-sm">-200.25 € </h3>
+                                <p class="font-semibold text-gray-500 text-sm">Refusé</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mt-6">
+                            <div class="flex items-center">
+                                <img src="./../../assets/feed/akar-icons_arrow-up.png">
+                                <div class="ml-4">
+                                    <h3 class="font-extrabold text-sm">Achat APPL</h3>
+                                    <p class="font-semibold text-gray-500 text-sm">23 Nov, 13h36</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-end">
+                                <h3 class="font-extrabold text-sm">+859.253 € </h3>
+                                <p class="font-semibold text-gray-500 text-sm">Validé</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mt-6">
+                            <div class="flex items-center">
+                                <img src="./../../assets/feed/akar-icons_arrow-down.png">
+                                <div class="ml-4">
+                                    <h3 class="font-extrabold text-sm">Retrait</h3>
+                                    <p class="font-semibold text-gray-500 text-sm">09 Oct, 13h36</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-end">
+                                <h3 class="font-extrabold text-sm">-200.25 € </h3>
+                                <p class="font-semibold text-gray-500 text-sm">Refusé</p>
+                            </div>
+                        </div>
+                        <p class="font-normal mt-8 text-gray-500">29 Décembre</p>
+                        <div class="flex items-center justify-between mt-6">
+                            <div class="flex items-center">
+                                <img src="./../../assets/feed/akar-icons_arrow-down.png">
+                                <div class="ml-4">
+                                    <h3 class="font-extrabold text-sm">Vente APPL</h3>
+                                    <p class="font-semibold text-gray-500 text-sm">09 Oct, 13h36</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-end">
+                                <h3 class="font-extrabold text-sm">-200.25 € </h3>
+                                <p class="font-semibold text-gray-500 text-sm">Refusé</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mt-6">
+                            <div class="flex items-center">
+                                <img src="./../../assets/feed/akar-icons_arrow-up.png">
+                                <div class="ml-4">
+                                    <h3 class="font-extrabold text-sm">Achat APPL</h3>
+                                    <p class="font-semibold text-gray-500 text-sm">23 Nov, 13h36</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-end">
+                                <h3 class="font-extrabold text-sm">+859.253 € </h3>
+                                <p class="font-semibold text-gray-500 text-sm">Validé</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mt-6">
+                            <div class="flex items-center">
+                                <img src="./../../assets/feed/akar-icons_arrow-down.png">
+                                <div class="ml-4">
+                                    <h3 class="font-extrabold text-sm">Retrait</h3>
+                                    <p class="font-semibold text-gray-500 text-sm">09 Oct, 13h36</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-end">
+                                <h3 class="font-extrabold text-sm">-200.25 € </h3>
+                                <p class="font-semibold text-gray-500 text-sm">Refusé</p>
+                            </div>
+                        </div>
+                                        </div>
                 </div>
             </div>
         </div>
 
         <!-- FOOTER -->
         <footer id="footer"
-            class="bg-light bottom-0 fixed flex h-20 items-end justify-between max-w-mobile pb-5 px-4 py-2 text-2xl w-full z-50"
+            class="bg-light bottom-0 fixed flex h-20 items-end justify-between max-w-mobile pb-5 px-4 py-2 text-2xl w-full z-40"
             style="filter: drop-shadow(0px 0px 20px rgba(17, 20, 58, 0.15));">
             <button id="feedBtn" class="flex flex-col items-center pagesBtn text-blue-normal" style="width: 20%;">
                 <i class="far fa-compass"></i>
