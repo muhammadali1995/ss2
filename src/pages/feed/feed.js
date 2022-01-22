@@ -97,7 +97,7 @@ const academyBtnStyled = 'academyBtn'
 const profilBtnStyled = 'profilBtn'
 const profilBtn = document.getElementById('profilBtn')
 const navbarText = document.getElementById('navbarText')
-const abonentNextBtn = document.getElementById('abonentNextBtn')
+const abonentNextBtn = document.querySelectorAll('.abonentNextBtn')
 const abonentPrevBtn = document.getElementById('abonentPrevBtn')
 const rechercherPrevBtn = document.getElementById('rechercherPrev')
 const navbar = document.getElementById('navbar')
@@ -208,10 +208,12 @@ profileCloseBtn.addEventListener('click', () => {
     profileDropdown.classList.add('hidden')
 })
 
-abonentNextBtn.addEventListener('click', () => {
+abonentNextBtn.forEach(element=>{
+    element.addEventListener('click', () => {
     changePage(abonentsPage)
     footer.classList.remove('hidden')
     navbar.classList.add('hidden')
+})
 })
 
 abonentPrevBtn.addEventListener('click', () => {
@@ -229,7 +231,6 @@ searchForms.forEach(searchForm => {
         e.preventDefault()
         const searchInputValue = searchForm.children[1].value;
         searchInputValue.value = ''
-        console.log(searchInputValue)
     })
 })
 publicationsBtn.addEventListener('click', () => {
@@ -379,7 +380,6 @@ portfolioBtn.addEventListener('click', () => {
     changeScrollPage()
     showPageBtn(portfolioBtnStyled)
     footer.classList.remove('hidden')
-    console.log(portfolioBtn)
     navbar.classList.remove('hidden')
     navbarText.innerText = 'Portefeuille'
 })
@@ -402,12 +402,9 @@ tousBtn.addEventListener('click', () => {
 
 function changeScrollPage() {
     const top = defaultMarginTop.getBoundingClientRect().top + defaultMarginTop.offsetHeight
-    console.log(upScroll, window.innerHeight - top)
     const maxHeight = window.innerHeight - top
     upScroll.style.maxHeight = maxHeight + 'px'
     upScroll.style.minHeight = maxHeight + 'px'
-    console.log(upScroll.getBoundingClientRect().top)
-    console.log(top)
 }
 window.onscroll = () => {
     if (upScroll.getBoundingClientRect().top < 130) {
@@ -500,7 +497,7 @@ closeBtn2.addEventListener('click', () => {
 chatBtn.addEventListener('click', () => {
     changePage(chat)
     navbarText.innerText = 'Chat'
-    console.log(chatBtn)
+    navbar.classList.remove('hidden')
     showPageBtn(chatBtnStyled)
 })
 
@@ -519,7 +516,6 @@ groupesBtn.addEventListener('click', () => {
 chatNextBtns.forEach(chatNextBtn => {
     chatNextBtn.addEventListener('click', () => {
         changePage(conversation)
-        console.log(chatNextBtn)
         user.innerHTML = `
         <img src="${chatNextBtn.children[0].children[0].src}" class="w-10 h-10 rounded-full">
         <h3 class="font-extrabold ml-4">${chatNextBtn.children[0].children[1].children[0].innerText}</h3>
@@ -638,6 +634,8 @@ tradePageNextBtn.addEventListener('click', () => {
 })
 tradingPrevBtn.addEventListener('click', () => {
     changePage(tradeMainPage)
+    footer.classList.remove('hidden')
+    navbar.classList.remove('hidden')
 })
 sellPrevBtn.addEventListener('click', () => {
     changePage(trandingPage)
