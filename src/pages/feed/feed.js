@@ -7,6 +7,7 @@ const profileMenu = document.getElementById('profileMenu')
 const profileCloseBtn = document.getElementById('profileCloseBtn')
 const searchInput = document.getElementById('searchValue')
 const searchForms = document.querySelectorAll('.searchForm')
+const profileNextBtn = document.getElementById('profileNextBtn')
 const singleLessonNextPageBtn = document.getElementById('singleLessonNextPageBtn')
 const intrClose = document.getElementById('intrClose')
 const closedPage = document.getElementById('closedPage')
@@ -16,6 +17,7 @@ const chatBtnStyled = 'chatBtn'
 const publicationsPage = document.getElementById('publications')
 const newsPage = document.getElementById('news')
 const academyNextPageBtn = document.getElementById('academyNextPageBtn')
+const tradeBtn = document.getElementById('tradeBtn')
 const lockBtns = document.querySelectorAll('.lockBtn')
 const postBtn = document.getElementById('post')
 const chatBtn = document.getElementById('chatBtn')
@@ -107,6 +109,32 @@ const personalPrevBtn = document.getElementById('personalPrevBtn')
 const academyBtn = document.getElementById('academyBtn')
 const upScroll = document.getElementById('upScroll')
 const userProfileBtns = document.querySelectorAll('.userProfile')
+const tradeTabsBtns = document.querySelectorAll('.tradeTabsBtn')
+const tradeProposBtn = document.getElementById('tradeProposBtn')
+const tradeNewsBtn = document.getElementById('tradeNewsBtn')
+const tradeAttenteBtn = document.getElementById('tradeAttenteBtn')
+const tradeAddLiked = document.getElementById('tradeAddLiked')
+const fixedBtn = document.getElementById('fixedBtn')
+const tradePageNextBtn = document.getElementById('tradePageNextBtn')
+const tradeAttentePage = 'tradeAttentePage'
+const tradeNewsPage = 'tradeNewsPage'
+const tradeProposPage = 'tradeProposPage'
+const tradeMainPage = 'tradeMainPage'
+const sellAsset = 'sellAsset'
+const trandingPage = 'trandingPage'
+const sellAsset2 = 'sellAsset2'
+const tradeCategoryPage = 'tradeCategoryPage'
+const tradeNextBtn = document.getElementById('tradeNextBtn')
+const fixedFooter = document.getElementById('fixedFooter')
+const sellAssetNextBtn = document.getElementById('sellAssetNextBtn')
+const tradingPrevBtn = document.getElementById('tradingPrevBtn')
+const sellAsset2PrevBtn = document.getElementById('sellAsset2PrevBtn')
+const pages = document.getElementsByClassName('ss-page')
+const sellSelectBtn = document.querySelectorAll('.sellSelectBtn')
+const sellPrevBtn = document.getElementById('sellPrevBtn')
+const sellAsset2NextBtn = document.getElementById('sellAsset2NextBtn')
+const tradeBtnStyled = 'tradeBtn'
+
 
 
 // FOOTER
@@ -139,7 +167,7 @@ function changePage(page) {
 function hidePages() {
     const pages = document.querySelectorAll('.ss-page');
     Array.from(pages).forEach(element => {
-        if (!element.classList.contains('hidden')) element.classList.add('hidden')
+         element.classList.add('hidden')
     });
 }
 
@@ -332,18 +360,18 @@ postCloseBtn.addEventListener('click', () => {
 })
 
 searchBtn.addEventListener('click', () => {
-        if (!searchBtn.classList.contains('text-blue-normal')) {
-            searchBtn.classList.add('text-blue-normal')
-            changePage(rechercherPage)
-            navbarText.innerText = 'Rechercher'
-        } else {
-            searchBtn.classList.remove('text-blue-normal')
-            changePage(FEED_PAGE)
-            navbarText.innerText = 'Feed'
-            showPageBtn(feddBtnStyled)
-        }
-    })
-    // FEED PAGE
+    if (!searchBtn.classList.contains('text-blue-normal')) {
+        searchBtn.classList.add('text-blue-normal')
+        changePage(rechercherPage)
+        navbarText.innerText = 'Rechercher'
+    } else {
+        searchBtn.classList.remove('text-blue-normal')
+        changePage(FEED_PAGE)
+        navbarText.innerText = 'Feed'
+        showPageBtn(feddBtnStyled)
+    }
+})
+// FEED PAGE
 
 // PORTFOLIO PAGE 
 portfolioBtn.addEventListener('click', () => {
@@ -393,9 +421,9 @@ window.onscroll = () => {
 // PORTFOLIO PAGE
 
 // ACADEMY
-academyBtn.addEventListener('click', () => {
+profileNextBtn.addEventListener('click', () => {
     changePage(ACADEMY_PAGE)
-    showPageBtn(academyBtnStyled)
+    profileDropdown.classList.add('hidden')
     footer.classList.remove('hidden')
     navbarText.innerText = 'Academy'
 })
@@ -551,6 +579,102 @@ const swiper = new Swiper('.swiper', {
     },
     scrollbar: false
 });
+
+// TRADE
+tradeBtn.addEventListener('click', () => {
+    changePage(tradeMainPage)
+    showPageBtn(tradeBtnStyled)
+})
+
+
+
+function changeTabBtn(tabBtn, tabPage) {
+    hideTabBtnsPages()
+    showTabBtnPage(tabBtn, tabPage)
+}
+
+function hideTabBtnsPages() {
+    tradeTabsBtns.forEach(tradeTabsBtn => {
+        tradeTabsBtn.className = 'py-1 w-1/3'
+    })
+    const tradePages = document.querySelectorAll('.trade-tab')
+    tradePages.forEach(tradeTabsBtn => {
+        tradeTabsBtn.classList.add('hidden')
+    })
+}
+
+function showTabBtnPage(tabBtn, tabPage) {
+    tabBtn.classList.add('rounded-full', 'bg-blue-normal', 'text-white')
+    const currTabPage = document.getElementById(tabPage)
+    currTabPage.classList.remove('hidden')
+}
+
+tradeAddLiked.addEventListener('click', () => {
+    if (tradeAddLiked.src == 'file:///C:/Users/Diyorbek/Documents/GitHub/ss2/src/assets/feed/star.png') {
+        tradeAddLiked.src = './../../assets/feed/star_blue.png'
+        fixedBtn.innerText = 'Achester'
+    }
+    else {
+        tradeAddLiked.src = './../../assets/feed/star.png'
+        fixedBtn.innerText = 'Trader'
+    }
+})
+tradeAttenteBtn.addEventListener('click', () => {
+    changeTabBtn(tradeAttenteBtn, tradeAttentePage)
+})
+tradeNewsBtn.addEventListener('click', () => {
+    changeTabBtn(tradeNewsBtn, tradeNewsPage)
+})
+tradeProposBtn.addEventListener('click', () => {
+    changeTabBtn(tradeProposBtn, tradeProposPage)
+})
+tradeNextBtn.addEventListener('click', () => {
+    changePage(trandingPage)
+    footer.classList.add('hidden')
+    navbar.classList.add('hidden')
+})
+tradePageNextBtn.addEventListener('click', () => {
+    changePage(sellAsset)
+})
+tradingPrevBtn.addEventListener('click', () => {
+    changePage(tradeMainPage)
+})
+sellPrevBtn.addEventListener('click', () => {
+    changePage(trandingPage)
+})
+
+sellSelectBtn.forEach(sellSelect => {
+    sellSelect.addEventListener('click', () => {
+        if (sellSelect.classList.contains('bg-light')) {
+            sellSelect.classList.remove('bg-light')
+        }
+        else {
+            sellSelect.classList.add('bg-light')
+        }
+    })
+})
+
+sellAssetNextBtn.addEventListener('click', () => {
+    changePage(sellAsset2)
+})
+sellAsset2PrevBtn.addEventListener('click', () => {
+    changePage(sellAsset)
+})
+sellAsset2NextBtn.addEventListener('click', () => {
+    changePage(tradeCategoryPage)
+    footer.classList.remove('hidden')
+    navbar.classList.remove('hidden')
+    navbarText.innerText ='Catagory'
+})
+
+const scrollAnimation = document.getElementById('scrollAnimation')
+window.addEventListener('scroll', () => {
+    scrollAnimation.style.minHeight = '520px'
+    scrollAnimation.style.maxHeight = '521px'
+})
+
+// TRADE
+
 // SWIPER
 
 userProfileBtns.forEach(userProfileBtn => {

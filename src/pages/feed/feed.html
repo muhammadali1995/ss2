@@ -9,12 +9,15 @@
     <link rel="stylesheet" href="./feed.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <script src="https://unpkg.com/@themesberg/flowbite@1.3.0/dist/flowbite.bundle.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/all.min.css" integrity="sha512-SUwyLkI1Wgm4aEZkDkwwigXaOI2HFLy1/YW73asun4sfvlkB9Ecl99+PHfCnfWD0FJjIuFTvWMM7BZPXCckpAA==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/all.min.css"
+        integrity="sha512-SUwyLkI1Wgm4aEZkDkwwigXaOI2HFLy1/YW73asun4sfvlkB9Ecl99+PHfCnfWD0FJjIuFTvWMM7BZPXCckpAA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <script src=" feed.js " defer></script>
     <title>Feed</title>
@@ -23,9 +26,11 @@
 <body>
     <div id="main-wrapper" class="max-w-mobile mx-auto bg-light h-screen ">
 
-        <nav id="navbar" class="font-semibold text-white bg-blue-dark z-50 fixed flex items-center justify-between max-w-mobile px-4 py-2 w-full top-0 ">
+        <nav id="navbar"
+            class="font-semibold text-white bg-blue-dark z-50 fixed flex items-center justify-between max-w-mobile px-4 py-2 w-full top-0 ">
             <div class="flex items-center ">
-                <button id="rechercherPrev" class="hidden mr-4 "><img src="./../../assets/feed/chevron-left.png "></button>
+                <button id="rechercherPrev" class="hidden mr-4 "><img
+                        src="./../../assets/feed/chevron-left.png "></button>
                 <h3 id="navbarText" class="text-2xl ">Feed</h3>
             </div>
             <div class="flex items-center ">
@@ -37,12 +42,14 @@
         <!-- MAIN CONTENT -->
         <div class="main-content ">
             <!-- PROFILE DROPDOWN -->
-            <div id="profileDropdown" style="box-shadow: 0px 0px 20px rgba(17, 20, 58, 0.15); " class="z-50 bg-light right-0 hidden fixed flex flex-col p-6 rounded-2xl text-black top-12 w-72 ">
+            <div id="profileDropdown" style="box-shadow: 0px 0px 20px rgba(17, 20, 58, 0.15); "
+                class="z-50 bg-light right-0 hidden fixed flex flex-col p-6 rounded-2xl text-black top-12 w-72 ">
                 <button class="ml-auto " id="profileCloseBtn"> <img src="./../../assets/feed/close (1) 1.png "></button>
                 <div class="flex items-center justify-center w-full ">
                     <img src="./../../assets/feed/PROFILE_IMG.png " alt=" ">
                 </div>
-                <button class="bg-gradient-to-r flex from-blue-darker justify-center mt-6 mx-auto py-2 rounded-full text-white to-blue-lighter w-32 ">
+                <button
+                    class="bg-gradient-to-r flex from-blue-darker justify-center mt-6 mx-auto py-2 rounded-full text-white to-blue-lighter w-32 ">
                     <img src="./../../assets/feed/gift.png " class="mr-2 ">
                     <p>Parrainer</p>
                 </button>
@@ -54,7 +61,7 @@
                     <img src="./../../assets/feed/banque.png " class="mr-6 ">
                     <h3 class="font-medium mr-4 ">Déposer/Retirer</h3>
                 </div>
-                <div class="flex items-center cursor-pointer mt-6 ">
+                <div id="profileNextBtn" class="flex items-center cursor-pointer mt-6 ">
                     <img src="./../../assets/feed/academy.png " class="mr-6 ">
                     <h3 class="font-medium mr-4 ">Academy</h3>
                 </div>
@@ -79,34 +86,41 @@
                         <button type="submit " class="-mr-10 relative ">
                             <img src="./../../assets/feed/search (1) 1.png " class=" ">
                         </button>
-                        <input type="text " id="searchValue" placeholder="Rechercher " class="p-4 px-10 outline-none rounded-full text-black w-full ">
+                        <input type="text " id="searchValue" placeholder="Rechercher "
+                            class="p-4 px-10 outline-none rounded-full text-black w-full ">
                     </form>
                 </div>
 
                 <!-- FEED TABS  -->
                 <div class="-mt-6 px-4 py-2 rounded-t-3xl bg-light h-min ">
                     <div class="bg-white rounded-full flex justify-between p-2 ">
-                        <button id="publicationsBtn" class="font-bold hover:bg-blue-normal p-1 bg-blue-normal rounded-full hover:text-white text-white w-1/2 ">Publications</button>
-                        <button id="newsBtn" class="font-bold hover:bg-blue-normal hover:text-white p-1 rounded-full text-gray-500 w-1/2 ">News</button>
+                        <button id="publicationsBtn"
+                            class="font-bold hover:bg-blue-normal p-1 bg-blue-normal rounded-full hover:text-white text-white w-1/2 ">Publications</button>
+                        <button id="newsBtn"
+                            class="font-bold hover:bg-blue-normal hover:text-white p-1 rounded-full text-gray-500 w-1/2 ">News</button>
                     </div>
                     <div id="publications" class=" mb-20 mt-6 w-100 ">
                         <div class="overflow-auto w-100 ">
                             <div class="flex " style="width: 400px; ">
-                                <div style="background: #2B64F526; " class="flex items-center justify-around mr-4 px-2 py-3 rounded-2xl w-32 ">
+                                <div style="background: #2B64F526; "
+                                    class="flex items-center justify-around mr-4 px-2 py-3 rounded-2xl w-32 ">
                                     <img src="./../../assets/feed/crupto.png ">
                                     <h3 class="font-bold text-sm ">Cryptos</h3>
                                 </div>
-                                <div style="background: #F2848426; " class="flex items-center justify-around mr-4 px-2 py-3 rounded-2xl w-32 ">
+                                <div style="background: #F2848426; "
+                                    class="flex items-center justify-around mr-4 px-2 py-3 rounded-2xl w-32 ">
                                     <img src="./../../assets/feed/video.png ">
                                     <h3 class="font-bold text-sm text-red " style="color:#EB5757; ">Média</h3>
                                 </div>
-                                <div style="background: #2B64F526; " class="flex items-center justify-around mr-4 px-2 py-3 rounded-2xl w-32 ">
+                                <div style="background: #2B64F526; "
+                                    class="flex items-center justify-around mr-4 px-2 py-3 rounded-2xl w-32 ">
                                     <img src="./../../assets/feed/pill.png ">
                                     <h3 class="font-bold text-sm " style="color: #08A647; ">Health</h3>
                                 </div>
                             </div>
                         </div>
-                        <div id="post" class="bg-white border border-blue-normal cursor-pointer flex items-center mt-6 px-4 py-2 rounded-2xl ">
+                        <div id="post"
+                            class="bg-white border border-blue-normal cursor-pointer flex items-center mt-6 px-4 py-2 rounded-2xl ">
                             <img src="./../../assets/feed/Profile_image.png ">
                             <p class="font-normal ml-4 text-blue-normal text-sm ">Partager un post...</p>
                         </div>
@@ -119,13 +133,17 @@
                                         <p class="text-gray-400 text-xs ">24s ago</p>
                                     </div>
                                 </div>
-                                <p class="font-normal mt-4 text-gray-600 text-sm ">Il a survécu non seulement à cinq siècles, mais aussi au saut dans la composition électronique.</p>
+                                <p class="font-normal mt-4 text-gray-600 text-sm ">Il a survécu non seulement à cinq
+                                    siècles, mais aussi au saut dans la composition électronique.</p>
                                 <div class="flex items-center justify-between w-60 mt-4 ">
                                     <div class="flex text-gray-400 items-center like  cursor-pointer ">
                                         <svg class="" width="24 " height="24 " fill="none " viewBox="0 0 24 24 ">
-                                            <path fill-rule="evenodd " stroke="currentColor " stroke-linecap="round " stroke-linejoin="round " stroke-width="1.5 " d="M11.995 7.23319C10.5455 5.60999 8.12832 5.17335 6.31215 6.65972C4.49599 8.14609 4.2403
-        10.6312 5.66654 12.3892L11.995 18.25L18.3235 12.3892C19.7498 10.6312 19.5253 8.13046 17.6779 6.65972C15.8305 5.18899 13.4446 5.60999 11.995 7.23319Z " clip-rule="evenodd "/>
-                                            </svg>
+                                            <path fill-rule="evenodd " stroke="currentColor " stroke-linecap="round "
+                                                stroke-linejoin="round " stroke-width="1.5 "
+                                                d="M11.995 7.23319C10.5455 5.60999 8.12832 5.17335 6.31215 6.65972C4.49599 8.14609 4.2403
+        10.6312 5.66654 12.3892L11.995 18.25L18.3235 12.3892C19.7498 10.6312 19.5253 8.13046 17.6779 6.65972C15.8305 5.18899 13.4446 5.60999 11.995 7.23319Z "
+                                                clip-rule="evenodd " />
+                                        </svg>
                                         <p class="ml-2 text-xs ">Like</p>
                                     </div>
                                     <div class="flex items-center cursor-pointer ">
@@ -146,9 +164,12 @@
                                 <div class="flex items-center justify-between mt-4 w-60 ">
                                     <div class="flex items-center cursor-pointer text-gray-400 like">
                                         <svg class=" " width="24 " height="24 " fill="none " viewBox="0 0 24 24 ">
-                                            <path fill-rule="evenodd " stroke="currentColor " stroke-linecap="round " stroke-linejoin="round " stroke-width="1.5 " d="M11.995 7.23319C10.5455 5.60999 8.12832 5.17335 6.31215 6.65972C4.49599 8.14609 4.2403
-        10.6312 5.66654 12.3892L11.995 18.25L18.3235 12.3892C19.7498 10.6312 19.5253 8.13046 17.6779 6.65972C15.8305 5.18899 13.4446 5.60999 11.995 7.23319Z " clip-rule="evenodd "/>
-                                            </svg>
+                                            <path fill-rule="evenodd " stroke="currentColor " stroke-linecap="round "
+                                                stroke-linejoin="round " stroke-width="1.5 "
+                                                d="M11.995 7.23319C10.5455 5.60999 8.12832 5.17335 6.31215 6.65972C4.49599 8.14609 4.2403
+        10.6312 5.66654 12.3892L11.995 18.25L18.3235 12.3892C19.7498 10.6312 19.5253 8.13046 17.6779 6.65972C15.8305 5.18899 13.4446 5.60999 11.995 7.23319Z "
+                                                clip-rule="evenodd " />
+                                        </svg>
                                         <p class="ml-2  text-xs ">Like</p>
                                     </div>
                                     <div class="flex items-center cursor-pointer ">
@@ -169,9 +190,12 @@
                                 <div class="flex items-center justify-between mt-4 w-60 ">
                                     <div class="flex items-center cursor-pointer text-gray-400 like ">
                                         <svg class="" width="24 " height="24 " fill="none " viewBox="0 0 24 24 ">
-                                            <path fill-rule="evenodd " stroke="currentColor " stroke-linecap="round " stroke-linejoin="round " stroke-width="1.5 " d="M11.995 7.23319C10.5455 5.60999 8.12832 5.17335 6.31215 6.65972C4.49599 8.14609 4.2403
-        10.6312 5.66654 12.3892L11.995 18.25L18.3235 12.3892C19.7498 10.6312 19.5253 8.13046 17.6779 6.65972C15.8305 5.18899 13.4446 5.60999 11.995 7.23319Z " clip-rule="evenodd "/>
-                                            </svg>
+                                            <path fill-rule="evenodd " stroke="currentColor " stroke-linecap="round "
+                                                stroke-linejoin="round " stroke-width="1.5 "
+                                                d="M11.995 7.23319C10.5455 5.60999 8.12832 5.17335 6.31215 6.65972C4.49599 8.14609 4.2403
+        10.6312 5.66654 12.3892L11.995 18.25L18.3235 12.3892C19.7498 10.6312 19.5253 8.13046 17.6779 6.65972C15.8305 5.18899 13.4446 5.60999 11.995 7.23319Z "
+                                                clip-rule="evenodd " />
+                                        </svg>
                                         <p class="ml-2 text-xs ">Like</p>
                                     </div>
                                     <div class="flex items-center cursor-pointer ">
@@ -192,9 +216,12 @@
                                 <div class="flex items-center justify-between mt-4 w-60 ">
                                     <div class="flex items-center cursor-pointer text-gray-400 like ">
                                         <svg class="" width="24 " height="24 " fill="none " viewBox="0 0 24 24 ">
-                                            <path fill-rule="evenodd " stroke="currentColor " stroke-linecap="round " stroke-linejoin="round " stroke-width="1.5 " d="M11.995 7.23319C10.5455 5.60999 8.12832 5.17335 6.31215 6.65972C4.49599 8.14609 4.2403
-        10.6312 5.66654 12.3892L11.995 18.25L18.3235 12.3892C19.7498 10.6312 19.5253 8.13046 17.6779 6.65972C15.8305 5.18899 13.4446 5.60999 11.995 7.23319Z " clip-rule="evenodd "/>
-                                            </svg>
+                                            <path fill-rule="evenodd " stroke="currentColor " stroke-linecap="round "
+                                                stroke-linejoin="round " stroke-width="1.5 "
+                                                d="M11.995 7.23319C10.5455 5.60999 8.12832 5.17335 6.31215 6.65972C4.49599 8.14609 4.2403
+        10.6312 5.66654 12.3892L11.995 18.25L18.3235 12.3892C19.7498 10.6312 19.5253 8.13046 17.6779 6.65972C15.8305 5.18899 13.4446 5.60999 11.995 7.23319Z "
+                                                clip-rule="evenodd " />
+                                        </svg>
                                         <p class="ml-2 text-xs ">Like</p>
                                     </div>
                                     <div class="flex items-center cursor-pointer ">
@@ -215,9 +242,12 @@
                                 <div class="flex items-center justify-between mt-4 w-60 ">
                                     <div class="flex items-center cursor-pointer text-gray-400 like ">
                                         <svg class="" width="24 " height="24 " fill="none " viewBox="0 0 24 24 ">
-                                            <path fill-rule="evenodd " stroke="currentColor " stroke-linecap="round " stroke-linejoin="round " stroke-width="1.5 " d="M11.995 7.23319C10.5455 5.60999 8.12832 5.17335 6.31215 6.65972C4.49599 8.14609 4.2403
-        10.6312 5.66654 12.3892L11.995 18.25L18.3235 12.3892C19.7498 10.6312 19.5253 8.13046 17.6779 6.65972C15.8305 5.18899 13.4446 5.60999 11.995 7.23319Z " clip-rule="evenodd "/>
-                                            </svg>
+                                            <path fill-rule="evenodd " stroke="currentColor " stroke-linecap="round "
+                                                stroke-linejoin="round " stroke-width="1.5 "
+                                                d="M11.995 7.23319C10.5455 5.60999 8.12832 5.17335 6.31215 6.65972C4.49599 8.14609 4.2403
+        10.6312 5.66654 12.3892L11.995 18.25L18.3235 12.3892C19.7498 10.6312 19.5253 8.13046 17.6779 6.65972C15.8305 5.18899 13.4446 5.60999 11.995 7.23319Z "
+                                                clip-rule="evenodd " />
+                                        </svg>
                                         <p class="ml-2 text-xs ">Like</p>
                                     </div>
                                     <div class="flex items-center cursor-pointer ">
@@ -229,12 +259,14 @@
                         </div>
                     </div>
                     <div id="news" class="mb-20 hidden ">
-                        <div class="swiper swiper-initialized swiper-horizontal swiper-pointer-events " style="height: 330px; ">
+                        <div class="swiper swiper-initialized swiper-horizontal swiper-pointer-events "
+                            style="height: 330px; ">
                             <div class="swiper-wrapper ">
                                 <div class="swiper-slide mx-auto flex justify-center relative ">
                                     <div class="bg-white h-60 mt-7 w-80 rounded-2xl ">
                                         <img src="./../../assets/feed/bitcoin full.png " alt=" " class="w-full ">
-                                        <h3 class="font-bold m-4 ">BTC devait rester en dessous de 50 000 $ pendant un certain temps...
+                                        <h3 class="font-bold m-4 ">BTC devait rester en dessous de 50 000 $ pendant un
+                                            certain temps...
                                         </h3>
                                         <div class="flex justify-between mt-2 pb-4 px-4 ">
                                             <p class="font-semibold text-blue-normal text-sm ">TrustWallet News</p>
@@ -245,7 +277,8 @@
                                 <div class="swiper-slide mx-auto flex justify-center relative ">
                                     <div class="bg-white h-60 mt-7 w-80 rounded-2xl ">
                                         <img src="./../../assets/feed/bitcoin full.png " alt=" " class="w-full ">
-                                        <h3 class="font-bold m-4 ">BTC devait rester en dessous de 50 000 $ pendant un certain temps...
+                                        <h3 class="font-bold m-4 ">BTC devait rester en dessous de 50 000 $ pendant un
+                                            certain temps...
                                         </h3>
                                         <div class="flex justify-between mt-2 pb-4 px-4 ">
                                             <p class="font-semibold text-blue-normal text-sm ">TrustWallet News</p>
@@ -256,7 +289,8 @@
                                 <div class="swiper-slide mx-auto flex justify-center relative ">
                                     <div class="bg-white h-60 mt-7 w-80 rounded-2xl ">
                                         <img src="./../../assets/feed/bitcoin full.png " alt=" " class="w-full ">
-                                        <h3 class="font-bold m-4 ">BTC devait rester en dessous de 50 000 $ pendant un certain temps...
+                                        <h3 class="font-bold m-4 ">BTC devait rester en dessous de 50 000 $ pendant un
+                                            certain temps...
                                         </h3>
                                         <div class="flex justify-between mt-2 pb-4 px-4 ">
                                             <p class="font-semibold text-blue-normal text-sm ">TrustWallet News</p>
@@ -267,7 +301,8 @@
                                 <div class="swiper-slide mx-auto flex justify-center relative ">
                                     <div class="bg-white h-60 mt-7 w-80 rounded-2xl ">
                                         <img src="./../../assets/feed/bitcoin full.png " alt=" " class="w-full ">
-                                        <h3 class="font-bold m-4 ">BTC devait rester en dessous de 50 000 $ pendant un certain temps...
+                                        <h3 class="font-bold m-4 ">BTC devait rester en dessous de 50 000 $ pendant un
+                                            certain temps...
                                         </h3>
                                         <div class="flex justify-between mt-2 pb-4 px-4 ">
                                             <p class="font-semibold text-blue-normal text-sm ">TrustWallet News</p>
@@ -278,7 +313,8 @@
                                 <div class="swiper-slide mx-auto flex justify-center relative ">
                                     <div class="bg-white h-60 mt-7 w-80 rounded-2xl ">
                                         <img src="./../../assets/feed/bitcoin full.png " alt=" " class="w-full ">
-                                        <h3 class="font-bold m-4 ">BTC devait rester en dessous de 50 000 $ pendant un certain temps...
+                                        <h3 class="font-bold m-4 ">BTC devait rester en dessous de 50 000 $ pendant un
+                                            certain temps...
                                         </h3>
                                         <div class="flex justify-between mt-2 pb-4 px-4 ">
                                             <p class="font-semibold text-blue-normal text-sm ">TrustWallet News</p>
@@ -302,7 +338,8 @@
                         <div class="mt-4 bg-white flex items-center p-4 rounded-2xl ">
                             <img src="./../../assets/feed/article.png ">
                             <div class="ml-4 ">
-                                <h3 class="font-semibold text-sm ">La Banque d'Angleterre qualifie Apple de «&nbsp;sans valeur&nbsp;» comme l'inflation britannique...</h3>
+                                <h3 class="font-semibold text-sm ">La Banque d'Angleterre qualifie Apple de «&nbsp;sans
+                                    valeur&nbsp;» comme l'inflation britannique...</h3>
                                 <div class="flex justify-between mt-2 ">
                                     <p class="font-semibold text-blue-normal text-xs ">Coingraph</p>
                                     <p class="text-gray-500 text-xs ">9h</p>
@@ -312,7 +349,8 @@
                         <div class="mt-4 bg-white flex items-center p-4 rounded-2xl ">
                             <img src="./../../assets/feed/man.png ">
                             <div class="ml-4 ">
-                                <h3 class="font-semibold text-sm ">DOGE developer mints first-ever NFT on the Dogecoin blockchain
+                                <h3 class="font-semibold text-sm ">DOGE developer mints first-ever NFT on the Dogecoin
+                                    blockchain
                                 </h3>
                                 <div class="flex justify-between mt-2 ">
                                     <p class="font-semibold text-blue-normal text-xs ">Coingraph</p>
@@ -339,13 +377,16 @@
                         <div class="flex justify-center mt-6 ">
                             <button class="bg-blue-normal font-bold py-3 rounded-full text-sm w-1/2 ">Ajouter de
                                 l’argent</button>
-                            <button class="bg-white font-bold ml-3 py-2 rounded-full text-blue-normal text-sm w-1/2 ">Retirer</button>
+                            <button
+                                class="bg-white font-bold ml-3 py-2 rounded-full text-blue-normal text-sm w-1/2 ">Retirer</button>
                         </div>
                         <div class="flex items-center justify-between mt-6 ">
                             <div class="flex items-center">
                                 <p class=" font-semibold mr-3 ">Liquidités</p>
-                                <button data-tooltip-target="tooltip-click" data-tooltip-trigger="click" type="button"><img src="./../../assets/feed/information 1.png " class=" "></button>
-                                <div id="tooltip-click" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700 ">
+                                <button data-tooltip-target="tooltip-click" data-tooltip-trigger="click"
+                                    type="button"><img src="./../../assets/feed/information 1.png " class=" "></button>
+                                <div id="tooltip-click" role="tooltip"
+                                    class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700 ">
                                     Lorem ipsum dolor sit.
                                     <div class="tooltip-arrow" data-popper-arrow></div>
                                 </div>
@@ -359,15 +400,20 @@
                             <p class="font-bold ">2,500 €</p>
                         </form>
                     </div>
-                    <div id="upScroll" class="UpScroll bg-light mt-24 pb-4 px-4 relative rounded-t-3xl z-30 overflow-hidden ">
+                    <div id="upScroll"
+                        class="UpScroll bg-light mt-24 pb-4 px-4 relative rounded-t-3xl z-30 overflow-hidden ">
                         <div class="bg-light py-6 sticky top-0 w-full ">
                             <div class="bg-white h-2 mx-auto w-20 "></div>
                             <div class="bg-white flex items-center justify-around mt-4 p-2 rounded-full text-black ">
-                                <button id="tousBtn" class="font-bold hover:bg-blue-normal hover:text-white px-4 py-2 rounded-full bg-blue-normal text-white ">Tous</button>
-                                <button class="tabsBtn font-bold hover:bg-blue-normal hover:text-white px-4 py-2 rounded-full text-gray-600 ">Stocks</button>
-                                <button class="tabsBtn font-bold hover:bg-blue-normal hover:text-white px-4 py-2 rounded-full text-gray-600 ">Crypto</button>
-                                <button id="attenteBtn" class="font-bold hover:bg-blue-normal hover:text-white px-2 py-2 rounded-full ">En
-                                attente</button>
+                                <button id="tousBtn"
+                                    class="font-bold hover:bg-blue-normal hover:text-white px-4 py-2 rounded-full bg-blue-normal text-white ">Tous</button>
+                                <button
+                                    class="tabsBtn font-bold hover:bg-blue-normal hover:text-white px-4 py-2 rounded-full text-gray-600 ">Stocks</button>
+                                <button
+                                    class="tabsBtn font-bold hover:bg-blue-normal hover:text-white px-4 py-2 rounded-full text-gray-600 ">Crypto</button>
+                                <button id="attenteBtn"
+                                    class="font-bold hover:bg-blue-normal hover:text-white px-2 py-2 rounded-full ">En
+                                    attente</button>
                             </div>
                         </div>
                         <div id="tousTab" class="pb-16 bg-light ">
@@ -493,13 +539,16 @@
                         <div id="attenteTab" class="hidden ">
                             <div class="flex items-center justify-between mt-6 ">
                                 <p class="font-semibold text-black ">En attente</p>
-                                <button data-tooltip-target="tooltip-click " data-tooltip-trigger="click " type="button "><img src="./../../assets/feed/information 1.png " class=" "></button>
-                                <div id="tooltip-click " role="tooltip " class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700 ">
+                                <button data-tooltip-target="tooltip-click " data-tooltip-trigger="click "
+                                    type="button "><img src="./../../assets/feed/information 1.png " class=" "></button>
+                                <div id="tooltip-click " role="tooltip "
+                                    class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700 ">
                                     Lorem ipsum dolor sit.
                                     <div class="tooltip-arrow " data-popper-arrow></div>
                                 </div>
                             </div>
-                            <div class="flex items-center justify-between mt-6 rounded-3xl p-4 bg-white text-black " style="filter: drop-shadow(0px 0px 20px rgba(17, 20, 58, 0.15)); ">
+                            <div class="flex items-center justify-between mt-6 rounded-3xl p-4 bg-white text-black "
+                                style="filter: drop-shadow(0px 0px 20px rgba(17, 20, 58, 0.15)); ">
                                 <div class="flex items-center ">
                                     <div><img src="./../../assets/feed/apple.png "></div>
                                     <div class="ml-4 ">
@@ -518,12 +567,15 @@
             <!-- PROFIL -->
             <div id="profil" class="-mt-4 bg-blue-dark ss-page hidden text-white ">
                 <div class="mt-16 ">
-                    <div class="border-2 border-blue-normal flex h-28 items-center justify-center mx-auto py-2 rounded-full w-28 ">
+                    <div
+                        class="border-2 border-blue-normal flex h-28 items-center justify-center mx-auto py-2 rounded-full w-28 ">
                         <img src="./../../assets/feed/PROFILE_IMG.png " alt=" ">
                     </div>
-                    <button id="personalInfBtn" class="-mt-10 absolute bg-white ml-52 p-2 rounded-full "><img src="./../../assets/feed/edit.png " alt=" "></button>
+                    <button id="personalInfBtn" class="-mt-10 absolute bg-white ml-52 p-2 rounded-full "><img
+                            src="./../../assets/feed/edit.png " alt=" "></button>
                     <h3 class="font-extrabold mt-2 text-center ">Sam GAMEGIE</h3>
-                    <p class="mt-2 mx-auto text-sm w-56 text-center ">C'est un fait établi depuis longtemps qu'un lecteur sera distrait.
+                    <p class="mt-2 mx-auto text-sm w-56 text-center ">C'est un fait établi depuis longtemps qu'un
+                        lecteur sera distrait.
                     </p>
                     <div class="flex items-center justify-between mt-4 px-4 ">
                         <div class="flex flex-col items-center cursor-pointer ">
@@ -543,8 +595,10 @@
                 </div>
                 <div class="bg-light mb-16 mt-16 p-4 relative rounded-t-3xl z-40 ">
                     <div class="bg-white flex items-center justify-around mt-4 p-2 rounded-full text-black ">
-                        <button id="tousBtn " class="font-bold w-1/2 text-gray-500 px-4 py-2 rounded-full ">Publications</button>
-                        <button class="tabsBtn font-bold w-1/2 px-4 py-2 rounded-full bg-blue-normal text-white ">Favoris</button>
+                        <button id="tousBtn "
+                            class="font-bold w-1/2 text-gray-500 px-4 py-2 rounded-full ">Publications</button>
+                        <button
+                            class="tabsBtn font-bold w-1/2 px-4 py-2 rounded-full bg-blue-normal text-white ">Favoris</button>
                     </div>
                     <div>
                         <div class="flex items-center justify-between mt-6 rounded-3xl p-4 bg-white text-black ">
@@ -609,7 +663,8 @@
                         <button type="submit " class="-mr-10 relative ">
                             <img src="./../../assets/feed/search (1) 1.png " class=" ">
                         </button>
-                        <input type="text " id="rechercherValue " placeholder="Rechercher " class="outline-none p-4 px-10 rounded-full text-black w-full">
+                        <input type="text " id="rechercherValue " placeholder="Rechercher "
+                            class="outline-none p-4 px-10 rounded-full text-black w-full">
                     </form>
                     <div class="bg-light p-4 rounded-t-3xl ">
                         <div class="bg-white p-2 rounded-full flex  text-black">
@@ -746,16 +801,22 @@
                 <div class="flex items-center mt-4 ">
                     <form id="postForm " class="flex items-center ">
                         <img src="./../../assets/feed/Profile_image.png ">
-                        <textarea placeholder=" Écrire... " required id="postInput " class="color-normal outline-none ml-4 " rows="1 "></textarea>
+                        <textarea placeholder=" Écrire... " required id="postInput "
+                            class="color-normal outline-none ml-4 " rows="1 "></textarea>
                     </form>
                 </div>
-                <div class="-ml-4 border border-light bottom-0 fixed flex items-center justify-around max-w-mobile py-2 w-full ">
+                <div
+                    class="-ml-4 border border-light bottom-0 fixed flex items-center justify-around max-w-mobile py-2 w-full ">
                     <div class="flex ">
-                        <div class="bg-light mr-2 p-2 px-3 cursor-pointer rounded-full "><img src="./../../assets/feed/dollar.png " alt=" "></div>
-                        <div class="bg-light mr-2 p-2 px-2 cursor-pointer rounded-full "><img src="./../../assets/feed/@.png " alt=" "></div>
-                        <div class="bg-light p-2 px-2 cursor-pointer rounded-full "><img src="./../../assets/feed/pictures.png " alt=" "></div>
+                        <div class="bg-light mr-2 p-2 px-3 cursor-pointer rounded-full "><img
+                                src="./../../assets/feed/dollar.png " alt=" "></div>
+                        <div class="bg-light mr-2 p-2 px-2 cursor-pointer rounded-full "><img
+                                src="./../../assets/feed/@.png " alt=" "></div>
+                        <div class="bg-light p-2 px-2 cursor-pointer rounded-full "><img
+                                src="./../../assets/feed/pictures.png " alt=" "></div>
                     </div>
-                    <button id="enterPost" class="bg-gradient-to-r font-bold from-blue-darker px-8 py-2 rounded-full text-sm text-white to-blue-lighter ">Publier</button>
+                    <button id="enterPost"
+                        class="bg-gradient-to-r font-bold from-blue-darker px-8 py-2 rounded-full text-sm text-white to-blue-lighter ">Publier</button>
                 </div>
             </div>
             <!-- COMMENT PAGE -->
@@ -773,7 +834,8 @@
                             <p class="font-semibold text-gray-300 text-xs ">2 jours</p>
                         </div>
                     </div>
-                    <p class="mt-4 text-gray-600 ">Il a survécu non seulement à cinq siècles, mais aussi au saut dans la composition électronique.</p>
+                    <p class="mt-4 text-gray-600 ">Il a survécu non seulement à cinq siècles, mais aussi au saut dans la
+                        composition électronique.</p>
                 </div>
                 <hr>
                 <div class="flex items-start mt-6 ">
@@ -783,7 +845,8 @@
                             <h3 class="font-bold text-sm ">Laura MERCIER</h3>
                             <p class="font-semibold text-gray-400 text-xs ">1 jour</p>
                         </div>
-                        <p class="font-normal mt-1 text-gray-600 text-sm ">Vraiment David ? 😂 Ce n'est pas toujours cool de parier contre $APPL en bourse. Ou Clark, qu'en pensez-vous ?</p>
+                        <p class="font-normal mt-1 text-gray-600 text-sm ">Vraiment David ? 😂 Ce n'est pas toujours
+                            cool de parier contre $APPL en bourse. Ou Clark, qu'en pensez-vous ?</p>
                     </div>
                 </div>
                 <div class="flex items-start mt-6 ">
@@ -793,26 +856,38 @@
                             <h3 class="font-bold text-sm ">Clark Hassan</h3>
                             <p class="font-semibold text-gray-400 text-xs ">9h</p>
                         </div>
-                        <p class="font-normal mt-1 text-gray-600 text-sm ">De nombreux packages de publications assistées par ordinateur et éditeurs de pages Web utilisent désormais Lorem Ipsum comme texte de modèle par défaut
+                        <p class="font-normal mt-1 text-gray-600 text-sm ">De nombreux packages de publications
+                            assistées par ordinateur et éditeurs de pages Web utilisent désormais Lorem Ipsum comme
+                            texte de modèle par défaut
                         </p>
                     </div>
                 </div>
-                <div class="-ml-4 border border-light bottom-0 fixed flex items-center justify-around max-w-mobile py-2 w-full ">
+                <div
+                    class="-ml-4 border border-light bottom-0 fixed flex items-center justify-around max-w-mobile py-2 w-full ">
                     <div class="p-2 ">
-                        <div id="dropdownBtn" class="bg-light mr-2 p-2 hidden px-2 cursor-pointer rounded-full "><img src="./../../assets/feed/plus.png " alt=" "></div>
+                        <div id="dropdownBtn" class="bg-light mr-2 p-2 hidden px-2 cursor-pointer rounded-full "><img
+                                src="./../../assets/feed/plus.png " alt=" "></div>
                     </div>
                     <div id="searchOthers" class="p-2 rounded-full flex ">
-                        <div class="bg-light mr-2 p-2 px-3 cursor-pointer rounded-full "><img src="./../../assets/feed/dollar.png " alt=" "></div>
-                        <div class="bg-light mr-2 p-2 px-2 cursor-pointer rounded-full "><img src="./../../assets/feed/@.png " alt=" "></div>
-                        <div class="bg-light p-2 px-2 cursor-pointer rounded-full "><img src="./../../assets/feed/pictures.png " alt=" "></div>
+                        <div class="bg-light mr-2 p-2 px-3 cursor-pointer rounded-full "><img
+                                src="./../../assets/feed/dollar.png " alt=" "></div>
+                        <div class="bg-light mr-2 p-2 px-2 cursor-pointer rounded-full "><img
+                                src="./../../assets/feed/@.png " alt=" "></div>
+                        <div class="bg-light p-2 px-2 cursor-pointer rounded-full "><img
+                                src="./../../assets/feed/pictures.png " alt=" "></div>
                     </div>
-                    <div id="commentDropdown" class="p-2 rounded-full hidden absolute bg-white left-0 -mt-40 " style="box-shadow: 0px 0px 20px rgba(17, 20, 58, 0.15); ">
-                        <div class="bg-light p-2 px-3 cursor-pointer rounded-full "><img src="./../../assets/feed/dollar.png " alt=" "></div>
-                        <div class="bg-light mt-2 p-2 px-2 cursor-pointer rounded-full "><img src="./../../assets/feed/@.png " alt=" "></div>
-                        <div class="bg-light mt-2 p-2 px-2 cursor-pointer rounded-full "><img src="./../../assets/feed/pictures.png " alt=" "></div>
+                    <div id="commentDropdown" class="p-2 rounded-full hidden absolute bg-white left-0 -mt-40 "
+                        style="box-shadow: 0px 0px 20px rgba(17, 20, 58, 0.15); ">
+                        <div class="bg-light p-2 px-3 cursor-pointer rounded-full "><img
+                                src="./../../assets/feed/dollar.png " alt=" "></div>
+                        <div class="bg-light mt-2 p-2 px-2 cursor-pointer rounded-full "><img
+                                src="./../../assets/feed/@.png " alt=" "></div>
+                        <div class="bg-light mt-2 p-2 px-2 cursor-pointer rounded-full "><img
+                                src="./../../assets/feed/pictures.png " alt=" "></div>
                     </div>
                     <form id="commentForm" class="bg-light flex items-center px-4 py-1 rounded-full ">
-                        <input type="text" id="commentSearch" placeholder="Écrire... " class="bg-transparent color-normal mr-2 outline-none ">
+                        <input type="text" id="commentSearch" placeholder="Écrire... "
+                            class="bg-transparent color-normal mr-2 outline-none ">
                         <button type="send"><img src="./../../assets/feed/send (1) 1.png " alt=" "></button>
                     </form>
                 </div>
@@ -828,7 +903,8 @@
                         <button type="submit " class="-mr-10 relative ">
                             <img src="./../../assets/feed/search (1) 1.png " class=" ">
                         </button>
-                        <input type="text " placeholder="Rechercher " class="p-4 px-10 outline-none rounded-full text-black w-full ">
+                        <input type="text " placeholder="Rechercher "
+                            class="p-4 px-10 outline-none rounded-full text-black w-full ">
                     </form>
                     <div class="flex items-center justify-between mt-8 ">
                         <div class="flex items-center ">
@@ -878,21 +954,27 @@
                     <button id="personalPrevBtn" class="mr-4 "><img src="./../../assets/Mask.png "></button>
                     <h3 class="font-semibold text-xl ">Informations personnelles</h3>
                 </div>
-                <div class="border-2 border-blue-normal flex h-28 items-center justify-center mx-auto py-2 mt-6 rounded-full w-28 ">
+                <div
+                    class="border-2 border-blue-normal flex h-28 items-center justify-center mx-auto py-2 mt-6 rounded-full w-28 ">
                     <img src="./../../assets/feed/PROFILE_IMG.png " alt=" ">
                 </div>
                 <button class="-mt-10 absolute bg-blue-normal ml-52 p-1 rounded-full ">
                     <label for="file-input ">
-                        <img src="./../../assets/feed/camera 1.png "/>
-                      </label>
-                      <input class="hidden " id="file-input" type="file " />
+                        <img src="./../../assets/feed/camera 1.png " />
+                    </label>
+                    <input class="hidden " id="file-input" type="file " />
                 </button>
                 <h3 class="font-semibold mt-2 text-center ">Sam Gamegie</h3>
-                <input type="text " value="Samy " class="personalInfInput outline-none bg-light mt-6 px-6 py-4 text-gray-500 rounded-2xl w-full ">
-                <input type="text " value="Gamegie " class="personalInfInput outline-none bg-light mt-2 px-6 py-4 text-gray-500 rounded-2xl w-full ">
-                <input type="text " value="s.gamegie@gmail.com " class="personalInfInput outline-none bg-light mt-2 text-gray-500 px-6 py-4 rounded-2xl w-full ">
-                <textarea rows="6 " class="w-100 w-full rounded-2xl mt-2 personalInfInput outline-none text-gray-500 bg-light py-4 px-5 ">C'est un fait établi de longue date qu'un lecteur sera distrait par le contenu lisible d'une page lorsqu'il regarde sa mise en page.</textarea>
-                <button class="bg-gradient-to-r font-semibold from-blue-darker mt-12 py-3 rounded-full text-white to-blue-lighter w-full ">Sauvegarder</button>
+                <input type="text " value="Samy "
+                    class="personalInfInput outline-none bg-light mt-6 px-6 py-4 text-gray-500 rounded-2xl w-full ">
+                <input type="text " value="Gamegie "
+                    class="personalInfInput outline-none bg-light mt-2 px-6 py-4 text-gray-500 rounded-2xl w-full ">
+                <input type="text " value="s.gamegie@gmail.com "
+                    class="personalInfInput outline-none bg-light mt-2 text-gray-500 px-6 py-4 rounded-2xl w-full ">
+                <textarea rows="6 "
+                    class="w-100 w-full rounded-2xl mt-2 personalInfInput outline-none text-gray-500 bg-light py-4 px-5 ">C'est un fait établi de longue date qu'un lecteur sera distrait par le contenu lisible d'une page lorsqu'il regarde sa mise en page.</textarea>
+                <button
+                    class="bg-gradient-to-r font-semibold from-blue-darker mt-12 py-3 rounded-full text-white to-blue-lighter w-full ">Sauvegarder</button>
             </div>
             <!-- ACADEMY -->
             <div id="academy" class="bg-blue-dark ss-page hidden ">
@@ -900,7 +982,9 @@
                 <div class="bg-light p-4 rounded-t-3xl ">
                     <h3 class="font-bold ">Bitcoin 101 - Whitepaper and TA</h3>
                     <p class="font-normal mt-2 text-sm
-                                ">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less Lorep ispsum iothe uth...<span class="text-blue-normal cursor-pointer "
+                                ">It is a long established fact that a reader will be distracted by the readable
+                        content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                        more-or-less Lorep ispsum iothe uth...<span class="text-blue-normal cursor-pointer "
                             id="academyNextPageBtn"> Read more</span></p>
                     <div class="flex justify-between mt-4 ">
                         <div class="bg-white flex flex-col rounded-3xl w-44 ">
@@ -920,11 +1004,15 @@
                     </div>
                     <h3 class="font-semibold mt-8 ">Introduction to the financial market</h3>
                     <p class="font-normal mt-2 text-sm
-                                ">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less Lorep ispsum iothe uth... <span class="text-blue-normal cursor-pointer ">Read more</span></p>
+                                ">It is a long established fact that a reader will be distracted by the readable
+                        content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                        more-or-less Lorep ispsum iothe uth... <span class="text-blue-normal cursor-pointer ">Read
+                            more</span></p>
                     <div class="overflow-auto w-auto ">
                         <div class="flex justify-between mt-4 " style="width: 560px; ">
                             <div class="bg-white flex flex-col rounded-3xl w-44 ">
-                                <div style="background-image: url(./../../assets/feed/bitcoin3.png);" class="rounded-t-3xl bg-no-repeat bg-cover bg-center h-16"></div>
+                                <div style="background-image: url(./../../assets/feed/bitcoin3.png);"
+                                    class="rounded-t-3xl bg-no-repeat bg-cover bg-center h-16"></div>
                                 <div class="p-4 ">
                                     <h4 class="font-semibold text-sm ">Why trade Bitcoin in the market...</h4>
                                     <div class="flex items-end justify-between ">
@@ -934,7 +1022,8 @@
                                 </div>
                             </div>
                             <div class="bg-white flex flex-col rounded-3xl w-44 ">
-                                <div style="background-image: url(./../../assets/feed/bitcoin4.png);" class="rounded-t-3xl bg-no-repeat bg-cover bg-center h-16"></div>
+                                <div style="background-image: url(./../../assets/feed/bitcoin4.png);"
+                                    class="rounded-t-3xl bg-no-repeat bg-cover bg-center h-16"></div>
                                 <div class="p-4 ">
                                     <h4 class="font-semibold text-sm ">Why trade Bitcoin in the market...</h4>
                                     <div class="flex items-end justify-between ">
@@ -944,7 +1033,8 @@
                                 </div>
                             </div>
                             <div class="bg-white flex flex-col rounded-3xl w-44 ">
-                                <div style="background-image: url(./../../assets/feed/bitcoin5.png);" class="rounded-t-3xl bg-no-repeat bg-cover bg-center h-16"></div>
+                                <div style="background-image: url(./../../assets/feed/bitcoin5.png);"
+                                    class="rounded-t-3xl bg-no-repeat bg-cover bg-center h-16"></div>
                                 <div class="p-4 ">
                                     <h4 class="font-semibold text-sm ">Why trade Bitcoin in the market...</h4>
                                     <div class="flex items-end justify-between ">
@@ -959,7 +1049,8 @@
             </div>
             <!-- LESSON -->
             <div id="lessonPage" class="bg-white max-w-mobile hidden mx-auto ss-page h-screen">
-                <video src="./../../assets/feed/Git va GitHub boshlang'ich Programmistlar uchun.mp4" class="h-full"></video>
+                <video src="./../../assets/feed/Git va GitHub boshlang'ich Programmistlar uchun.mp4"
+                    class="h-full"></video>
                 <div class="absolute bg-cover bg-no-repeat h-screen max-w-mobile p-4 top-0 w-full">
                     <div class="flex justify-around">
                         <div class="h-1 w-10 bg-white rounded-full">
@@ -973,9 +1064,11 @@
                     <button id="playVideo" class="flex h-full items-center justify-center w-full">
                         <img src="./../../assets/feed/video_play.png" class="w-4">
                     </button>
-                    <button id="lessonNextBtn" class="-mt-16 absolute bg-blue-normal flex items-center px-6 py-3 right-4 rounded-full text-sm text-white">
+                    <button id="lessonNextBtn"
+                        class="-mt-16 absolute bg-blue-normal flex items-center px-6 py-3 right-4 rounded-full text-sm text-white">
                         <p class="mr-4">Suivant</p>
-                        <img src="./../../assets/feed/arrow.png"></button>
+                        <img src="./../../assets/feed/arrow.png">
+                    </button>
                     <div id="videoTime" class="-ml-4 absolute bg-blue-normal bottom-0 h-1 max-w-mobile w-full"></div>
                 </div>
             </div>
@@ -998,21 +1091,31 @@
                         </div>
                         <div id="closedPage">
                             <img src="./../../assets/feed/bitcoin_trading.png" class="mt-6 mx-auto">
-                            <p class="font-normal mt-6 text-gray-300 text-sm">Imagine that one day you decide to place all your savings under your mattress. Yes you forget this money for a year, it does will bring you nothing. You will find exactly the same amount. Now imagine that you have instead used
-                                that money to buy assets financial, such as stocks or raw materials. Instead of being at a standstill, your money would have benefited from a potential much greater growth because these actions or raw materials are likely
-                                to gain value. But conversely, they can also lose value. To invest in the financial markets it is therefore important to choose assets likely to evolve in the direction of your anticipation and then finding the ideal balance
-                                between risk of loss and potential for gain. As we will see, trading can, if it is applied in a prudent and reasoned manner earn more than the interest rates charged by the banks</p>
+                            <p class="font-normal mt-6 text-gray-300 text-sm">Imagine that one day you decide to place
+                                all your savings under your mattress. Yes you forget this money for a year, it does will
+                                bring you nothing. You will find exactly the same amount. Now imagine that you have
+                                instead used
+                                that money to buy assets financial, such as stocks or raw materials. Instead of being at
+                                a standstill, your money would have benefited from a potential much greater growth
+                                because these actions or raw materials are likely
+                                to gain value. But conversely, they can also lose value. To invest in the financial
+                                markets it is therefore important to choose assets likely to evolve in the direction of
+                                your anticipation and then finding the ideal balance
+                                between risk of loss and potential for gain. As we will see, trading can, if it is
+                                applied in a prudent and reasoned manner earn more than the interest rates charged by
+                                the banks</p>
                         </div>
                     </div>
                     <div class="bg-blue-dark bottom-0 flex justify-between p-4 static">
                         <button id="singleLessonPrevPageBtn" class=" flex items-center text-sm ">
-                        <img src="./../../assets/feed/chevron-left.png ">
-                        <p class="ml-4 ">Précédent</p>
-                    </button>
-                        <button id="singleLessonNextPageBtn" class="bg-blue-normal flex font-semibold items-center px-6 py-3 rounded-full text-sm ">
-                        <p>Suivant</p>
-                        <img src="./../../assets/feed/arrow.png " class="ml-4 ">
-                    </button>
+                            <img src="./../../assets/feed/chevron-left.png ">
+                            <p class="ml-4 ">Précédent</p>
+                        </button>
+                        <button id="singleLessonNextPageBtn"
+                            class="bg-blue-normal flex font-semibold items-center px-6 py-3 rounded-full text-sm ">
+                            <p>Suivant</p>
+                            <img src="./../../assets/feed/arrow.png " class="ml-4 ">
+                        </button>
                     </div>
                 </div>
             </div>
@@ -1034,12 +1137,18 @@
                             <button id="closeBtn2"><img src="./../../assets/feed/close_white.png "></button>
                         </div>
                         <div id="closedDiv">
-                            <p class="font-normal mt-4 text-gray-300 text-sm ">What we have just described is called " invest ”. It is essentially a form long-term financial trading, which amounts to buy and hold financial assets for several months or several years.
+                            <p class="font-normal mt-4 text-gray-300 text-sm ">What we have just described is called "
+                                invest ”. It is essentially a form long-term financial trading, which amounts to buy and
+                                hold financial assets for several months or several years.
                             </p>
                             <img src="./../../assets/feed/planting_bitcoin.png" class="mt-6 mx-auto">
                             <h3 class="font-semibold mt-8 text-xl">You need invest in Bitcoin</h3>
-                            <p class="font-normal mt-4 text-gray-300 text-sm">To invest in the financial markets it is therefore important to choose assets likely to evolve in the direction of your anticipation and then finding the ideal balance between risk of loss and potential for gain. As we will
-                                see, trading can, if it is applied in a prudent and reasoned manner earn more than the interest rates charged by the banks</p>
+                            <p class="font-normal mt-4 text-gray-300 text-sm">To invest in the financial markets it is
+                                therefore important to choose assets likely to evolve in the direction of your
+                                anticipation and then finding the ideal balance between risk of loss and potential for
+                                gain. As we will
+                                see, trading can, if it is applied in a prudent and reasoned manner earn more than the
+                                interest rates charged by the banks</p>
                         </div>
                     </div>
                     <div class="flex justify-between mt-12">
@@ -1047,7 +1156,8 @@
                             <img src="./../../assets/feed/chevron-left.png">
                             <p class="ml-4">Précédent</p>
                         </button>
-                        <button id="singleLesson2NextPageBtn" class="bg-blue-normal flex font-semibold items-center px-6 py-3 rounded-full text-sm">
+                        <button id="singleLesson2NextPageBtn"
+                            class="bg-blue-normal flex font-semibold items-center px-6 py-3 rounded-full text-sm">
                             <p>Suivant</p>
                             <img src="./../../assets/feed/arrow.png" class="ml-4">
                         </button>
@@ -1058,16 +1168,21 @@
             <div id="userProfile" class="max-w-mobile mx-auto hidden ss-page bg-blue-dark">
                 <div class="bg-blue-dark p-4">
                     <button>
-            <img src="./../../assets/feed/chevron-left.png">
-        </button>
-                    <div class="border-2 border-blue-normal flex h-28 items-center justify-center mt-8 mx-auto py-2 rounded-full w-28">
+                        <img src="./../../assets/feed/chevron-left.png">
+                    </button>
+                    <div
+                        class="border-2 border-blue-normal flex h-28 items-center justify-center mt-8 mx-auto py-2 rounded-full w-28">
                         <img src="./../../assets/feed/hassan 2.png">
                     </div>
                     <h3 class="font-extrabold mt-2 text-center text-white">Clark Hassan</h3>
-                    <p class="mt-2 mx-auto text-center text-gray-300 text-sm w-56">C'est un fait établi depuis longtemps qu 'un lecteur sera distrait.</p>
+                    <p class="mt-2 mx-auto text-center text-gray-300 text-sm w-56">C'est un fait établi depuis longtemps
+                        qu 'un lecteur sera distrait.</p>
                     <div class="flex justify-around mt-4">
-                        <button class="bg-blue-normal font-bold px-4 py-2 rounded-full text-sm text-white">S’abonner</button>
-                        <button class="border border-blue-normal font-bold px-4 py-2 rounded-full text-blue-normal text-sm">Envoyer un message</button>
+                        <button
+                            class="bg-blue-normal font-bold px-4 py-2 rounded-full text-sm text-white">S’abonner</button>
+                        <button
+                            class="border border-blue-normal font-bold px-4 py-2 rounded-full text-blue-normal text-sm">Envoyer
+                            un message</button>
                     </div>
                     <div class="flex items-center justify-between mt-6 text-white">
                         <div class="flex flex-col items-center cursor-pointer">
@@ -1086,7 +1201,8 @@
                 </div>
                 <div class="bg-light rounded-t-3xl p-4">
                     <div class="bg-white flex items-center justify-around mt-4 p-2 rounded-full text-black ">
-                        <button id="tousBtn" class="font-bold w-1/ px-4  bg-blue-normal text-white  py-2 rounded-full  w-1/2">Publications</button>
+                        <button id="tousBtn"
+                            class="font-bold w-1/ px-4  bg-blue-normal text-white  py-2 rounded-full  w-1/2">Publications</button>
                         <button class="tabsBtn font-bold px-4 text-gray-500 py-2 rounded-full w-1/2">Favoris</button>
                     </div>
                     <div class="bg-white mt-4 p-4 rounded-2xl ">
@@ -1097,7 +1213,8 @@
                                 <p class="text-gray-400 text-xs ">24s ago</p>
                             </div>
                         </div>
-                        <p class="font-normal mt-4 text-gray-600 text-sm ">Il a survécu non seulement à cinq siècles, mais aussi au saut dans la composition électronique.</p>
+                        <p class="font-normal mt-4 text-gray-600 text-sm ">Il a survécu non seulement à cinq siècles,
+                            mais aussi au saut dans la composition électronique.</p>
                         <div class="flex items-center justify-between w-60 mt-4 ">
                             <div class="flex items-center cursor-pointer ">
                                 <img src="./../../assets/feed/heart (1) 1.png ">
@@ -1140,7 +1257,8 @@
                     <img src="./../../assets/feed/tick.png">
                     <div class="ml-6">
                         <h3 class="font-medium text-sm">Share your personal invitation link</h3>
-                        <p class="font-normal mt-1 text-gray-500 text-xs">Let your friends know about The Social Stocks</p>
+                        <p class="font-normal mt-1 text-gray-500 text-xs">Let your friends know about The Social Stocks
+                        </p>
                     </div>
                 </div>
                 <div class="flex items-center mt-8">
@@ -1157,7 +1275,9 @@
                         <p class="font-normal mt-1 text-gray-500 text-xs">You get your 100 € for every friend.</p>
                     </div>
                 </div>
-                <button class="bg-gradient-to-r font-semibold from-blue-darker mt-12 py-3 rounded-full text-white to-blue-lighter w-full">Invite your friends</button>
+                <button
+                    class="bg-gradient-to-r font-semibold from-blue-darker mt-12 py-3 rounded-full text-white to-blue-lighter w-full">Invite
+                    your friends</button>
                 <p class="mt-2 text-center text-xs">Terms and conditions apply</p>
             </div>
             <!-- CHAT PAGE -->
@@ -1165,14 +1285,16 @@
                 <div class="bg-blue-dark mx-auto p-4 pb-12 pt-20">
                     <form class="flex justify-around ml-2 searchForm">
                         <button type="submit " class="-mr-10 relative ">
-                        <img src="./../../assets/feed/search (1) 1.png " class=" ">
-                    </button>
-                        <input type="text " id="searchValue" placeholder="Rechercher" class="p-4 px-10 outline-none rounded-full text-black w-full ">
+                            <img src="./../../assets/feed/search (1) 1.png " class=" ">
+                        </button>
+                        <input type="text " id="searchValue" placeholder="Rechercher"
+                            class="p-4 px-10 outline-none rounded-full text-black w-full ">
                     </form>
                 </div>
                 <div class="-mt-4 bg-light p-4 rounded-t-3xl pb-20">
                     <div class="bg-white flex justify-between px-4 py-2 rounded-full">
-                        <button id="amisBtn" class="bg-blue-normal font-bold py-1 rounded-full text-white w-1/2">Amis.es</button>
+                        <button id="amisBtn"
+                            class="bg-blue-normal font-bold py-1 rounded-full text-white w-1/2">Amis.es</button>
                         <button id="groupesBtn" class="font-bold text-gray-600 w-1/2">Groupes</button>
                     </div>
                     <div class="flex font-normal justify-between mt-6">
@@ -1181,7 +1303,7 @@
                     </div>
                     <hr class="ml-auto mt-4 w-72">
                     <div id="amisPage">
-                        <div class="flex contact items-center justify-between mt-4">
+                        <div class="flex contact items-center cursor-pointer  justify-between mt-4">
                             <div class="flex items-center">
                                 <img src="./../../assets/david.png">
                                 <div class="ml-4">
@@ -1195,7 +1317,7 @@
                             </div>
                         </div>
                         <hr class="ml-auto mt-4 w-72">
-                        <div class="flex contact justify-between mt-4">
+                        <div class="flex contact justify-between cursor-pointer  mt-4">
                             <div class="flex items-center">
                                 <img src="./../../assets/floyd.png">
                                 <div class="ml-4">
@@ -1208,12 +1330,13 @@
                             </div>
                         </div>
                         <hr class="ml-auto mt-4 w-72">
-                        <div class="flex contact  justify-between mt-4">
+                        <div class="flex contact  justify-between  cursor-pointer mt-4">
                             <div class="flex items-center">
                                 <img src="./../../assets/webb.png">
                                 <div class="ml-4">
                                     <h3 class="font-extrabold">Theresa Webb</h3>
-                                    <p class="font-normal text-gray-600 text-sm">Quand est ce que tu vas en prendre ?</p>
+                                    <p class="font-normal text-gray-600 text-sm">Quand est ce que tu vas en prendre ?
+                                    </p>
                                 </div>
                             </div>
                             <div>
@@ -1221,12 +1344,13 @@
                             </div>
                         </div>
                         <hr class="ml-auto mt-4 w-72">
-                        <div class="flex contact justify-between mt-4">
+                        <div class="flex contact justify-between cursor-pointer  mt-4">
                             <div class="flex items-center">
                                 <img src="./../../assets/devon.png">
                                 <div class="ml-4">
                                     <h3 class="font-extrabold">Devon Lane</h3>
-                                    <p class="font-normal text-gray-600 text-sm">Je ne sais pas il faut que je me renseigne, je crois avoir vu quelque chose dans...</p>
+                                    <p class="font-normal text-gray-600 text-sm">Je ne sais pas il faut que je me
+                                        renseigne, je crois avoir vu quelque chose dans...</p>
                                 </div>
                             </div>
                             <div>
@@ -1236,12 +1360,13 @@
                         <hr class="ml-auto mt-4 w-72">
                     </div>
                     <div id="groupesPage" class="hidden">
-                        <div class="contact flex items-center justify-between mt-4">
+                        <div class="contact cursor-pointer flex items-center justify-between mt-4">
                             <div class="flex items-center">
                                 <img src="./../../assets/family.png">
                                 <div class="ml-4">
                                     <h3 class="font-extrabold">My Family Group</h3>
-                                    <p class="font-normal text-gray-600 text-sm">David : Je crois pas que ce soit la bonne manière de faire...</p>
+                                    <p class="font-normal text-gray-600 text-sm">David : Je crois pas que ce soit la
+                                        bonne manière de faire...</p>
                                 </div>
                             </div>
                             <div>
@@ -1249,7 +1374,7 @@
                             </div>
                         </div>
                         <hr class="ml-auto mt-4 w-72">
-                        <div class="contact flex justify-between mt-4">
+                        <div class="contact cursor-pointer flex justify-between mt-4">
                             <div class="flex items-center">
                                 <img src="./../../assets/trader.png">
                                 <div class="ml-4">
@@ -1262,12 +1387,13 @@
                             </div>
                         </div>
                         <hr class="ml-auto mt-4 w-72">
-                        <div class="contact flex  justify-between mt-4">
+                        <div class="contact cursor-pointer flex  justify-between mt-4">
                             <div class="flex items-center">
                                 <img src="./../../assets/investor.png">
                                 <div class="ml-4">
                                     <h3 class="font-extrabold">Big Tech Investors</h3>
-                                    <p class="font-normal text-gray-600 text-sm">Peter : Je viens de lire un nouvel article hyper intéressant, je vous l’envoie</p>
+                                    <p class="font-normal text-gray-600 text-sm">Peter : Je viens de lire un nouvel
+                                        article hyper intéressant, je vous l’envoie</p>
                                 </div>
                             </div>
                             <div>
@@ -1275,12 +1401,13 @@
                             </div>
                         </div>
                         <hr class="ml-auto mt-4 w-72">
-                        <div class="contact flex justify-between mt-4">
+                        <div class="contact cursor-pointer flex justify-between mt-4">
                             <div class="flex items-center">
                                 <img src="./../../assets/whales.png">
                                 <div class="ml-4">
                                     <h3 class="font-extrabold">Bitcoin Whales</h3>
-                                    <p class="font-normal text-gray-600 text-sm">Jane : J’ai pas trop d’avis sur la question</p>
+                                    <p class="font-normal text-gray-600 text-sm">Jane : J’ai pas trop d’avis sur la
+                                        question</p>
                                 </div>
                             </div>
                             <div>
@@ -1296,7 +1423,8 @@
                 <div class="bg-white fixed flex items-center max-w-mobile py-2 top-0">
                     <button id="conversationPrevBtn"><img src="./../../assets/Mask.png"></button>
                     <div id="user" class="flex items-center justify-center w-96">
-                        <img src="file:///C:/Users/Diyorbek/Documents/GitHub/ss2/src/assets/floyd.png" class="w-10 h-10 rounded-full">
+                        <img src="file:///C:/Users/Diyorbek/Documents/GitHub/ss2/src/assets/floyd.png"
+                            class="w-10 h-10 rounded-full">
                         <h3 class="font-extrabold ml-4">Floyd Miles</h3>
                     </div>
                 </div>
@@ -1307,7 +1435,9 @@
                                 <h3 class="font-bold text-sm">Sam GAMEGIE</h3>
                                 <p class="font-semibold text-gray-300 text-xs">9h</p>
                             </div>
-                            <p class="font-normal mt-1 text-gray-300 text-sm">De nombreux packages de publications assistées par ordinateur et éditeurs de pages Web utilisent désormais Lorem Ipsum comme texte de modèle par défaut</p>
+                            <p class="font-normal mt-1 text-gray-300 text-sm">De nombreux packages de publications
+                                assistées par ordinateur et éditeurs de pages Web utilisent désormais Lorem Ipsum comme
+                                texte d modèle par défaut</p>
                         </div>
                         <img src="./../../assets/feed/Profile_image.png" class="ml-4">
                     </div>
@@ -1318,15 +1448,20 @@
                                 <h3 class="font-bold text-sm">Clark HASSAN</h3>
                                 <p class="font-semibold text-gray-600 text-xs">1 jour</p>
                             </div>
-                            <p class="font-normal mt-1 text-gray-600 text-sm">Vraiment David ? 😂 Ce n'est pas toujours cool de parier contre $APPL en bourse. Ou Clark, qu'en pensez-vous ?</p>
+                            <p class="font-normal mt-1 text-gray-600 text-sm">Vraiment David ? 😂 Ce n'est pas toujours
+                                cool de parier contre $APPL en bourse. Ou Clark, qu'en pensez-vous ?</p>
                         </div>
                     </div>
                 </div>
-                <div class="-ml-4 bg-white border border-light bottom-0 fixed flex items-center justify-around max-w-mobile py-2 w-full">
+                <div
+                    class="-ml-4 bg-white border border-light bottom-0 fixed flex items-center justify-around max-w-mobile py-2 w-full">
                     <div class="p-2 rounded-full flex ">
-                        <div id="dollarBtn" class="bg-blue-normal cursor-pointer mr-2 p-2 px-3 rounded-full"><img src="./../../assets/feed/$ white.png " alt=" "></div>
-                        <div id="emailbtn" class="bg-light mr-2 p-2 px-2 cursor-pointer rounded-full "><img src="./../../assets/feed/@.png " alt=" "></div>
-                        <div id="dollarPage" class="-ml-4 bg-white bottom-2 fixed hidden flex flex-col max-w-mobile mb-14 px-6 py-4 rounded-t-2xl w-full">
+                        <div id="dollarBtn" class="bg-blue-normal cursor-pointer mr-2 p-2 px-3 rounded-full"><img
+                                src="./../../assets/feed/$ white.png " alt=" "></div>
+                        <div id="emailbtn" class="bg-light mr-2 p-2 px-2 cursor-pointer rounded-full "><img
+                                src="./../../assets/feed/@.png " alt=" "></div>
+                        <div id="dollarPage"
+                            class="-ml-4 bg-white bottom-2 fixed hidden flex flex-col max-w-mobile mb-14 px-6 py-4 rounded-t-2xl w-full">
                             <div class="flex items-center mt-4">
                                 <img src="./../../assets/feed/avalance.png">
                                 <div class="ml-3">
@@ -1349,7 +1484,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="emailpage" class="-ml-4 hidden bg-white bottom-2 fixed flex flex-col max-w-mobile mb-14 px-6 py-4 rounded-t-2xl w-full">
+                        <div id="emailpage"
+                            class="-ml-4 hidden bg-white bottom-2 fixed flex flex-col max-w-mobile mb-14 px-6 py-4 rounded-t-2xl w-full">
                             <div class="flex items-center">
                                 <img src="./../../assets/feed/shelby.png" class="w-8 h-8 rounded-full">
                                 <h3 class="font-semibold ml-4 text-sm">Shelby David</h3>
@@ -1361,24 +1497,488 @@
                         </div>
                     </div>
                     <form id="chatFrom" class="bg-light flex items-center px-4 py-1 rounded-full ">
-                        <input type="text" id="commentSearch" placeholder="Écrire... " class="bg-transparent color-normal mr-2 outline-none ">
+                        <input type="text" id="commentSearch" placeholder="Écrire... "
+                            class="bg-transparent color-normal mr-2 outline-none ">
                         <button type="send"><img src="./../../assets/feed/send (1) 1.png " alt=" "></button>
                     </form>
+                </div>
+            </div>
+            <!-- TRADE PAGEF -->
+            <div id="tradeMainPage" class="bg-blue-dark ss-page max-w-mobile hidden  bg-white ss-page mx-auto">
+                <div class="bg-blue-dark pt-20 ">
+                    <form class="flex justify-around m-4 ml-6 searchForm">
+                        <button type="submit " class="-mr-10 relative ">
+                            <img src="./../../assets/feed/search (1) 1.png " class=" ">
+                        </button>
+                        <input type="text " id="rechercherValue " placeholder="Rechercher "
+                            class="p-4 px-10 outline-none pl-10 rounded-full text-black w-full ">
+                    </form>
+                    <div class="bg-light p-4 rounded-t-3xl ">
+                        <div class="overflow-auto w-100 ">
+                            <div class="flex " style="width: 400px; ">
+                                <div style="background: #2B64F526; "
+                                    class="flex items-center justify-around mr-4 px-2 py-3 rounded-2xl w-32 ">
+                                    <img src="./../../assets/feed/crupto.png ">
+                                    <h3 class="font-bold text-sm text-black">Cryptos</h3>
+                                </div>
+                                <div style="background: #F2848426; "
+                                    class="flex items-center justify-around mr-4 px-2 py-3 rounded-2xl w-32 ">
+                                    <img src="./../../assets/feed/video.png ">
+                                    <h3 class="font-bold text-sm text-red " style="color:#EB5757; ">Média</h3>
+                                </div>
+                                <div style="background: #2B64F526; "
+                                    class="flex items-center justify-around mr-4 px-2 py-3 rounded-2xl w-32 ">
+                                    <img src="./../../assets/feed/pill.png ">
+                                    <h3 class="font-bold text-sm " style="color: #08A647; ">Health</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="font-normal mt-6">Tous</h3>
+                        <div>
+                            <div class="flex items-center justify-between mt-6 text-black ">
+                                <div class="flex items-center ">
+                                    <div><img src="./../../assets/feed/tesla.png "></div>
+                                    <div class="ml-4 ">
+                                        <h3 class="font-semibold text-base ">Tesla</h3>
+                                        <p class="text-gray-400 text-xs ">TSLA</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-end ">
+                                    <h3 class="font-normal text-sm ">12,502.36 €</h3>
+                                    <p class="text-green-600 font-semibold text-xs ">+510% </p>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between mt-6 text-black ">
+                                <div class="flex items-center ">
+                                    <div><img src="./../../assets/feed/apple.png "></div>
+                                    <div class="ml-4 ">
+                                        <h3 class="font-semibold text-base ">Apple</h3>
+                                        <p class="text-gray-400 text-xs ">APPL</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-end ">
+                                    <h3 class="font-normal text-sm ">5,365.00 €</h3>
+                                    <p class="text-green-600 font-semibold text-xs ">+545% </p>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between mt-6 text-black ">
+                                <div class="flex items-center ">
+                                    <div><img src="./../../assets/feed/amd.png "></div>
+                                    <div class="ml-4 ">
+                                        <h3 class="font-semibold text-base ">AMD</h3>
+                                        <p class="text-gray-400 text-xs ">AMD</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-end ">
+                                    <h3 class="font-normal text-sm ">5,365.00 €</h3>
+                                    <p class="text-red-600 font-semibold text-xs ">-10% </p>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between mt-6 text-black ">
+                                <div class="flex items-center ">
+                                    <div><img src="./../../assets/feed/snapshot.png "></div>
+                                    <div class="ml-4 ">
+                                        <h3 class="font-semibold text-base ">Snapchat</h3>
+                                        <p class="text-gray-400 text-xs ">SNAP</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-end ">
+                                    <h3 class="font-normal text-sm ">5,365.00 €</h3>
+                                    <p class="text-green-600 font-semibold text-xs ">+1080.3% </p>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 id="tradeNextBtn"
+                            class="cursor-pointer font-bold mt-6 text-blue-normal text-center text-sm">Voir
+                            tous</h3>
+                        <hr class="mt-4">
+                        <div class="flex justify-between mt-6">
+                            <h3 class="font-normal">Top Stocks</h3>
+                            <p class="cursor-pointer font-bold text-blue-normal text-sm">Voir tous</p>
+                        </div>
+                        <div class="overflow-auto w-100 ">
+                            <div class="flex mt-4" style="width: 460px; ">
+                                <div class="bg-white p-4 rounded-2xl mr-5">
+                                    <div class="flex">
+                                        <img src="./../../assets/feed/apple.png" class="mr-4">
+                                        <div class="flex font-semibold items-center text-sm" style="color: #08A647;">
+                                            <svg width="10" height="8" viewBox="0 0 10 8" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" class="mr-1">
+                                                <path
+                                                    d="M1.29197 7.09059H9.0391C9.11754 7.09034 9.19442 7.06835 9.26148 7.02698C9.32854 6.98562 9.38322 6.92644 9.41966 6.85583C9.45609 6.78522 9.47289 6.70584 9.46825 6.62624C9.46361 6.54665 9.43771 6.46984 9.39332 6.4041L5.51975 0.716179C5.35922 0.480349 4.97272 0.480349 4.81175 0.716179L0.938186 6.4041C0.893349 6.46971 0.867056 6.54655 0.862163 6.62628C0.857269 6.70601 0.873964 6.78558 0.910431 6.85634C0.946899 6.9271 1.00174 6.98635 1.06901 7.02765C1.13628 7.06895 1.21339 7.09072 1.29197 7.09059Z"
+                                                    fill="#08A647"></path>
+                                            </svg>
+                                            <p>10.89%</p>
+                                        </div>
+                                    </div>
+                                    <h3 class="font-bold mt-2">Apple</h3>
+                                    <p class="font-semibold mt-1 text-gray-600 text-xs">12,502,365.0 €</p>
+                                </div>
+                                <div class="bg-white p-4 rounded-2xl mr-5">
+                                    <div class="flex">
+                                        <img src="./../../assets/alphabet.png" class="mr-4">
+                                        <div class="flex font-semibold items-center text-sm" style="color: #08A647;">
+                                            <svg width="10" height="8" viewBox="0 0 10 8" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" class="mr-1">
+                                                <path
+                                                    d="M1.29197 7.09059H9.0391C9.11754 7.09034 9.19442 7.06835 9.26148 7.02698C9.32854 6.98562 9.38322 6.92644 9.41966 6.85583C9.45609 6.78522 9.47289 6.70584 9.46825 6.62624C9.46361 6.54665 9.43771 6.46984 9.39332 6.4041L5.51975 0.716179C5.35922 0.480349 4.97272 0.480349 4.81175 0.716179L0.938186 6.4041C0.893349 6.46971 0.867056 6.54655 0.862163 6.62628C0.857269 6.70601 0.873964 6.78558 0.910431 6.85634C0.946899 6.9271 1.00174 6.98635 1.06901 7.02765C1.13628 7.06895 1.21339 7.09072 1.29197 7.09059Z"
+                                                    fill="#08A647"></path>
+                                            </svg>
+                                            <p>37.5%</p>
+                                        </div>
+                                    </div>
+                                    <h3 class="font-bold mt-2">Alphabet</h3>
+                                    <p class="font-semibold mt-1 text-gray-600 text-xs">502,365.0 €</p>
+                                </div>
+                                <div class="bg-white p-4 rounded-2xl mr-5">
+                                    <div class="flex">
+                                        <img src="./../../assets/feed/amazon.png" class="mr-4">
+                                        <div class="flex font-semibold items-center text-sm" style="color: #08A647;">
+                                            <svg width="10" height="8" viewBox="0 0 10 8" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" class="mr-1">
+                                                <path
+                                                    d="M1.29197 7.09059H9.0391C9.11754 7.09034 9.19442 7.06835 9.26148 7.02698C9.32854 6.98562 9.38322 6.92644 9.41966 6.85583C9.45609 6.78522 9.47289 6.70584 9.46825 6.62624C9.46361 6.54665 9.43771 6.46984 9.39332 6.4041L5.51975 0.716179C5.35922 0.480349 4.97272 0.480349 4.81175 0.716179L0.938186 6.4041C0.893349 6.46971 0.867056 6.54655 0.862163 6.62628C0.857269 6.70601 0.873964 6.78558 0.910431 6.85634C0.946899 6.9271 1.00174 6.98635 1.06901 7.02765C1.13628 7.06895 1.21339 7.09072 1.29197 7.09059Z"
+                                                    fill="#08A647"></path>
+                                            </svg>
+                                            <p>37.5%</p>
+                                        </div>
+                                    </div>
+                                    <h3 class="font-bold mt-2">Amazon</h3>
+                                    <p class="font-semibold mt-1 text-gray-600 text-xs">3,502,365.0 €</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="trandingPage" class="max-w-mobile hidden ss-page mx-auto bg-white ">
+                <div class="p-4 sticky top-0">
+                    <div class="flex items-center justify-between">
+                        <button id="tradingPrevBtn"> <img src="./../../assets/Mask.png"></button>
+                        <div class="flex items-center">
+                            <h3 class="font-bold mr-4 text-blue-normal text-sm">Voir la discussion (8)</h3>
+                            <img src="./../../assets/feed/star.png" class="cursor-pointer" id="tradeAddLiked">
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between mt-4">
+                        <div>
+                            <div class="flex items-center">
+                                <h3 class="font-bold">Apple</h3>
+                                <p class="ml-2 text-gray-600 text-sm">APPL</p>
+                            </div>
+                            <h3 class="font-semibold text-2xl">3,360.356 €</h3>
+                        </div>
+                        <button class="bg-green-normal flex items-center p-1 rounded-full">
+                            <img src="./../../assets/top.png">
+                            <p class="font-semibold ml-2 text-white text-xs">10.89%</p>
+                        </button>
+                    </div>
+                    <p class="font-normal ml-60 mt-2 text-gray-500 text-sm">2,254.65 €</p>
+                    <div class="overflow-auto w-100">
+                        <div style="width: 400px;" class="">
+                            <img src="./../../assets/feed/diagram.png">
+                        </div>
+                    </div>
+                    <div class="flex font-extrabold justify-between mt-4 text-gray-600 text-xs">
+                        <h5>J</h5>
+                        <h5>S</h5>
+                        <h5>M</h5>
+                        <h5 class="text-blue-normal">6M</h5>
+                        <h5>A</h5>
+                        <h5>Tous</h5>
+                    </div>
+                </div>
+                <div id="scrollAnimation" class="bg-light mt-4 pt-4 px-4 rounded-t-3xl pb-20 relative">
+                    <div class="bg-white h-2 mx-auto rounded-2xl w-20"></div>
+                    <div class="bg-white flex font-bold mt-4 p-2 rounded-full text-sm">
+                        <button id="tradeAttenteBtn"
+                            class="tradeTabsBtn bg-blue-normal py-1 rounded-full text-white w-1/3">En
+                            attente</button>
+                        <button id="tradeNewsBtn" class="tradeTabsBtn py-1 w-1/3">News</button>
+                        <button id="tradeProposBtn" class="tradeTabsBtn py-1 w-1/3">A propos</button>
+                    </div>
+                    <div id="tradeAttentePage" class=" trade-tab">
+                        <div class="flex font-normal justify-between mt-6">
+                            <h3>En attente</h3>
+                            <button data-tooltip-target="tooltip-click" data-tooltip-trigger="click" type="button">
+                                <img src="./../../assets/feed/information 1.png " class=" ">
+                            </button>
+                            <div id="tooltip-click" role="tooltip"
+                                class="inline-block absolute z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm transition-opacity duration-300 tooltip dark:bg-gray-700 opacity-0 invisible">
+                                Lorem ipsum dolor sit.
+                                <div class="tooltip-arrow" data-popper-arrow=""></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mt-6 rounded-3xl p-4 bg-white text-black ">
+                            <div class="flex items-center ">
+                                <div><img src="./../../assets/feed/apple.png "></div>
+                                <div class="ml-4 ">
+                                    <h3 class="font-semibold text-base ">Apple</h3>
+                                    <p class="text-gray-400 text-xs ">APPL</p>
+                                </div>
+                            </div>
+                            <img src="./../../assets/feed/close (1) 1.png" class="w-2 h-2">
+                        </div>
+                    </div>
+                    <div id="tradeNewsPage" class="hidden trade-tab">
+                        <div class="mt-4 bg-white flex items-center p-4 rounded-2xl ">
+                            <img src="./../../assets/apple.png ">
+                            <div class="ml-4 ">
+                                <h3 class="font-semibold text-sm ">Apple devra rester en dessous
+                                    de 50 000 $ pendant
+                                    un certain temps.</h3>
+                                <div class="flex justify-between mt-2 ">
+                                    <p class="font-semibold text-blue-normal text-xs ">The financial Times</p>
+                                    <p class="text-gray-500 text-xs ">9h</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tradeProposPage" class="hidden trade-tab">
+                        <div class="flex items-center justify-between mt-4">
+                            <div class="flex items-center">
+                                <button class="bg-white flex items-center justify-center p-2 rounded-full">
+                                    <img src="./../../assets/building_icon.png">
+                                </button>
+                                <h3 class="font-bold ml-4">Market Cap</h3>
+                            </div>
+                            <p class="font-normal text-gray-500">500,000,000.365 € </p>
+                        </div>
+                        <div class="flex items-center justify-between mt-4">
+                            <div class="flex items-center">
+                                <button class="bg-white flex items-center justify-center p-2 rounded-full w-8 h-8">
+                                    <img src="./../../assets/feed/fond.png">
+                                </button>
+                                <h3 class="font-bold ml-4">Price-earnings ration</h3>
+                            </div>
+                            <p class="font-normal text-gray-500">22.51</p>
+                        </div>
+                    </div>
+                    <div id="fixedFooter" class="-ml-4 bg-light bottom-0 fixed max-w-mobile py-2 w-full">
+                        <button type="button" id="fixedBtn" data-modal-toggle="defaultModal"
+                            class="bg-gradient-to-r font-normal from-blue-darker py-3 rounded-full text-white to-blue-lighter w-full">Trader</button>
+                    </div>
+                    <div id="defaultModal" aria-hidden="true" style="max-width: 355px;"
+                        class="fixed flex h-screen items-end hidden justify-center left-0 md:h-full md:inset-0 mx-auto overflow-x-hidden overflow-y-auto pb-4 right-0 top-4 w-full z-50">
+                        <div class="relative px-4 w-full max-w-2xl h-80 md:h-auto">
+                            <div class="relative rounded-lg shadow">
+                                <div class="absolute z-10">
+                                    <img src="./../../assets/feed/modal-card.png">
+                                </div>
+                                <div class="p-4 pt-10 relative z-50">
+                                    <div class="flex font-semibold items-center justify-center text-2xl text-blue-dark">
+                                        <img src="./../../assets/feed/social stocks main logo.png">
+                                        <h3 class="ml-1 w-14" style="line-height: 21px;">We Stocks</h3>
+                                    </div>
+                                    <button data-modal-toggle="defaultModal" class="absolute right-4 top-12"><img
+                                            src="./../../assets/feed/close (1) 1.png"></button>
+                                    <div data-modal-toggle="defaultModal" id="tradePageNextBtn"
+                                        class="flex font-normal pt-10">
+                                        <img src="./../../assets/feed/plus-circle.png">
+                                        <h3 class="ml-4">Acheter</h3>
+                                    </div>
+                                    <div class="flex font-normal pt-10">
+                                        <img src="./../../assets/feed/minus-circle.png">
+                                        <h3 class="ml-4">Vendre</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sellAsset" class="max-w-mobile mx-auto ss-page p-4 hidden bg-white h-screen">
+                <div class="flex font-semibold items-center text-2xl">
+                    <button id="sellPrevBtn"><img src="./../../assets/Mask.png"></button>
+                    <h3 class="ml-4">Acheter APPL</h3>
+                </div>
+                <div class="flex items-center justify-around mt-12">
+                    <p class="font-semibold text-blue-normal text-sm">Maxi</p>
+                    <div class="flex flex-col items-center">
+                        <h3 class="font-extrabold text-3xl text-blue-normal">50.00 € </h3>
+                        <h5 class="font-bold mt-4 text-gray-500">~ 0.0584 APPL</h5>
+                    </div>
+                    <img src="./../../assets/feed/switch btn.png">
+                </div>
+                <p class="font-normal mt-24 text-center text-red-500 text-sm">Il n’y a pas assez d’argent. </p>
+                <div class="flex items-center justify-center mt-4">
+                    <img src="./../../assets/feed/plus.png">
+                    <p class="ml-2 text-blue-normal">Ajouter de l’argent</p>
+                </div>
+                <div class="flex font-bold justify-between mt-6 text-sm">
+                    <p>Liquidité :</p>
+                    <p>5 030,75 €</p>
+                </div>
+                <div class="gap-x-8 gap-y-5 grid grid-cols-3 mt-6">
+                    <button style="background-color: #F2F3FC;"
+                        class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">1</button>
+                    <button style="background-color: #F2F3FC"
+                        class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">2</button>
+                    <button style="background-color: #F2F3FC"
+                        class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">3</button>
+                    <button style="background-color: #F2F3FC"
+                        class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">4</button>
+                    <button style="background-color: #F2F3FC"
+                        class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">5</button>
+                    <button style="background-color: #F2F3FC"
+                        class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">6</button>
+                    <button style="background-color: #F2F3FC"
+                        class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">7</button>
+                    <button style="background-color: #F2F3FC"
+                        class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">8</button>
+                    <button style="background-color: #F2F3FC"
+                        class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">9</button>
+                    <button style="background-color: #F2F3FC"
+                        class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">.</button>
+                    <button style="background-color: #F2F3FC"
+                        class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">0</button>
+                    <button class="px-8 py-3" id="pin-clear-btn"><img src="./../../assets/del.png"></button>
+                </div>
+                <button id="sellAssetNextBtn"
+                    class="bg-gradient-to-br from-blue-darker mt-6 py-3 rounded-full text-white to-blue-lighter w-full">Aperçu
+                    des achats</button>
+            </div>
+            <div id="sellAsset2" class="max-w-mobile ss-page mx-auto hidden p-4 bg-white h-screen">
+                <div class="flex items-center">
+                    <button id="sellAsset2PrevBtn"><img src="./../../assets/Mask.png"></button>
+                    <h3 class="font-semibold ml-4 text-2xl">Aperçu de l’achat</h3>
+                </div>
+                <h3 class="font-extrabold mt-12 text-4xl text-blue-normal text-center">0.0584 <span
+                        class="font-bold ml-3 text-sm">APPL</span></h3>
+                <hr class="-ml-4 absolute border max-w-mobile mt-6 w-full">
+                <div class="bg-light flex font-bold justify-between mt-6 p-4 text-sm sellSelectBtn">
+                    <h3 class="text-gray-600">Montant</h3>
+                    <p class="font-normal">50,00 €</p>
+                </div>
+                <div class="bg-light flex font-bold justify-between p-4 text-sm sellSelectBtn">
+                    <h3 class="text-gray-600">Moyen de paiement</h3>
+                    <p class="font-normal">?</p>
+                </div>
+                <div class="bg-light flex font-bold justify-between p-4 text-sm sellSelectBtn">
+                    <h3 class="text-gray-600">Frais Social Stocks</h3>
+                    <p class="font-normal">1,00 €</p>
+                </div>
+                <div class="bg-light flex font-bold justify-between p-4 text-sm sellSelectBtn">
+                    <h3 class="text-gray-600">Total</h3>
+                    <p class="font-normal">51,00 €</p>
+                </div>
+                <div class="-ml-4 bg-white bottom-2 fixed max-w-mobile w-full">
+                    <p class="font-bold text-center">Offre valable pendant 15 secondes</p>
+                    <button data-modal-toggle="defaultModal2"
+                        class="bg-gradient-to-br font-normal from-blue-darker mt-6 py-3 rounded-full text-white to-blue-lighter w-full">Acheter</button>
+                </div>
+                <div id="defaultModal2" aria-hidden="true" style="max-width: 355px;"
+                    class="fixed flex h-screen items-end hidden justify-center left-0 md:h-full md:inset-0 mx-auto overflow-x-hidden overflow-y-auto pb-4 right-0 top-4 w-full z-50">
+                    <div class="relative px-4 w-full max-w-2xl h-full md:h-auto">
+                        <div class="relative px-4 w-full max-w-2xl h-full md:h-auto">
+                            <div class="relative rounded-lg shadow" style="margin-top: -400px;">
+                                <div class="absolute z-10">
+                                    <img src="./../../assets/bg.png" class="h-96 w-96">
+                                </div>
+                                <div class="p-4 pt-10 relative z-50">
+                                    <div class="flex font-semibold items-center justify-center text-2xl text-blue-dark">
+                                        <img src="./../../assets/feed/social stocks main logo.png">
+                                        <h3 class="ml-1 w-14" style="line-height: 21px;">We Stocks</h3>
+                                    </div>
+                                    <button data-modal-toggle="defaultModal2" class="absolute right-4 top-12"><img
+                                            src="./../../assets/feed/close (1) 1.png"></button>
+                                    <h3 class="font-semibold mt-24 text-2xl text-center">Félicitations !</h3>
+                                    <p class="font-normal mt-2 text-center text-gray-600 text-sm">Vous venez d'acheter
+                                        des
+                                        actions Apple&nbsp;!</p>
+                                    <div class="flex items-center mt-8">
+                                        <img src="./../../assets/feed/Share_blue.png">
+                                        <p class="font-normal ml-4">Partager</p>
+                                    </div><button id="sellAsset2NextBtn" data-modal-toggle="defaultModal2"
+                                        class="bg-gradient-to-r font-normal from-blue-darker mt-3 py-3 rounded-full text-white to-blue-lighter w-full">Trader</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tradeCategoryPage" class="bg-blue-dark max-w-mobile hidden ss-page mx-auto pt-4 bg-white h-screen">
+                <div class="bg-light h-full pt-10 mt-16 rounded-t-3xl">
+                    <h3 class="m-4">Catégories</h3>
+                    <div class="gap-y-10 grid grid-cols-3 mt-8">
+                        <div class="w-28 flex flex-col ss-pick-btn items-center">
+                            <div
+                                class="bg-white border-2 border-blue-700 flex h-16 items-center justify-center rounded-full w-16">
+                                <img src="./../../assets/feed/crypto_white.png" alt=""></div>
+                            <p class="font-bold mt-2 text-blue-normal text-center text-sm w-16">Cryptos</p>
+                        </div>
+                        <div class="w-28 flex flex-col ss-pick-btn items-center">
+                            <div
+                                class="bg-white border-2 border-blue-700 flex h-16 items-center justify-center rounded-full w-16">
+                                <img src="./../../assets/feed/media.png" alt="">
+                            </div>
+                            <p class="font-bold mt-2 text-blue-normal text-center text-sm w-16">Media</p>
+                        </div>
+                        <div class="w-28 flex flex-col ss-pick-btn items-center">
+                            <div
+                                class="bg-white border-2 border-blue-700 flex h-16 items-center justify-center rounded-full w-16">
+                                <img src="./../../assets/feed/Sports_white.png" alt=""></div>
+                            <p class="font-bold mt-2 text-blue-normal text-center text-sm w-16">Sports</p>
+                        </div>
+                        <div class="w-28 flex flex-col ss-pick-btn items-center">
+                            <div
+                                class="bg-white border-2 border-blue-700 flex h-16 items-center justify-center rounded-full w-16">
+                                <img src="./../../assets/ecommerce.png" alt="">
+                            </div>
+                            <p class="font-bold mt-2 text-blue-normal text-center text-sm w-16">Ecommerce</p>
+                        </div>
+                        <div class="w-28 flex flex-col ss-pick-btn items-center">
+                            <div
+                                class=" flex h-16 bg-white border-2 border-blue-700 items-center justify-center rounded-full w-16">
+                                <img src="./../../assets/feed/music.png" alt=""></div>
+                            <p class="font-bold mt-2 text-blue-normal text-center text-sm w-16">Musique</p>
+                        </div>
+                        <div class="w-28 flex flex-col ss-pick-btn items-center">
+                            <div
+                                class="bg-white border-2 border-blue-700 flex h-16 items-center justify-center rounded-full w-16">
+                                <img src="./../../assets/energie.png" alt="">
+                            </div>
+                            <p class="font-bold mt-2 text-blue-normal text-center text-sm w-16">Energie</p>
+                        </div>
+                        <div class="w-28 flex flex-col ss-pick-btn items-center">
+                            <div
+                                class="flex h-16 items-center bg-white border-2 border-blue-700 justify-center rounded-full w-16">
+                                <img src="./../../assets/feed/Tech.png" alt=""></div>
+                            <p class="font-bold mt-2 text-blue-normal text-center text-sm w-16">Tech</p>
+                        </div>
+                        <div class="w-28 flex flex-col ss-pick-btn items-center">
+                            <div
+                                class="bg-white border-2 border-blue-700 flex h-16 items-center justify-center rounded-full w-16">
+                                <img src="./../../assets/pill.png" alt="">
+                            </div>
+                            <p class="font-bold mt-2 text-blue-normal text-center text-sm w-16">Medecine</p>
+                        </div>
+                        <div class="w-28 flex flex-col ss-pick-btn items-center">
+                            <div
+                                class="bg-white border-2 border-blue-700 flex h-16 items-center justify-center rounded-full w-16">
+                                <img src="./../../assets/Bank.png" alt="">
+                            </div>
+                            <p class="font-bold mt-2 text-blue-normal text-center text-sm w-16">Medecine</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
         <!-- FOOTER -->
-        <footer id="footer" class="bg-light bottom-0 fixed flex h-20 items-end justify-between max-w-mobile pb-5 px-4 py-2 text-2xl w-full z-50" style="filter: drop-shadow(0px 0px 20px rgba(17, 20, 58, 0.15));">
+        <footer id="footer"
+            class="bg-light bottom-0 fixed flex h-20 items-end justify-between max-w-mobile pb-5 px-4 py-2 text-2xl w-full z-50"
+            style="filter: drop-shadow(0px 0px 20px rgba(17, 20, 58, 0.15));">
             <button id="feedBtn" class="flex flex-col items-center pagesBtn text-blue-normal" style="width: 20%;">
-              <i class="far fa-compass"></i>
-                    <h4 class="text-xs font-semibold mt-1">Feed</h4>
+                <i class="far fa-compass"></i>
+                <h4 class="text-xs font-semibold mt-1">Feed</h4>
             </button>
             <button id="portfolioBtn" class="pagesBtn flex flex-col items-center text-gray-400" style="width: 20%;">
                 <i class="bi bi-wallet"></i>
                 <h4 class="text-xs font-semibold mt-1">Portefeuille</h4>
             </button>
-            <button id="academyBtn" class="flex flex-col items-center pagesBtn text-center text-gray-400" style="margin-bottom: -12px;">
+            <button id="tradeBtn" class="flex flex-col items-center pagesBtn text-center text-gray-400"
+                style="margin-bottom: -12px;">
                 <div class="bg-light ml-1 p-2 rounded-full">
                     <div class="bg-gradient-to-r from-blue-darker p-4 rounded-full to-blue-lighter ">
                         <img src="./../../assets/feed/Trade.png ">
@@ -1390,7 +1990,8 @@
                 <i class="bi bi-chat-square-dots"></i>
                 <h4 class="text-xs font-semibold mt-1">Chat</h4>
             </button>
-            <button id="profilBtn" class="pagesBtn flex profileNextBtn flex-col items-center text-gray-400 " style="width: 20%;">
+            <button id="profilBtn" class="pagesBtn flex profileNextBtn flex-col items-center text-gray-400 "
+                style="width: 20%;">
                 <i class="bi bi-person"></i>
                 <h4 class="text-xs font-semibold mt-1 ">Profil</h4>
             </button>
