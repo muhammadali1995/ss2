@@ -15,6 +15,8 @@
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <script src="https://unpkg.com/@themesberg/flowbite@1.3.0/dist/flowbite.bundle.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.3.0/dist/flowbite.min.css" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/all.min.css"
         integrity="sha512-SUwyLkI1Wgm4aEZkDkwwigXaOI2HFLy1/YW73asun4sfvlkB9Ecl99+PHfCnfWD0FJjIuFTvWMM7BZPXCckpAA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -45,8 +47,8 @@
             <div id="profileDropdown" style="box-shadow: 0px 0px 20px rgba(17, 20, 58, 0.15); "
                 class="z-50 bg-light right-0 hidden fixed flex flex-col p-6 rounded-2xl text-black top-12 w-72 ">
                 <button class="ml-auto " id="profileCloseBtn"> <img src="./../../assets/feed/close (1) 1.png "></button>
-                <div class="flex items-center justify-center w-full ">
-                    <img src="./../../assets/feed/PROFILE_IMG.png " class="w-24 h-24">
+                <div class="border-2 border-blue-500 flex items-center justify-center mx-auto p-1 rounded-full w-28">
+                    <img src="./../../assets/feed/PROFILE_IMG.png " class="w-full h-full">
                 </div>
                 <button
                     class="bg-gradient-to-r flex from-blue-darker justify-center mt-6 mx-auto py-2 rounded-full text-white to-blue-lighter w-32 ">
@@ -83,11 +85,11 @@
                 <!-- FEED SEARCH BAR -->
                 <div class="pt-20 pb-12 px-4 bg-blue-dark ">
                     <form class=" searchForm flex justify-around ">
-                        <button type="submit " class="-mr-10 relative ">
+                        <button type="submit" class="-mr-10 relative ">
                             <img src="./../../assets/feed/search (1) 1.png " class=" ">
                         </button>
                         <input type="text " id="searchValue" placeholder="Rechercher "
-                            class="p-4 px-10 outline-none rounded-full text-black w-full ">
+                            class="p-4 px-10 outline-none pl-10 rounded-full text-black w-full ">
                     </form>
                 </div>
 
@@ -258,7 +260,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="news" class="mb-20 hidden ">
+                    <div id="news" class="mb-24 hidden ">
                         <div class="swiper swiper-initialized swiper-horizontal swiper-pointer-events "
                             style="height: 330px; ">
                             <div class="swiper-wrapper ">
@@ -593,7 +595,7 @@
                     </div>
                     <p></p>
                 </div>
-                <div class="bg-light mb-16 mt-16 p-4 relative rounded-t-3xl z-40 ">
+                <div class="bg-light pb-24 mt-4 px-4 pt-4 relative rounded-t-3xl z-40 ">
                     <div class="bg-white flex items-center justify-around mt-4 p-2 rounded-full text-black ">
                         <button id="tousBtn "
                             class="font-bold w-1/2 text-gray-500 px-4 py-2 rounded-full ">Publications</button>
@@ -660,11 +662,11 @@
             <div id="rechercher" class="bg-blue-dark ss-page hidden max-w-mobile mx-auto text-white ">
                 <div class="bg-blue-dark pt-20 ">
                     <form class="flex justify-around m-4 ml-6 searchForm">
-                        <button type="submit " class="-mr-10 relative ">
+                        <button type="submit" class="-mr-10 relative">
                             <img src="./../../assets/feed/search (1) 1.png " class=" ">
                         </button>
-                        <input type="text " id="rechercherValue " placeholder="Rechercher "
-                            class="outline-none p-4 px-10 rounded-full text-black w-full">
+                        <input type="text" id="rechercherValue" placeholder="Rechercher"
+                            class="outline-none p-4 px-10 pl-10 rounded-full text-black w-full">
                     </form>
                     <div class="bg-light p-4 rounded-t-3xl ">
                         <div class="bg-white p-2 rounded-full flex  text-black">
@@ -903,8 +905,8 @@
                         <button type="submit " class="-mr-10 relative ">
                             <img src="./../../assets/feed/search (1) 1.png " class=" ">
                         </button>
-                        <input type="text " placeholder="Rechercher "
-                            class="p-4 px-10 outline-none rounded-full text-black w-full ">
+                        <input type="text" placeholder="Rechercher"
+                            class="p-4 px-10 outline-none rounded-full pl-10 text-black w-full ">
                     </form>
                     <div class="flex items-center justify-between mt-8 ">
                         <div class="flex items-center ">
@@ -1106,7 +1108,7 @@
                                 the banks</p>
                         </div>
                     </div>
-                    <div class="bg-blue-dark bottom-0 flex justify-between p-4 static">
+                    <div class="bg-blue-dark bottom-0 flex justify-between px-4 py-2 static">
                         <button id="singleLessonPrevPageBtn" class=" flex items-center text-sm ">
                             <img src="./../../assets/feed/chevron-left.png ">
                             <p class="ml-4 ">Précédent</p>
@@ -1121,7 +1123,7 @@
             </div>
             <!-- SINGLE LESSON 2 -->
             <div id="singleLesson2" class="bg-blue-dark h-screen ss-page hidden  text-white">
-                <div class="bg-blue-dark flex flex-col justify-between min-h-screen p-4 pb-12">
+                <div class="bg-blue-dark flex flex-col justify-between min-h-screen px-4 pt-4 pb-2 pb-12">
                     <div>
                         <div class="flex justify-around ">
                             <div class="h-1 w-10 bg-blue-normal rounded-full "></div>
@@ -1293,140 +1295,143 @@
                 <p class="mt-2 text-center text-xs">Terms and conditions apply</p>
             </div>
             <!-- CHAT PAGE -->
-            <div id="chat" class="ss-page hidden">
+            <div id="chat" class="ss-page hidden mt-12 bg-blue-dark">
                 <div class="bg-blue-dark mx-auto p-4 pb-12 pt-20">
                     <form class="flex justify-around ml-2 searchForm">
                         <button type="submit " class="-mr-10 relative ">
-                            <img src="./../../assets/feed/search (1) 1.png " class=" ">
+                            <img src="./../../assets/feed/search (1) 1.png" class=" ">
                         </button>
-                        <input type="text " id="searchValue" placeholder="Rechercher"
-                            class="p-4 px-10 outline-none rounded-full text-black w-full ">
+                        <input type="text" id="searchValue" placeholder="Rechercher"
+                            class="p-4 px-10 outline-none rounded-full pl-10 text-black w-full ">
                     </form>
                 </div>
-                <div class="-mt-4 bg-light p-4 rounded-t-3xl pb-20">
-                    <div class="bg-white flex justify-between px-4 py-2 rounded-full">
-                        <button id="amisBtn"
-                            class="bg-blue-normal font-bold py-1 rounded-full text-white w-1/2">Amis.es</button>
-                        <button id="groupesBtn" class="font-bold text-gray-600 w-1/2">Groupes</button>
-                    </div>
-                    <div class="flex font-normal justify-between mt-6">
-                        <h3>Liste de discussions</h3>
-                        <button id="chatNextBtn"><img src="./../../assets/feed/message +.png"></button>
-                    </div>
-                    <hr class="ml-auto mt-4 w-72">
-                    <div id="amisPage">
-                        <div class="flex contact items-center cursor-pointer  justify-between mt-4">
-                            <div class="flex items-center">
-                                <img src="./../../assets/david.png" class="w-14 h-14">
-                                <div class="ml-4">
-                                    <h3 class="font-extrabold">David Cohen</h3>
-                                    <p class="font-normal text-gray-600 text-sm">Comment tu vas ?</p>
+                <div class="mt-12 bg-blue-dark">
+                    <div class="-mt-4 bg-light p-4 rounded-t-3xl pb-20">
+                        <div class="bg-white flex justify-between px-4 py-2 rounded-full">
+                            <button id="amisBtn"
+                                class="bg-blue-normal font-bold py-1 rounded-full text-white w-1/2">Amis.es</button>
+                            <button id="groupesBtn" class="font-bold text-gray-600 w-1/2">Groupes</button>
+                        </div>
+                        <div class="flex font-normal justify-between mt-6">
+                            <h3>Liste de discussions</h3>
+                            <button id="chatNextBtn"><img src="./../../assets/feed/message +.png"></button>
+                        </div>
+                        <hr class="ml-auto mt-4 w-72 text-gray-400">
+                        <div id="amisPage">
+                            <div class="flex contact items-center cursor-pointer  justify-between mt-4">
+                                <div class="flex items-center">
+                                    <img src="./../../assets/david.png" class="w-14 h-14">
+                                    <div class="ml-4">
+                                        <h3 class="font-extrabold">David Cohen</h3>
+                                        <p class="font-normal text-gray-600 text-sm">Comment tu vas ?</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="font-normal text-gray-500 text-xs">17h00</p>
+                                    <button class="bg-blue-normal mt-4 rounded-full text-sm text-white w-5">5</button>
                                 </div>
                             </div>
-                            <div>
-                                <p class="font-normal text-gray-500 text-xs">17h00</p>
-                                <button class="bg-blue-normal mt-4 rounded-full text-sm text-white w-5">5</button>
-                            </div>
-                        </div>
-                        <hr class="ml-auto mt-4 w-72">
-                        <div class="flex contact justify-between cursor-pointer  mt-4">
-                            <div class="flex items-center">
-                                <img src="./../../assets/floyd.png" class="w-14 h-14">
-                                <div class="ml-4">
-                                    <h3 class="font-extrabold">Floyd Miles</h3>
-                                    <p class="font-normal text-gray-600 text-sm">Je viens d’en acheter</p>
+                            <hr class="ml-auto mt-4 w-72 text-gray-400">
+                            <div class="flex contact justify-between cursor-pointer  mt-4">
+                                <div class="flex items-center">
+                                    <img src="./../../assets/floyd.png" class="w-14 h-14">
+                                    <div class="ml-4">
+                                        <h3 class="font-extrabold">Floyd Miles</h3>
+                                        <p class="font-normal text-gray-600 text-sm">Je viens d’en acheter</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="font-normal text-gray-500 text-xs">1 jours</p>
                                 </div>
                             </div>
-                            <div>
-                                <p class="font-normal text-gray-500 text-xs">1 jours</p>
-                            </div>
-                        </div>
-                        <hr class="ml-auto mt-4 w-72">
-                        <div class="flex contact  justify-between  cursor-pointer mt-4">
-                            <div class="flex items-center">
-                                <img src="./../../assets/webb.png" class="w-14 h-14">
-                                <div class="ml-4">
-                                    <h3 class="font-extrabold">Theresa Webb</h3>
-                                    <p class="font-normal text-gray-600 text-sm">Quand est ce que tu vas en prendre ?
-                                    </p>
+                            <hr class="ml-auto mt-4 w-72 text-gray-400">
+                            <div class="flex contact  justify-between  cursor-pointer mt-4">
+                                <div class="flex items-center">
+                                    <img src="./../../assets/webb.png" class="w-14 h-14">
+                                    <div class="ml-4">
+                                        <h3 class="font-extrabold">Theresa Webb</h3>
+                                        <p class="font-normal text-gray-600 text-sm">Quand est ce que tu vas en prendre
+                                            ?
+                                        </p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="font-normal text-gray-500 text-xs">Mardi</p>
                                 </div>
                             </div>
-                            <div>
-                                <p class="font-normal text-gray-500 text-xs">Mardi</p>
-                            </div>
-                        </div>
-                        <hr class="ml-auto mt-4 w-72">
-                        <div class="flex contact justify-between cursor-pointer  mt-4">
-                            <div class="flex items-center">
-                                <img src="./../../assets/devon.png" class="w-14 h-14">
-                                <div class="ml-4">
-                                    <h3 class="font-extrabold">Devon Lane</h3>
-                                    <p class="font-normal text-gray-600 text-sm">Je ne sais pas il faut que je me
-                                        renseigne, je crois avoir dans...</p>
+                            <hr class="ml-auto mt-4 w-72 text-gray-400">
+                            <div class="flex contact justify-between cursor-pointer  mt-4">
+                                <div class="flex items-center">
+                                    <img src="./../../assets/devon.png" class="w-14 h-14">
+                                    <div class="ml-4">
+                                        <h3 class="font-extrabold">Devon Lane</h3>
+                                        <p class="font-normal text-gray-600 text-sm">Je ne sais pas il faut que je me
+                                            renseigne, je crois avoir dans...</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="font-normal text-gray-500 text-xs">6:55AM</p>
                                 </div>
                             </div>
-                            <div>
-                                <p class="font-normal text-gray-500 text-xs">6:55AM</p>
-                            </div>
+                            <hr class="ml-auto mt-4 w-72 text-gray-400">
                         </div>
-                        <hr class="ml-auto mt-4 w-72">
-                    </div>
-                    <div id="groupesPage" class="hidden">
-                        <div class="contact cursor-pointer flex items-center justify-between mt-4">
-                            <div class="flex items-center">
-                                <img src="./../../assets/family.png" class="w-14 h-14">
-                                <div class="ml-4">
-                                    <h3 class="font-extrabold">My Family Group</h3>
-                                    <p class="font-normal text-gray-600 text-sm">David : Je crois pas que ce soit la
-                                        bonne manière de faire...</p>
+                        <div id="groupesPage" class="hidden">
+                            <div class="contact cursor-pointer flex items-center justify-between mt-4">
+                                <div class="flex items-center">
+                                    <img src="./../../assets/family.png" class="w-14 h-14">
+                                    <div class="ml-4">
+                                        <h3 class="font-extrabold">My Family Group</h3>
+                                        <p class="font-normal text-gray-600 text-sm">David : Je crois pas que ce soit la
+                                            bonne manière de faire...</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="font-normal text-gray-500 text-xs">hier</p>
                                 </div>
                             </div>
-                            <div>
-                                <p class="font-normal text-gray-500 text-xs">hier</p>
-                            </div>
-                        </div>
-                        <hr class="ml-auto mt-4 w-72">
-                        <div class="contact cursor-pointer flex justify-between mt-4">
-                            <div class="flex items-center">
-                                <img src="./../../assets/trader.png" class="w-14 h-14">
-                                <div class="ml-4">
-                                    <h3 class="font-extrabold">Crypto Traders</h3>
-                                    <p class="font-normal text-gray-600 text-sm">Ben : Pourquoi ?</p>
+                            <hr class="ml-auto mt-4 w-72 text-gray-400">
+                            <div class="contact cursor-pointer flex justify-between mt-4">
+                                <div class="flex items-center">
+                                    <img src="./../../assets/trader.png" class="w-14 h-14">
+                                    <div class="ml-4">
+                                        <h3 class="font-extrabold">Crypto Traders</h3>
+                                        <p class="font-normal text-gray-600 text-sm">Ben : Pourquoi ?</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="font-normal text-gray-500 text-xs">Jeudi</p>
                                 </div>
                             </div>
-                            <div>
-                                <p class="font-normal text-gray-500 text-xs">Jeudi</p>
-                            </div>
-                        </div>
-                        <hr class="ml-auto mt-4 w-72">
-                        <div class="contact cursor-pointer flex  justify-between mt-4">
-                            <div class="flex items-center">
-                                <img src="./../../assets/investor.png" class="w-14 h-14">
-                                <div class="ml-4">
-                                    <h3 class="font-extrabold">Big Tech Investors</h3>
-                                    <p class="font-normal text-gray-600 text-sm">Peter : Je viens de lire un nouvel
-                                        article hyper intéressant, je vous l’envoie</p>
+                            <hr class="ml-auto mt-4 w-72 text-gray-400">
+                            <div class="contact cursor-pointer flex  justify-between mt-4">
+                                <div class="flex items-center">
+                                    <img src="./../../assets/investor.png" class="w-14 h-14">
+                                    <div class="ml-4">
+                                        <h3 class="font-extrabold">Big Tech Investors</h3>
+                                        <p class="font-normal text-gray-600 text-sm">Peter : Je viens de lire un nouvel
+                                            article hyper intéressant, je vous l’envoie</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="font-normal text-gray-500 text-xs">Vendredi</p>
                                 </div>
                             </div>
-                            <div>
-                                <p class="font-normal text-gray-500 text-xs">Vendredi</p>
-                            </div>
-                        </div>
-                        <hr class="ml-auto mt-4 w-72">
-                        <div class="contact cursor-pointer flex justify-between mt-4">
-                            <div class="flex items-center">
-                                <img src="./../../assets/whales.png" class="w-14 h-14">
-                                <div class="ml-4">
-                                    <h3 class="font-extrabold">Bitcoin Whales</h3>
-                                    <p class="font-normal text-gray-600 text-sm">Jane : J’ai pas trop d’avis sur la
-                                        question</p>
+                            <hr class="ml-auto mt-4 w-72 text-gray-400">
+                            <div class="contact cursor-pointer flex justify-between mt-4">
+                                <div class="flex items-center">
+                                    <img src="./../../assets/whales.png" class="w-14 h-14">
+                                    <div class="ml-4">
+                                        <h3 class="font-extrabold">Bitcoin Whales</h3>
+                                        <p class="font-normal text-gray-600 text-sm">Jane : J’ai pas trop d’avis sur la
+                                            question</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="font-normal text-gray-500 text-xs">Dimanche</p>
                                 </div>
                             </div>
-                            <div>
-                                <p class="font-normal text-gray-500 text-xs">Dimanche</p>
-                            </div>
+                            <hr class="ml-auto mt-4 w-72 text-gray-400">
                         </div>
-                        <hr class="ml-auto mt-4 w-72">
                     </div>
                 </div>
             </div>
@@ -1985,11 +1990,11 @@
             </div>
             <!-- NOTIFICATION -->
             <div id="notification" class="bg-white p-4 ss-page hidden">
-                <div class="flex items-center">
+                <div class="-ml-4 bg-white fixed flex items-center max-w-mobile py-2 top-0 w-full">
                     <button id="notificationCloseBtn"><img src="./../../assets/feed/close (1) 1.png"></button>
                     <h3 class="font-semibold ml-4 text-2xl">Notifications</h3>
                 </div>
-                <p class="font-medium mt-4 text-blue-normal text-sm">Marquer comme lu</p>
+                <p class="font-medium mt-10 text-blue-normal text-sm">Marquer comme lu</p>
                 <div class="flex items-start mt-8">
                     <button class="bg-blue-normal p-3 rounded-full"><img
                             src="./../../assets/feed/feather_lock_white.png" class="w-6"></button>
@@ -2273,9 +2278,9 @@
                             <div
                                 class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
                                 <input type="checkbox" name="toggle" id="toggle"
-                                    class="toggle-checkbox absolute block w-4 h-4 mt-1 ml-1 mr-1 rounded-full bg-blue-normal appearance-none cursor-pointer" />
+                                    class="toggle-checkbox absolute block w-3 h-3 mt-1 ml-1 mr-1 rounded-full bg-blue-normal appearance-none cursor-pointer" />
                                 <label for="toggle"
-                                    class="toggle-label block overflow-hidden h-6 rounded-full bg-white border-blue-normal border cursor-pointer"></label>
+                                    class="toggle-label block overflow-hidden h-5 rounded-full bg-white border-blue-normal border cursor-pointer"></label>
                             </div>
                         </div>
                         <div class="flex items-center justify-between mt-6 cursor-pointer">
@@ -2438,130 +2443,165 @@
             <div id="history" class="bg-blue-dark ss-page hidden">
                 <div class="bg-blue-dark h-1 pb-20 pt-20">
                     <div class="bg-light mt-10 p-4 rounded-t-3xl">
-                        <div class="flex font-norma items-center justify-between">
-                            <h3>Trasactions récentes</h3>
-                            <button id="orderNextBtn">
-                                <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_341_6599)">
-                                        <path d="M0.937012 3.75H4.06201" stroke="#525967" stroke-width="1.5"
-                                            stroke-linecap="round" stroke-linejoin="round"></path>
-                                        <path d="M10.937 3.75H19.062" stroke="#525967" stroke-width="1.5"
-                                            stroke-linecap="round" stroke-linejoin="round"></path>
-                                        <path d="M0.937012 13.75H10.312" stroke="#525967" stroke-width="1.5"
-                                            stroke-linecap="round" stroke-linejoin="round"></path>
-                                        <path d="M17.187 13.75H19.062" stroke="#525967" stroke-width="1.5"
-                                            stroke-linecap="round" stroke-linejoin="round"></path>
-                                        <path
-                                            d="M7.49951 6.5625C9.05281 6.5625 10.312 5.3033 10.312 3.75C10.312 2.1967 9.05281 0.9375 7.49951 0.9375C5.94621 0.9375 4.68701 2.1967 4.68701 3.75C4.68701 5.3033 5.94621 6.5625 7.49951 6.5625Z"
-                                            stroke="#525967" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round"></path>
-                                        <path
-                                            d="M13.7495 16.5625C15.3028 16.5625 16.562 15.3033 16.562 13.75C16.562 12.1967 15.3028 10.9375 13.7495 10.9375C12.1962 10.9375 10.937 12.1967 10.937 13.75C10.937 15.3033 12.1962 16.5625 13.7495 16.5625Z"
-                                            stroke="#525967" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round"></path>
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_341_6599">
-                                            <rect width="20" height="17.5" fill="white"
-                                                transform="translate(-0.000488281)">
-                                            </rect>
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                            </button>
-                        </div>
-                        <p class="font-normal mt-6 text-gray-600 text-sm">Aujourd’hui</p>
-                        <div class="flex items-center justify-between mt-6">
-                            <div class="flex items-center">
-                                <img src="./../../assets/feed/akar-icons_arrow-up.png">
-                                <div class="ml-4">
-                                    <h3 class="font-extrabold text-sm">Dépot</h3>
-                                    <p class="font-semibold text-gray-500 text-sm">23 Nov, 13h36</p>
+                        <div class="h-100 mb-20 overflow-auto">
+                            <div class="flex font-norma items-center justify-between">
+                                <h3>Trasactions récentes</h3>
+                                <button id="orderNextBtn">
+                                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_341_6599)">
+                                            <path d="M0.937012 3.75H4.06201" stroke="#525967" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M10.937 3.75H19.062" stroke="#525967" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M0.937012 13.75H10.312" stroke="#525967" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M17.187 13.75H19.062" stroke="#525967" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path
+                                                d="M7.49951 6.5625C9.05281 6.5625 10.312 5.3033 10.312 3.75C10.312 2.1967 9.05281 0.9375 7.49951 0.9375C5.94621 0.9375 4.68701 2.1967 4.68701 3.75C4.68701 5.3033 5.94621 6.5625 7.49951 6.5625Z"
+                                                stroke="#525967" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                            <path
+                                                d="M13.7495 16.5625C15.3028 16.5625 16.562 15.3033 16.562 13.75C16.562 12.1967 15.3028 10.9375 13.7495 10.9375C12.1962 10.9375 10.937 12.1967 10.937 13.75C10.937 15.3033 12.1962 16.5625 13.7495 16.5625Z"
+                                                stroke="#525967" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_341_6599">
+                                                <rect width="20" height="17.5" fill="white"
+                                                    transform="translate(-0.000488281)">
+                                                </rect>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </button>
+                            </div>
+                              <div class="flex font-norma items-center justify-between">
+                                <h3>Trasactions récentes</h3>
+                                <button id="orderNextBtn">
+                                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_341_6599)">
+                                            <path d="M0.937012 3.75H4.06201" stroke="#525967" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M10.937 3.75H19.062" stroke="#525967" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M0.937012 13.75H10.312" stroke="#525967" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M17.187 13.75H19.062" stroke="#525967" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path
+                                                d="M7.49951 6.5625C9.05281 6.5625 10.312 5.3033 10.312 3.75C10.312 2.1967 9.05281 0.9375 7.49951 0.9375C5.94621 0.9375 4.68701 2.1967 4.68701 3.75C4.68701 5.3033 5.94621 6.5625 7.49951 6.5625Z"
+                                                stroke="#525967" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                            <path
+                                                d="M13.7495 16.5625C15.3028 16.5625 16.562 15.3033 16.562 13.75C16.562 12.1967 15.3028 10.9375 13.7495 10.9375C12.1962 10.9375 10.937 12.1967 10.937 13.75C10.937 15.3033 12.1962 16.5625 13.7495 16.5625Z"
+                                                stroke="#525967" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_341_6599">
+                                                <rect width="20" height="17.5" fill="white"
+                                                    transform="translate(-0.000488281)">
+                                                </rect>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </button>
+                            </div>
+                            <p class="font-normal mt-6 text-gray-600 text-sm">Aujourd’hui</p>
+                            <div class="flex items-center justify-between mt-6">
+                                <div class="flex items-center">
+                                    <img src="./../../assets/feed/akar-icons_arrow-up.png">
+                                    <div class="ml-4">
+                                        <h3 class="font-extrabold text-sm">Dépot</h3>
+                                        <p class="font-semibold text-gray-500 text-sm">23 Nov, 13h36</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-end">
+                                    <h3 class="font-extrabold text-sm">+859.253 € </h3>
+                                    <p class="font-semibold text-gray-500 text-sm">Validé</p>
                                 </div>
                             </div>
-                            <div class="flex flex-col items-end">
-                                <h3 class="font-extrabold text-sm">+859.253 € </h3>
-                                <p class="font-semibold text-gray-500 text-sm">Validé</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between mt-6">
-                            <div class="flex items-center">
-                                <img src="./../../assets/feed/akar-icons_arrow-down.png">
-                                <div class="ml-4">
-                                    <h3 class="font-extrabold text-sm">Vente APPL</h3>
-                                    <p class="font-semibold text-gray-500 text-sm">09 Oct, 13h36</p>
+                            <div class="flex items-center justify-between mt-6">
+                                <div class="flex items-center">
+                                    <img src="./../../assets/feed/akar-icons_arrow-down.png">
+                                    <div class="ml-4">
+                                        <h3 class="font-extrabold text-sm">Vente APPL</h3>
+                                        <p class="font-semibold text-gray-500 text-sm">09 Oct, 13h36</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-end">
+                                    <h3 class="font-extrabold text-sm">-200.25 € </h3>
+                                    <p class="font-semibold text-gray-500 text-sm">Refusé</p>
                                 </div>
                             </div>
-                            <div class="flex flex-col items-end">
-                                <h3 class="font-extrabold text-sm">-200.25 € </h3>
-                                <p class="font-semibold text-gray-500 text-sm">Refusé</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between mt-6">
-                            <div class="flex items-center">
-                                <img src="./../../assets/feed/akar-icons_arrow-up.png">
-                                <div class="ml-4">
-                                    <h3 class="font-extrabold text-sm">Achat APPL</h3>
-                                    <p class="font-semibold text-gray-500 text-sm">23 Nov, 13h36</p>
+                            <div class="flex items-center justify-between mt-6">
+                                <div class="flex items-center">
+                                    <img src="./../../assets/feed/akar-icons_arrow-up.png">
+                                    <div class="ml-4">
+                                        <h3 class="font-extrabold text-sm">Achat APPL</h3>
+                                        <p class="font-semibold text-gray-500 text-sm">23 Nov, 13h36</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-end">
+                                    <h3 class="font-extrabold text-sm">+859.253 € </h3>
+                                    <p class="font-semibold text-gray-500 text-sm">Validé</p>
                                 </div>
                             </div>
-                            <div class="flex flex-col items-end">
-                                <h3 class="font-extrabold text-sm">+859.253 € </h3>
-                                <p class="font-semibold text-gray-500 text-sm">Validé</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between mt-6">
-                            <div class="flex items-center">
-                                <img src="./../../assets/feed/akar-icons_arrow-down.png">
-                                <div class="ml-4">
-                                    <h3 class="font-extrabold text-sm">Retrait</h3>
-                                    <p class="font-semibold text-gray-500 text-sm">09 Oct, 13h36</p>
+                            <div class="flex items-center justify-between mt-6">
+                                <div class="flex items-center">
+                                    <img src="./../../assets/feed/akar-icons_arrow-down.png">
+                                    <div class="ml-4">
+                                        <h3 class="font-extrabold text-sm">Retrait</h3>
+                                        <p class="font-semibold text-gray-500 text-sm">09 Oct, 13h36</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-end">
+                                    <h3 class="font-extrabold text-sm">-200.25 € </h3>
+                                    <p class="font-semibold text-gray-500 text-sm">Refusé</p>
                                 </div>
                             </div>
-                            <div class="flex flex-col items-end">
-                                <h3 class="font-extrabold text-sm">-200.25 € </h3>
-                                <p class="font-semibold text-gray-500 text-sm">Refusé</p>
-                            </div>
-                        </div>
-                        <p class="font-normal mt-8 text-gray-500">29 Décembre</p>
-                        <div class="flex items-center justify-between mt-6">
-                            <div class="flex items-center">
-                                <img src="./../../assets/feed/akar-icons_arrow-down.png">
-                                <div class="ml-4">
-                                    <h3 class="font-extrabold text-sm">Vente APPL</h3>
-                                    <p class="font-semibold text-gray-500 text-sm">09 Oct, 13h36</p>
+                            <p class="font-normal mt-8 text-gray-500">29 Décembre</p>
+                            <div class="flex items-center justify-between mt-6">
+                                <div class="flex items-center">
+                                    <img src="./../../assets/feed/akar-icons_arrow-down.png">
+                                    <div class="ml-4">
+                                        <h3 class="font-extrabold text-sm">Vente APPL</h3>
+                                        <p class="font-semibold text-gray-500 text-sm">09 Oct, 13h36</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-end">
+                                    <h3 class="font-extrabold text-sm">-200.25 € </h3>
+                                    <p class="font-semibold text-gray-500 text-sm">Refusé</p>
                                 </div>
                             </div>
-                            <div class="flex flex-col items-end">
-                                <h3 class="font-extrabold text-sm">-200.25 € </h3>
-                                <p class="font-semibold text-gray-500 text-sm">Refusé</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between mt-6">
-                            <div class="flex items-center">
-                                <img src="./../../assets/feed/akar-icons_arrow-up.png">
-                                <div class="ml-4">
-                                    <h3 class="font-extrabold text-sm">Achat APPL</h3>
-                                    <p class="font-semibold text-gray-500 text-sm">23 Nov, 13h36</p>
+                            <div class="flex items-center justify-between mt-6">
+                                <div class="flex items-center">
+                                    <img src="./../../assets/feed/akar-icons_arrow-up.png">
+                                    <div class="ml-4">
+                                        <h3 class="font-extrabold text-sm">Achat APPL</h3>
+                                        <p class="font-semibold text-gray-500 text-sm">23 Nov, 13h36</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-end">
+                                    <h3 class="font-extrabold text-sm">+859.253 € </h3>
+                                    <p class="font-semibold text-gray-500 text-sm">Validé</p>
                                 </div>
                             </div>
-                            <div class="flex flex-col items-end">
-                                <h3 class="font-extrabold text-sm">+859.253 € </h3>
-                                <p class="font-semibold text-gray-500 text-sm">Validé</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between mt-6">
-                            <div class="flex items-center">
-                                <img src="./../../assets/feed/akar-icons_arrow-down.png">
-                                <div class="ml-4">
-                                    <h3 class="font-extrabold text-sm">Retrait</h3>
-                                    <p class="font-semibold text-gray-500 text-sm">09 Oct, 13h36</p>
+                            <div class="flex items-center justify-between mt-6">
+                                <div class="flex items-center">
+                                    <img src="./../../assets/feed/akar-icons_arrow-down.png">
+                                    <div class="ml-4">
+                                        <h3 class="font-extrabold text-sm">Retrait</h3>
+                                        <p class="font-semibold text-gray-500 text-sm">09 Oct, 13h36</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="flex flex-col items-end">
-                                <h3 class="font-extrabold text-sm">-200.25 € </h3>
-                                <p class="font-semibold text-gray-500 text-sm">Refusé</p>
+                                <div class="flex flex-col items-end">
+                                    <h3 class="font-extrabold text-sm">-200.25 € </h3>
+                                    <p class="font-semibold text-gray-500 text-sm">Refusé</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -2574,7 +2614,7 @@
                         <button id="orderPrevBtn"><img src="./../../assets/Mask.png"></button>
                         <h3 class="font-semibold ml-4 text-2xl">Détails Achat</h3>
                     </div>
-                    <img src="./../../assets/feed/apple.png" class="h-10 mt-8 mx-auto w-10">
+                    <img src="./../../assets/feed/apple.png" class="h-10 mt-8 rounded-full mx-auto w-10">
                     <p class="font-extrabold mt-2 text-center text-gray-500 text-sm">AAPL</p>
                     <h3 class="font-semibold mt-2 text-2xl text-blue-normal text-center">235.025 AAPL</h3>
                 </div>
@@ -2589,7 +2629,7 @@
                     <div class="flex items-center justify-between mt-6">
                         <h3 class="font-normal text-gray-500">Type</h3>
                         <div class="flex items-center">
-                            <p>Buy</p>
+                            <p class="text-green-500">Buy</p>
                         </div>
                     </div>
                     <div class="flex items-center justify-between mt-6">
@@ -2766,16 +2806,15 @@
                         class="outline-none border textInput border-black mt-4 px-6 py-4 rounded-2xl w-full">
                     <input type="text" name="surname" placeholder="BIC"
                         class="border border-black mr-2 mt-4 outline-none px-6 py-4 rounded-2xl textInput w-full">
-                    <form>
-                        <div class="-ml-4 bottom-2 fixed max-w-mobile p-4 w-full">
-                            <p class="font-normal text-center text-gray-600 text-sm">En liant votre compte bancaire,
-                                vous acceptez
-                                nos conditions financières relatives aux tiers.</p>
-                            <button
-                                class="bg-gradient-to-br font-normal from-blue-darker mt-4 py-3 rounded-full text-white to-blue-lighter w-full">Valider
-                                le compte</button>
-                        </div>
-                    </form>
+                </form>
+                <div class="-ml-4 bottom-2 fixed max-w-mobile p-4 w-full">
+                    <p class="font-normal text-center text-gray-600 text-sm">En liant votre compte bancaire,
+                        vous acceptez
+                        nos conditions financières relatives aux tiers.</p>
+                    <button
+                        class="bg-gradient-to-br font-normal from-blue-darker mt-4 py-3 rounded-full text-white to-blue-lighter w-full">Valider
+                        le compte</button>
+                </div>
             </div>
         </div>
         <!-- FOOTER -->

@@ -178,14 +178,15 @@ function showPageBtn(pageBtn) {
 
 function hidePageBtns() {
     Array.from(pagesBtn).forEach(element => {
-        if (!element.classList.contains('text-gray-400')) element.classList.add('text-gray-400')
-        element.classList.remove('text-blue-normal')
+            element.classList.add('text-gray-400')
+            element.classList.remove('text-blue-normal')
     });
 }
 
 function showPagesBtn(pageBtnId) {
     const currPage = document.getElementById(pageBtnId);
     currPage.classList.add('text-blue-normal');
+    currPage.classList.remove('text-gray-400')
 }
 
 // FOOTER
@@ -407,6 +408,7 @@ searchBtn.addEventListener('click', () => {
 
 notificationNextBtn.addEventListener('click', () => {
     changePage(notification)
+    profileDropdown.classList.add('hidden')
     navbar.classList.add('hidden')
     footer.classList.add('hidden')
 })
@@ -488,6 +490,8 @@ lesson2PrevBtn.addEventListener('click', () => {
 playVideo.addEventListener('click', () => {
     if (playVideo.innerHTML == '<img src="./../../assets/feed/video_play.png" class="w-4">') {
         video.play()
+        playVideo.parentElement.parentElement.classList.remove('bg-light')
+        playVideo.parentElement.parentElement.classList.add('bg-white')
         videoTime.style.width = video.currentTime + '%'
         playVideo.innerHTML = '<img src="./../../assets/feed/pause.png">'
     } else {
@@ -523,7 +527,7 @@ lessonNextBtn.addEventListener('click', () => {
 })
 
 intrClose.addEventListener('click', () => {
-    closedPage.classList.add('hidden')
+    changePage(lessonPage)
 })
 
 singleLessonNextPageBtn.addEventListener('click', () => {
@@ -533,7 +537,7 @@ singleLessonNextPageBtn.addEventListener('click', () => {
 })
 
 closeBtn2.addEventListener('click', () => {
-    closedDiv.classList.add('hidden')
+    changePage(singleLessonPage)
 })
 
 // ACADEMY
@@ -638,21 +642,22 @@ function showTabBtnPage(tabBtn, tabPage) {
 tradeAddLiked.addEventListener('click', () => {
     if (tradeAddLiked.src == 'file:///C:/Users/Diyorbek/Documents/GitHub/ss2/src/assets/feed/star.png') {
         tradeAddLiked.src = './../../assets/feed/star_blue.png'
-        fixedBtn.innerText = 'Achester'
     }
     else {
         tradeAddLiked.src = './../../assets/feed/star.png'
-        fixedBtn.innerText = 'Trader'
     }
 })
 tradeAttenteBtn.addEventListener('click', () => {
     changeTabBtn(tradeAttenteBtn, tradeAttentePage)
+    fixedBtn.innerText = 'Trader'
 })
 tradeNewsBtn.addEventListener('click', () => {
     changeTabBtn(tradeNewsBtn, tradeNewsPage)
+    fixedBtn.innerText = 'Achester'
 })
 tradeProposBtn.addEventListener('click', () => {
     changeTabBtn(tradeProposBtn, tradeProposPage)
+    fixedBtn.innerText = 'Achester'
 })
 tradeNextBtn.addEventListener('click', () => {
     changePage(trandingPage)
@@ -697,8 +702,8 @@ sellAsset2NextBtn.addEventListener('click', () => {
 
 const scrollAnimation = document.getElementById('scrollAnimation')
 window.addEventListener('scroll', () => {
-    scrollAnimation.style.minHeight = '520px'
-    scrollAnimation.style.maxHeight = '521px'
+    scrollAnimation.style.minHeight = '80vh'
+    scrollAnimation.style.maxHeight = '81vh'
 })
 
 headerCloseBtn.addEventListener('click', () => {
@@ -818,7 +823,7 @@ deposerNextBtn.addEventListener('click', () => {
 ajouterNextBtn.forEach(element => {
     element.addEventListener('click', () => {
         changePage(ajouter)
-        card.src=element.children[0].children[0].children[0].src
+        card.src = element.children[0].children[0].children[0].src
         console.log(element.children[0].children[0])
         navbar.classList.add('hidden')
         footer.classList.add('hidden')
@@ -831,13 +836,13 @@ ajouterPrevBtn.addEventListener('click', () => {
     footer.classList.remove('hidden')
 })
 
-ajouterCompeteNextBtn.addEventListener('click',()=>{
+ajouterCompeteNextBtn.addEventListener('click', () => {
     changePage(ajouterCompete)
     navbar.classList.add('hidden')
     footer.classList.add('hidden')
 })
 
-ajouterCompetePrevBtn.addEventListener('click',()=>{
+ajouterCompetePrevBtn.addEventListener('click', () => {
     changePage(ajouter)
 })
 
