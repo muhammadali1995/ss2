@@ -160,7 +160,7 @@
                                         <p class="text-gray-400 text-xs ">24s ago</p>
                                     </div>
                                 </div>
-                                <img src="./../../assets/feed/bitcoin.png " alt=" " class="mt-4">
+                                <img src="./../../assets/feed/bitcoin.png " alt=" " class="mt-4 w-full">
                                 <div class="flex items-center justify-between mt-4 w-60 ">
                                     <div class="flex items-center cursor-pointer text-gray-400 like">
                                         <svg class=" " width="24 " height="24 " fill="none " viewBox="0 0 24 24 ">
@@ -186,7 +186,7 @@
                                         <p class="text-gray-400 text-xs ">24s ago</p>
                                     </div>
                                 </div>
-                                <img src="./../../assets/feed/bitcoin.png " alt=" " class="mt-4">
+                                <img src="./../../assets/feed/bitcoin.png " alt=" " class="mt-4 w-full">
                                 <div class="flex items-center justify-between mt-4 w-60 ">
                                     <div class="flex items-center cursor-pointer text-gray-400 like ">
                                         <svg class="" width="24 " height="24 " fill="none " viewBox="0 0 24 24 ">
@@ -212,7 +212,7 @@
                                         <p class="text-gray-400 text-xs ">24s ago</p>
                                     </div>
                                 </div>
-                                <img src="./../../assets/feed/bitcoin.png " alt=" " class="mt-4">
+                                <img src="./../../assets/feed/bitcoin.png " alt=" " class="mt-4 w-full">
                                 <div class="flex items-center justify-between mt-4 w-60 ">
                                     <div class="flex items-center cursor-pointer text-gray-400 like ">
                                         <svg class="" width="24 " height="24 " fill="none " viewBox="0 0 24 24 ">
@@ -238,7 +238,7 @@
                                         <p class="text-gray-400 text-xs ">24s ago</p>
                                     </div>
                                 </div>
-                                <img src="./../../assets/feed/bitcoin.png " alt=" " class="mt-4">
+                                <img src="./../../assets/feed/bitcoin.png " alt=" " class="mt-4 w-full">
                                 <div class="flex items-center justify-between mt-4 w-60 ">
                                     <div class="flex items-center cursor-pointer text-gray-400 like ">
                                         <svg class="" width="24 " height="24 " fill="none " viewBox="0 0 24 24 ">
@@ -2740,12 +2740,39 @@
                                 <p class="font-normal mt-2 text-center text-gray-600 text-sm">Votre carte a bien été
                                     enregistrée
                                     dans votre portefeuille de carte.</p>
-                                <button data-modal-toggle="small-modal"
-                                    class="bg-gradient-to-r font-normal from-blue-darker mt-3 py-3 rounded-full text-white to-blue-lighter w-full">Déposer de l’argent</button>
+                                <button id="ajouterCompeteNextBtn" data-modal-toggle="small-modal"
+                                    class="bg-gradient-to-r font-normal from-blue-darker mt-3 py-3 rounded-full text-white to-blue-lighter w-full">Déposer
+                                    de l’argent</button>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div id="ajouterCompete" class="bg-white h-screen p-4 ss-page hidden">
+                <div class="flex items-center">
+                    <button id="ajouterCompetePrevBtn"><img src="./../../assets/Mask.png"></button>
+                    <h3 class="font-bold ml-4 text-2xl">Ajouter un compte</h3>
+                </div>
+                <p class="font-normal mt-4 text-gray-600 text-sm">Ajoutez un compte en banque et commencer
+                    à trader.</p>
+                <form>
+                    <input type="text" name="surname" placeholder="Nom du titulaire"
+                        class="border border-black mt-8 outline-none px-6 py-4 rounded-2xl textInput w-full">
+                    <input type="text" name="surname" placeholder="IBAN"
+                        class="outline-none border textInput border-black mt-4 px-6 py-4 rounded-2xl w-full">
+
+                    <input type="text" name="surname" placeholder="BIC"
+                        class="border border-black mr-2 mt-4 outline-none px-6 py-4 rounded-2xl textInput w-full">
+                    <form>
+                        <div class="-ml-4 bottom-2 fixed max-w-mobile p-4 w-full">
+                            <p class="font-normal text-center text-gray-600 text-sm">En liant votre compte bancaire,
+                                vous acceptez
+                                nos conditions financières relatives aux tiers.</p>
+                            <button
+                                class="bg-gradient-to-br font-normal from-blue-darker mt-4 py-3 rounded-full text-white to-blue-lighter w-full">Valider
+                                le compte</button>
+                        </div>
+                        </fomr>
             </div>
         </div>
         <!-- FOOTER -->

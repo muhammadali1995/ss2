@@ -9,6 +9,9 @@ const ajouter = 'ajouter'
 const ajouterPrevBtn = document.getElementById('ajouterPrevBtn')
 const card = document.getElementById('card')
 const profileDropdown = document.getElementById('profileDropdown')
+const ajouterCompeteNextBtn = document.getElementById('ajouterCompeteNextBtn')
+const ajouterCompete = 'ajouterCompete'
+const ajouterCompetePrevBtn = document.getElementById('ajouterCompetePrevBtn')
 const profileMenu = document.getElementById('profileMenu')
 const profileCloseBtn = document.getElementById('profileCloseBtn')
 const searchInput = document.getElementById('searchValue')
@@ -826,6 +829,16 @@ ajouterPrevBtn.addEventListener('click', () => {
     changePage(deposer)
     navbar.classList.remove('hidden')
     footer.classList.remove('hidden')
+})
+
+ajouterCompeteNextBtn.addEventListener('click',()=>{
+    changePage(ajouterCompete)
+    navbar.classList.add('hidden')
+    footer.classList.add('hidden')
+})
+
+ajouterCompetePrevBtn.addEventListener('click',()=>{
+    changePage(ajouter)
 })
 
 // DEPOSER
