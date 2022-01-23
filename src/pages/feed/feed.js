@@ -638,21 +638,22 @@ function showTabBtnPage(tabBtn, tabPage) {
 tradeAddLiked.addEventListener('click', () => {
     if (tradeAddLiked.src == 'file:///C:/Users/Diyorbek/Documents/GitHub/ss2/src/assets/feed/star.png') {
         tradeAddLiked.src = './../../assets/feed/star_blue.png'
-        fixedBtn.innerText = 'Achester'
     }
     else {
         tradeAddLiked.src = './../../assets/feed/star.png'
-        fixedBtn.innerText = 'Trader'
     }
 })
 tradeAttenteBtn.addEventListener('click', () => {
     changeTabBtn(tradeAttenteBtn, tradeAttentePage)
+    fixedBtn.innerText = 'Trader'
 })
 tradeNewsBtn.addEventListener('click', () => {
     changeTabBtn(tradeNewsBtn, tradeNewsPage)
+    fixedBtn.innerText = 'Achester'
 })
 tradeProposBtn.addEventListener('click', () => {
     changeTabBtn(tradeProposBtn, tradeProposPage)
+    fixedBtn.innerText = 'Achester'
 })
 tradeNextBtn.addEventListener('click', () => {
     changePage(trandingPage)
@@ -818,7 +819,7 @@ deposerNextBtn.addEventListener('click', () => {
 ajouterNextBtn.forEach(element => {
     element.addEventListener('click', () => {
         changePage(ajouter)
-        card.src=element.children[0].children[0].children[0].src
+        card.src = element.children[0].children[0].children[0].src
         console.log(element.children[0].children[0])
         navbar.classList.add('hidden')
         footer.classList.add('hidden')
@@ -831,13 +832,13 @@ ajouterPrevBtn.addEventListener('click', () => {
     footer.classList.remove('hidden')
 })
 
-ajouterCompeteNextBtn.addEventListener('click',()=>{
+ajouterCompeteNextBtn.addEventListener('click', () => {
     changePage(ajouterCompete)
     navbar.classList.add('hidden')
     footer.classList.add('hidden')
 })
 
-ajouterCompetePrevBtn.addEventListener('click',()=>{
+ajouterCompetePrevBtn.addEventListener('click', () => {
     changePage(ajouter)
 })
 
