@@ -527,7 +527,7 @@ lessonNextBtn.addEventListener('click', () => {
 })
 
 intrClose.addEventListener('click', () => {
-    closedPage.classList.add('hidden')
+    changePage(lessonPage)
 })
 
 singleLessonNextPageBtn.addEventListener('click', () => {
@@ -537,7 +537,7 @@ singleLessonNextPageBtn.addEventListener('click', () => {
 })
 
 closeBtn2.addEventListener('click', () => {
-    closedDiv.classList.add('hidden')
+    changePage(singleLessonPage)
 })
 
 // ACADEMY
