@@ -697,8 +697,8 @@ sellAsset2NextBtn.addEventListener('click', () => {
 
 const scrollAnimation = document.getElementById('scrollAnimation')
 window.addEventListener('scroll', () => {
-    scrollAnimation.style.minHeight = '520px'
-    scrollAnimation.style.maxHeight = '521px'
+    scrollAnimation.style.minHeight = '80vh'
+    scrollAnimation.style.maxHeight = '81vh'
 })
 
 headerCloseBtn.addEventListener('click', () => {
