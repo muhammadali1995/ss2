@@ -600,12 +600,12 @@
                 </div>
                 <div class="bg-light pb-24 mt-4 px-4 pt-4 relative rounded-t-3xl z-40 ">
                     <div class="bg-white flex items-center justify-around mt-4 p-2 rounded-full text-black ">
-                        <button id="tousBtn "
-                            class="font-bold w-1/2 text-gray-500 px-4 py-2 rounded-full ">Publications</button>
-                        <button
-                            class="tabsBtn font-bold w-1/2 px-4 py-2 rounded-full bg-blue-normal text-white ">Favoris</button>
+                        <button id="profilePublicationsBtn"
+                            class="font-bold w-1/2 px-4 py-2 rounded-full bg-blue-normal text-white ">Publications</button>
+                        <button id="publicationsFavorisBtn"
+                            class="font-bold w-1/2 text-gray-500 px-4 py-2 rounded-full ">Favoris</button>
                     </div>
-                    <div>
+                    <div id="profileFavorisPage" class='hidden'>
                         <div class="flex items-center justify-between mt-6 rounded-3xl p-4 bg-white text-black ">
                             <div class="flex items-center ">
                                 <div><img src="./../../assets/Ethereum.png " class="w-8 h-8"></div>
@@ -656,6 +656,68 @@
                             <div class="flex flex-col items-end ">
                                 <h3 class="font-normal text-sm ">5,365.00 €</h3>
                                 <p class="text-green-600 font-semibold text-xs ">-10% </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="profilePublicationsPage">
+                        <div id="postParent">
+                            <div class="bg-white mt-4 p-4 rounded-2xl ">
+                                <div class="flex justify-between  iteems-start">
+                                    <div class="flex items-center ">
+                                    <img src="./../../assets/feed/Profile_image.png" class="userProfile h-10 w-10">
+                                    <div class="ml-4 ">
+                                        <h3 class="font-semibold text-black">Sam Gamegie</h3>
+                                        <p class="text-gray-400 text-xs ">24s ago</p>
+                                    </div>
+                                </div>
+                                <svg class="cursor-pointer" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.75 15.2498L5 14.2498L14.2929 4.95696C14.6834 4.56643 14.6834 3.93327 14.2929 3.54274L12.4571 1.70696C12.0666 1.31643 11.4334 1.31643 11.0429 1.70696L1.75 10.9998L0.75 15.2498Z" stroke="#2B64F5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M15.25 15.25H9.75" stroke="#2B64F5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg> 
+                            </div>
+                                <p class="font-normal mt-4 text-gray-600 text-sm ">It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+                                <div class="flex items-center justify-between w-60 mt-4 ">
+                                    <div class="flex text-gray-400 items-center like  cursor-pointer ">
+                                        <svg class="" width="24 " height="24 " fill="none " viewBox="0 0 24 24 ">
+                                            <path fill-rule="evenodd " stroke="currentColor " stroke-linecap="round " stroke-linejoin="round " stroke-width="1.5 " d="M11.995 7.23319C10.5455 5.60999 8.12832 5.17335 6.31215 6.65972C4.49599 8.14609 4.2403
+        10.6312 5.66654 12.3892L11.995 18.25L18.3235 12.3892C19.7498 10.6312 19.5253 8.13046 17.6779 6.65972C15.8305 5.18899 13.4446 5.60999 11.995 7.23319Z " clip-rule="evenodd "></path>
+                                        </svg>
+                                        <p class="ml-2 text-xs ">Like</p>
+                                    </div>
+                                    <div class="flex items-center cursor-pointer ">
+                                        <img src="./../../assets/feed/message 1.png ">
+                                        <p class="ml-2 text-gray-400 text-xs commentBtn">Comment</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white mt-4 p-4 rounded-2xl ">
+                             <div class="flex items-start justify-between">
+                                    <div class="flex items-center ">
+                                    <img src="./../../assets/feed/Profile_image.png" class="userProfile h-10 w-10">
+                                    <div class="ml-4 ">
+                                        <h3 class="font-semibold text-black">Sam Gamegie</h3>
+                                        <p class="text-gray-400 text-xs ">24s ago</p>
+                                    </div>
+                                </div>
+                                <svg class="cursor-pointer" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.75 15.2498L5 14.2498L14.2929 4.95696C14.6834 4.56643 14.6834 3.93327 14.2929 3.54274L12.4571 1.70696C12.0666 1.31643 11.4334 1.31643 11.0429 1.70696L1.75 10.9998L0.75 15.2498Z" stroke="#2B64F5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M15.25 15.25H9.75" stroke="#2B64F5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                    
+                                </div>
+                                <img src="./../../assets/feed/bitcoin.png " alt=" " class="mt-4 w-full">
+                                <div class="flex items-center justify-between mt-4 w-60 ">
+                                    <div class="flex items-center cursor-pointer text-gray-400 like">
+                                        <svg class=" " width="24 " height="24 " fill="none " viewBox="0 0 24 24 ">
+                                            <path fill-rule="evenodd " stroke="currentColor " stroke-linecap="round " stroke-linejoin="round " stroke-width="1.5 " d="M11.995 7.23319C10.5455 5.60999 8.12832 5.17335 6.31215 6.65972C4.49599 8.14609 4.2403
+        10.6312 5.66654 12.3892L11.995 18.25L18.3235 12.3892C19.7498 10.6312 19.5253 8.13046 17.6779 6.65972C15.8305 5.18899 13.4446 5.60999 11.995 7.23319Z " clip-rule="evenodd "></path>
+                                        </svg>
+                                        <p class="ml-2  text-xs ">Like</p>
+                                    </div>
+                                    <div class="flex items-center cursor-pointer ">
+                                        <img src="./../../assets/feed/message 1.png ">
+                                        <p class="ml-2 text-gray-400 text-xs commentBtn">Comment</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -8,13 +8,17 @@ const accountPrevBtn = document.getElementById('accountPrevBtn')
 const deposer = 'deposer'
 const ajouter = 'ajouter'
 const ajouterPrevBtn = document.getElementById('ajouterPrevBtn')
+const profilePublicationsBtn = document.getElementById('profilePublicationsBtn')
+const publicationsFavorisBtn = document.getElementById('publicationsFavorisBtn')
+const profileFavorisPage = document.getElementById('profileFavorisPage')
+const profilePublicationsPage = document.getElementById('profilePublicationsPage')
 const card = document.getElementById('card')
 const deposerBtn = document.getElementById('deposerBtn')
 const retirerBtn = document.getElementById('retirerBtn')
 const profileDropdown = document.getElementById('profileDropdown')
 const ajouterCompeteNextBtn = document.getElementById('ajouterCompeteNextBtn')
 const ajouterCompete = 'ajouterCompete'
-const rewardPage ='rewardPage'
+const rewardPage = 'rewardPage'
 const accountCreateNextBtn = document.getElementById('accountCreateNextBtn')
 const accountCreate = 'accountCreate'
 const rewardNextBtn = document.getElementById('rewardNextBtn')
@@ -76,7 +80,7 @@ const singleLessonNextBtn = document.getElementById('singleLessonNextBtn')
 const commentCloseBtn = document.getElementById('commentCloseBtn')
 const dropdownBtn = document.getElementById('dropdownBtn')
 const reloadBtn = document.getElementById('reloadBtn')
-const loader ='loader'
+const loader = 'loader'
 const commentDropdown = document.getElementById('commentDropdown')
 const searchOthers = document.getElementById('searchOthers')
 const notificationNextBtn = document.getElementById('notificationNextBtn')
@@ -188,8 +192,8 @@ function showPageBtn(pageBtn) {
 
 function hidePageBtns() {
     Array.from(pagesBtn).forEach(element => {
-            element.classList.add('text-gray-400')
-            element.classList.remove('text-blue-normal')
+        element.classList.add('text-gray-400')
+        element.classList.remove('text-blue-normal')
     });
 }
 
@@ -265,6 +269,19 @@ abonentPrevBtn.addEventListener('click', () => {
     footer.classList.remove('hidden')
     navbar.classList.remove('hidden')
 });
+profilePublicationsBtn.addEventListener('click', () => {
+    profilePublicationsBtn.className = 'font-bold w-1/2 px-4 py-2 rounded-full bg-blue-normal text-white'
+    publicationsFavorisBtn.className = 'font-bold w-1/2 text-gray-500 px-4 py-2 rounded-full'
+    profilePublicationsPage.classList.remove('hidden')
+    profileFavorisPage.classList.add('hidden')
+})
+publicationsFavorisBtn.addEventListener('click', () => {
+    publicationsFavorisBtn.className = 'font-bold w-1/2 px-4 py-2 rounded-full bg-blue-normal text-white'
+    profilePublicationsBtn.className = 'font-bold w-1/2 text-gray-500 px-4 py-2 rounded-full'
+    profilePublicationsPage.classList.add('hidden')
+    profileFavorisPage.classList.remove('hidden')
+})
+
 // PROFIL PAGE
 
 // FEED PAGE
@@ -814,9 +831,9 @@ connectionPrevBtn.addEventListener('click', () => {
     footer.classList.remove('hidden')
     navbar.classList.remove('hidden')
 })
-reloadBtn.addEventListener('click',()=>{
+reloadBtn.addEventListener('click', () => {
     changePage(loader)
-    setTimeout(()=>changePage(connection),5000)
+    setTimeout(() => changePage(connection), 5000)
 })
 // CONNECTION
 
@@ -859,35 +876,35 @@ ajouterCompetePrevBtn.addEventListener('click', () => {
     changePage(ajouter)
 })
 
-rewardNextBtn.addEventListener('click',()=>{
+rewardNextBtn.addEventListener('click', () => {
     changePage(rewardPage)
     navbar.classList.add('hidden')
     footer.classList.add('hidden')
     profileDropdown.classList.add('hidden')
 })
 
-rewardCloseBtn.addEventListener('click',()=>{
+rewardCloseBtn.addEventListener('click', () => {
     changePage(FEED_PAGE)
     navbar.classList.remove('hidden')
     footer.classList.remove('hidden')
 })
 
-accountCreateNextBtn.addEventListener('click',()=>{
-    changePage( accountCreate)
+accountCreateNextBtn.addEventListener('click', () => {
+    changePage(accountCreate)
 })
 
-accountPrevBtn.addEventListener('click',()=>{
+accountPrevBtn.addEventListener('click', () => {
     changePage(ajouterCompete)
 })
 
-deposerBtn.addEventListener('click',()=>{
-    retirerBtn.className ='font-bold text-gray-600 w-1/2'
-    deposerBtn.className='bg-blue-normal font-bold py-1 rounded-full text-white w-1/2'
+deposerBtn.addEventListener('click', () => {
+    retirerBtn.className = 'font-bold text-gray-600 w-1/2'
+    deposerBtn.className = 'bg-blue-normal font-bold py-1 rounded-full text-white w-1/2'
 })
 
-retirerBtn.addEventListener('click',()=>{
-    deposerBtn.className ='font-bold text-gray-600 w-1/2'
-    retirerBtn.className='bg-blue-normal font-bold py-1 rounded-full text-white w-1/2'
+retirerBtn.addEventListener('click', () => {
+    deposerBtn.className = 'font-bold text-gray-600 w-1/2'
+    retirerBtn.className = 'bg-blue-normal font-bold py-1 rounded-full text-white w-1/2'
 })
 
 // DEPOSER
