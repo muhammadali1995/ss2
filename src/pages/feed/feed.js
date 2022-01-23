@@ -408,6 +408,7 @@ searchBtn.addEventListener('click', () => {
 
 notificationNextBtn.addEventListener('click', () => {
     changePage(notification)
+    profileDropdown.classList.add('hidden')
     navbar.classList.add('hidden')
     footer.classList.add('hidden')
 })
