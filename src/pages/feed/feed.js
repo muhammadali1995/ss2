@@ -2,17 +2,34 @@ const attenteBtn = document.getElementById('attenteBtn')
 const tousBtn = document.getElementById('tousBtn')
 const attenteTab = document.getElementById('attenteTab')
 const tousTab = document.getElementById('tousTab')
+const deposerNextBtn = document.getElementById('deposerNextBtn')
+const ajouterNextBtn = document.querySelectorAll('.ajouterNextBtn')
+const deposer = 'deposer'
+const ajouter = 'ajouter'
+const ajouterPrevBtn = document.getElementById('ajouterPrevBtn')
+const card = document.getElementById('card')
 const profileDropdown = document.getElementById('profileDropdown')
 const profileMenu = document.getElementById('profileMenu')
 const profileCloseBtn = document.getElementById('profileCloseBtn')
 const searchInput = document.getElementById('searchValue')
+const orderNextBtn = document.getElementById('orderNextBtn')
+const connection = 'connection'
+const connectionNextBtn = document.getElementById('connectionNextBtn')
+const connectionPrevBtn = document.getElementById('connectionPrevBtn')
+const orderPrevBtn = document.getElementById('orderPrevBtn')
 const searchForms = document.querySelectorAll('.searchForm')
+const addSmthBtn = document.querySelectorAll('.addSmthBtn')
 const profileNextBtn = document.getElementById('profileNextBtn')
 const singleLessonNextPageBtn = document.getElementById('singleLessonNextPageBtn')
 const intrClose = document.getElementById('intrClose')
 const closedPage = document.getElementById('closedPage')
 const publicationsBtn = document.getElementById('publicationsBtn')
 const newsBtn = document.getElementById('newsBtn')
+const parametrNextBtn = document.getElementById('parametrNextBtn')
+const historyNextBtn = document.getElementById('historyNextBtn')
+const history = 'history'
+const order = 'order'
+const settings = 'settings'
 const chatBtnStyled = 'chatBtn'
 const publicationsPage = document.getElementById('publications')
 const newsPage = document.getElementById('news')
@@ -49,6 +66,7 @@ const commentCloseBtn = document.getElementById('commentCloseBtn')
 const dropdownBtn = document.getElementById('dropdownBtn')
 const commentDropdown = document.getElementById('commentDropdown')
 const searchOthers = document.getElementById('searchOthers')
+const notificationNextBtn = document.getElementById('notificationNextBtn')
 const commentSearchInput = document.getElementById('commentSearch')
 const chatForm = document.getElementById('chatFrom')
 const commentForm = document.getElementById('commentForm')
@@ -70,11 +88,13 @@ const academyMenuBtn = document.getElementById('menu')
 const likeBtns = document.querySelectorAll('.like')
 const rechercherInput = document.getElementById('rechercherValue')
 const rechercherCloseBtn = document.getElementById('rechercherCloseBtn')
+const notificationCloseBtn = document.getElementById('notificationCloseBtn')
 const postCloseBtn = document.getElementById('close')
 const academyNextBtn = document.getElementById('mainNextBtn')
 const pagesBtn = document.querySelectorAll('.pagesBtn')
 const rechercherPage = 'rechercher'
 const FEED_PAGE = 'feedPage'
+const notification = 'notification'
 const chat = 'chat'
 const Inf_page = 'personalInformation'
 const PORTFOLIO = 'portfolio'
@@ -83,6 +103,7 @@ const USER_PROFILE_PAGE = 'userProfile'
 const postPage = 'postPage'
 const abonentsPage = 'abonents'
 const ACADEMY_PAGE = 'academy'
+const headerCloseBtn = document.getElementById('headerCloseBtn')
 const lessonPage = 'lessonPage'
 const singleLessonPage = 'singleLesson'
 const singleLesson2 = 'singleLesson2'
@@ -110,6 +131,9 @@ const academyBtn = document.getElementById('academyBtn')
 const upScroll = document.getElementById('upScroll')
 const userProfileBtns = document.querySelectorAll('.userProfile')
 const tradeTabsBtns = document.querySelectorAll('.tradeTabsBtn')
+const supportChatNextBtn = document.getElementById('supportChatNextBtn')
+const supportChat = 'supportChat'
+const supportChatCloseBtn = document.getElementById('supportChatCloseBtn')
 const tradeProposBtn = document.getElementById('tradeProposBtn')
 const tradeNewsBtn = document.getElementById('tradeNewsBtn')
 const tradeAttenteBtn = document.getElementById('tradeAttenteBtn')
@@ -130,10 +154,15 @@ const sellAssetNextBtn = document.getElementById('sellAssetNextBtn')
 const tradingPrevBtn = document.getElementById('tradingPrevBtn')
 const sellAsset2PrevBtn = document.getElementById('sellAsset2PrevBtn')
 const pages = document.getElementsByClassName('ss-page')
+const supportNextBtn = document.getElementById('supportNextBtn')
+const support = 'support'
+const supportCloseBtn = document.getElementById('supportCloseBtn')
 const sellSelectBtn = document.querySelectorAll('.sellSelectBtn')
 const sellPrevBtn = document.getElementById('sellPrevBtn')
 const sellAsset2NextBtn = document.getElementById('sellAsset2NextBtn')
 const tradeBtnStyled = 'tradeBtn'
+const supportChatFrom = document.getElementById('supportChatFrom')
+const messagesSite = document.getElementById('messagesSite')
 
 
 
@@ -167,7 +196,7 @@ function changePage(page) {
 function hidePages() {
     const pages = document.querySelectorAll('.ss-page');
     Array.from(pages).forEach(element => {
-         element.classList.add('hidden')
+        element.classList.add('hidden')
     });
 }
 
@@ -208,12 +237,12 @@ profileCloseBtn.addEventListener('click', () => {
     profileDropdown.classList.add('hidden')
 })
 
-abonentNextBtn.forEach(element=>{
+abonentNextBtn.forEach(element => {
     element.addEventListener('click', () => {
-    changePage(abonentsPage)
-    footer.classList.remove('hidden')
-    navbar.classList.add('hidden')
-})
+        changePage(abonentsPage)
+        footer.classList.remove('hidden')
+        navbar.classList.add('hidden')
+    })
 })
 
 abonentPrevBtn.addEventListener('click', () => {
@@ -372,6 +401,20 @@ searchBtn.addEventListener('click', () => {
         showPageBtn(feddBtnStyled)
     }
 })
+
+notificationNextBtn.addEventListener('click', () => {
+    changePage(notification)
+    navbar.classList.add('hidden')
+    footer.classList.add('hidden')
+})
+
+notificationCloseBtn.addEventListener('click', () => {
+    changePage(FEED_PAGE)
+    showPageBtn(feddBtnStyled)
+    navbar.classList.remove('hidden')
+    footer.classList.remove('hidden')
+})
+
 // FEED PAGE
 
 // PORTFOLIO PAGE 
@@ -560,22 +603,6 @@ dollarBtn.addEventListener('click', () => {
 
 // CHAT
 
-// SWIPER
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    loop: true,
-
-    autoplay: {
-        delay: 3000
-    },
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-    },
-    scrollbar: false
-});
-
 // TRADE
 tradeBtn.addEventListener('click', () => {
     changePage(tradeMainPage)
@@ -662,7 +689,7 @@ sellAsset2NextBtn.addEventListener('click', () => {
     changePage(tradeCategoryPage)
     footer.classList.remove('hidden')
     navbar.classList.remove('hidden')
-    navbarText.innerText ='Catagory'
+    navbarText.innerText = 'Catagory'
 })
 
 const scrollAnimation = document.getElementById('scrollAnimation')
@@ -671,7 +698,155 @@ window.addEventListener('scroll', () => {
     scrollAnimation.style.maxHeight = '521px'
 })
 
+headerCloseBtn.addEventListener('click', () => {
+    headerCloseBtn.parentElement.classList.add('hidden')
+    setTimeout(() => headerCloseBtn.parentElement.classList.remove('hidden'), 5000)
+})
+
 // TRADE
+
+// SUPPORT
+
+supportNextBtn.addEventListener('click', () => {
+    changePage(support)
+    profileDropdown.classList.add('hidden')
+    footer.classList.add('hidden')
+    navbar.classList.add('hidden')
+})
+
+supportCloseBtn.addEventListener('click', () => {
+    changePage(FEED_PAGE)
+    showPageBtn(feddBtnStyled)
+    navbar.classList.remove('hidden')
+    footer.classList.remove('hidden')
+})
+
+supportChatNextBtn.addEventListener('click', () => {
+    changePage(supportChat)
+})
+supportChatCloseBtn.addEventListener('click', () => {
+    changePage(support)
+})
+
+supportChatFrom.addEventListener('submit', (e) => {
+    e.preventDefault()
+    const newMessadge = document.createElement('div')
+    newMessadge.innerHTML = `<div class="flex items-start mt-8">
+                    <div class="bg-blue-dark px-4 py-2 rounded-2xl text-white" style="border-top-right-radius: 0;">
+                        <div class="flex justify-between">
+                            <h3 class="font-bold text-sm">Sam GAMEGIE</h3>
+                            <p class="font-semibold text-gray-300 text-xs">${new Date().toLocaleTimeString()}</p>
+                        </div>
+                        <p class="font-normal mt-1 text-gray-300 w-72 overflow-auto text-sm">${supportChatFrom.children[0].value}</p>
+                    </div>
+                    <img src="./../../assets/feed/Profile_image.png" class="ml-4">
+                </div>`
+    messagesSite.appendChild(newMessadge)
+    supportChatFrom[0].value = ''
+})
+
+// SUPPORT
+
+// SETTINGS
+parametrNextBtn.addEventListener('click', () => {
+    changePage(settings)
+    footer.classList.add('hidden')
+    navbarText.innerText = 'Paramètres'
+    rechercherPrevBtn.classList.remove('hidden')
+    rechercherPrevBtn.addEventListener('click', () => {
+        changePage(FEED_PAGE)
+        showPageBtn(feddBtnStyled)
+        navbarText.innerText = 'Feed'
+        footer.classList.remove('hidden')
+        rechercherPrevBtn.classList.add('hidden')
+    })
+    profileDropdown.classList.add('hidden')
+})
+// SETTINGS
+
+// HISTORY
+historyNextBtn.addEventListener('click', () => {
+    changePage(history)
+    navbarText.innerText = 'Historique de transactions'
+    profileDropdown.classList.add('hidden')
+})
+orderNextBtn.addEventListener('click', () => {
+    changePage(order)
+    navbar.classList.add('hidden')
+    footer.classList.add('hidden')
+})
+orderPrevBtn.addEventListener('click', () => {
+    changePage(history)
+    navbar.classList.remove('hidden')
+    footer.classList.remove('hidden')
+})
+// HISTORY
+
+// CONNECTION
+connectionNextBtn.addEventListener('click', () => {
+    changePage(connection)
+    profileDropdown.classList.add('hidden')
+    footer.classList.add('hidden')
+    navbar.classList.add('hidden')
+})
+
+connectionPrevBtn.addEventListener('click', () => {
+    changePage(FEED_PAGE)
+    showPageBtn(feddBtnStyled)
+    footer.classList.remove('hidden')
+    navbar.classList.remove('hidden')
+})
+// CONNECTION
+
+
+// DEPOSER
+addSmthBtn.forEach(element => {
+    element.addEventListener('click', () => {
+        element.parentElement.children[0].classList.remove('hidden')
+    })
+})
+
+deposerNextBtn.addEventListener('click', () => {
+    changePage(deposer)
+    profileDropdown.classList.add('hidden')
+    navbarText.innerText = 'Dépôt/Retrait'
+})
+
+ajouterNextBtn.forEach(element => {
+    element.addEventListener('click', () => {
+        changePage(ajouter)
+        card.src=element.children[0].children[0].children[0].src
+        console.log(element.children[0].children[0])
+        navbar.classList.add('hidden')
+        footer.classList.add('hidden')
+    })
+})
+
+ajouterPrevBtn.addEventListener('click', () => {
+    changePage(deposer)
+    navbar.classList.remove('hidden')
+    footer.classList.remove('hidden')
+})
+
+// DEPOSER
+
+
+// SWIPER
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    loop: true,
+
+    autoplay: {
+        delay: 3000
+    },
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+    },
+    scrollbar: false
+});
+
 
 // SWIPER
 
