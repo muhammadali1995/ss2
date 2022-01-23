@@ -4,13 +4,20 @@ const attenteTab = document.getElementById('attenteTab')
 const tousTab = document.getElementById('tousTab')
 const deposerNextBtn = document.getElementById('deposerNextBtn')
 const ajouterNextBtn = document.querySelectorAll('.ajouterNextBtn')
+const accountPrevBtn = document.getElementById('accountPrevBtn')
 const deposer = 'deposer'
 const ajouter = 'ajouter'
 const ajouterPrevBtn = document.getElementById('ajouterPrevBtn')
 const card = document.getElementById('card')
+const deposerBtn = document.getElementById('deposerBtn')
+const retirerBtn = document.getElementById('retirerBtn')
 const profileDropdown = document.getElementById('profileDropdown')
 const ajouterCompeteNextBtn = document.getElementById('ajouterCompeteNextBtn')
 const ajouterCompete = 'ajouterCompete'
+const rewardPage ='rewardPage'
+const accountCreateNextBtn = document.getElementById('accountCreateNextBtn')
+const accountCreate = 'accountCreate'
+const rewardNextBtn = document.getElementById('rewardNextBtn')
 const ajouterCompetePrevBtn = document.getElementById('ajouterCompetePrevBtn')
 const profileMenu = document.getElementById('profileMenu')
 const profileCloseBtn = document.getElementById('profileCloseBtn')
@@ -19,6 +26,7 @@ const orderNextBtn = document.getElementById('orderNextBtn')
 const connection = 'connection'
 const connectionNextBtn = document.getElementById('connectionNextBtn')
 const connectionPrevBtn = document.getElementById('connectionPrevBtn')
+const rewardCloseBtn = document.getElementById('rewardCloseBtn')
 const orderPrevBtn = document.getElementById('orderPrevBtn')
 const searchForms = document.querySelectorAll('.searchForm')
 const addSmthBtn = document.querySelectorAll('.addSmthBtn')
@@ -67,6 +75,8 @@ const lesson2PrevBtn = document.getElementById('lesson2PrevBtn')
 const singleLessonNextBtn = document.getElementById('singleLessonNextBtn')
 const commentCloseBtn = document.getElementById('commentCloseBtn')
 const dropdownBtn = document.getElementById('dropdownBtn')
+const reloadBtn = document.getElementById('reloadBtn')
+const loader ='loader'
 const commentDropdown = document.getElementById('commentDropdown')
 const searchOthers = document.getElementById('searchOthers')
 const notificationNextBtn = document.getElementById('notificationNextBtn')
@@ -804,6 +814,10 @@ connectionPrevBtn.addEventListener('click', () => {
     footer.classList.remove('hidden')
     navbar.classList.remove('hidden')
 })
+reloadBtn.addEventListener('click',()=>{
+    changePage(loader)
+    setTimeout(()=>changePage(connection),5000)
+})
 // CONNECTION
 
 
@@ -824,7 +838,6 @@ ajouterNextBtn.forEach(element => {
     element.addEventListener('click', () => {
         changePage(ajouter)
         card.src = element.children[0].children[0].children[0].src
-        console.log(element.children[0].children[0])
         navbar.classList.add('hidden')
         footer.classList.add('hidden')
     })
@@ -844,6 +857,37 @@ ajouterCompeteNextBtn.addEventListener('click', () => {
 
 ajouterCompetePrevBtn.addEventListener('click', () => {
     changePage(ajouter)
+})
+
+rewardNextBtn.addEventListener('click',()=>{
+    changePage(rewardPage)
+    navbar.classList.add('hidden')
+    footer.classList.add('hidden')
+    profileDropdown.classList.add('hidden')
+})
+
+rewardCloseBtn.addEventListener('click',()=>{
+    changePage(FEED_PAGE)
+    navbar.classList.remove('hidden')
+    footer.classList.remove('hidden')
+})
+
+accountCreateNextBtn.addEventListener('click',()=>{
+    changePage( accountCreate)
+})
+
+accountPrevBtn.addEventListener('click',()=>{
+    changePage(ajouterCompete)
+})
+
+deposerBtn.addEventListener('click',()=>{
+    retirerBtn.className ='font-bold text-gray-600 w-1/2'
+    deposerBtn.className='bg-blue-normal font-bold py-1 rounded-full text-white w-1/2'
+})
+
+retirerBtn.addEventListener('click',()=>{
+    deposerBtn.className ='font-bold text-gray-600 w-1/2'
+    retirerBtn.className='bg-blue-normal font-bold py-1 rounded-full text-white w-1/2'
 })
 
 // DEPOSER
