@@ -53,11 +53,11 @@
                     <img src="./../../assets/feed/gift.png " class="mr-2 ">
                     <p>Parrainer</p>
                 </button>
-                <div class="mt-8 flex items-center cursor-pointer ">
+                <div id="historyNextBtn" class="mt-8 flex items-center cursor-pointer ">
                     <img src="./../../assets/feed/historique.png " class="mr-6 ">
                     <h3 class="font-medium ">Historique de transactions</h3>
                 </div>
-                <div class="flex items-center cursor-pointer mt-6 ">
+                <div id="deposerNextBtn" class="flex items-center cursor-pointer mt-6 ">
                     <img src="./../../assets/feed/banque.png " class="mr-6 ">
                     <h3 class="font-medium mr-4 ">Déposer/Retirer</h3>
                 </div>
@@ -73,13 +73,13 @@
                     <img src="./../../assets/feed/setting.png " class="mr-6 ">
                     <h3 class="font-medium mr-4 ">Paramètres</h3>
                 </div>
-                <div class="flex items-center cursor-pointer mt-6 ">
+                <div id="connectionNextBtn" class="flex items-center cursor-pointer mt-6 ">
                     <img src="./../../assets/feed/log-out.png " class="mr-6 ">
                     <h3 class="font-medium mr-4 text-red-600 ">Déconnexion</h3>
                 </div>
             </div>
             <!-- FEED -->
-            <div id="feedPage" class="ss-page hidden">
+            <div id="feedPage" class="ss-page">
                 <!-- FEED SEARCH BAR -->
                 <div class="pt-20 pb-12 px-4 bg-blue-dark ">
                     <form class=" searchForm flex justify-around ">
@@ -2044,7 +2044,7 @@
                 </div>
                 <hr class="mt-4">
                 <div class="flex items-start mt-8">
-                    <button class="rounded-full"><img src="./../../assets/feed/person2.png" class=""></button>
+                    <button class="rounded-full"><img src="./../../assets/feed/person2.png" class="w-10 "></button>
                     <div class="ml-3">
                         <h3 class="font-bold">Vous avez un nouvel ami</h3>
                         <h4 class="font-semibold text-gray-600 text-sm">Carl TORIN à accepté votre invitation. </h4>
@@ -2127,7 +2127,7 @@
                 </div>
                 <p class="font-semibold mt-4 mx-auto text-center text-gray-600 text-sm w-96">Les réponses peuvent
                     prendre plus de temps que d'habitude en raison des volumes entrants doubles à élevés.</p>
-                <div id="messagesSite" class="pb-20">
+                <div id="messagesSite" class="pb-20 p-4">
                     <div class="flex items-start mt-3">
                         <img src="./../../assets/feed/ss-btn.png" class="mr-4 w-6 h-6">
                         <div class="bg-light px-4 py-2 rounded-2xl text-black" style="border-top-left-radius: 0;">
@@ -2431,38 +2431,41 @@
                 </div>
             </div>
             <!-- HISTORY -->
-            <div id="history" class="bg-blue-dark">
-                <div class="bg-blue-dark pb-20 pt-20">
-                    <div class="bg-light p-4 rounded-t-3xl">
+            <div id="history" class="bg-blue-dark ss-page hidden">
+                <div class="bg-blue-dark h-1 pb-20 pt-20">
+                    <div class="bg-light mt-10 p-4 rounded-t-3xl">
                         <div class="flex font-norma items-center justify-between">
                             <h3>Trasactions récentes</h3>
-                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_341_6599)">
-                                    <path d="M0.937012 3.75H4.06201" stroke="#525967" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M10.937 3.75H19.062" stroke="#525967" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M0.937012 13.75H10.312" stroke="#525967" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M17.187 13.75H19.062" stroke="#525967" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path
-                                        d="M7.49951 6.5625C9.05281 6.5625 10.312 5.3033 10.312 3.75C10.312 2.1967 9.05281 0.9375 7.49951 0.9375C5.94621 0.9375 4.68701 2.1967 4.68701 3.75C4.68701 5.3033 5.94621 6.5625 7.49951 6.5625Z"
-                                        stroke="#525967" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round"></path>
-                                    <path
-                                        d="M13.7495 16.5625C15.3028 16.5625 16.562 15.3033 16.562 13.75C16.562 12.1967 15.3028 10.9375 13.7495 10.9375C12.1962 10.9375 10.937 12.1967 10.937 13.75C10.937 15.3033 12.1962 16.5625 13.7495 16.5625Z"
-                                        stroke="#525967" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round"></path>
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_341_6599">
-                                        <rect width="20" height="17.5" fill="white" transform="translate(-0.000488281)">
-                                        </rect>
-                                    </clipPath>
-                                </defs>
-                            </svg>
+                            <button id="orderNextBtn">
+                                <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_341_6599)">
+                                        <path d="M0.937012 3.75H4.06201" stroke="#525967" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M10.937 3.75H19.062" stroke="#525967" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M0.937012 13.75H10.312" stroke="#525967" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M17.187 13.75H19.062" stroke="#525967" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path
+                                            d="M7.49951 6.5625C9.05281 6.5625 10.312 5.3033 10.312 3.75C10.312 2.1967 9.05281 0.9375 7.49951 0.9375C5.94621 0.9375 4.68701 2.1967 4.68701 3.75C4.68701 5.3033 5.94621 6.5625 7.49951 6.5625Z"
+                                            stroke="#525967" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                        <path
+                                            d="M13.7495 16.5625C15.3028 16.5625 16.562 15.3033 16.562 13.75C16.562 12.1967 15.3028 10.9375 13.7495 10.9375C12.1962 10.9375 10.937 12.1967 10.937 13.75C10.937 15.3033 12.1962 16.5625 13.7495 16.5625Z"
+                                            stroke="#525967" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_341_6599">
+                                            <rect width="20" height="17.5" fill="white"
+                                                transform="translate(-0.000488281)">
+                                            </rect>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </button>
                         </div>
                         <p class="font-normal mt-6 text-gray-600 text-sm">Aujourd’hui</p>
                         <div class="flex items-center justify-between mt-6">
@@ -2557,11 +2560,194 @@
                                 <p class="font-semibold text-gray-500 text-sm">Refusé</p>
                             </div>
                         </div>
-                                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ORDER -->
+            <div id="order" class="bg-white ss-page hidden">
+                <div class="p-4">
+                    <div class="flex items-center">
+                        <button id="orderPrevBtn"><img src="./../../assets/Mask.png"></button>
+                        <h3 class="font-semibold ml-4 text-2xl">Détails Achat</h3>
+                    </div>
+                    <img src="./../../assets/feed/apple.png" class="h-10 mt-8 mx-auto w-10">
+                    <p class="font-extrabold mt-2 text-center text-gray-500 text-sm">AAPL</p>
+                    <h3 class="font-semibold mt-2 text-2xl text-blue-normal text-center">235.025 AAPL</h3>
+                </div>
+                <div class="bg-light p-4 rounded-t-3xl">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-normal text-gray-500">Payé avec</h3>
+                        <div class="flex items-center">
+                            <img src="./../../assets/Group.png">
+                            <p class="font-normal ml-4 text-sm">5399 ****</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between mt-6">
+                        <h3 class="font-normal text-gray-500">Type</h3>
+                        <div class="flex items-center">
+                            <p>Buy</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between mt-6">
+                        <h3 class="font-normal text-gray-500">Prix</h3>
+                        <div class="flex items-center">
+                            <p class="font-normal ml-4 text-sm">135.23 €</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between mt-6">
+                        <h3 class="font-normal text-gray-500">Unités</h3>
+                        <div class="flex items-center">
+                            <p class="font-normal ml-4 text-sm">235.025 APPL</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between mt-6">
+                        <h3 class="font-normal text-gray-500">Frais</h3>
+                        <div class="flex items-center">
+                            <p class="font-normal ml-4 text-sm">1.00 €</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between mt-6">
+                        <h3 class="font-normal text-gray-500">Date</h3>
+                        <div class="flex items-center">
+                            <p class="font-normal ml-4 text-sm">12/11/2011 15:58:25</p>
+                        </div>
+                    </div>
+                    <hr class="mt-6">
+                    <div class="flex items-center justify-between mt-6">
+                        <h3 class="font-normal text-gray-500">Statut</h3>
+                        <div class="flex items-center">
+                            <p class="font-normal ml-4 text-sm">Pending</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- NO CONNECTION -->
+            <div id="connection" class="bg-white h-screen ss-page hidden p-4">
+                <button id="connectionPrevBtn"><img src="./../../assets/Mask.png"></button>
+                <div class="-mt-16 flex flex-col h-screen items-center justify-center">
+                    <img src="./../../assets/feed/noInternet.png">
+                    <h3 class="font-semibold mt-4 text-2xl">Oups !</h3>
+                    <p class="font-semibold mt-4 text-center text-gray-600 text-sm w-80">Assurez-vous que le Wi-Fi ou
+                        les données mobiles
+                        sont activés, puis réessayez</p>
+                    <button
+                        class="border border-blue-normal font-bold mt-8 py-2 rounded-full text-blue-normal w-1/2">Réssayer</button>
+                </div>
+            </div>
+            <!-- DEPOSER -->
+            <div id="deposer" class="bg-blue-dark pt-10 text-white hidden ss-page">
+                <p class="font-normal p-4 text-gray-300 text-sm">Select your preferred payment to continue</p>
+                <div class="bg-light pb-24 p-4 rounded-t-3xl text-black">
+                    <div class="bg-white flex px-4 py-2 rounded-full">
+                        <button class="bg-blue-normal font-bold py-1 rounded-full text-white w-1/2">Déposer</button>
+                        <button class="font-bold text-gray-600 w-1/2">Retirer</button>
+                    </div>
+                    <h3 class="mt-6">Cartes de paiement</h3>
+                    <div>
+                        <div class="bg-white cursor-pointer flex items-center justify-between hidden ajouterNextBtn mt-4 px-6 py-4 rounded-2xl"
+                            style="box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);">
+                            <div class="flex items-center">
+                                <button><img src="./../../assets/Group.png"></button>
+                                <div>
+                                    <h3 class="font-bold ml-4">Frank Thomas</h3>
+                                    <p class="font-normal ml-4 text-gray-300 text-sm">**** 9079</p>
+                                </div>
+                            </div>
+                            <img src="./../../assets/vector.png">
+                        </div>
+                        <div class="bg-white cursor-pointer flex items-center justify-between mt-4 px-6 py-4 rounded-2xl addSmthBtn"
+                            style="box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);">
+                            <div class="flex items-center">
+                                <button><img src="./../../assets/feed/plus.png"></button>
+                                <h3 class="font-bold ml-4">Ajouter une carte bancaire</h3>
+                            </div>
+                            <img src="./../../assets/vector.png">
+                        </div>
+                    </div>
+                    <h3 class="mt-8">Comptes bancaires</h3>
+                    <div>
+                        <div class="bg-white cursor-pointer flex items-center justify-between hidden ajouterNextBtn mt-4 px-6 py-4 rounded-2xl"
+                            style="box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);">
+                            <div class="flex items-center">
+                                <button><img src="./../../assets/Vector 2.png"></button>
+                                <div>
+                                    <h3 class="font-bold ml-4">Chase Banque FR</h3>
+                                    <p class="font-normal ml-4 text-gray-300 text-sm">IBAN **** **** 0865</p>
+                                </div>
+                            </div>
+                            <img src="./../../assets/vector.png">
+                        </div>
+                        <div class="bg-white cursor-pointer flex items-center justify-between mt-4 px-6 py-4 rounded-2xl addSmthBtn"
+                            style="box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);">
+                            <div class="flex items-center">
+                                <button><img src="./../../assets/feed/plus.png"></button>
+                                <h3 class="font-bold ml-4">Ajouter un compte bancaire</h3>
+                            </div>
+                            <img src="./../../assets/vector.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="ajouter" class="bg-white h-screen p-4 ss-page hidden">
+                <div class="flex items-center">
+                    <button id="ajouterPrevBtn"><img src="./../../assets/Mask.png"></button>
+                    <h3 class="font-bold ml-4 text-2xl">Ajouter une carte</h3>
+                </div>
+                <p class="font-normal mt-4 text-gray-600 text-sm">Ajoutez une carte de crédit à votre compte
+                    afin de pouvoir commencer à trader.</p>
+                <form>
+                    <input type="text" name="surname" placeholder="Nom du titulaire"
+                        class="border border-black mt-8 outline-none px-6 py-4 rounded-2xl textInput w-full">
+                    <input type="text" name="surname" placeholder="Numéro de carte"
+                        class="outline-none border textInput border-black mt-4 px-6 py-4 rounded-2xl w-full">
+                    <button class="-mt-9 absolute flex items-center ml-72"><svg width="24" height="8" viewBox="0 0 24 8"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12.4122 2.54705C12.3985 3.65703 13.3744 4.2764 14.1095 4.64469C14.8647 5.02252 15.1184 5.26483 15.1154 5.60276C15.1098 6.11987 14.513 6.34811 13.9545 6.35698C12.9802 6.3725 12.4136 6.08652 11.9633 5.87023L11.6122 7.55881C12.0641 7.77288 12.9008 7.95958 13.7685 7.96777C15.8052 7.96777 17.1377 6.93413 17.1449 5.33153C17.1529 3.2976 14.4085 3.18503 14.4273 2.27592C14.4338 2.00026 14.6896 1.70609 15.2502 1.63129C15.5277 1.59351 16.2937 1.56459 17.1623 1.97577L17.5031 0.342039C17.0361 0.167195 16.4358 -0.000226974 15.6884 -0.000226974C13.7714 -0.000226974 12.4231 1.04748 12.4122 2.54705ZM20.7786 0.140496C20.4067 0.140496 20.0933 0.363532 19.9534 0.705797L17.044 7.84777H19.0793L19.4842 6.69703H21.9713L22.2062 7.84777H24L22.4347 0.140496H20.7786ZM21.0633 2.22252L21.6506 5.11669H20.0421L21.0633 2.22252ZM9.94462 0.140592L8.34037 7.84768H10.2798L11.8833 0.140399H9.94462V0.140592ZM7.07559 0.140399L5.05697 5.38638L4.24041 0.925942C4.14459 0.428014 3.76622 0.140496 3.34603 0.140496H0.0462187L0 0.364303C0.677437 0.515436 1.44712 0.759195 1.91344 1.02001C2.19881 1.17934 2.28019 1.31862 2.37394 1.69722L3.92053 7.84777H5.97L9.11213 0.140496H7.07559"
+                                fill="#525967"></path>
+                        </svg>
+                        <img src="./../../assets/Group.png" id="card" class="w-4 h-auto ml-2">
+                    </button>
+                    <div class="flex items-center">
+                        <input type="text" name="surname" placeholder="MM/YY"
+                            class="border border-black mr-2 mt-4 outline-none px-6 py-4 rounded-2xl textInput w-full">
+                        <input type="text" name="surname" placeholder="CVC"
+                            class="outline-none border textInput border-black mt-4 px-6 py-4 rounded-2xl w-full">
+                    </div>
+                </form>
+                <div class="-ml-4 bottom-2 fixed max-w-mobile p-4 w-full">
+                    <p class="font-normal text-center text-gray-600 text-sm">En ajoutant une nouvelle carte, vous
+                        acceptez les conditions de la carte de crédit/débit.</p>
+                    <button data-modal-toggle="small-modal"
+                        class="bg-gradient-to-br font-normal from-blue-darker mt-4 py-3 rounded-full text-white to-blue-lighter w-full">Valider
+                        la carte</button>
+                </div>
+                <div id="small-modal" aria-hidden="true" style="max-width: 355px;"
+                    class="fixed flex h-screen items-end hidden justify-center left-0 md:h-full md:inset-0 mx-auto overflow-x-hidden overflow-y-auto pb-4 right-0 top-4 w-full z-50">
+                    <div class="relative px-4 w-full max-w-2xl h-80 md:h-auto">
+                        <div class="relative rounded-lg shadow" style="margin-top: -400px;">
+                            <div class="absolute z-10">
+                                <img src="./../../assets/bg.png" class="h-96 w-96">
+                            </div>
+                            <div class="p-4 pt-10 relative z-50">
+                                <div class="flex font-semibold items-center justify-center text-2xl text-blue-dark">
+                                    <img src="./../../assets/feed/social stocks main logo.png">
+                                    <h3 class="ml-1 w-14" style="line-height: 21px;">We Stocks</h3>
+                                </div>
+                                <button data-modal-toggle="small-modal" class="absolute right-4 top-12"><img
+                                        src="./../../assets/feed/close (1) 1.png"></button>
+                                <h3 class="font-semibold mt-36 text-2xl text-center">Enregistrement validé</h3>
+                                <p class="font-normal mt-2 text-center text-gray-600 text-sm">Votre carte a bien été
+                                    enregistrée
+                                    dans votre portefeuille de carte.</p>
+                                <button data-modal-toggle="small-modal"
+                                    class="bg-gradient-to-r font-normal from-blue-darker mt-3 py-3 rounded-full text-white to-blue-lighter w-full">Déposer de l’argent</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
         <!-- FOOTER -->
         <footer id="footer"
             class="bg-light bottom-0 fixed flex h-20 items-end justify-between max-w-mobile pb-5 px-4 py-2 text-2xl w-full z-40"

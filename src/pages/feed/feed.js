@@ -2,11 +2,23 @@ const attenteBtn = document.getElementById('attenteBtn')
 const tousBtn = document.getElementById('tousBtn')
 const attenteTab = document.getElementById('attenteTab')
 const tousTab = document.getElementById('tousTab')
+const deposerNextBtn = document.getElementById('deposerNextBtn')
+const ajouterNextBtn = document.querySelectorAll('.ajouterNextBtn')
+const deposer = 'deposer'
+const ajouter = 'ajouter'
+const ajouterPrevBtn = document.getElementById('ajouterPrevBtn')
+const card = document.getElementById('card')
 const profileDropdown = document.getElementById('profileDropdown')
 const profileMenu = document.getElementById('profileMenu')
 const profileCloseBtn = document.getElementById('profileCloseBtn')
 const searchInput = document.getElementById('searchValue')
+const orderNextBtn = document.getElementById('orderNextBtn')
+const connection = 'connection'
+const connectionNextBtn = document.getElementById('connectionNextBtn')
+const connectionPrevBtn = document.getElementById('connectionPrevBtn')
+const orderPrevBtn = document.getElementById('orderPrevBtn')
 const searchForms = document.querySelectorAll('.searchForm')
+const addSmthBtn = document.querySelectorAll('.addSmthBtn')
 const profileNextBtn = document.getElementById('profileNextBtn')
 const singleLessonNextPageBtn = document.getElementById('singleLessonNextPageBtn')
 const intrClose = document.getElementById('intrClose')
@@ -14,6 +26,9 @@ const closedPage = document.getElementById('closedPage')
 const publicationsBtn = document.getElementById('publicationsBtn')
 const newsBtn = document.getElementById('newsBtn')
 const parametrNextBtn = document.getElementById('parametrNextBtn')
+const historyNextBtn = document.getElementById('historyNextBtn')
+const history = 'history'
+const order = 'order'
 const settings = 'settings'
 const chatBtnStyled = 'chatBtn'
 const publicationsPage = document.getElementById('publications')
@@ -395,6 +410,7 @@ notificationNextBtn.addEventListener('click', () => {
 
 notificationCloseBtn.addEventListener('click', () => {
     changePage(FEED_PAGE)
+    showPageBtn(feddBtnStyled)
     navbar.classList.remove('hidden')
     footer.classList.remove('hidden')
 })
@@ -587,22 +603,6 @@ dollarBtn.addEventListener('click', () => {
 
 // CHAT
 
-// SWIPER
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    loop: true,
-
-    autoplay: {
-        delay: 3000
-    },
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-    },
-    scrollbar: false
-});
-
 // TRADE
 tradeBtn.addEventListener('click', () => {
     changePage(tradeMainPage)
@@ -716,6 +716,7 @@ supportNextBtn.addEventListener('click', () => {
 
 supportCloseBtn.addEventListener('click', () => {
     changePage(FEED_PAGE)
+    showPageBtn(feddBtnStyled)
     navbar.classList.remove('hidden')
     footer.classList.remove('hidden')
 })
@@ -754,6 +755,7 @@ parametrNextBtn.addEventListener('click', () => {
     rechercherPrevBtn.classList.remove('hidden')
     rechercherPrevBtn.addEventListener('click', () => {
         changePage(FEED_PAGE)
+        showPageBtn(feddBtnStyled)
         navbarText.innerText = 'Feed'
         footer.classList.remove('hidden')
         rechercherPrevBtn.classList.add('hidden')
@@ -761,6 +763,90 @@ parametrNextBtn.addEventListener('click', () => {
     profileDropdown.classList.add('hidden')
 })
 // SETTINGS
+
+// HISTORY
+historyNextBtn.addEventListener('click', () => {
+    changePage(history)
+    navbarText.innerText = 'Historique de transactions'
+    profileDropdown.classList.add('hidden')
+})
+orderNextBtn.addEventListener('click', () => {
+    changePage(order)
+    navbar.classList.add('hidden')
+    footer.classList.add('hidden')
+})
+orderPrevBtn.addEventListener('click', () => {
+    changePage(history)
+    navbar.classList.remove('hidden')
+    footer.classList.remove('hidden')
+})
+// HISTORY
+
+// CONNECTION
+connectionNextBtn.addEventListener('click', () => {
+    changePage(connection)
+    profileDropdown.classList.add('hidden')
+    footer.classList.add('hidden')
+    navbar.classList.add('hidden')
+})
+
+connectionPrevBtn.addEventListener('click', () => {
+    changePage(FEED_PAGE)
+    showPageBtn(feddBtnStyled)
+    footer.classList.remove('hidden')
+    navbar.classList.remove('hidden')
+})
+// CONNECTION
+
+
+// DEPOSER
+addSmthBtn.forEach(element => {
+    element.addEventListener('click', () => {
+        element.parentElement.children[0].classList.remove('hidden')
+    })
+})
+
+deposerNextBtn.addEventListener('click', () => {
+    changePage(deposer)
+    profileDropdown.classList.add('hidden')
+    navbarText.innerText = 'Dépôt/Retrait'
+})
+
+ajouterNextBtn.forEach(element => {
+    element.addEventListener('click', () => {
+        changePage(ajouter)
+        card.src=element.children[0].children[0].children[0].src
+        console.log(element.children[0].children[0])
+        navbar.classList.add('hidden')
+        footer.classList.add('hidden')
+    })
+})
+
+ajouterPrevBtn.addEventListener('click', () => {
+    changePage(deposer)
+    navbar.classList.remove('hidden')
+    footer.classList.remove('hidden')
+})
+
+// DEPOSER
+
+
+// SWIPER
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    loop: true,
+
+    autoplay: {
+        delay: 3000
+    },
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+    },
+    scrollbar: false
+});
+
 
 // SWIPER
 
