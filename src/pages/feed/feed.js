@@ -178,14 +178,15 @@ function showPageBtn(pageBtn) {
 
 function hidePageBtns() {
     Array.from(pagesBtn).forEach(element => {
-        if (!element.classList.contains('text-gray-400')) element.classList.add('text-gray-400')
-        element.classList.remove('text-blue-normal')
+            element.classList.add('text-gray-400')
+            element.classList.remove('text-blue-normal')
     });
 }
 
 function showPagesBtn(pageBtnId) {
     const currPage = document.getElementById(pageBtnId);
     currPage.classList.add('text-blue-normal');
+    currPage.classList.remove('text-gray-400')
 }
 
 // FOOTER
@@ -488,6 +489,8 @@ lesson2PrevBtn.addEventListener('click', () => {
 playVideo.addEventListener('click', () => {
     if (playVideo.innerHTML == '<img src="./../../assets/feed/video_play.png" class="w-4">') {
         video.play()
+        playVideo.parentElement.parentElement.classList.remove('bg-light')
+        playVideo.parentElement.parentElement.classList.add('bg-white')
         videoTime.style.width = video.currentTime + '%'
         playVideo.innerHTML = '<img src="./../../assets/feed/pause.png">'
     } else {
