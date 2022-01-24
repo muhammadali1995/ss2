@@ -40,15 +40,18 @@
 .toggle-checkbox:checked + .toggle-label {
   @apply: bg-green-400;
   background-color: #7ad3e7;
-  border:none !important;
+  border: none !important;
 }
 .toggle-checkbox:checked {
   border: none !important;
   background: white !important;
-  box-shadow:none
+  box-shadow: none;
 }
 
-.toggle-checkbox:focus{
-    border:none !important;
-    box-shadow:none
+.toggle-checkbox:focus {
+  border: none !important;
+  box-shadow: none;
+}
+.input-outline:focus {
+  --tw-ring-color: white;
 }
