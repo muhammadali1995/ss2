@@ -52,6 +52,6 @@
   border: none !important;
   box-shadow: none;
 }
-.input-outline:focus {
-  --tw-ring-color: white;
+input:focus {
+  --tw-ring-color: transparent!important;
 }
