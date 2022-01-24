@@ -39,7 +39,7 @@
 }
 .toggle-checkbox:checked + .toggle-label {
   @apply: bg-green-400;
-  background-color: #7ad3e7;
+  background-color: #2b64f5;
   border: none !important;
 }
 .toggle-checkbox:checked {
@@ -52,6 +52,6 @@
   border: none !important;
   box-shadow: none;
 }
-.input-outline:focus {
-  --tw-ring-color: white;
+input:focus {
+  --tw-ring-color: transparent!important;
 }
