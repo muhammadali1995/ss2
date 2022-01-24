@@ -1,43 +1,54 @@
 * ::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 * ::-webkit-scrollbar-button {
-    background: transparent!important;
+  background: transparent !important;
 }
 
 *::-webkit-scrollbar-track-piece {
-    background: transparent!important;
+  background: transparent !important;
 }
 
 * ::-webkit-scrollbar-thumb {
-    background: transparent!important;
+  background: transparent !important;
 }
 
 * {
-    font-family: 'Lato';
+  font-family: "Lato";
 }
 
 .swiper-pagination {
-    color: #525967!important;
+  color: #525967 !important;
 }
 
 .color-normal::placeholder {
-    color: #2B64F5;
-    font-size: 14px;
-    font-weight: 400;
+  color: #2b64f5;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .no-repeat {
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
 }
 
 .toggle-checkbox:checked {
-    @apply: right-0 border-green-400;
-    right: 0;
-    border-color: rgba(43, 100, 245, 1);
-  }
-  .toggle-checkbox:checked + .toggle-label {
-    @apply: bg-green-400;
-    background-color: #7ad3e7;
-  }
+  @apply: right-0 border-green-400;
+  right: 0;
+  border-color: rgba(43, 100, 245, 1);
+}
+.toggle-checkbox:checked + .toggle-label {
+  @apply: bg-green-400;
+  background-color: #7ad3e7;
+  border:none !important;
+}
+.toggle-checkbox:checked {
+  border: none !important;
+  background: white !important;
+  box-shadow:none
+}
+
+.toggle-checkbox:focus{
+    border:none !important;
+    box-shadow:none
+}
