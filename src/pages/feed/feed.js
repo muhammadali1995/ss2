@@ -6,12 +6,15 @@ const deposerNextBtn = document.getElementById('deposerNextBtn')
 const ajouterNextBtn = document.querySelectorAll('.ajouterNextBtn')
 const accountPrevBtn = document.getElementById('accountPrevBtn')
 const deposer = 'deposer'
+const formBtn = document.getElementById('formBtn')
 const ajouter = 'ajouter'
 const ajouterPrevBtn = document.getElementById('ajouterPrevBtn')
 const profilePublicationsBtn = document.getElementById('profilePublicationsBtn')
 const publicationsFavorisBtn = document.getElementById('publicationsFavorisBtn')
+const ajouterCompeteForm = document.getElementById('ajouterCompeteForm')
 const profileFavorisPage = document.getElementById('profileFavorisPage')
 const profilePublicationsPage = document.getElementById('profilePublicationsPage')
+const perInf = document.getElementById('perInf')
 const card = document.getElementById('card')
 const deposerBtn = document.getElementById('deposerBtn')
 const retirerBtn = document.getElementById('retirerBtn')
@@ -515,7 +518,7 @@ lesson2PrevBtn.addEventListener('click', () => {
     changePage(singleLessonPage)
 })
 playVideo.addEventListener('click', () => {
-    if (playVideo.innerHTML == '<img src="./../../assets/feed/video_play.png" class="w-4">') {
+    if (playVideo.innerHTML === '<img src="./../../assets/feed/video_play.png" class="w-4">') {
         video.play()
         playVideo.parentElement.parentElement.classList.remove('bg-light')
         playVideo.parentElement.parentElement.classList.add('bg-white')
@@ -554,7 +557,10 @@ lessonNextBtn.addEventListener('click', () => {
 })
 
 intrClose.addEventListener('click', () => {
-    changePage(lessonPage)
+    changePage(FEED_PAGE)
+    navbar.classList.remove('hidden')
+    footer.classList.remove('hidden')
+    navbarText.innerText = 'Feed'
 })
 
 singleLessonNextPageBtn.addEventListener('click', () => {
@@ -565,7 +571,12 @@ singleLessonNextPageBtn.addEventListener('click', () => {
 
 closeBtn2.addEventListener('click', () => {
     changePage(singleLessonPage)
+    navbar.classList.remove('hidden')
+    footer.classList.remove('hidden')
+    navbarText.innerText = 'Feed'
 })
+
+
 
 // ACADEMY
 
@@ -634,6 +645,8 @@ dollarBtn.addEventListener('click', () => {
     dollarPage.classList.toggle('hidden')
     emailpage.classList.add('hidden')
 })
+
+
 
 // CHAT
 
@@ -780,6 +793,13 @@ supportChatFrom.addEventListener('submit', (e) => {
     supportChatFrom[0].value = ''
 })
 
+
+ajouterCompeteForm.addEventListener('submit',(e)=>{
+    e.preventDefault()
+    const Data = new FormData(ajouterCompeteForm)
+    const value = Object.fromEntries(Data.entries())
+    console.log(value)
+})
 // SUPPORT
 
 // SETTINGS
@@ -891,6 +911,9 @@ rewardCloseBtn.addEventListener('click', () => {
 
 accountCreateNextBtn.addEventListener('click', () => {
     changePage(accountCreate)
+    const Data = new FormData(ajouterCompeteForm)
+    const value = Object.fromEntries(Data.entries())
+    console.log(value)
 })
 
 accountPrevBtn.addEventListener('click', () => {
@@ -905,6 +928,20 @@ deposerBtn.addEventListener('click', () => {
 retirerBtn.addEventListener('click', () => {
     deposerBtn.className = 'font-bold text-gray-600 w-1/2'
     retirerBtn.className = 'bg-blue-normal font-bold py-1 rounded-full text-white w-1/2'
+})
+
+formBtn.addEventListener('click',(e)=>{
+    e.preventDefault()
+    const Data = new FormData(perInf)
+    const value = Object.fromEntries(Data.entries());
+    console.log(value)
+})
+
+perInf.addEventListener('submit', (e) => {
+    e.preventDefault()
+    const Data = new FormData(perInf)
+    const value = Object.fromEntries(Data.entries());
+    console.log(value)
 })
 
 // DEPOSER
