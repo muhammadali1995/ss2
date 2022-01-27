@@ -789,6 +789,11 @@ switchBtn.addEventListener('click', () => {
 })
 
 maxiBtn.addEventListener('click', () => {
+    if (fondBtn.classList.contains('fondBtn')) {
+        maxivalue = fondBtn.value + ' €'
+    }else{
+        maxivalue = fondBtn.value + ' APPL' 
+    }
     fontResultBtn.innerText = maxivalue
 })
 
