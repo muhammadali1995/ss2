@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <script src="https://unpkg.com/@themesberg/flowbite@1.3.0/dist/flowbite.bundle.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.3.0/dist/flowbite.min.css" />
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/all.min.css"
         integrity="sha512-SUwyLkI1Wgm4aEZkDkwwigXaOI2HFLy1/YW73asun4sfvlkB9Ecl99+PHfCnfWD0FJjIuFTvWMM7BZPXCckpAA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -25,7 +24,8 @@
     <script type="module">
         import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js'
     </script>
-      <script src="feed.js" defer></script>
+        <script src=" feed.js " defer></script>
+
     <title>Feed</title>
 </head>
 
@@ -33,7 +33,7 @@
     <div id="main-wrapper" class="max-w-mobile mx-auto bg-light h-screen ">
 
         <nav id="navbar"
-            class="font-semibold hidden text-white bg-blue-dark z-50 fixed flex items-center justify-between max-w-mobile px-4 py-2 w-full top-0 ">
+            class="font-semibold text-white bg-blue-dark z-50 fixed flex items-center justify-between max-w-mobile px-4 py-2 w-full top-0 ">
             <div class="flex items-center ">
                 <button id="rechercherPrev" class="hidden mr-4 "><img
                         src="./../../assets/feed/chevron-left.png "></button>
@@ -85,7 +85,7 @@
                 </div>
             </div>
             <!-- FEED -->
-            <div id="feedPage" class="ss-page hidden">
+            <div id="feedPage" class="ss-page">
                 <!-- FEED SEARCH BAR -->
                 <div class="pt-20 pb-12 px-4 bg-blue-dark ">
                     <form class=" searchForm flex justify-around ">
@@ -1762,7 +1762,7 @@
                 </div>
             </div>
             <div id="trandingPage" class="max-w-mobile hidden ss-page mx-auto bg-white ">
-                <div class="p-4 sticky top-0">
+                <div class="p-4 sticky top-0 z-10">
                     <div class="flex items-center justify-between">
                         <button id="tradingPrevBtn"> <img src="./../../assets/Mask.png"></button>
                         <div class="flex items-center">
@@ -1798,7 +1798,7 @@
                         <h5>Tous</h5>
                     </div>
                 </div>
-                <div id="scrollAnimation" class="bg-light mt-4 pt-4 px-4 rounded-t-3xl pb-20 z-50 relative">
+                <div id="scrollAnimation" class="bg-light mt-4 pt-4 px-4 z-20 rounded-t-3xl pb-20 relative">
                     <div class="bg-white h-2 mx-auto rounded-2xl w-20"></div>
                     <div class="bg-white flex font-bold mt-4 p-2 rounded-full text-sm">
                         <button id="tradeAttenteBtn"
@@ -1868,36 +1868,36 @@
                         <button type="button" id="fixedBtn" data-modal-toggle="defaultModal"
                             class="bg-gradient-to-r font-normal from-blue-darker py-3 rounded-full text-white to-blue-lighter w-full">Trader</button>
                     </div>
-                    <div id="defaultModal" aria-hidden="true" style="max-width: 355px;"
-                        class="fixed flex h-screen items-end hidden justify-center left-0 md:h-full md:inset-0 mx-auto overflow-x-hidden overflow-y-auto pb-4 right-0 top-4 w-full z-50">
-                        <div class="relative px-4 w-full max-w-2xl h-80 md:h-auto">
-                            <div class="relative rounded-lg shadow">
-                                <div class="absolute z-10">
-                                    <img src="./../../assets/feed/modal-card.png">
-                                </div>
-                                <div class="p-4 pt-10 relative z-50">
-                                    <div class="flex font-semibold items-center justify-center text-2xl text-blue-dark">
-                                        <img src="./../../assets/feed/social stocks main logo.png" class="w-10 h-10">
-                                        <h3 class="ml-1 w-14 text-base" style="line-height: 21px;">We Stocks</h3>
-                                    </div>
-                                    <button data-modal-toggle="defaultModal" class="absolute right-4 top-12"><img
-                                            src="./../../assets/feed/close (1) 1.png"></button>
-                                    <div data-modal-toggle="defaultModal" id="tradePageNextBtn"
-                                        class="flex font-normal pt-10">
-                                        <img src="./../../assets/feed/plus-circle.png">
-                                        <h3 class="ml-4">Acheter</h3>
-                                    </div>
-                                    <div class="flex font-normal pt-10">
-                                        <img src="./../../assets/feed/minus-circle.png">
-                                        <h3 class="ml-4">Vendre</h3>
-                                    </div>
-                                </div>
+                </div>
+                <div id="defaultModal" aria-hidden="true" style="max-width: 355px;"
+                class="fixed flex h-screen items-end hidden justify-center left-0 md:h-full md:inset-0 mx-auto overflow-x-hidden overflow-y-auto pb-4 right-0 top-4 w-full z-50">
+                <div class="relative px-4 w-full max-w-2xl h-80 md:h-auto">
+                    <div class="relative rounded-lg shadow">
+                        <div class="absolute z-10">
+                            <img src="./../../assets/feed/modal-card.png">
+                        </div>
+                        <div class="p-4 pt-10 relative z-50">
+                            <div class="flex font-semibold items-center justify-center text-2xl text-blue-dark">
+                                <img src="./../../assets/feed/social stocks main logo.png" class="w-10 h-10">
+                                <h3 class="ml-1 w-14 text-base" style="line-height: 21px;">We Stocks</h3>
+                            </div>
+                            <button data-modal-toggle="defaultModal" class="absolute right-4 top-12"><img
+                                    src="./../../assets/feed/close (1) 1.png"></button>
+                            <div data-modal-toggle="defaultModal" id="tradePageNextBtn"
+                                class="flex font-normal pt-10">
+                                <img src="./../../assets/feed/plus-circle.png">
+                                <h3 class="ml-4">Acheter</h3>
+                            </div>
+                            <div class="flex font-normal pt-10">
+                                <img src="./../../assets/feed/minus-circle.png">
+                                <h3 class="ml-4">Vendre</h3>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="sellAsset" class="max-w-mobile mx-auto ss-page p-4 bg-white h-screen">
+            </div>
+            <div id="sellAsset" class="max-w-mobile mx-auto ss-page p-4 bg-white hidden h-screen">
                 <div class="flex flex-col justify-between h-screen">
                     <div>
                         <div class="flex font-semibold items-center text-2xl">
@@ -1909,7 +1909,7 @@
                             <div class="flex flex-col items-center">
                                 <div id="fondParent" class="font-extrabold text-3xl text-blue-normal text-center">
                                   <span class="hidden">~</span>
-                                    <input id="fondBtn" type="number" class="numberInput fondBtn outline-none text-center w-1/3"
+                                    <input id="fondBtn" type="number" class="numberInput border-0 text-3xl fondBtn outline-none text-center w-1/3"
                                         value="50.00">
                                     <span id="fondIcon">€</span>
                                 </div>
@@ -2983,7 +2983,7 @@
         </div>
         <!-- FOOTER -->
         <footer id="footer"
-            class="bg-light hidden bottom-0 fixed flex h-20 items-end justify-between max-w-mobile pb-5 px-4 py-2 text-2xl w-full z-40"
+            class="bg-light bottom-0 fixed flex h-20 items-end justify-between max-w-mobile pb-5 px-4 py-2 text-2xl w-full z-40"
             style="filter: drop-shadow(0px 0px 20px rgba(17, 20, 58, 0.15));">
             <button id="feedBtn" class="flex flex-col items-center pagesBtn text-blue-normal" style="width: 20%;">
                 <i class="far fa-compass"></i>

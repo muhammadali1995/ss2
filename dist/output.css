@@ -494,6 +494,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .z-40 {
   z-index: 40;
 }
+.z-20 {
+  z-index: 20;
+}
 .m-4 {
   margin: 1rem;
 }
