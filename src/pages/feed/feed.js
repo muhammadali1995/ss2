@@ -5,6 +5,7 @@ const tousTab = document.getElementById('tousTab')
 const deposerNextBtn = document.getElementById('deposerNextBtn')
 const ajouterNextBtn = document.querySelectorAll('.ajouterNextBtn')
 const accountPrevBtn = document.getElementById('accountPrevBtn')
+const maxiBtn = document.getElementById('maxiBtn')
 const deposer = 'deposer'
 const formBtn = document.getElementById('formBtn')
 const ajouter = 'ajouter'
@@ -14,6 +15,7 @@ const publicationsFavorisBtn = document.getElementById('publicationsFavorisBtn')
 const ajouterCompeteForm = document.getElementById('ajouterCompeteForm')
 const profileFavorisPage = document.getElementById('profileFavorisPage')
 const profilePublicationsPage = document.getElementById('profilePublicationsPage')
+const btnNums = document.querySelectorAll('.btn-num')
 const perInf = document.getElementById('perInf')
 const card = document.getElementById('card')
 const deposerBtn = document.getElementById('deposerBtn')
@@ -97,6 +99,7 @@ const conversationPrevBtn = document.getElementById('conversationPrevBtn')
 const singleLessonPrevPageBtn = document.getElementById('singleLessonPrevPageBtn')
 const singleNextLesson = document.getElementById('singleNextLesson')
 const groupesPage = document.getElementById('groupesPage')
+const tradeClearBtn = document.getElementById('trade-clear-btn')
 const messadgeSite = document.getElementById('messadgeSite')
 const groupesBtn = document.getElementById('groupesBtn')
 const amisBtn = document.getElementById('amisBtn')
@@ -144,6 +147,10 @@ const rechercherPrevBtn = document.getElementById('rechercherPrev')
 const navbar = document.getElementById('navbar')
 const footer = document.getElementById('footer')
 const user = document.getElementById('user')
+const fontResultBtn = document.getElementById('fontResultBtn')
+const switchBtn = document.getElementById('switchBtn')
+const fondBtn = document.getElementById('fondBtn')
+const appleBtn = document.getElementById('appleBtn')
 const followBtns = document.querySelectorAll('.follow')
 const defaultMarginTop = document.getElementById('defaultMarginTop')
 const personalPrevBtn = document.getElementById('personalPrevBtn')
@@ -751,6 +758,53 @@ headerCloseBtn.addEventListener('click', () => {
     setTimeout(() => headerCloseBtn.parentElement.classList.remove('hidden'), 5000)
 })
 
+const fondParent = document.getElementById('fondParent')
+const applParent = document.getElementById('applParent')
+let maxivalue = '50.00 €'
+
+switchBtn.addEventListener('click', () => {
+    if (fondBtn.classList.contains('fondBtn')) {
+        maxivalue = appleBtn.innerText + 'APPL'
+        fondParent.children[2].innerText = 'APPL'
+        fondParent.children[0].classList.remove('hidden')
+        applParent.children[0].classList.add('hidden')
+        applParent.children[2].innerText = '€'
+        const fontBtnValue = fondBtn.value
+        fondBtn.value = appleBtn.innerText
+        appleBtn.innerText = fontBtnValue
+        fondBtn.classList.remove('fondBtn')
+    }
+    else {
+        console.log(fondParent)
+        fondParent.children[2].innerText = '€'
+        fondParent.children[0].classList.add('hidden')
+        applParent.children[0].classList.remove('hidden')
+        applParent.children[2].innerText = 'APPL'
+        const fontBtnValue = fondBtn.value
+        fondBtn.value = appleBtn.innerText
+        appleBtn.innerText = fontBtnValue
+        fondBtn.classList.add('fondBtn')
+        maxivalue = fondBtn.value + '€'
+    }
+})
+
+maxiBtn.addEventListener('click', () => {
+    fontResultBtn.innerText = maxivalue
+})
+
+btnNums.forEach(btn => {
+    btn.addEventListener('click', () => {
+        fondBtn.focus()
+        fondBtn.value += btn.innerText
+    })
+})
+
+tradeClearBtn.addEventListener('click', () => {
+    fondBtn.focus()
+    const last = (fondBtn.value.lastIndexOf(''))
+    fondBtn.value = fondBtn.value.slice(0, last - 1)
+})
+
 // TRADE
 
 // SUPPORT
@@ -794,7 +848,7 @@ supportChatFrom.addEventListener('submit', (e) => {
 })
 
 
-ajouterCompeteForm.addEventListener('submit',(e)=>{
+ajouterCompeteForm.addEventListener('submit', (e) => {
     e.preventDefault()
     const Data = new FormData(ajouterCompeteForm)
     const value = Object.fromEntries(Data.entries())
@@ -930,7 +984,7 @@ retirerBtn.addEventListener('click', () => {
     retirerBtn.className = 'bg-blue-normal font-bold py-1 rounded-full text-white w-1/2'
 })
 
-formBtn.addEventListener('click',(e)=>{
+formBtn.addEventListener('click', (e) => {
     e.preventDefault()
     const Data = new FormData(perInf)
     const value = Object.fromEntries(Data.entries());
