@@ -57,11 +57,25 @@
   box-shadow: none;
 }
 input:focus {
-  --tw-ring-color: transparent !important;
+  --tw-ring-color: transparent!important;
+}
+
+textarea:focus{
+  --tw-ring-color: transparent!important;
 }
 
 .numberInput::-webkit-outer-spin-button,
 .numberInput::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.datepicker-picker {
+  position: fixed !important;
+  margin-left: -80vw !important;
+  bottom: 115px !important;
+}
+
+.datepicker  {
+  z-index: 50;
 }

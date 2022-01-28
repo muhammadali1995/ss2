@@ -760,11 +760,10 @@ headerCloseBtn.addEventListener('click', () => {
 
 const fondParent = document.getElementById('fondParent')
 const applParent = document.getElementById('applParent')
-let maxivalue = '50.00 €'
+
 
 switchBtn.addEventListener('click', () => {
     if (fondBtn.classList.contains('fondBtn')) {
-        maxivalue = appleBtn.innerText + 'APPL'
         fondParent.children[2].innerText = 'APPL'
         fondParent.children[0].classList.remove('hidden')
         applParent.children[0].classList.add('hidden')
@@ -784,17 +783,15 @@ switchBtn.addEventListener('click', () => {
         fondBtn.value = appleBtn.innerText
         appleBtn.innerText = fontBtnValue
         fondBtn.classList.add('fondBtn')
-        maxivalue = fondBtn.value + '€'
     }
 })
 
+fondBtn.addEventListener('keyup', () => {
+    fondBtn.style.fontSize = fondBtn.parentElement.style.width - 20+'px'
+})
+
 maxiBtn.addEventListener('click', () => {
-    if (fondBtn.classList.contains('fondBtn')) {
-        maxivalue = fondBtn.value + ' €'
-    }else{
-        maxivalue = fondBtn.value + ' APPL' 
-    }
-    fontResultBtn.innerText = maxivalue
+    fondBtn.value = fontResultBtn.innerText
 })
 
 btnNums.forEach(btn => {
