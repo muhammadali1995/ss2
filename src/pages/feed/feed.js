@@ -5,10 +5,17 @@ const tousTab = document.getElementById('tousTab')
 const deposerNextBtn = document.getElementById('deposerNextBtn')
 const ajouterNextBtn = document.querySelectorAll('.ajouterNextBtn')
 const accountPrevBtn = document.getElementById('accountPrevBtn')
+const modifierClose = document.getElementById('modifierClose')
+const deletePost = document.getElementById('deletePost')
+const modifier = 'modifier'
 const maxiBtn = document.getElementById('maxiBtn')
 const deposer = 'deposer'
 const formBtn = document.getElementById('formBtn')
 const ajouter = 'ajouter'
+const searchTousBtn = document.getElementById('searchTousBtn')
+const searchCryptoBtn = document.getElementById('searchCryptoBtn')
+const searchCryptopage = document.getElementById('searchCryptopage')
+const searchTousPage = document.getElementById('searchTousPage')
 const ajouterPrevBtn = document.getElementById('ajouterPrevBtn')
 const profilePublicationsBtn = document.getElementById('profilePublicationsBtn')
 const publicationsFavorisBtn = document.getElementById('publicationsFavorisBtn')
@@ -16,6 +23,7 @@ const ajouterCompeteForm = document.getElementById('ajouterCompeteForm')
 const profileFavorisPage = document.getElementById('profileFavorisPage')
 const profilePublicationsPage = document.getElementById('profilePublicationsPage')
 const btnNums = document.querySelectorAll('.btn-num')
+const editBtn = document.querySelectorAll('.editBtn')
 const perInf = document.getElementById('perInf')
 const card = document.getElementById('card')
 const deposerBtn = document.getElementById('deposerBtn')
@@ -235,6 +243,41 @@ function showPage(pageId) {
 // PAGES
 
 // PROFIL PAGE
+editBtn.forEach(btn => {
+    btn.addEventListener('click', () => {
+        changePage(modifier)
+        navbar.classList.add('hidden')
+        footer.classList.add('hidden')
+        deletePost.addEventListener('click', () => {
+            changePage(PROFIL_PAGE)
+            navbar.classList.remove('hidden')
+            footer.classList.remove('hidden')
+            btn.parentElement.parentElement.classList.add('hidden')
+        })
+    })
+})
+
+searchTousBtn.addEventListener('click', () => {
+    searchTousBtn.className = 'bg-blue-normal font-bold py-1 rounded-full text-white w-1/3'
+    searchCryptoBtn.className ='font-bold py-1 rounded-full text-gray-600 w-1/3'
+    searchTousPage.classList.remove('hidden')
+    searchCryptopage.classList.add('hidden')
+})
+
+
+searchCryptoBtn.addEventListener('click', () => {
+    searchCryptoBtn.className = 'bg-blue-normal font-bold py-1 rounded-full text-white w-1/3'
+    searchTousBtn.className ='font-bold py-1 rounded-full text-gray-600 w-1/3'
+    searchCryptopage.classList.remove('hidden')
+    searchTousPage.classList.add('hidden')
+})
+
+modifierClose.addEventListener('click', () => {
+    changePage(PROFIL_PAGE)
+    navbar.classList.remove('hidden')
+    footer.classList.remove('hidden')
+})
+
 profilBtn.addEventListener('click', () => {
     changePage(PROFIL_PAGE)
     showPageBtn(profilBtnStyled)
@@ -787,7 +830,7 @@ switchBtn.addEventListener('click', () => {
 })
 
 fondBtn.addEventListener('keyup', () => {
-    fondBtn.style.fontSize = fondBtn.parentElement.style.width - 20+'px'
+    fondBtn.style.fontSize = fondBtn.parentElement.style.width - 20 + 'px'
 })
 
 maxiBtn.addEventListener('click', () => {
@@ -881,11 +924,11 @@ historyNextBtn.addEventListener('click', () => {
     navbarText.innerText = 'Historique de transactions'
     profileDropdown.classList.add('hidden')
 })
-orderNextBtn.addEventListener('click', () => {
-    changePage(order)
-    navbar.classList.add('hidden')
-    footer.classList.add('hidden')
-})
+// orderNextBtn.addEventListener('click', () => {
+//     changePage(order)
+//     navbar.classList.add('hidden')
+//     footer.classList.add('hidden')
+// })
 orderPrevBtn.addEventListener('click', () => {
     changePage(history)
     navbar.classList.remove('hidden')
