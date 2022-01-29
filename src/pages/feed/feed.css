@@ -63,6 +63,9 @@
 input:focus {
   --tw-ring-color: transparent!important;
 }
+input{
+  border: none;
+}
 
 textarea:focus{
   --tw-ring-color: transparent!important;
