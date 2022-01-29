@@ -63,9 +63,6 @@
 input:focus {
   --tw-ring-color: transparent!important;
 }
-input{
-  border: none;
-}
 
 textarea:focus{
   --tw-ring-color: transparent!important;
@@ -79,7 +76,6 @@ textarea:focus{
 
 .datepicker-picker {
   position: fixed !important;
-  margin-left: -80vw !important;
   bottom: 115px !important;
 }
 
