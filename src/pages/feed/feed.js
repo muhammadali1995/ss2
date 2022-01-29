@@ -261,7 +261,7 @@ editBtn.forEach(btn => {
 
 searchTousBtn.addEventListener('click', () => {
     searchTousBtn.className = 'bg-blue-normal font-bold py-1 rounded-full text-white w-1/3'
-    searchCryptoBtn.className ='font-bold py-1 rounded-full text-gray-600 w-1/3'
+    searchCryptoBtn.className = 'font-bold py-1 rounded-full text-gray-600 w-1/3'
     searchTousPage.classList.remove('hidden')
     searchCryptopage.classList.add('hidden')
 })
@@ -269,7 +269,7 @@ searchTousBtn.addEventListener('click', () => {
 
 searchCryptoBtn.addEventListener('click', () => {
     searchCryptoBtn.className = 'bg-blue-normal font-bold py-1 rounded-full text-white w-1/3'
-    searchTousBtn.className ='font-bold py-1 rounded-full text-gray-600 w-1/3'
+    searchTousBtn.className = 'font-bold py-1 rounded-full text-gray-600 w-1/3'
     searchCryptopage.classList.remove('hidden')
     searchTousPage.classList.add('hidden')
 })
@@ -318,20 +318,21 @@ abonentNextBtn.forEach(element => {
     })
 })
 
-function myFunction(){
-    var x=document.getElementById("fondBtn");
-        var initialSize=25-x.value.length;
-        initialSize=initialSize<=10?10:initialSize;
+function myFunction() {
+    var x = document.getElementById("fondBtn");
+    var initialSize = 25 - x.value.length;
+    initialSize = initialSize <= 10 ? 10 : initialSize;
     x.style.fontSize = initialSize + "px";
-    }
-    
-    function myFunction2(){
-        var x=document.getElementById("inp");
-            var initialSize=25-x.value.length;
-            initialSize=initialSize<=10?10:initialSize;
-        x.style.fontSize = initialSize + "px";
-        }
-        
+    fondBtn.style.width = '150px'
+}
+
+function myFunction2() {
+    var x = document.getElementById("inp");
+    var initialSize = 25 - x.value.length;
+    initialSize = initialSize <= 10 ? 10 : initialSize;
+    x.style.fontSize = initialSize + "px";
+}
+
 
 abonentPrevBtn.addEventListener('click', () => {
     changePage(PROFIL_PAGE)
@@ -985,16 +986,16 @@ addSmthBtn.forEach(element => {
     })
 })
 
-const accountDelBtn =document.getElementById('account-clear-btn')
-accountDelBtn.addEventListener('click',()=>{
+const accountDelBtn = document.getElementById('account-clear-btn')
+accountDelBtn.addEventListener('click', () => {
     myFunction2()
     accountCreateInput.focus()
     const last = (accountCreateInput.value.lastIndexOf(''))
     accountCreateInput.value = accountCreateInput.value.slice(0, last - 1)
 })
 
-numberBtn2.forEach(btn=>{
-    btn.addEventListener('click',()=>{
+numberBtn2.forEach(btn => {
+    btn.addEventListener('click', () => {
         myFunction2()
         accountCreateInput.value += btn.innerText
     })
