@@ -824,6 +824,7 @@ const applParent = document.getElementById('applParent')
 
 switchBtn.addEventListener('click', () => {
     if (fondBtn.classList.contains('fondBtn')) {
+        myFunction()
         fondParent.children[2].innerText = 'APPL'
         fondParent.children[0].classList.remove('hidden')
         applParent.children[0].classList.add('hidden')
@@ -834,6 +835,7 @@ switchBtn.addEventListener('click', () => {
         fondBtn.classList.remove('fondBtn')
     }
     else {
+        myFunction()
         console.log(fondParent)
         fondParent.children[2].innerText = '€'
         fondParent.children[0].classList.add('hidden')
@@ -856,12 +858,14 @@ maxiBtn.addEventListener('click', () => {
 
 btnNums.forEach(btn => {
     btn.addEventListener('click', () => {
+        myFunction()
         fondBtn.focus()
         fondBtn.value += btn.innerText
     })
 })
 
 tradeClearBtn.addEventListener('click', () => {
+    myFunction()
     fondBtn.focus()
     const last = (fondBtn.value.lastIndexOf(''))
     fondBtn.value = fondBtn.value.slice(0, last - 1)
@@ -983,6 +987,7 @@ addSmthBtn.forEach(element => {
 
 const accountDelBtn =document.getElementById('account-clear-btn')
 accountDelBtn.addEventListener('click',()=>{
+    myFunction2()
     accountCreateInput.focus()
     const last = (accountCreateInput.value.lastIndexOf(''))
     accountCreateInput.value = accountCreateInput.value.slice(0, last - 1)

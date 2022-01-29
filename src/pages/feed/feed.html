@@ -2668,11 +2668,7 @@
                         <div class="h-100 mb-20 overflow-auto">
                             <div class="flex font-norma items-center justify-between">
                                 <h3>Trasactions récentes</h3>
-                                <button class="relative">
-                                    <input data-modal-toggle="small-modal2"
-                                        class="-mb-2 -ml-2 absolute bg-transparent border-0 cursor-pointer h-2 w-2"
-                                        type="text" datepicker datepicker-title="Filter by date">
-                                    <div id="small-modal2" aria-hidden="true" style="z-index:-2"></div>
+                                <button data-modal-toggle="small-modal2" class="relative">
                                     <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_341_6599)">
@@ -2702,7 +2698,18 @@
                                         </defs>
                                     </svg>
                                 </button>
+                                <div id="small-modal2" aria-hidden="true" style="max-width: 355px;"
+                                class="fixed flex h-screen hidden items-end justify-center left-0 md:h-full md:inset-0 mx-auto overflow-x-hidden overflow-y-auto pb-4 right-0 top-4 w-full z-50"
+                                aria-modal="true" role="dialog">
+                                <div class="relative px-4 w-full max-w-2xl h-full md:h-auto">
+                                    <div class="relative px-4 w-full max-w-2xl flex items-end pb-10 h-full md:h-auto">
+                                        <div class="relative rounded-lg shadow w-full">
+                                            <div inline-datepicker data-modal-toggle="small-modal2" data-date="02/25/2022" placeholder="Filter by date"></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                            </div>                                  
                             <p class="font-normal mt-6 text-gray-600 text-sm">Aujourd’hui</p>
                             <div class="flex items-center justify-between mt-6">
                                 <div class="flex items-center">
