@@ -20,11 +20,13 @@
         integrity="sha512-SUwyLkI1Wgm4aEZkDkwwigXaOI2HFLy1/YW73asun4sfvlkB9Ecl99+PHfCnfWD0FJjIuFTvWMM7BZPXCckpAA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <script src="https://unpkg.com/@themesberg/flowbite@1.3.0/dist/datepicker.bundle.js"></script>
+    <script src="../path/to/@themesberg/flowbite/dist/datepicker.bundle.js"></script>
     <link rel="stylesheet" href="./feed.css">
     <script type="module">
         import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js'
     </script>
-        <script src=" feed.js " defer></script>
+    <script src=" feed.js " defer></script>
 
     <title>Feed</title>
 </head>
@@ -578,7 +580,7 @@
                         <img src="./../../assets/feed/PROFILE_IMG.png " class="w-24 h-24">
                     </div>
                     <button id="personalInfBtn" class="-mt-10 absolute bg-white ml-52 p-2 rounded-full "><img
-                            src="./../../assets/feed/edit.png " alt=" "></button>
+                            src="./../../assets/feed/edit.png "></button>
                     <h3 class="font-extrabold mt-2 text-center ">Sam GAMEGIE</h3>
                     <p class="mt-2 mx-auto text-sm w-56 text-center ">C'est un fait établi depuis longtemps qu'un
                         lecteur sera distrait.
@@ -671,8 +673,8 @@
                                             <p class="text-gray-400 text-xs ">24s ago</p>
                                         </div>
                                     </div>
-                                    <svg class="cursor-pointer" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="editBtn cursor-pointer" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M0.75 15.2498L5 14.2498L14.2929 4.95696C14.6834 4.56643 14.6834 3.93327 14.2929 3.54274L12.4571 1.70696C12.0666 1.31643 11.4334 1.31643 11.0429 1.70696L1.75 10.9998L0.75 15.2498Z"
                                             stroke="#2B64F5" stroke-width="1.5" stroke-linecap="round"
@@ -685,7 +687,7 @@
                                     centuries, but also the leap into electronic typesetting.</p>
                                 <div class="flex items-center justify-between w-60 mt-4 ">
                                     <div class="flex text-gray-400 items-center like  cursor-pointer ">
-                                        <svg class="" width="24 " height="24 " fill="none " viewBox="0 0 24 24 ">
+                                        <svg width="24 " height="24 " fill="none " viewBox="0 0 24 24 ">
                                             <path fill-rule="evenodd " stroke="currentColor " stroke-linecap="round "
                                                 stroke-linejoin="round " stroke-width="1.5 "
                                                 d="M11.995 7.23319C10.5455 5.60999 8.12832 5.17335 6.31215 6.65972C4.49599 8.14609 4.2403
@@ -709,8 +711,8 @@
                                             <p class="text-gray-400 text-xs ">24s ago</p>
                                         </div>
                                     </div>
-                                    <svg class="cursor-pointer" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="cursor-pointer editBtn" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M0.75 15.2498L5 14.2498L14.2929 4.95696C14.6834 4.56643 14.6834 3.93327 14.2929 3.54274L12.4571 1.70696C12.0666 1.31643 11.4334 1.31643 11.0429 1.70696L1.75 10.9998L0.75 15.2498Z"
                                             stroke="#2B64F5" stroke-width="1.5" stroke-linecap="round"
@@ -741,6 +743,49 @@
                     </div>
                 </div>
             </div>
+            <!-- MODIFIER POST -->
+            <div id="modifier" class="ss-page bg-white h-screen hidden max-w-mobile mx-auto p-4 ">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center ">
+                        <button id="modifierClose"><img src="./../../assets/feed/close (1) 1.png "></button>
+                        <h3 class="font-semibold ml-4 text-2xl ">Partager un post</h3>
+                    </div>
+                    <svg class="cursor-pointer" id="deletePost" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 6H5H21" stroke="#2B64F5" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path
+                            d="M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6H19Z"
+                            stroke="#2B64F5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M10 11V17" stroke="#2B64F5" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M14 11V17" stroke="#2B64F5" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="flex items-center mt-4 ">
+                    <form id="postForm " class="flex items-center ">
+                        <img src="./../../assets/feed/Profile_image.png " class="w-6 h-6">
+                        <textarea
+                            placeholder=" It has survived not only five centuries, but also the leap into electronic typesetting.... "
+                            required id="postInput " class="color-normal border-0 outline-none ml-4" cols="25"
+                            rows="3"></textarea>
+                    </form>
+                </div>
+                <div
+                    class="-ml-4 border border-light bottom-0 fixed flex items-center justify-around max-w-mobile py-2 w-full ">
+                    <div class="flex">
+                        <div class="bg-light mr-2 p-2 px-3 cursor-pointer rounded-full "><img
+                                src="./../../assets/feed/dollar.png " alt=" "></div>
+                        <div class="bg-light mr-2 p-2 px-2 cursor-pointer rounded-full "><img
+                                src="./../../assets/feed/@.png " alt=" "></div>
+                        <div class="bg-light p-2 px-2 cursor-pointer rounded-full "><img
+                                src="./../../assets/feed/pictures.png " alt=" "></div>
+                    </div>
+                    <button id="enterPost"
+                        class="bg-gradient-to-r font-bold from-blue-darker px-8 py-2 rounded-full text-sm text-white to-blue-lighter ">Publier</button>
+                </div>
+            </div>
             <!-- RECHERCHER -->
             <div id="rechercher" class="bg-blue-dark ss-page hidden max-w-mobile mx-auto text-white ">
                 <div class="bg-blue-dark pt-20 ">
@@ -752,126 +797,176 @@
                             class="outline-none p-4 px-10 pl-10 rounded-full text-black w-full">
                     </form>
                     <div class="bg-light p-4 rounded-t-3xl ">
-                        <div class="bg-white p-2 rounded-full flex  text-black">
-                            <button class="bg-blue-normal font-bold py-1 rounded-full text-white w-1/3">Tous</button>
+                        <div class="bg-white p-2 rounded-full flex text-black">
+                            <button id="searchTousBtn"
+                                class="bg-blue-normal font-bold py-1 rounded-full text-white w-1/3">Tous</button>
                             <button class="font-bold py-1 rounded-full text-gray-600 w-1/3">Stocks</button>
-                            <button class="font-bold py-1 rounded-full text-gray-600 w-1/3">Crypto</button>
+                            <button id="searchCryptoBtn"
+                                class="font-bold py-1 rounded-full text-gray-600 w-1/3">Crypto</button>
                         </div>
-                        <div class="flex items-center justify-between mt-6 text-black ">
-                            <div class="flex items-center ">
-                                <div><img src="./../../assets/feed/tesla.png " class="w-8 h-8"></div>
-                                <div class="ml-4 ">
-                                    <h3 class="font-semibold text-base ">Tesla</h3>
-                                    <p class="text-gray-400 text-xs ">TSLA</p>
+                        <div id="searchTousPage">
+                            <div class="flex items-center justify-between mt-6 text-black ">
+                                <div class="flex items-center ">
+                                    <div><img src="./../../assets/feed/tesla.png " class="w-8 h-8"></div>
+                                    <div class="ml-4 ">
+                                        <h3 class="font-semibold text-base ">Tesla</h3>
+                                        <p class="text-gray-400 text-xs ">TSLA</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-end ">
+                                    <h3 class="font-normal text-sm ">12,502.36 €</h3>
+                                    <p class="text-green-600 font-semibold text-xs ">+510% </p>
                                 </div>
                             </div>
-                            <div class="flex flex-col items-end ">
-                                <h3 class="font-normal text-sm ">12,502.36 €</h3>
-                                <p class="text-green-600 font-semibold text-xs ">+510% </p>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between mt-6 text-black ">
-                            <div class="flex items-center ">
-                                <div><img src="./../../assets/feed/facebook.png " class="w-8 h-8"></div>
-                                <div class="ml-4 ">
-                                    <h3 class="font-semibold text-base ">Meta (Facebook)</h3>
-                                    <p class="text-gray-400 text-xs ">FB</p>
+                            <div class="flex items-center justify-between mt-6 text-black ">
+                                <div class="flex items-center ">
+                                    <div><img src="./../../assets/feed/facebook.png " class="w-8 h-8"></div>
+                                    <div class="ml-4 ">
+                                        <h3 class="font-semibold text-base ">Meta (Facebook)</h3>
+                                        <p class="text-gray-400 text-xs ">FB</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-end ">
+                                    <h3 class="font-normal text-sm ">58,505,35.00 €</h3>
+                                    <p class="text-red-600 font-semibold text-xs ">-510% </p>
                                 </div>
                             </div>
-                            <div class="flex flex-col items-end ">
-                                <h3 class="font-normal text-sm ">58,505,35.00 €</h3>
-                                <p class="text-red-600 font-semibold text-xs ">-510% </p>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between mt-6 text-black ">
-                            <div class="flex items-center ">
-                                <div><img src="./../../assets/feed/microsoft.png " class="w-8 h-8"></div>
-                                <div class="ml-4 ">
-                                    <h3 class="font-semibold text-base ">Microsoft</h3>
-                                    <p class="text-gray-400 text-xs ">MSFT</p>
+                            <div class="flex items-center justify-between mt-6 text-black ">
+                                <div class="flex items-center ">
+                                    <div><img src="./../../assets/feed/microsoft.png " class="w-8 h-8"></div>
+                                    <div class="ml-4 ">
+                                        <h3 class="font-semibold text-base ">Microsoft</h3>
+                                        <p class="text-gray-400 text-xs ">MSFT</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-end ">
+                                    <h3 class="font-normal text-sm ">5,365.00 €</h3>
+                                    <p class="text-red-600 font-semibold text-xs ">-10% </p>
                                 </div>
                             </div>
-                            <div class="flex flex-col items-end ">
-                                <h3 class="font-normal text-sm ">5,365.00 €</h3>
-                                <p class="text-red-600 font-semibold text-xs ">-10% </p>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between mt-6 text-black ">
-                            <div class="flex items-center ">
-                                <div><img src="./../../assets/feed/amd.png " class="w-8 h-8"></div>
-                                <div class="ml-4 ">
-                                    <h3 class="font-semibold text-base ">AMD</h3>
-                                    <p class="text-gray-400 text-xs ">AMD</p>
+                            <div class="flex items-center justify-between mt-6 text-black ">
+                                <div class="flex items-center ">
+                                    <div><img src="./../../assets/feed/amd.png " class="w-8 h-8"></div>
+                                    <div class="ml-4 ">
+                                        <h3 class="font-semibold text-base ">AMD</h3>
+                                        <p class="text-gray-400 text-xs ">AMD</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-end ">
+                                    <h3 class="font-normal text-sm ">5,365.00 €</h3>
+                                    <p class="text-red-600 font-semibold text-xs ">-10% </p>
                                 </div>
                             </div>
-                            <div class="flex flex-col items-end ">
-                                <h3 class="font-normal text-sm ">5,365.00 €</h3>
-                                <p class="text-red-600 font-semibold text-xs ">-10% </p>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between mt-6 text-black ">
-                            <div class="flex items-center ">
-                                <div><img src="./../../assets/feed/apple.png " class="w-8 h-8"></div>
-                                <div class="ml-4 ">
-                                    <h3 class="font-semibold text-base ">Apple</h3>
-                                    <p class="text-gray-400 text-xs ">APPL</p>
+                            <div class="flex items-center justify-between mt-6 text-black ">
+                                <div class="flex items-center ">
+                                    <div><img src="./../../assets/feed/apple.png " class="w-8 h-8"></div>
+                                    <div class="ml-4 ">
+                                        <h3 class="font-semibold text-base ">Apple</h3>
+                                        <p class="text-gray-400 text-xs ">APPL</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-end ">
+                                    <h3 class="font-normal text-sm ">5,365.00 €</h3>
+                                    <p class="text-green-600 font-semibold text-xs ">+545% </p>
                                 </div>
                             </div>
-                            <div class="flex flex-col items-end ">
-                                <h3 class="font-normal text-sm ">5,365.00 €</h3>
-                                <p class="text-green-600 font-semibold text-xs ">+545% </p>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between mt-6 text-black ">
-                            <div class="flex items-center ">
-                                <div><img src="./../../assets/feed/snapshot.png " class="w-8 h-8"></div>
-                                <div class="ml-4 ">
-                                    <h3 class="font-semibold text-base ">Snapchat</h3>
-                                    <p class="text-gray-400 text-xs ">SNAP</p>
+                            <div class="flex items-center justify-between mt-6 text-black ">
+                                <div class="flex items-center ">
+                                    <div><img src="./../../assets/feed/snapshot.png " class="w-8 h-8"></div>
+                                    <div class="ml-4 ">
+                                        <h3 class="font-semibold text-base ">Snapchat</h3>
+                                        <p class="text-gray-400 text-xs ">SNAP</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-end ">
+                                    <h3 class="font-normal text-sm ">5,365.00 €</h3>
+                                    <p class="text-green-600 font-semibold text-xs ">+1080.3% </p>
                                 </div>
                             </div>
-                            <div class="flex flex-col items-end ">
-                                <h3 class="font-normal text-sm ">5,365.00 €</h3>
-                                <p class="text-green-600 font-semibold text-xs ">+1080.3% </p>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between mt-6 text-black ">
-                            <div class="flex items-center ">
-                                <div><img src="./../../assets/feed/zoom.png " class="w-8 h-8"></div>
-                                <div class="ml-4 ">
-                                    <h3 class="font-semibold text-base ">Zoom</h3>
-                                    <p class="text-gray-400 text-xs ">ZMN</p>
+                            <div class="flex items-center justify-between mt-6 text-black ">
+                                <div class="flex items-center ">
+                                    <div><img src="./../../assets/feed/zoom.png " class="w-8 h-8"></div>
+                                    <div class="ml-4 ">
+                                        <h3 class="font-semibold text-base ">Zoom</h3>
+                                        <p class="text-gray-400 text-xs ">ZMN</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-end ">
+                                    <h3 class="font-normal text-sm ">5,365.00 €</h3>
+                                    <p class="text-red-600 font-semibold text-xs ">-54%</p>
                                 </div>
                             </div>
-                            <div class="flex flex-col items-end ">
-                                <h3 class="font-normal text-sm ">5,365.00 €</h3>
-                                <p class="text-red-600 font-semibold text-xs ">-54%</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between mt-6 text-black ">
-                            <div class="flex items-center ">
-                                <div><img src="./../../assets/feed/hp.png " class="w-8 h-8"></div>
-                                <div class="ml-4 ">
-                                    <h3 class="font-semibold text-base ">Hewlett Packard</h3>
-                                    <p class="text-gray-400 text-xs ">HP</p>
+                            <div class="flex items-center justify-between mt-6 text-black ">
+                                <div class="flex items-center ">
+                                    <div><img src="./../../assets/feed/hp.png " class="w-8 h-8"></div>
+                                    <div class="ml-4 ">
+                                        <h3 class="font-semibold text-base ">Hewlett Packard</h3>
+                                        <p class="text-gray-400 text-xs ">HP</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-end ">
+                                    <h3 class="font-normal text-sm ">5,365.00 €</h3>
+                                    <p class="text-red-600 font-semibold text-xs ">-10% </p>
                                 </div>
                             </div>
-                            <div class="flex flex-col items-end ">
-                                <h3 class="font-normal text-sm ">5,365.00 €</h3>
-                                <p class="text-red-600 font-semibold text-xs ">-10% </p>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between mt-6 text-black ">
-                            <div class="flex items-center ">
-                                <div><img src="./../../assets/feed/nivida.png " class="w-8 h-8"></div>
-                                <div class="ml-4 ">
-                                    <h3 class="font-semibold text-base ">Nvidia</h3>
-                                    <p class="text-gray-400 text-xs ">NVD</p>
+                            <div class="flex items-center justify-between mt-6 text-black ">
+                                <div class="flex items-center ">
+                                    <div><img src="./../../assets/feed/nivida.png " class="w-8 h-8"></div>
+                                    <div class="ml-4 ">
+                                        <h3 class="font-semibold text-base ">Nvidia</h3>
+                                        <p class="text-gray-400 text-xs ">NVD</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-end ">
+                                    <h3 class="font-normal text-sm ">5,365.00 €</h3>
+                                    <p class="text-green-600 font-semibold text-xs ">+810% </p>
                                 </div>
                             </div>
-                            <div class="flex flex-col items-end ">
-                                <h3 class="font-normal text-sm ">5,365.00 €</h3>
-                                <p class="text-green-600 font-semibold text-xs ">+810% </p>
+                        </div>
+                        <div id="searchCryptopage" class="hidden p-4 text-black mb-20">
+                            <div class="flex items-center justify-between mt-8 ">
+                                <div class="flex items-center ">
+                                    <div class="h-14 rounded-full w-14 "> <img src="./../../assets/david.png "></div>
+                                    <div class="ml-4 ">
+                                        <h3 class="font-semibold text-base ">David Cohen</h3>
+                                        <h4 class="text-gray-600 text-sm ">Here will be some...</h4>
+                                    </div>
+                                </div>
+                                <button class="follow bg-blue-normal px-4 py-2 rounded-full text-white ">Se
+                                    désabonner</button>
+                            </div>
+                            <div class="flex items-center justify-between mt-6 ">
+                                <div class="flex items-center ">
+                                    <div class="h-14 rounded-full w-14 "> <img src="./../../assets/ralph.png "></div>
+                                    <div class="ml-4 ">
+                                        <h3 class="font-semibold text-base ">Ralph Edwards</h3>
+                                        <h4 class="text-gray-600 text-sm ">Here will be some...</h4>
+                                    </div>
+                                </div>
+                                <button class="follow bg-blue-normal px-4 py-2 rounded-full text-white ">Se
+                                    désabonner</button>
+                            </div>
+                            <div class="flex items-center justify-between mt-6 ">
+                                <div class="flex items-center ">
+                                    <div class="h-14 rounded-full w-14 "><img src="./../../assets/web.png "></div>
+                                    <div class="ml-4 ">
+                                        <h3 class="font-semibold text-base ">Theresa Webb</h3>
+                                        <h4 class="text-gray-600 text-sm ">Here will be some...</h4>
+                                    </div>
+                                </div>
+                                <button class="follow bg-blue-normal px-4 py-2 rounded-full text-white ">Se
+                                    désabonner</button>
+                            </div>
+                            <div class="flex items-center justify-between mt-6 ">
+                                <div class="flex items-center ">
+                                    <div class="h-14 rounded-full w-14 "><img src="./../../assets/darell.png "></div>
+                                    <div class="ml-4 ">
+                                        <h3 class="font-semibold text-base ">Darrell Steward</h3>
+                                        <h4 class="text-gray-600 text-sm ">Here will be some...</h4>
+                                    </div>
+                                </div>
+                                <button class="follow bg-blue-normal px-4 py-2 rounded-full text-white ">Se
+                                    désabonner</button>
                             </div>
                         </div>
                     </div>
@@ -1870,32 +1965,32 @@
                     </div>
                 </div>
                 <div id="defaultModal" aria-hidden="true" style="max-width: 355px;"
-                class="fixed flex h-screen items-end hidden justify-center left-0 md:h-full md:inset-0 mx-auto overflow-x-hidden overflow-y-auto pb-4 right-0 top-4 w-full z-50">
-                <div class="relative px-4 w-full max-w-2xl h-80 md:h-auto">
-                    <div class="relative rounded-lg shadow">
-                        <div class="absolute z-10">
-                            <img src="./../../assets/feed/modal-card.png">
-                        </div>
-                        <div class="p-4 pt-10 relative z-50">
-                            <div class="flex font-semibold items-center justify-center text-2xl text-blue-dark">
-                                <img src="./../../assets/feed/social stocks main logo.png" class="w-10 h-10">
-                                <h3 class="ml-1 w-14 text-base" style="line-height: 21px;">We Stocks</h3>
+                    class="fixed flex h-screen items-end hidden justify-center left-0 md:h-full md:inset-0 mx-auto overflow-x-hidden overflow-y-auto pb-4 right-0 top-4 w-full z-50">
+                    <div class="relative px-4 w-full max-w-2xl h-80 md:h-auto">
+                        <div class="relative rounded-lg shadow">
+                            <div class="absolute z-10">
+                                <img src="./../../assets/feed/modal-card.png">
                             </div>
-                            <button data-modal-toggle="defaultModal" class="absolute right-4 top-12"><img
-                                    src="./../../assets/feed/close (1) 1.png"></button>
-                            <div data-modal-toggle="defaultModal" id="tradePageNextBtn"
-                                class="flex font-normal pt-10">
-                                <img src="./../../assets/feed/plus-circle.png">
-                                <h3 class="ml-4">Acheter</h3>
-                            </div>
-                            <div class="flex font-normal pt-10">
-                                <img src="./../../assets/feed/minus-circle.png">
-                                <h3 class="ml-4">Vendre</h3>
+                            <div class="p-4 pt-10 relative z-50">
+                                <div class="flex font-semibold items-center justify-center text-2xl text-blue-dark">
+                                    <img src="./../../assets/feed/social stocks main logo.png" class="w-10 h-10">
+                                    <h3 class="ml-1 w-14 text-base" style="line-height: 21px;">We Stocks</h3>
+                                </div>
+                                <button data-modal-toggle="defaultModal" class="absolute right-4 top-12"><img
+                                        src="./../../assets/feed/close (1) 1.png"></button>
+                                <div data-modal-toggle="defaultModal" id="tradePageNextBtn"
+                                    class="flex font-normal pt-10">
+                                    <img src="./../../assets/feed/plus-circle.png">
+                                    <h3 class="ml-4">Acheter</h3>
+                                </div>
+                                <div class="flex font-normal pt-10">
+                                    <img src="./../../assets/feed/minus-circle.png">
+                                    <h3 class="ml-4">Vendre</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
             </div>
             <div id="sellAsset" class="max-w-mobile mx-auto ss-page p-4 bg-white hidden h-screen">
                 <div class="flex flex-col justify-between h-screen">
@@ -1908,8 +2003,9 @@
                             <p id='maxiBtn' class="font-semibold cursor-pointer text-blue-normal text-sm">Maxi</p>
                             <div class="flex flex-col items-center">
                                 <div id="fondParent" class="font-extrabold text-3xl text-blue-normal text-center">
-                                  <span class="hidden">~</span>
-                                    <input id="fondBtn" type="number" class="numberInput border-0 text-3xl fondBtn outline-none text-center w-1/3"
+                                    <span class="hidden">~</span>
+                                    <input id="fondBtn" type="text"
+                                        class="numberInput border-0 text-3xl fondBtn outline-none text-center w-1/3"
                                         value="50.00">
                                     <span id="fondIcon">€</span>
                                 </div>
@@ -1928,7 +2024,10 @@
                         </div>
                         <div class="flex font-bold justify-between mt-6 text-sm">
                             <p>Liquidité :</p>
-                            <p id="fontResultBtn">5 030,75 €</p>
+                            <div class="flex items-center">
+                                <p id="fontResultBtn">5 030,75</p>
+                                <span> €</span>
+                            </div>
                         </div>
                         <div class="gap-x-8 gap-y-5 grid grid-cols-3 mt-6">
                             <button style="background-color: #F2F3FC;"
@@ -2548,7 +2647,11 @@
                         <div class="h-100 mb-20 overflow-auto">
                             <div class="flex font-norma items-center justify-between">
                                 <h3>Trasactions récentes</h3>
-                                <button id="orderNextBtn">
+                                <button class="relative">
+                                    <input data-modal-toggle="small-modal2"
+                                        class="-mb-2 -ml-2 absolute bg-transparent border-0 cursor-pointer h-2 w-2"
+                                        type="text" datepicker datepicker-title="Filter by date">
+                                    <div id="small-modal2" aria-hidden="true" style="z-index:-2"></div>
                                     <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_341_6599)">
