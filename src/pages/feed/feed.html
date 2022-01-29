@@ -750,7 +750,7 @@
                         <button id="modifierClose"><img src="./../../assets/feed/close (1) 1.png "></button>
                         <h3 class="font-semibold ml-4 text-2xl ">Partager un post</h3>
                     </div>
-                    <svg class="cursor-pointer" id="deletePost" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    <svg class="cursor-pointer"data-modal-toggle="defaultModal4" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path d="M3 6H5H21" stroke="#2B64F5" stroke-width="1.5" stroke-linecap="round"
                             stroke-linejoin="round" />
@@ -785,6 +785,27 @@
                     <button id="enterPost"
                         class="bg-gradient-to-r font-bold from-blue-darker px-8 py-2 rounded-full text-sm text-white to-blue-lighter ">Publier</button>
                 </div>
+                <div id="defaultModal4" aria-hidden="true" style="max-width: 355px;"
+                class="fixed flex h-screen hidden items-end justify-center left-0 md:h-full md:inset-0 mx-auto overflow-x-hidden overflow-y-auto pb-4 right-0 top-4 w-full z-50"
+                aria-modal="true" role="dialog">
+                <div class="relative px-4 w-full max-w-2xl h-full md:h-auto">
+                    <div class="relative px-4 w-full max-w-2xl flex items-end pb-10 h-full md:h-auto">
+                        <div class="relative rounded-lg shadow w-full">
+                            <div class="absolute z-10">
+                                <img src="./../../assets/feed/modal-card.png" class="h-60 pb-4">
+                            </div>
+                            <div class="p-4 pt-10 relative z-50">
+                                <div class="flex font-semibold items-center justify-center text-2xl text-blue-dark">
+                                    <img src="./../../assets/feed/social stocks main logo.png" class="h-10 w-10">
+                                    <h3 class="ml-1 w-14 text-lg" style="line-height: 21px;">We Stocks</h3>
+                                </div>
+                                <button data-modal-toggle="defaultModal4" class="absolute right-4 top-12"><img src="./../../assets/feed/close (1) 1.png"></button>
+                                        <h3 class="font-semibold ml-2 mt-8 my-4">PPOUR FDSDFDSFDF</h3>                                <button data-modal-toggle="defaultModal4" class="bg-gradient-to-r font-normal from-blue-darker mt-3 py-3 rounded-full text-white to-blue-lighter w-full">Supprimer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             </div>
             <!-- RECHERCHER -->
             <div id="rechercher" class="bg-blue-dark ss-page hidden max-w-mobile mx-auto text-white ">
@@ -1992,8 +2013,8 @@
                     </div>
                 </div>
             </div>
-            <div id="sellAsset" class="max-w-mobile mx-auto ss-page p-4 bg-white hidden h-screen">
-                <div class="flex flex-col justify-between h-screen">
+            <div id="sellAsset" class="max-w-mobile mx-auto ss-page bg-white hidden h-screen">
+                <div class="flex flex-col justify-between h-screen p-4">
                     <div>
                         <div class="flex font-semibold items-center text-2xl">
                             <button id="sellPrevBtn"><img src="./../../assets/Mask.png"></button>
@@ -2004,7 +2025,7 @@
                             <div class="flex flex-col items-center">
                                 <div id="fondParent" class="font-extrabold text-3xl text-blue-normal text-center">
                                     <span class="hidden">~</span>
-                                    <input id="fondBtn" type="text"
+                                    <input id="fondBtn" onkeyup="myFunction()" type="text"
                                         class="numberInput border-0 text-3xl fondBtn outline-none text-center w-1/3"
                                         value="50.00">
                                     <span id="fondIcon">€</span>
@@ -2091,7 +2112,7 @@
                 </div>
                 <div id="defaultModal2" aria-hidden="true" style="max-width: 355px;"
                     class="fixed flex h-screen items-end hidden justify-center left-0 md:h-full md:inset-0 mx-auto overflow-x-hidden overflow-y-auto pb-4 right-0 top-4 w-full z-50">
-                    <div class="relative px-4 w-full max-w-2xl h-full md:h-auto">
+                    <div class="relative px-4 w-full max-w-2xl h-full md:h-auto mb-14">
                         <div class="relative px-4 w-full max-w-2xl flex items-end pb-10 h-full md:h-auto">
                             <div class="relative rounded-lg shadow">
                                 <div class="absolute z-10">
@@ -2099,8 +2120,8 @@
                                 </div>
                                 <div class="p-4 pt-10 relative z-50">
                                     <div class="flex font-semibold items-center justify-center text-2xl text-blue-dark">
-                                        <img src="./../../assets/feed/social stocks main logo.png">
-                                        <h3 class="ml-1 w-14" style="line-height: 21px;">We Stocks</h3>
+                                        <img src="./../../assets/feed/social stocks main logo.png" class="w-10 h-10">
+                                        <h3 class="ml-1 w-14 text-lg" style="line-height: 21px;">We Stocks</h3>
                                     </div>
                                     <button data-modal-toggle="defaultModal2" class="absolute right-4 top-12"><img
                                             src="./../../assets/feed/close (1) 1.png"></button>
@@ -2963,8 +2984,8 @@
                             </div>
                             <div class="p-4 pt-10 relative z-50">
                                 <div class="flex font-semibold items-center justify-center text-2xl text-blue-dark">
-                                    <img src="./../../assets/feed/social stocks main logo.png">
-                                    <h3 class="ml-1 w-14" style="line-height: 21px;">We Stocks</h3>
+                                    <img src="./../../assets/feed/social stocks main logo.png" class="w-10 h-10">
+                                    <h3 class="ml-1 w-14 text-lg" style="line-height: 21px;">We Stocks</h3>
                                 </div>
                                 <button data-modal-toggle="small-modal" class="absolute right-4 top-12"><img
                                         src="./../../assets/feed/close (1) 1.png"></button>
@@ -3011,7 +3032,9 @@
                             <button id="accountPrevBtn"> <img src="./../../assets/Mask.png"></button>
                             <h3 class="font-bold ml-4 text-2xl">Déposer</h3>
                         </div>
-                        <h3 class="font-extrabold mt-12 text-3xl text-blue-normal text-center">70,00 €</h3>
+                        <h3 class="font-extrabold mt-12 text-3xl text-blue-normal text-center">
+                            <input type="text" id="inp" class="border-0 input text-3xl text-center w-32" value="70,00">
+                            <span>€</span></h3>
                         <p class="font-normal mt-4 text-center text-gray-500">Liquidité disponible :<span
                                 class="font-bold text-green-500"> 800.78 €</span></p>
                         <p class="font-medium mt-16">Déposer sur</p>
@@ -3028,28 +3051,28 @@
                         </div>
                         <div class="gap-x-8 gap-y-5 grid grid-cols-3 mt-10">
                             <button style="background-color: #F2F3FC;"
-                                class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">1</button>
+                                class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num2">1</button>
                             <button style="background-color: #F2F3FC"
-                                class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">2</button>
+                                class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num2">2</button>
                             <button style="background-color: #F2F3FC"
-                                class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">3</button>
+                                class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num2">3</button>
                             <button style="background-color: #F2F3FC"
-                                class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">4</button>
+                                class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num2">4</button>
                             <button style="background-color: #F2F3FC"
-                                class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">5</button>
+                                class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num2">5</button>
                             <button style="background-color: #F2F3FC"
-                                class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">6</button>
+                                class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num2">6</button>
                             <button style="background-color: #F2F3FC"
-                                class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">7</button>
+                                class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num2">7</button>
                             <button style="background-color: #F2F3FC"
-                                class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">8</button>
+                                class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num2">8</button>
                             <button style="background-color: #F2F3FC"
-                                class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">9</button>
+                                class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num2">9</button>
                             <button style="background-color: #F2F3FC"
-                                class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">.</button>
+                                class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num2">.</button>
                             <button style="background-color: #F2F3FC"
-                                class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num">0</button>
-                            <button class="px-8 py-3" id="pin-clear-btn"><img src="./../../assets/del.png"></button>
+                                class="font-medium px-8 py-3 rounded-3xl text-2xl btn-num2">0</button>
+                            <button class="px-8 py-3" id="account-clear-btn"><img src="./../../assets/del.png"></button>
                         </div>
                     </div>
                     <button data-modal-toggle="defaultModal3"
@@ -3060,14 +3083,14 @@
                     aria-modal="true" role="dialog">
                     <div class="relative px-4 w-full max-w-2xl h-full md:h-auto">
                         <div class="relative px-4 w-full max-w-2xl flex items-end pb-10 h-full md:h-auto">
-                            <div class="relative rounded-lg shadow">
+                            <div class="relative rounded-lg shadow w-full">
                                 <div class="absolute z-10">
                                     <img src="./../../assets/bg.png" class="h-96 w-96">
                                 </div>
                                 <div class="p-4 pt-10 relative z-50">
                                     <div class="flex font-semibold items-center justify-center text-2xl text-blue-dark">
-                                        <img src="./../../assets/feed/social stocks main logo.png">
-                                        <h3 class="ml-1 w-14" style="line-height: 21px;">We Stocks</h3>
+                                        <img src="./../../assets/feed/social stocks main logo.png" class="h-10 w-10">
+                                        <h3 class="ml-1 w-14 text-lg" style="line-height: 21px;">We Stocks</h3>
                                     </div>
                                     <button data-modal-toggle="defaultModal3" class="absolute right-4 top-12"><img
                                             src="./../../assets/feed/close (1) 1.png"></button>

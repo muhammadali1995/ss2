@@ -3,6 +3,8 @@ const tousBtn = document.getElementById('tousBtn')
 const attenteTab = document.getElementById('attenteTab')
 const tousTab = document.getElementById('tousTab')
 const deposerNextBtn = document.getElementById('deposerNextBtn')
+const accountCreateInput = document.querySelector('.input')
+const numberBtn2 = document.querySelectorAll('.btn-num2')
 const ajouterNextBtn = document.querySelectorAll('.ajouterNextBtn')
 const accountPrevBtn = document.getElementById('accountPrevBtn')
 const modifierClose = document.getElementById('modifierClose')
@@ -315,6 +317,21 @@ abonentNextBtn.forEach(element => {
         navbar.classList.add('hidden')
     })
 })
+
+function myFunction(){
+    var x=document.getElementById("fondBtn");
+        var initialSize=25-x.value.length;
+        initialSize=initialSize<=10?10:initialSize;
+    x.style.fontSize = initialSize + "px";
+    }
+    
+    function myFunction2(){
+        var x=document.getElementById("inp");
+            var initialSize=25-x.value.length;
+            initialSize=initialSize<=10?10:initialSize;
+        x.style.fontSize = initialSize + "px";
+        }
+        
 
 abonentPrevBtn.addEventListener('click', () => {
     changePage(PROFIL_PAGE)
@@ -961,6 +978,20 @@ reloadBtn.addEventListener('click', () => {
 addSmthBtn.forEach(element => {
     element.addEventListener('click', () => {
         element.parentElement.children[0].classList.remove('hidden')
+    })
+})
+
+const accountDelBtn =document.getElementById('account-clear-btn')
+accountDelBtn.addEventListener('click',()=>{
+    accountCreateInput.focus()
+    const last = (accountCreateInput.value.lastIndexOf(''))
+    accountCreateInput.value = accountCreateInput.value.slice(0, last - 1)
+})
+
+numberBtn2.forEach(btn=>{
+    btn.addEventListener('click',()=>{
+        myFunction2()
+        accountCreateInput.value += btn.innerText
     })
 })
 
