@@ -202,7 +202,6 @@ const supportChatFrom = document.getElementById('supportChatFrom')
 const messagesSite = document.getElementById('messagesSite')
 
 
-
 // FOOTER
 
 function showPageBtn(pageBtn) {
@@ -250,11 +249,22 @@ editBtn.forEach(btn => {
         changePage(modifier)
         navbar.classList.add('hidden')
         footer.classList.add('hidden')
-        deletePost.addEventListener('click', () => {
-            changePage(PROFIL_PAGE)
-            navbar.classList.remove('hidden')
-            footer.classList.remove('hidden')
-            btn.parentElement.parentElement.classList.add('hidden')
+        // deletePost.addEventListener('click', () => {
+        //     changePage(PROFIL_PAGE)
+        //     navbar.classList.remove('hidden')
+        //     footer.classList.remove('hidden')
+        //     btn.parentElement.parentElement.classList.add('hidden')
+        // })
+    })
+})
+const modalBtn = document.getElementById('modalBtn')
+modalBtn.addEventListener('click', () => {
+    const datepickers = document.querySelectorAll('.datepicker-cell')
+    const small = document.getElementById('small-modal2')
+    datepickers.forEach(btn => {
+        btn.addEventListener('click', () => {
+            small.classList.add('hidden')
+            document.body.children[1].className = ''
         })
     })
 })
