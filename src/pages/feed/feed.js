@@ -10,6 +10,7 @@ const ajouterNextBtn = document.querySelectorAll('.ajouterNextBtn')
 const accountPrevBtn = document.getElementById('accountPrevBtn')
 const shareStockPrebBtn = document.getElementById('shareStockPrebBtn')
 const shareStockPost = 'shareStockPost'
+const newShareNextBtn = document.getElementById('newShareNextBtn')
 const NewStockPost = 'NewStockPost'
 const shareStock = 'shareStock'
 const sharePrevBtn = document.getElementById('sharePrevBtn')
@@ -741,6 +742,18 @@ dollarBtn.addEventListener('click', () => {
 // CHAT
 
 // TRADE
+newShareNextBtn.addEventListener('click',()=>{
+    changePage(NewStockPost)
+    navbar.classList.add('hidden')
+    footer.classList.add('hidden')
+})
+
+newStockPrevBtn.addEventListener('click',()=>{
+    changePage(sellAsset2)
+    navbar.classList.add('hidden')
+    footer.classList.add('hidden')
+})
+
 chatNextBtn.addEventListener('click', () => {
     changePage(shareStock)
     navbar.classList.add('hidden')
@@ -777,17 +790,6 @@ shareStockPrebBtn.addEventListener('click', () => {
     footer.classList.add('hidden')
 })
 
-newPostNextBtn.addEventListener('click', () => {
-    changePage(NewStockPost)
-    navbar.classList.add('hidden')
-    footer.classList.add('hidden')
-})
-
-newStockPrevBtn.addEventListener('click', () => {
-    changePage(shareStockPost)
-    navbar.classList.add('hidden')
-    footer.classList.add('hidden')
-})
 
 function changeTabBtn(tabBtn, tabPage) {
     hideTabBtnsPages()
