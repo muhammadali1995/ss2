@@ -5,13 +5,24 @@ const tousTab = document.getElementById('tousTab')
 const deposerNextBtn = document.getElementById('deposerNextBtn')
 const accountCreateInput = document.querySelector('.input')
 const numberBtn2 = document.querySelectorAll('.btn-num2')
+const newStockPrevBtn = document.getElementById('newStockPrevBtn')
 const ajouterNextBtn = document.querySelectorAll('.ajouterNextBtn')
 const accountPrevBtn = document.getElementById('accountPrevBtn')
+const shareStockPrebBtn = document.getElementById('shareStockPrebBtn')
+const shareStockPost = 'shareStockPost'
+const newShareNextBtn = document.getElementById('newShareNextBtn')
+const NewStockPost = 'NewStockPost'
+const shareStock = 'shareStock'
+const sharePrevBtn = document.getElementById('sharePrevBtn')
+const newPostNextBtn = document.getElementById('newPostNextBtn')
 const modifierClose = document.getElementById('modifierClose')
+const users = document.getElementById('users')
 const deletePost = document.getElementById('deletePost')
 const modifier = 'modifier'
 const maxiBtn = document.getElementById('maxiBtn')
+const shareStockNextBtn = document.getElementById('shareStockNextBtn')
 const deposer = 'deposer'
+const usersSite = document.getElementById('usersSite')
 const formBtn = document.getElementById('formBtn')
 const ajouter = 'ajouter'
 const searchTousBtn = document.getElementById('searchTousBtn')
@@ -89,6 +100,7 @@ const video2 = document.getElementById('video2')
 const playVideo2 = document.getElementById('playVideo2')
 const video = document.querySelector('video')
 const chatNextBtns = document.querySelectorAll('.contact')
+const chatNextBtn = document.getElementById('chatNextBtn')
 const conversation = 'conversation'
 const lesson2PrevBtn = document.getElementById('lesson2PrevBtn')
 const singleLessonNextBtn = document.getElementById('singleLessonNextBtn')
@@ -184,6 +196,7 @@ const tradeMainPage = 'tradeMainPage'
 const sellAsset = 'sellAsset'
 const trandingPage = 'trandingPage'
 const sellAsset2 = 'sellAsset2'
+const checkbox = document.querySelectorAll('.checkbox')
 const tradeCategoryPage = 'tradeCategoryPage'
 const tradeNextBtn = document.getElementById('tradeNextBtn')
 const fixedFooter = document.getElementById('fixedFooter')
@@ -200,7 +213,6 @@ const sellAsset2NextBtn = document.getElementById('sellAsset2NextBtn')
 const tradeBtnStyled = 'tradeBtn'
 const supportChatFrom = document.getElementById('supportChatFrom')
 const messagesSite = document.getElementById('messagesSite')
-
 
 
 // FOOTER
@@ -250,11 +262,22 @@ editBtn.forEach(btn => {
         changePage(modifier)
         navbar.classList.add('hidden')
         footer.classList.add('hidden')
-        deletePost.addEventListener('click', () => {
-            changePage(PROFIL_PAGE)
-            navbar.classList.remove('hidden')
-            footer.classList.remove('hidden')
-            btn.parentElement.parentElement.classList.add('hidden')
+        // deletePost.addEventListener('click', () => {
+        //     changePage(PROFIL_PAGE)
+        //     navbar.classList.remove('hidden')
+        //     footer.classList.remove('hidden')
+        //     btn.parentElement.parentElement.classList.add('hidden')
+        // })
+    })
+})
+const modalBtn = document.getElementById('modalBtn')
+modalBtn.addEventListener('click', () => {
+    const datepickers = document.querySelectorAll('.datepicker-cell')
+    const small = document.getElementById('small-modal2')
+    datepickers.forEach(btn => {
+        btn.addEventListener('click', () => {
+            small.classList.add('hidden')
+            document.body.children[1].className = ''
         })
     })
 })
@@ -719,11 +742,53 @@ dollarBtn.addEventListener('click', () => {
 // CHAT
 
 // TRADE
+newShareNextBtn.addEventListener('click',()=>{
+    changePage(NewStockPost)
+    navbar.classList.add('hidden')
+    footer.classList.add('hidden')
+})
+
+newStockPrevBtn.addEventListener('click',()=>{
+    changePage(sellAsset2)
+    navbar.classList.add('hidden')
+    footer.classList.add('hidden')
+})
+
+chatNextBtn.addEventListener('click', () => {
+    changePage(shareStock)
+    navbar.classList.add('hidden')
+    footer.classList.add('hidden')
+})
+
+chatNextBtn.addEventListener('click', () => {
+    changePage(shareStock)
+    navbar.classList.add('hidden')
+    footer.classList.add('hidden')
+})
+
+sharePrevBtn.addEventListener('click', () => {
+    changePage(chat)
+    navbar.classList.remove('hidden')
+    footer.classList.remove('hidden')
+    showPagesBtn(chatBtnStyled)
+    navbarText.innerText = 'Chat'
+})
+
 tradeBtn.addEventListener('click', () => {
     changePage(tradeMainPage)
     showPageBtn(tradeBtnStyled)
 })
 
+shareStockNextBtn.addEventListener('click', () => {
+    changePage(shareStockPost)
+    navbar.classList.add('hidden')
+    footer.classList.add('hidden')
+})
+shareStockPrebBtn.addEventListener('click', () => {
+    changePage(shareStock)
+    navbar.classList.add('hidden')
+    footer.classList.add('hidden')
+})
 
 
 function changeTabBtn(tabBtn, tabPage) {
@@ -914,13 +979,43 @@ supportChatFrom.addEventListener('submit', (e) => {
     supportChatFrom[0].value = ''
 })
 
+const usersArray = []
 
 ajouterCompeteForm.addEventListener('submit', (e) => {
     e.preventDefault()
     const Data = new FormData(ajouterCompeteForm)
     const value = Object.fromEntries(Data.entries())
-    console.log(value)
 })
+checkbox.forEach(element => {
+    element.addEventListener('click', () => {
+        const clickedItem = element.parentElement.parentElement.children[0].children[0].src;
+        if (element.src == 'file:///C:/Users/Diyorbek/Documents/GitHub/ss2/src/assets/feed/checked.png') {
+            element.src = 'file:///C:/Users/Diyorbek/Documents/GitHub/ss2/src/assets/feed/Unchecked.png'
+            usersArray.push(clickedItem)
+            showUser(usersArray[usersArray.length - 1])
+        }
+        else {
+            element.src = 'file:///C:/Users/Diyorbek/Documents/GitHub/ss2/src/assets/feed/checked.png'
+            const deletedElIndex = usersArray.indexOf(clickedItem)
+            deleteUser(deletedElIndex)
+        }
+    })
+})
+
+const showUser = (e) => {
+    const element = document.createElement('div')
+    element.innerHTML = `
+    <img src="${e}" class="w-7 h-7">
+    `
+    usersSite.appendChild(element)
+    users.appendChild(element)
+}
+
+const deleteUser = (e) => {
+    console.log(e)
+    usersSite.children[e] = ''
+}
+
 // SUPPORT
 
 // SETTINGS
