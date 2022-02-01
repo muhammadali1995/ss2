@@ -742,13 +742,13 @@ dollarBtn.addEventListener('click', () => {
 // CHAT
 
 // TRADE
-newShareNextBtn.addEventListener('click',()=>{
+newShareNextBtn.addEventListener('click', () => {
     changePage(NewStockPost)
     navbar.classList.add('hidden')
     footer.classList.add('hidden')
 })
 
-newStockPrevBtn.addEventListener('click',()=>{
+newStockPrevBtn.addEventListener('click', () => {
     changePage(sellAsset2)
     navbar.classList.add('hidden')
     footer.classList.add('hidden')
@@ -989,15 +989,18 @@ ajouterCompeteForm.addEventListener('submit', (e) => {
 checkbox.forEach(element => {
     element.addEventListener('click', () => {
         const clickedItem = element.parentElement.parentElement.children[0].children[0].src;
-        if (element.src == 'file:///C:/Users/Diyorbek/Documents/GitHub/ss2/src/assets/feed/checked.png') {
-            element.src = 'file:///C:/Users/Diyorbek/Documents/GitHub/ss2/src/assets/feed/Unchecked.png'
-            usersArray.push(clickedItem)
-            showUser(usersArray[usersArray.length - 1])
-        }
-        else {
-            element.src = 'file:///C:/Users/Diyorbek/Documents/GitHub/ss2/src/assets/feed/checked.png'
+        console.log(element.src.toLowerCase().includes('unchecked'))
+        if (!element.src.toLowerCase().includes('unchecked')) {
+            console.log(clickedItem)
             const deletedElIndex = usersArray.indexOf(clickedItem)
+            console.log(deletedElIndex)
+            console.log(usersArray)
             deleteUser(deletedElIndex)
+            element.src = './../../assets/feed/Unchecked.png'
+        } else {
+            usersArray.push(clickedItem)
+            showUser(clickedItem)
+            element.src = './../../assets/feed/checked.png'
         }
     })
 })
@@ -1008,12 +1011,11 @@ const showUser = (e) => {
     <img src="${e}" class="w-7 h-7">
     `
     usersSite.appendChild(element)
-    users.appendChild(element)
 }
 
 const deleteUser = (e) => {
-    console.log(e)
-    usersSite.children[e] = ''
+    console.log(usersSite.children[e])
+    usersSite.children[e].remove()
 }
 
 // SUPPORT
