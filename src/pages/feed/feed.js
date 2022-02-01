@@ -995,6 +995,7 @@ checkbox.forEach(element => {
             const deletedElIndex = usersArray.indexOf(clickedItem)
             console.log(deletedElIndex)
             console.log(usersArray)
+            usersArray.splice(deletedElIndex, 1)
             deleteUser(deletedElIndex)
             element.src = './../../assets/feed/Unchecked.png'
         } else {
@@ -1015,6 +1016,7 @@ const showUser = (e) => {
 
 const deleteUser = (e) => {
     console.log(usersSite.children[e])
+    console.log(e)
     usersSite.children[e].remove()
 }
 
